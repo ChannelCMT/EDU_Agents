@@ -1,0 +1,23 @@
+schema_version: "1.0"
+audience:
+  id: "entrepreneur"
+  name: "Entrepreneur"
+  purpose: "面向企业家和业务实践者的 AI 教育交付 Agent"
+
+agents:
+  - id: "entrepreneur.video-teaching-assistant"
+    path: "video-teaching-assistant"
+    status: "mature-migrated"
+    source_id: "courseVedio"
+    primary_output: "可验证、可复用的分章课程视频生产流程"
+    validation:
+      command: "python course-video-pipeline/scripts/validate_course_video.py ."
+  - id: "entrepreneur.vibestar-frontend-maintainer"
+    path: "vibestar-frontend-maintainer"
+    status: "mature-migrated"
+    source_id: "knowledge-base-builder"
+    primary_output: "可构建的 Vibestar VitePress 学习资料站"
+    validation:
+      command: "npm run build"
+
+maintenance_rule: "每次新增或修改 Agent 都要同步更新分类说明、Agent 契约、使用流程和变更记录"

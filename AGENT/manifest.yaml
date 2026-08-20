@@ -1,0 +1,40 @@
+schema_version: "1.0"
+project:
+  id: "edu-agents"
+  name: "EDU_Agents"
+  purpose: "维护已经能够稳定交付结果的 AI 教育培训 Agent"
+  audiences:
+    - id: "teenager"
+      path: "Teenager"
+      status: "active-empty"
+    - id: "entrepreneur"
+      path: "Entrepreneur"
+      status: "active"
+
+documentation_layers:
+  project: "AGENT/"
+  audience: "<audience>/AGENT/"
+  agent: "<audience>/<agent>/AGENT/"
+  functional: "<audience>/<agent>/"
+
+agents:
+  - id: "entrepreneur.video-teaching-assistant"
+    audience: "entrepreneur"
+    path: "Entrepreneur/video-teaching-assistant"
+    status: "mature-migrated"
+    source_id: "courseVedio"
+    summary: "把原始素材整理为可验证、可复用的分章课程视频生产流程"
+    validation_commands:
+      - "python course-video-pipeline/scripts/validate_course_video.py ."
+  - id: "entrepreneur.vibestar-frontend-maintainer"
+    audience: "entrepreneur"
+    path: "Entrepreneur/vibestar-frontend-maintainer"
+    status: "mature-migrated"
+    source_id: "knowledge-base-builder"
+    summary: "维护 Vibestar VitePress 学习资料站、导航和 GitHub Pages 发布流程"
+    validation_commands:
+      - "npm run build"
+
+iteration_record:
+  rule: "新增或修改 Agent 时同步完善项目层、受众层、Agent 层和功能层说明文档"
+  changelog: "AGENT/CHANGELOG.md"
