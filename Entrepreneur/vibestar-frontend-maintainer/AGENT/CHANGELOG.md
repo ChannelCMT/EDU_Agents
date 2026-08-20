@@ -7,3 +7,4 @@
 - 建立 Agent 功能说明、manifest、使用流程和分层文档维护规则。
 - 站点源码结构检查已通过；`npm run build` 在最终验收阶段执行。
 - 复制统计：源文件 4,892 个，复制 45 个（0.27 MB），排除 4,847 个（91.33 MB）。
+- `npm install` 和 `npm run build` 已完成；VitePress 1.6.4 构建通过。npm 报告 12 个依赖审计告警（9 moderate、3 high），未执行自动升级。
