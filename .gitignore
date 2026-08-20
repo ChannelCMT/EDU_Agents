@@ -1,0 +1,56 @@
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+*.key
+*secret*.json
+*token*.txt
+
+# Dependencies and imported repository metadata
+**/node_modules/
+**/.git/
+**/__pycache__/
+**/*.pyc
+**/.pytest_cache/
+**/.npm-cache/
+**/.cache/
+
+# Build output and generated documentation
+**/dist/
+**/build/
+**/coverage/
+**/.vitepress/cache/
+**/.vitepress/dist/
+
+# Generated media and render workspaces
+*.mp4
+*.mov
+*.mkv
+*.wav
+*.mp3
+*.m4a
+*.aac
+**/raw/
+**/renders/
+**/frames/
+**/snapshots/
+**/audio_alignment/
+**/PastUselessDoc/
+**/publish-package-*/
+**/tmp/
+**/temp/
+**/output/
+**/outputs/
+
+# Native/toolchain binaries
+*.dll
+*.dylib
+*.so
+*.exe
+*.wasm
+*.node
+
+# OS/editor metadata
+.DS_Store
+Thumbs.db
+.vscode/

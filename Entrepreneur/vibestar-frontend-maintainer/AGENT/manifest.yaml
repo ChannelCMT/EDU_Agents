@@ -44,6 +44,16 @@ privacy_boundary:
   - "不在页面或配置中写入本机绝对路径、Token 或私人账号"
   - "页面使用的素材必须有明确来源和授权边界"
 
+migration_record:
+  source_files_scanned: 4892
+  source_size_mb: 91.6
+  copied_source_files: 45
+  copied_source_size_mb: 0.27
+  excluded_source_files: 4847
+  excluded_source_size_mb: 91.33
+  source_retained: true
+  copy_mode: "copy-only"
+
 documentation_layers:
   project: "../../AGENT/"
   audience: "../AGENT/"

@@ -42,6 +42,16 @@ privacy_boundary:
   - "不提交 API Token、私人 Voice ID、训练音频、数字人源视频或未授权媒体"
   - "不在公开文档中记录本机绝对路径"
 
+migration_record:
+  source_files_scanned: 26989
+  source_size_mb: 2834.52
+  copied_source_files: 217
+  copied_source_size_mb: 4.54
+  excluded_source_files: 26772
+  excluded_source_size_mb: 2829.98
+  source_retained: true
+  copy_mode: "copy-only"
+
 documentation_layers:
   project: "../../AGENT/"
   audience: "../AGENT/"
