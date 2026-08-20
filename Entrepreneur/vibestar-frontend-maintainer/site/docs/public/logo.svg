@@ -1,0 +1,24 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="starBlue" x1="5" y1="5" x2="27" y2="27" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0B74E8"/>
+      <stop offset="1" stop-color="#0756B8"/>
+    </linearGradient>
+    <linearGradient id="vGold" x1="14" y1="12" x2="23" y2="24" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFECA5" stop-opacity="0.84"/>
+      <stop offset="1" stop-color="#F5C33B" stop-opacity="0.64"/>
+    </linearGradient>
+  </defs>
+  <rect width="32" height="32" rx="8" fill="#FFFFFF"/>
+  <path
+    fill-rule="evenodd"
+    clip-rule="evenodd"
+    d="M16 2.75L19.52 11.1L28.55 11.85L21.7 17.7L23.78 26.55L16 21.85L8.22 26.55L10.3 17.7L3.45 11.85L12.48 11.1L16 2.75ZM16 8.72L14.28 13.03L9.54 13.42L13.11 16.48L12.01 21.13L16 18.72L19.99 21.13L18.89 16.48L22.46 13.42L17.72 13.03L16 8.72Z"
+    fill="url(#starBlue)"
+  />
+  <path
+    d="M13.95 13.85H16.32L17.26 17.5L20.48 11.2H23.14L16.94 23.25L13.95 13.85Z"
+    fill="url(#vGold)"
+  />
+  <path d="M21.1 11.2H23.14L16.94 23.25L16.34 21.38L21.1 11.2Z" fill="#F8D65F" fill-opacity="0.38"/>
+</svg>
