@@ -94,7 +94,7 @@ Course1/HarnessEngineeringPPT/AIBuilderCampHKCCF/
 Run:
 
 ```powershell
-$project = 'C:\Users\HI\Documents\ABC_E\Course1\HarnessEngineeringPPT\AIBuilderCampHKCCF'
+$project = '.\AIBuilderCampHKCCF'
 New-Item -ItemType Directory -Force -Path $project, "$project\build", "$project\build\assets", "$project\build\lib", "$project\build\slides", "$project\build\tools", "$project\build\rendered\final" | Out-Null
 ```
 
@@ -119,7 +119,7 @@ https://www.goldmansachs.com/insights/articles/what-to-expect-from-ai-in-2026-pe
 Run:
 
 ```powershell
-Get-FileHash -Algorithm SHA256 'C:\Users\HI\Documents\ABC_E\Course1\HarnessEngineeringPPT\AIBuilderCampRoadshow\AI_Builder_Camp_15min_Roadshow_2026-08-29_30.pptx'
+Get-FileHash -Algorithm SHA256 '.\AIBuilderCampRoadshow\AI_Builder_Camp_15min_Roadshow_2026-08-29_30.pptx'
 ```
 
 Expected: one SHA-256 value copied into `source-notes.txt` as `source_deck_sha256_before=`.
@@ -185,7 +185,7 @@ console.log("content contract passed");
 Run:
 
 ```powershell
-& 'C:\Users\HI\.cache\codex-runtimes\codex-primary-runtime\dependencies\node\bin\node.exe' 'C:\Users\HI\Documents\ABC_E\Course1\HarnessEngineeringPPT\AIBuilderCampHKCCF\build\validate-content.mjs'
+& 'node' '.\AIBuilderCampHKCCF\build\validate-content.mjs'
 ```
 
 Expected: `content contract passed`.
@@ -265,8 +265,8 @@ public static class Program {
 Compile it to `build/tools/unzip.exe`, reference `System.IO.Compression.FileSystem`, and prepend `build/tools` to the process `PATH`:
 
 ```powershell
-$build = 'C:\Users\HI\Documents\ABC_E\Course1\HarnessEngineeringPPT\AIBuilderCampHKCCF\build'
-$sourcePptx = 'C:\Users\HI\Documents\ABC_E\Course1\HarnessEngineeringPPT\AIBuilderCampRoadshow\AI_Builder_Camp_15min_Roadshow_2026-08-29_30.pptx'
+$build = '.\AIBuilderCampHKCCF\build'
+$sourcePptx = '.\AIBuilderCampRoadshow\AI_Builder_Camp_15min_Roadshow_2026-08-29_30.pptx'
 $cs = Get-Content -LiteralPath "$build\tools\UnzipShim.cs" -Raw -Encoding UTF8
 Add-Type -TypeDefinition $cs -ReferencedAssemblies 'System.IO.Compression.dll','System.IO.Compression.FileSystem.dll' -OutputAssembly "$build\tools\unzip.exe" -OutputType ConsoleApplication
 $env:PATH = "$build\tools;$env:PATH"
@@ -281,10 +281,10 @@ Expected: the first command lists package entries; the second emits presentation
 Run the bundled workspace setup and `inspect_template_deck.mjs`:
 
 ```powershell
-$node = 'C:\Users\HI\.cache\codex-runtimes\codex-primary-runtime\dependencies\node\bin\node.exe'
-$skill = 'C:\Users\HI\.codex\plugins\cache\openai-primary-runtime\presentations\26.805.11740\skills\presentations'
-$build = 'C:\Users\HI\Documents\ABC_E\Course1\HarnessEngineeringPPT\AIBuilderCampHKCCF\build'
-$sourcePptx = 'C:\Users\HI\Documents\ABC_E\Course1\HarnessEngineeringPPT\AIBuilderCampRoadshow\AI_Builder_Camp_15min_Roadshow_2026-08-29_30.pptx'
+$node = 'node'
+$skill = '.\skills\presentations'
+$build = '.\AIBuilderCampHKCCF\build'
+$sourcePptx = '.\AIBuilderCampRoadshow\AI_Builder_Camp_15min_Roadshow_2026-08-29_30.pptx'
 $env:PATH = "$build\tools;$env:PATH"
 & $node "$skill\container_tools\setup_artifact_tool_workspace.mjs" --workspace $build
 & $node "$skill\template_following_scripts\inspect_template_deck.mjs" --workspace $build --pptx $sourcePptx
@@ -350,10 +350,10 @@ Log one global typography deviation: use Noto Sans TC if installed, otherwise Mi
 Run `prepare_template_starter_deck.mjs` using the source PPTX and frame map:
 
 ```powershell
-$node = 'C:\Users\HI\.cache\codex-runtimes\codex-primary-runtime\dependencies\node\bin\node.exe'
-$skill = 'C:\Users\HI\.codex\plugins\cache\openai-primary-runtime\presentations\26.805.11740\skills\presentations'
-$build = 'C:\Users\HI\Documents\ABC_E\Course1\HarnessEngineeringPPT\AIBuilderCampHKCCF\build'
-$sourcePptx = 'C:\Users\HI\Documents\ABC_E\Course1\HarnessEngineeringPPT\AIBuilderCampRoadshow\AI_Builder_Camp_15min_Roadshow_2026-08-29_30.pptx'
+$node = 'node'
+$skill = '.\skills\presentations'
+$build = '.\AIBuilderCampHKCCF\build'
+$sourcePptx = '.\AIBuilderCampRoadshow\AI_Builder_Camp_15min_Roadshow_2026-08-29_30.pptx'
 & $node "$skill\template_following_scripts\prepare_template_starter_deck.mjs" --workspace $build --pptx $sourcePptx --map "$build\template-frame-map.json" --out "$build\template-starter.pptx" --preview-dir "$build\template-starter-preview" --layout-dir "$build\template-starter-layout" --contact-sheet "$build\template-starter-contact-sheet.png"
 ```
 
@@ -391,7 +391,7 @@ Checkpoint 2 — template starter: PASS — 13 mapped duplicate slides; inherite
 Copy without modifying the originals:
 
 ```text
-C:\Users\HI\AppData\Local\Temp\codex-clipboard-dd83f629-24e9-4638-85db-ab3272aef760.png
+.\assets\reference-screenshot.png
   → build/assets/starbay-home.png
 
 Course1/HarnessEngineeringPPT/AIBuilderCampRoadshow/build/assets/website-hero.png
@@ -516,7 +516,7 @@ Each note must include the approved timing, a natural Cantonese talk track, a tr
 Run:
 
 ```powershell
-& 'C:\Users\HI\.cache\codex-runtimes\codex-primary-runtime\dependencies\node\bin\node.exe' 'C:\Users\HI\Documents\ABC_E\Course1\HarnessEngineeringPPT\AIBuilderCampHKCCF\build\preview-batch.mjs' --module 'slides/slides-01-05.mjs' --slides '1-5'
+& 'node' '.\AIBuilderCampHKCCF\build\preview-batch.mjs' --module 'slides/slides-01-05.mjs' --slides '1-5'
 ```
 
 Expected: five PNGs and five layout JSON files. Inspect each PNG at full size and record title wrapping, image crop, hierarchy, and retained chrome in `qa-ledger.txt`.
@@ -561,7 +561,7 @@ Make the human role explicit on slides 6–9: commercial judgement, creative dir
 Run:
 
 ```powershell
-& 'C:\Users\HI\.cache\codex-runtimes\codex-primary-runtime\dependencies\node\bin\node.exe' 'C:\Users\HI\Documents\ABC_E\Course1\HarnessEngineeringPPT\AIBuilderCampHKCCF\build\preview-batch.mjs' --module 'slides/slides-06-10.mjs' --slides '6-10'
+& 'node' '.\AIBuilderCampHKCCF\build\preview-batch.mjs' --module 'slides/slides-06-10.mjs' --slides '6-10'
 ```
 
 Expected: five PNGs and five layout JSON files. Inspect slides 6, 7, and 8 consecutively to ensure their silhouettes differ despite sharing dark navy styling.
@@ -622,8 +622,8 @@ Use absolute paths resolved from `import.meta.url`. Fail immediately if the impo
 Run the content validator, then `deck.mjs`:
 
 ```powershell
-$node = 'C:\Users\HI\.cache\codex-runtimes\codex-primary-runtime\dependencies\node\bin\node.exe'
-$build = 'C:\Users\HI\Documents\ABC_E\Course1\HarnessEngineeringPPT\AIBuilderCampHKCCF\build'
+$node = 'node'
+$build = '.\AIBuilderCampHKCCF\build'
 & $node "$build\validate-content.mjs"
 & $node "$build\deck.mjs"
 ```
@@ -669,11 +669,11 @@ Checkpoint 6 — full export: PASS — 13-slide PPTX, renders, layout evidence, 
 Run:
 
 ```powershell
-$python = 'C:\Users\HI\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe'
-$node = 'C:\Users\HI\.cache\codex-runtimes\codex-primary-runtime\dependencies\node\bin\node.exe'
-$skill = 'C:\Users\HI\.codex\plugins\cache\openai-primary-runtime\presentations\26.805.11740\skills\presentations'
-$build = 'C:\Users\HI\Documents\ABC_E\Course1\HarnessEngineeringPPT\AIBuilderCampHKCCF\build'
-$final = 'C:\Users\HI\Documents\ABC_E\Course1\HarnessEngineeringPPT\AIBuilderCampHKCCF\Starbay_AI_Agent_Boss_HKCCF_15min_2026-08-29-30.pptx'
+$python = 'python'
+$node = 'node'
+$skill = '.\skills\presentations'
+$build = '.\AIBuilderCampHKCCF\build'
+$final = '.\AIBuilderCampHKCCF\Starbay_AI_Agent_Boss_HKCCF_15min_2026-08-29-30.pptx'
 & $python "$skill\container_tools\slides_test.py" $final
 & $node "$skill\template_following_scripts\check_template_fidelity.mjs" --workspace $build --starter-pptx "$build\template-starter.pptx" --final-pptx $final --map "$build\template-frame-map.json" --starter-layout-dir "$build\template-starter-layout" --final-layout-dir "$build\rendered\final" --edit-dir $build
 ```

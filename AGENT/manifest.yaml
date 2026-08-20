@@ -24,6 +24,7 @@ agents:
     status: "mature-migrated"
     source_id: "courseVedio"
     summary: "把原始素材整理为可验证、可复用的分章课程视频生产流程"
+    agent_docs: "Entrepreneur/video-teaching-assistant/AGENT/"
     validation_commands:
       - "python course-video-pipeline/scripts/validate_course_video.py ."
   - id: "entrepreneur.vibestar-frontend-maintainer"
@@ -32,6 +33,7 @@ agents:
     status: "mature-migrated"
     source_id: "knowledge-base-builder"
     summary: "维护 Vibestar VitePress 学习资料站、导航和 GitHub Pages 发布流程"
+    agent_docs: "Entrepreneur/vibestar-frontend-maintainer/AGENT/"
     validation_commands:
       - "npm run build"
 

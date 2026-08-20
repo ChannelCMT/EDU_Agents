@@ -1,0 +1,51 @@
+schema_version: "1.0"
+id: "entrepreneur.vibestar-frontend-maintainer"
+name: "Vibestar 教学前端维护 Agent"
+audience: "entrepreneur"
+status: "mature-migrated"
+source_id: "knowledge-base-builder"
+purpose: "维护 Vibestar VitePress 学习资料站、导航和 GitHub Pages 发布流程"
+
+capabilities:
+  - "课程知识库页面维护"
+  - "学习地图、章节和行业场景组织"
+  - "工具安装与 Windows/Mac 差异说明"
+  - "VitePress 导航、主题和页面结构维护"
+  - "GitHub Pages 构建与发布检查"
+
+inputs:
+  - "课程结构、页面内容和学习目标"
+  - "工具安装步骤、验证命令和平台差异"
+  - "行业案例、演示页面和导航调整要求"
+
+outputs:
+  - "site/docs/ 下的学习资料页面"
+  - "VitePress 配置和导航更新"
+  - "GitHub Pages workflow 和构建交付记录"
+
+workflow:
+  site_root: "site/"
+  content_root: "site/docs/"
+  config: "site/docs/.vitepress/config.mts"
+  deployment: "site/.github/workflows/deploy.yml"
+  sequence: "确认页面归属 → 修改内容 → 更新导航 → 本地构建 → 记录交付 → 检查部署"
+
+validation_commands:
+  - "npm install"
+  - "npm run build"
+  - "npm run preview"
+
+excluded_from_copy:
+  - "源项目 .git 和 node_modules"
+  - "docs/.vitepress/cache 和 docs/.vitepress/dist"
+  - "远程比较快照、压缩包和未纳入源码维护边界的 Logo 文件"
+
+privacy_boundary:
+  - "不在页面或配置中写入本机绝对路径、Token 或私人账号"
+  - "页面使用的素材必须有明确来源和授权边界"
+
+documentation_layers:
+  project: "../../AGENT/"
+  audience: "../AGENT/"
+  agent: "AGENT/"
+  functional: "site/"

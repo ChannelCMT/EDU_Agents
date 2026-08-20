@@ -1,0 +1,49 @@
+schema_version: "1.0"
+id: "entrepreneur.video-teaching-assistant"
+name: "视频助教 Agent"
+audience: "entrepreneur"
+status: "mature-migrated"
+source_id: "courseVedio"
+purpose: "把原始教育素材整理为可验证、可复用的分章课程视频生产流程"
+
+capabilities:
+  - "素材盘点与转录校正"
+  - "课程拆章、讲稿、术语和语气规划"
+  - "最终音频逐词对齐与语义时间轴"
+  - "PPT 风格动画、字幕和发布质量门禁"
+  - "最小返工 Loop 和发布经验回写"
+
+inputs:
+  - "原始视频、音频、文章、访谈或 PPT"
+  - "目标受众、平台和课程目标"
+  - "术语、视觉和批准声线配置"
+
+outputs:
+  - "版本化课程项目目录"
+  - "讲稿、语气、对齐、分镜和字幕 manifest"
+  - "章节 QA、媒体报告和发布清单"
+
+workflow:
+  source_of_truth: "course-video-pipeline/SKILL.md"
+  machine_workflow: "workflow/course-video-workflow.yaml"
+  sequence: "素材盘点 → 转录 → 讲稿 → 配音 → 逐词对齐 → 语义时间 → 试片 → 动画 → 字幕 → 发布 QA"
+
+validation_commands:
+  - "python .\\course-video-pipeline\\scripts\\validate_course_video.py ."
+  - "python .\\course-video-pipeline\\scripts\\init_course_project.py --output .\\work\\demo --title \"Demo Course\" --chapters 1"
+  - "python .\\course-video-pipeline\\scripts\\validate_course_video.py .\\work\\demo --structure-only"
+
+excluded_from_copy:
+  - "node_modules、.npm-cache、.cache 和 Python 缓存"
+  - "PastUselessDoc、raw、audio、publish-package、renders、frames 和临时目录"
+  - "MP4、MOV、MKV、WAV、MP3、M4A、AAC 和工具二进制依赖"
+
+privacy_boundary:
+  - "不提交 API Token、私人 Voice ID、训练音频、数字人源视频或未授权媒体"
+  - "不在公开文档中记录本机绝对路径"
+
+documentation_layers:
+  project: "../../AGENT/"
+  audience: "../AGENT/"
+  agent: "AGENT/"
+  functional: "workflow/、docs/、course-video-pipeline/、examples/"

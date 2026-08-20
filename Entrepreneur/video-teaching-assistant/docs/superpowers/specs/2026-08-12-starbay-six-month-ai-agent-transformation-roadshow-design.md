@@ -326,7 +326,7 @@ OPC 指 One-Person Company。簡報使用的解釋是：
 - NVIDIA 對數碼員工規模的公開預測：https://www.cnbc.com/2026/03/20/nvidia-ai-agents-tokens-human-workers-engineer-jobs-unemployment-jensen-huang.html
 - TCS 對 AI Agent 與員工規模的公開預測（Reuters）：https://www.reuters.com/world/india/indias-tcs-chairman-expects-ai-agents-equal-employee-count-2026-06-09/
 - Goldman Sachs 關於人類編排專門多 Agent 團隊的展望：https://www.goldmansachs.com/insights/articles/what-to-expect-from-ai-in-2026-personal-agents-mega-alliances
-- 使用者提供的灣星官網截圖：`C:\Users\HI\AppData\Local\Temp\codex-clipboard-dd83f629-24e9-4638-85db-ab3272aef760.png`。
+- 使用者提供的灣星官網截圖：`assets/reference-screenshot.png`。
 
 外部來源只在真正使用其事實或素材的頁面加入備註，不把來源網址堆在觀眾可見畫面。
 

@@ -1,7 +1,7 @@
 version: "v01"
 project: "mcp_api_cli"
 status: "review_ready"
-reference_video: "C:/Users/HI/Documents/ABC_E/Course1/HarnessEngineeringPPT/courseVedio/projects/agent-architecture-7-patterns/chapter-01/renders/chapter-01_v14_harness-audit_subtitled.mp4"
+reference_video: "references/reference-video.mp4"
 reference_frames_checked: [5, 15, 25]
 scope:
   script: "ready_for_owner_review"
