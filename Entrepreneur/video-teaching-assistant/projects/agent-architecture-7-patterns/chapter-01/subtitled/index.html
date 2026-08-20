@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=1920, height=1080" />
+<title>Agent 架构选型｜第 1 章</title>
+<script src="vendor/gsap.min.js"></script>
+<style>@font-face { font-family: "Microsoft YaHei"; src: local("Microsoft YaHei"); } @font-face { font-family: "Noto Sans SC"; src: local("Noto Sans SC"); }
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; background: #06182A; color: #F7FBFF; font-family: "Microsoft YaHei", "Noto Sans SC", sans-serif; }
+#root { position: relative; width: 1920px; height: 1080px; overflow: hidden; background: #06182A; }
+.clip { position: absolute; inset: 0; display: block; overflow: hidden; }
+.fill { position: absolute; inset: 0; background: #06182A; }
+.grid { position: absolute; inset: 0; opacity: .09; background-image: linear-gradient(rgba(142,214,255,.32) 1px, transparent 1px), linear-gradient(90deg, rgba(142,214,255,.32) 1px, transparent 1px); background-size: 80px 80px; mask-image: linear-gradient(to bottom, rgba(0,0,0,.8), transparent 88%); }
+.glow { position: absolute; border-radius: 50%; filter: blur(10px); }
+.glow.a { width: 720px; height: 720px; left: -220px; top: -280px; background: radial-gradient(circle, rgba(45,124,196,.28), transparent 70%); }
+.glow.b { width: 680px; height: 680px; right: -240px; bottom: -260px; background: radial-gradient(circle, rgba(44,101,162,.24), transparent 72%); }
+.topbar { position: absolute; left: 76px; right: 76px; top: 50px; display: flex; justify-content: space-between; align-items: center; color: #B8C4D2; font-size: 22px; letter-spacing: .12em; text-transform: uppercase; }
+.eyebrow { color: #8ED6FF; font-weight: 700; }
+.chapter-no { color: #FFD66F; font-weight: 700; }
+.rule { position: absolute; left: 76px; right: 76px; top: 104px; height: 2px; background: rgba(142,214,255,.35); transform-origin: left center; }
+.title { position: absolute; left: 96px; top: 142px; max-width: 1250px; font-size: 76px; line-height: 1.08; font-weight: 800; letter-spacing: -.025em; }
+.subtitle { position: absolute; left: 100px; top: 240px; color: #B8C4D2; font-size: 30px; line-height: 1.3; }
+.section-label { position: absolute; color: #8ED6FF; font-size: 24px; letter-spacing: .08em; font-weight: 700; }
+.panel { position: absolute; border: 2px solid rgba(142,214,255,.5); border-radius: 24px; background: rgba(10,47,78,.86); box-shadow: 0 20px 50px rgba(0,0,0,.28); }
+.panel.warm { border-color: rgba(255,214,111,.62); }
+.panel.alert { border-color: rgba(255,152,152,.66); background: rgba(74,30,47,.78); }
+.panel.green { border-color: rgba(160,230,191,.65); background: rgba(22,65,70,.78); }
+.panel-title { color: #F7FBFF; font-size: 34px; font-weight: 750; }
+.panel-copy { color: #B8C4D2; font-size: 25px; line-height: 1.38; white-space: pre-line; }
+.node { position: absolute; display: flex; align-items: center; justify-content: center; border-radius: 999px; border: 3px solid #8ED6FF; color: #F7FBFF; background: #0C2B49; font-size: 27px; font-weight: 750; box-shadow: 0 12px 24px rgba(0,0,0,.25); }
+.node.hot { border-color: #FFD66F; color: #FFD66F; }
+.node.done { border-color: #A0E6BF; color: #A0E6BF; }
+.arrow { position: absolute; height: 4px; background: #8ED6FF; transform-origin: left center; border-radius: 2px; }
+.arrow::after { content: ""; position: absolute; right: -2px; top: -7px; border-left: 15px solid #8ED6FF; border-top: 9px solid transparent; border-bottom: 9px solid transparent; }
+.chip { position: absolute; padding: 14px 22px; border-radius: 14px; border: 2px solid rgba(142,214,255,.48); color: #F7FBFF; background: rgba(12,43,73,.88); font-size: 24px; font-weight: 700; }
+.chip.hot { color: #FFD66F; border-color: rgba(255,214,111,.68); }
+.chip.gray { color: #B8C4D2; border-color: rgba(184,196,210,.44); }
+.metric { position: absolute; color: #8ED6FF; font-family: "JetBrains Mono", monospace; font-size: 22px; letter-spacing: .08em; }
+.caption { position: absolute; top: auto; left: 220px; right: 220px; bottom: 46px; height: 76px; display: flex; align-items: center; justify-content: center; padding: 0 28px; border-radius: 16px; border: 2px solid rgba(142,214,255,.48); background: rgba(12,43,73,.72); color: #FFFFFF; font-size: 36px; font-weight: 650; white-space: nowrap; text-align: center; box-shadow: 0 10px 26px rgba(0,0,0,.22); }
+.caption span { display: block; }
+.caption-safe-line { position: absolute; left: 76px; right: 76px; bottom: 150px; height: 2px; background: rgba(184,196,210,.15); }
+.small-note { position: absolute; color: #B8C4D2; font-size: 22px; }
+.axis { position: absolute; background: rgba(142,214,255,.66); transform-origin: left center; }
+.axis.x { height: 3px; }
+.axis.y { width: 3px; transform-origin: center bottom; }
+.axis.x::after { content: ""; position: absolute; right: -2px; top: -7px; border-left: 15px solid rgba(142,214,255,.66); border-top: 9px solid transparent; border-bottom: 9px solid transparent; }
+.axis.y::after { content: ""; position: absolute; left: -7px; top: -15px; border-bottom: 15px solid rgba(142,214,255,.66); border-left: 9px solid transparent; border-right: 9px solid transparent; }
+.axis-label { position: absolute; color: #B8C4D2; font-size: 24px; font-weight: 700; }
+.loop { position: absolute; border: 4px solid #8ED6FF; border-radius: 50%; }
+.loop-arrow { position: absolute; width: 0; height: 0; border-left: 20px solid #FFD66F; border-top: 12px solid transparent; border-bottom: 12px solid transparent; }
+.state-line { position: absolute; height: 2px; background: rgba(142,214,255,.45); }
+.state-dot { position: absolute; width: 18px; height: 18px; border-radius: 50%; background: #8ED6FF; box-shadow: 0 0 24px rgba(142,214,255,.8); }
+</style>
+</head>
+<body>
+<div id="root" data-composition-id="agent-architecture-ch01" data-start="0" data-width="1920" data-height="1080" data-duration="31.894" data-fps="30" data-subtitle-safe-band="900-1080">
+  <div class="fill"></div><div id="grid" class="grid"></div><div id="glow-a" class="glow a"></div><div id="glow-b" class="glow b"></div>
+  <div class="topbar"><span class="eyebrow">AGENT ARCHITECTURE / COURSE LOOP</span><span class="chapter-no">CHAPTER 01 / 05</span></div>
+  <div id="rule" class="rule"></div><div class="caption-safe-line"></div>
+  <audio id="narration" src="audio/chapter-final.wav" data-start="0" data-duration="31.894" data-track-index="10" data-volume="1"></audio>
+
+    <section id="c1-scene" class="clip" data-start="0" data-duration="31.894" data-track-index="1">
+    <div class="section-label" style="left:100px;top:240px;">SELECTION COORDINATES</div>
+    <div id="c1-title" class="title" style="top:282px;">先选型，再上架构</div>
+    <div id="c1-sub" class="subtitle" style="top:382px;max-width:780px;">先不要急着让AI干活，先看任务复杂度与控制力。</div>
+    <div id="c1-axis-x" class="axis x" style="left:220px;top:812px;width:1010px;"></div>
+    <div id="c1-axis-y" class="axis y" style="left:220px;top:530px;height:282px;"></div>
+    <div id="c1-x-label" class="axis-label" style="left:1080px;top:832px;">场景复杂度 →</div>
+    <div id="c1-y-label" class="axis-label" style="left:42px;top:560px;transform:rotate(-90deg);">控制力 ↑</div>
+    <div id="c1-q1" class="chip hot" style="left:420px;top:700px;">快速验证</div>
+    <div id="c1-q2" class="chip" style="left:820px;top:560px;">拆分与路由</div>
+    <div id="c1-evo" class="panel" style="left:1460px;top:210px;width:390px;height:410px;padding:22px;">
+      <div class="panel-title" style="font-size:26px;">七种架构演进线</div>
+      <div id="c1-evo-1" class="small-note" style="left:24px;top:66px;font-size:20px;">01 · 单 Agent</div><div id="c1-evo-2" class="small-note" style="left:24px;top:106px;font-size:20px;">02 · ReAct</div><div id="c1-evo-3" class="small-note" style="left:24px;top:146px;font-size:20px;">03 · Plan and Execute</div><div id="c1-evo-4" class="small-note" style="left:24px;top:186px;font-size:20px;">04 · Multi-Agent</div><div id="c1-evo-5" class="small-note" style="left:24px;top:226px;font-size:20px;">05 · Route + Skill</div><div id="c1-evo-6" class="small-note" style="left:24px;top:266px;font-size:20px;">06 · Blackboard</div><div id="c1-evo-7" class="small-note" style="left:24px;top:306px;font-size:20px;">07 · Graph Workflow</div>
+    </div>
+    <div id="c1-note" class="small-note" style="left:100px;top:840px;">先问两件事：任务有多复杂？哪里必须可控？</div>
+  </section>
+<div id="caption-000" class="clip caption" data-start="0.000" data-duration="2.670" data-track-index="40"><span>你是不是想到什么，就让AI做什么？</span></div>
+<div id="caption-001" class="clip caption" data-start="2.901" data-duration="1.820" data-track-index="41"><span>先不要急着让AI干活</span></div>
+<div id="caption-002" class="clip caption" data-start="5.017" data-duration="1.840" data-track-index="42"><span>真正要回答的是</span></div>
+<div id="caption-003" class="clip caption" data-start="7.177" data-duration="1.180" data-track-index="43"><span>任务有多复杂</span></div>
+<div id="caption-004" class="clip caption" data-start="8.517" data-duration="1.940" data-track-index="44"><span>以及你需要多强的控制力</span></div>
+<div id="caption-005" class="clip caption" data-start="10.467" data-duration="2.090" data-track-index="45"><span>轻任务只要快速验证</span></div>
+<div id="caption-006" class="clip caption" data-start="12.757" data-duration="1.700" data-track-index="46"><span>复杂任务才需要拆分</span></div>
+<div id="caption-007" class="clip caption" data-start="14.597" data-duration="1.880" data-track-index="47"><span>路由和状态管理</span></div>
+<div id="caption-008" class="clip caption" data-start="16.487" data-duration="2.010" data-track-index="48"><span>七种架构不是排行榜</span></div>
+<div id="caption-009" class="clip caption" data-start="18.677" data-duration="1.600" data-track-index="49"><span>而是一条从单 Agent</span></div>
+<div id="caption-010" class="clip caption" data-start="20.287" data-duration="1.410" data-track-index="50"><span>到协作系统</span></div>
+<div id="caption-011" class="clip caption" data-start="21.707" data-duration="1.630" data-track-index="51"><span>再到 Graph Workflow</span></div>
+<div id="caption-012" class="clip caption" data-start="23.347" data-duration="0.850" data-track-index="52"><span>的演进线</span></div>
+<div id="caption-013" class="clip caption" data-start="24.417" data-duration="1.880" data-track-index="53"><span>本章先记住两个判断轴</span></div>
+<div id="caption-014" class="clip caption" data-start="26.577" data-duration="1.460" data-track-index="54"><span>复杂度和控制力</span></div>
+<div id="caption-015" class="clip caption" data-start="28.047" data-duration="2.050" data-track-index="55"><span>后面每一种架构都放回</span></div>
+<div id="caption-016" class="clip caption" data-start="30.107" data-duration="1.470" data-track-index="56"><span>这张坐标系里选择</span></div>
+</div>
+<script>
+window.__timelines = window.__timelines || {};
+const tl = gsap.timeline({ paused: true });
+tl.to("#glow-a", {scale: 1.12, opacity: .85, duration: 30.894, ease: "sine.inOut"}, 0);
+tl.to("#glow-b", {scale: 1.08, opacity: .78, duration: 30.394, ease: "sine.inOut"}, 0.4);
+tl.fromTo("#rule", {scaleX: 0}, {scaleX: 1, duration: .65, ease: "power3.out"}, .12);
+
+tl.fromTo("#c1-title", {opacity:0, y:30}, {opacity:1, y:0, duration:.7, ease:"expo.out"}, .12);
+tl.fromTo("#c1-sub", {opacity:0, x:-38}, {opacity:1, x:0, duration:.55, ease:"power3.out"}, .65);
+tl.fromTo("#c1-axis-x", {scaleX:0}, {scaleX:1, duration:.7, ease:"power2.out"}, 5.14);
+tl.fromTo("#c1-axis-y", {scaleY:0}, {scaleY:1, duration:.7, ease:"power3.out"}, 5.27);
+tl.fromTo(["#c1-x-label","#c1-y-label"], {opacity:0}, {opacity:1, duration:.35, ease:"sine.out"}, 5.94);
+tl.fromTo("#c1-q1", {opacity:0, scale:.82}, {opacity:1, scale:1, duration:.5, ease:"back.out(1.6)"}, 10.51);
+tl.fromTo("#c1-q2", {opacity:0, x:40}, {opacity:1, x:0, duration:.48, ease:"power3.out"}, 14.00);
+tl.fromTo("#c1-evo", {opacity:0, y:28}, {opacity:1, y:0, duration:.6, ease:"power2.out"}, 16.54);
+tl.fromTo(["#c1-evo-1","#c1-evo-2","#c1-evo-3","#c1-evo-4","#c1-evo-5","#c1-evo-6","#c1-evo-7"], {opacity:0, x:-18}, {opacity:1, x:0, duration:.28, ease:"power2.out", stagger:.32}, 16.90);
+tl.to("#c1-evo", {opacity:0, y:-16, duration:.35, ease:"sine.in"}, 23.99);
+tl.fromTo("#c1-note", {opacity:0}, {opacity:1, duration:.4, ease:"sine.out"}, 24.47);
+
+window.__timelines["agent-architecture-ch01"] = tl;
+</script>
+</body></html>

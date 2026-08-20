@@ -1,0 +1,19 @@
+version: v01
+rule: global word evidence, monotonic cues, <=80ms cue/evidence delta
+chapters:
+- chapter: 1
+  failures: []
+  status: pass
+- chapter: 2
+  failures: []
+  status: pass
+- chapter: 3
+  failures: []
+  status: pass
+- chapter: 4
+  failures: []
+  status: pass
+- chapter: 5
+  failures: []
+  status: pass
+status: pass

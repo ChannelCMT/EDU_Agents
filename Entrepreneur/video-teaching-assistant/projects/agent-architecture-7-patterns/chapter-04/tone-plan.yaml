@@ -1,0 +1,139 @@
+version: v05
+chapter: 4
+voice: Channel科技解说员
+delivery_profile: 稳重底色 + 句内对比 + 关键名词重读 + 结论落点
+generic_plan_rejected: true
+sentences:
+- sentence_id: S1
+  source_text: Route+Skill 的关键不是让模型自由发挥。
+  delivery_intent: reframe
+  energy_1_to_5: 4
+  pace: firm
+  emphasis_terms:
+  - Route+Skill
+  - 自由发挥
+  pause_after_ms: 160
+  breath_points:
+  - 关键
+  pronunciation: use canonical terminology.yaml spelling; no ASR variant in display
+  visual_sync: c4-title
+  audio_window:
+  - 0.0
+  - 4.1
+- sentence_id: S2
+  source_text: 而是先让意图路由器选中一个 Skill，再执行这项可复用能力。
+  delivery_intent: show_control_path
+  energy_1_to_5: 5
+  pace: stepwise
+  emphasis_terms:
+  - 意图路由器
+  - Skill
+  - 可复用能力
+  pause_after_ms: 180
+  breath_points:
+  - 选中 Skill
+  - 执行
+  pronunciation: use canonical terminology.yaml spelling; no ASR variant in display
+  visual_sync: c4-router
+  audio_window:
+  - 4.1
+  - 9.12
+- sentence_id: S3
+  source_text: 这样更稳定、更容易缓存，也能用命中率评估效果。
+  delivery_intent: show_benefit
+  energy_1_to_5: 4
+  pace: accelerate_then_land
+  emphasis_terms:
+  - 稳定
+  - 缓存
+  - 命中率
+  pause_after_ms: 160
+  breath_points:
+  - 可缓存
+  - 可评估
+  pronunciation: use canonical terminology.yaml spelling; no ASR variant in display
+  visual_sync: c4-cache
+  audio_window:
+  - 9.46
+  - 13.48
+- sentence_id: S4
+  source_text: 代价是 Skill 设计成本高，还要处理路由冲突。
+  delivery_intent: show_cost
+  energy_1_to_5: 5
+  pace: deliberate_warning
+  emphasis_terms:
+  - 设计成本
+  - 路由冲突
+  pause_after_ms: 260
+  breath_points:
+  - 代价
+  pronunciation: use canonical terminology.yaml spelling; no ASR variant in display
+  visual_sync: c4-cost
+  audio_window:
+  - 13.8
+  - 17.56
+- sentence_id: S5
+  source_text: Blackboard 则让多个 Agent 共同读写一份共享状态。
+  delivery_intent: introduce_shared_state
+  energy_1_to_5: 4
+  pace: measured
+  emphasis_terms:
+  - Blackboard
+  - 共享状态
+  pause_after_ms: 180
+  breath_points:
+  - 共同读写
+  pronunciation: use canonical terminology.yaml spelling; no ASR variant in display
+  visual_sync: c4b-board
+  audio_window:
+  - 18.0
+  - 22.34
+- sentence_id: S6
+  source_text: 状态变化推动下一步执行。
+  delivery_intent: show_state_transition
+  energy_1_to_5: 4
+  pace: short_punch
+  emphasis_terms:
+  - 状态变化
+  - 下一步执行
+  pause_after_ms: 140
+  breath_points:
+  - 状态变化
+  pronunciation: use canonical terminology.yaml spelling; no ASR variant in display
+  visual_sync: c4b-a1
+  audio_window:
+  - 22.56
+  - 24.64
+- sentence_id: S7
+  source_text: 它适合复杂协作，但状态模型、权限和追踪必须先设计好。
+  delivery_intent: state_governance
+  energy_1_to_5: 5
+  pace: tighten_then_land
+  emphasis_terms:
+  - 复杂协作
+  - 状态模型
+  - 权限
+  - 追踪
+  pause_after_ms: 240
+  breath_points:
+  - 必须先设计好
+  pronunciation: use canonical terminology.yaml spelling; no ASR variant in display
+  visual_sync: c4b-warn
+  audio_window:
+  - 24.98
+  - 30.16
+- sentence_id: S8
+  source_text: 否则出了问题很难定位。
+  delivery_intent: close_risk
+  energy_1_to_5: 4
+  pace: slow_land
+  emphasis_terms:
+  - 很难定位
+  pause_after_ms: 240
+  breath_points:
+  - 定位
+  pronunciation: use canonical terminology.yaml spelling; no ASR variant in display
+  visual_sync: c4b-warn
+  audio_window:
+  - 30.42
+  - 32.728

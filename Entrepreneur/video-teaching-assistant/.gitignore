@@ -1,0 +1,38 @@
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+*.key
+*secret*.json
+*token*.txt
+
+# Private or large media
+*.mp4
+*.mov
+*.mkv
+*.wav
+*.mp3
+*.m4a
+*.aac
+raw-media/
+renders/
+captioned-*/
+audio_alignment/
+frames/
+snapshots/
+
+# Generated and archived work
+PastUselessDoc/
+tmp/
+temp/
+cache/
+output/
+publish-package-*/
+
+# Tooling
+node_modules/
+__pycache__/
+*.pyc
+.pytest_cache/
+.DS_Store
+Thumbs.db

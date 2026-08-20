@@ -1,0 +1,1486 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/pllve9",
+    "id": "pllve9",
+    "slide": 5,
+    "layoutId": "78f3f17c-effe-426a-843e-b847b5f23867",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "3cd712da-81cc-4e88-934a-01e1c28d60fa",
+    "masterLayoutName": "Master",
+    "backgroundColor": "#06182A",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1920,
+      "height": 1080
+    }
+  },
+  "theme": {
+    "colorSchemeName": "ChatGPT",
+    "colors": {
+      "accent1": "#156082",
+      "accent2": "#E97132",
+      "accent3": "#196B24",
+      "accent4": "#0F9ED5",
+      "accent5": "#A02B93",
+      "accent6": "#4EA72E",
+      "bg1": "#FFFFFF",
+      "bg2": "#000000",
+      "tx1": "#1F1F1F",
+      "tx2": "#FFFFFF",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#0E2841",
+      "lt2": "#E8E8E8",
+      "hlink": "#467886",
+      "folHlink": "#96607D"
+    },
+    "typefaces": [
+      "+mn-lt"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "78f3f17c-effe-426a-843e-b847b5f23867",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "3cd712da-81cc-4e88-934a-01e1c28d60fa",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "3cd712da-81cc-4e88-934a-01e1c28d60fa",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/a54nmd4z",
+      "id": "1",
+      "name": "glow-top-left-5",
+      "bbox": [
+        -220,
+        -280,
+        720,
+        720
+      ],
+      "geometry": "ellipse",
+      "lineWidth": 0
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/xsfmxs3q",
+      "id": "2",
+      "name": "glow-bottom-right-5",
+      "bbox": [
+        1460,
+        760,
+        680,
+        680
+      ],
+      "geometry": "ellipse",
+      "lineWidth": 0
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/c7m5onm5",
+      "id": "3",
+      "bbox": [
+        0,
+        0,
+        0,
+        1080
+      ],
+      "geometry": "line",
+      "lineColor": "#0B2236",
+      "lineWidth": 1
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/n2d4ril8",
+      "id": "4",
+      "bbox": [
+        160,
+        0,
+        0,
+        1080
+      ],
+      "geometry": "line",
+      "lineColor": "#0B2236",
+      "lineWidth": 1
+    },
+    {
+      "order": 5,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/2143id43",
+      "id": "5",
+      "bbox": [
+        320,
+        0,
+        0,
+        1080
+      ],
+      "geometry": "line",
+      "lineColor": "#0B2236",
+      "lineWidth": 1
+    },
+    {
+      "order": 6,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/p4vmt83e",
+      "id": "6",
+      "bbox": [
+        480,
+        0,
+        0,
+        1080
+      ],
+      "geometry": "line",
+      "lineColor": "#0B2236",
+      "lineWidth": 1
+    },
+    {
+      "order": 7,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/o3m5k3mt",
+      "id": "7",
+      "bbox": [
+        640,
+        0,
+        0,
+        1080
+      ],
+      "geometry": "line",
+      "lineColor": "#0B2236",
+      "lineWidth": 1
+    },
+    {
+      "order": 8,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/fyt4nylc",
+      "id": "8",
+      "bbox": [
+        800,
+        0,
+        0,
+        1080
+      ],
+      "geometry": "line",
+      "lineColor": "#0B2236",
+      "lineWidth": 1
+    },
+    {
+      "order": 9,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/exk3et4r",
+      "id": "9",
+      "bbox": [
+        960,
+        0,
+        0,
+        1080
+      ],
+      "geometry": "line",
+      "lineColor": "#0B2236",
+      "lineWidth": 1
+    },
+    {
+      "order": 10,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/o7uxsf2p",
+      "id": "10",
+      "bbox": [
+        1120,
+        0,
+        0,
+        1080
+      ],
+      "geometry": "line",
+      "lineColor": "#0B2236",
+      "lineWidth": 1
+    },
+    {
+      "order": 11,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ps3elk3a",
+      "id": "11",
+      "bbox": [
+        1280,
+        0,
+        0,
+        1080
+      ],
+      "geometry": "line",
+      "lineColor": "#0B2236",
+      "lineWidth": 1
+    },
+    {
+      "order": 12,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/25sfq5kz",
+      "id": "12",
+      "bbox": [
+        1440,
+        0,
+        0,
+        1080
+      ],
+      "geometry": "line",
+      "lineColor": "#0B2236",
+      "lineWidth": 1
+    },
+    {
+      "order": 13,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/361wjal4",
+      "id": "13",
+      "bbox": [
+        1600,
+        0,
+        0,
+        1080
+      ],
+      "geometry": "line",
+      "lineColor": "#0B2236",
+      "lineWidth": 1
+    },
+    {
+      "order": 14,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/g3axov2t",
+      "id": "14",
+      "bbox": [
+        1760,
+        0,
+        0,
+        1080
+      ],
+      "geometry": "line",
+      "lineColor": "#0B2236",
+      "lineWidth": 1
+    },
+    {
+      "order": 15,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/14jeh03e",
+      "id": "15",
+      "bbox": [
+        1920,
+        0,
+        0,
+        1080
+      ],
+      "geometry": "line",
+      "lineColor": "#0B2236",
+      "lineWidth": 1
+    },
+    {
+      "order": 16,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/e1sfmlkn",
+      "id": "16",
+      "bbox": [
+        0,
+        0,
+        1920,
+        0
+      ],
+      "geometry": "line",
+      "lineColor": "#0B2236",
+      "lineWidth": 1
+    },
+    {
+      "order": 17,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/f21wfql8",
+      "id": "17",
+      "bbox": [
+        0,
+        160,
+        1920,
+        0
+      ],
+      "geometry": "line",
+      "lineColor": "#0B2236",
+      "lineWidth": 1
+    },
+    {
+      "order": 18,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/0zex0z2x",
+      "id": "18",
+      "bbox": [
+        0,
+        320,
+        1920,
+        0
+      ],
+      "geometry": "line",
+      "lineColor": "#0B2236",
+      "lineWidth": 1
+    },
+    {
+      "order": 19,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/l0nyt4ji",
+      "id": "19",
+      "bbox": [
+        0,
+        480,
+        1920,
+        0
+      ],
+      "geometry": "line",
+      "lineColor": "#0B2236",
+      "lineWidth": 1
+    },
+    {
+      "order": 20,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/9gjedkbm",
+      "id": "20",
+      "bbox": [
+        0,
+        640,
+        1920,
+        0
+      ],
+      "geometry": "line",
+      "lineColor": "#0B2236",
+      "lineWidth": 1
+    },
+    {
+      "order": 21,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/8faxkzu1",
+      "id": "21",
+      "bbox": [
+        0,
+        800,
+        1920,
+        0
+      ],
+      "geometry": "line",
+      "lineColor": "#0B2236",
+      "lineWidth": 1
+    },
+    {
+      "order": 22,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/7e1wbutg",
+      "id": "22",
+      "bbox": [
+        0,
+        960,
+        1920,
+        0
+      ],
+      "geometry": "line",
+      "lineColor": "#0B2236",
+      "lineWidth": 1
+    },
+    {
+      "order": 23,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/mdsfipcb",
+      "id": "23",
+      "name": "eyebrow-5",
+      "bbox": [
+        76,
+        34,
+        700,
+        34
+      ],
+      "geometry": "rect",
+      "text": "AGENT ARCHITECTURE / COURSE LOOP",
+      "textPreview": "AGENT ARCHITECTURE / COURSE LOOP",
+      "resolvedFontSize": 18,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 18,
+        "typeface": "+mn-lt",
+        "color": "#8ED6FF",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "middle",
+        "wrap": "square",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "AGENT ARCHITECTURE / COURSE LOOP"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "AGENT ARCHITECTURE / COURSE LOOP",
+          "lineSpacingPercent": 112000,
+          "resolvedTextStyle": {
+            "fontSize": 18,
+            "color": "#8ED6FF",
+            "bold": true,
+            "alignment": "left",
+            "lineSpacing": 1.12
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "AGENT ARCHITECTURE / COURSE LOOP",
+              "fontSize": 18,
+              "color": "#8ED6FF",
+              "bold": true,
+              "alignment": "left",
+              "lineSpacing": 1.12
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 24,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/lcze9kvq",
+      "id": "24",
+      "name": "label-5",
+      "bbox": [
+        1340,
+        34,
+        500,
+        34
+      ],
+      "geometry": "rect",
+      "text": "CONNECTION LAYER / 01:28",
+      "textPreview": "CONNECTION LAYER / 01:28",
+      "resolvedFontSize": 18,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 18,
+        "typeface": "+mn-lt",
+        "color": "#FFD66F",
+        "bold": true,
+        "alignment": "right",
+        "verticalAlignment": "middle",
+        "wrap": "square",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "CONNECTION LAYER / 01:28"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "CONNECTION LAYER / 01:28",
+          "lineSpacingPercent": 112000,
+          "resolvedTextStyle": {
+            "fontSize": 18,
+            "color": "#FFD66F",
+            "bold": true,
+            "alignment": "right",
+            "lineSpacing": 1.12
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "CONNECTION LAYER / 01:28",
+              "fontSize": 18,
+              "color": "#FFD66F",
+              "bold": true,
+              "alignment": "right",
+              "lineSpacing": 1.12
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 25,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/krqxgfu5",
+      "id": "25",
+      "bbox": [
+        76,
+        92,
+        1768,
+        0
+      ],
+      "geometry": "line",
+      "lineColor": "#1B4058",
+      "lineWidth": 1
+    },
+    {
+      "order": 26,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/zqhw7adk",
+      "id": "26",
+      "name": "title-5",
+      "bbox": [
+        92,
+        124,
+        1600,
+        86
+      ],
+      "geometry": "rect",
+      "text": "MCP：把外部能力接得更标准",
+      "textPreview": "MCP：把外部能力接得更标准",
+      "resolvedFontSize": 46,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 46,
+        "typeface": "+mn-lt",
+        "color": "#F7FBFF",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "middle",
+        "wrap": "square",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "MCP：把外部能力接得更标准"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "MCP：把外部能力接得更标准",
+          "lineSpacingPercent": 112000,
+          "resolvedTextStyle": {
+            "fontSize": 46,
+            "color": "#F7FBFF",
+            "bold": true,
+            "alignment": "left",
+            "lineSpacing": 1.12
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "MCP：把外部能力接得更标准",
+              "fontSize": 46,
+              "color": "#F7FBFF",
+              "bold": true,
+              "alignment": "left",
+              "lineSpacing": 1.12
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 27,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/yp8fe5cz",
+      "id": "27",
+      "name": "subtitle-safe-band-5",
+      "bbox": [
+        0,
+        900,
+        1920,
+        180
+      ],
+      "geometry": "rect",
+      "fillColor": "#03101D",
+      "lineWidth": 0
+    },
+    {
+      "order": 28,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/xoze50ve",
+      "id": "28",
+      "bbox": [
+        76,
+        900,
+        1768,
+        0
+      ],
+      "geometry": "line",
+      "lineColor": "#204B6A",
+      "lineWidth": 1
+    },
+    {
+      "order": 29,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/cnqxcvut",
+      "id": "29",
+      "name": "safe-note-5",
+      "bbox": [
+        1500,
+        930,
+        310,
+        26
+      ],
+      "geometry": "rect",
+      "text": "字幕安全区（暂不显示）",
+      "textPreview": "字幕安全区（暂不显示）",
+      "resolvedFontSize": 14,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 14,
+        "typeface": "+mn-lt",
+        "color": "#52718A",
+        "alignment": "right",
+        "verticalAlignment": "middle",
+        "wrap": "square",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "字幕安全区（暂不显示）"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "字幕安全区（暂不显示）",
+          "lineSpacingPercent": 112000,
+          "resolvedTextStyle": {
+            "fontSize": 14,
+            "color": "#52718A",
+            "alignment": "right",
+            "lineSpacing": 1.12
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "字幕安全区（暂不显示）",
+              "fontSize": 14,
+              "color": "#52718A",
+              "alignment": "right",
+              "lineSpacing": 1.12
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 30,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/2t4bm1sr",
+      "id": "30",
+      "name": "explosion",
+      "bbox": [
+        110,
+        380,
+        520,
+        265
+      ],
+      "geometry": "roundRect",
+      "fillColor": "#0A2F4E",
+      "lineColor": "#FFB1B1",
+      "lineWidth": 2
+    },
+    {
+      "order": 31,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/nuxcf69c",
+      "id": "31",
+      "name": "explosion-title",
+      "bbox": [
+        138,
+        402,
+        464,
+        42
+      ],
+      "geometry": "rect",
+      "text": "没有 MCP",
+      "textPreview": "没有 MCP",
+      "resolvedFontSize": 31,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 31,
+        "typeface": "+mn-lt",
+        "color": "#FFB1B1",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "middle",
+        "wrap": "square",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "没有 MCP"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "没有 MCP",
+          "lineSpacingPercent": 112000,
+          "resolvedTextStyle": {
+            "fontSize": 31,
+            "color": "#FFB1B1",
+            "bold": true,
+            "alignment": "left",
+            "lineSpacing": 1.12
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "没有 MCP",
+              "fontSize": 31,
+              "color": "#FFB1B1",
+              "bold": true,
+              "alignment": "left",
+              "lineSpacing": 1.12
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 32,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ov6tobax",
+      "id": "32",
+      "name": "explosion-copy",
+      "bbox": [
+        138,
+        450,
+        464,
+        177
+      ],
+      "geometry": "rect",
+      "text": "GitHub · Slack · Notion · DB\n每接一个，就写一套适配器\nIntegration Explosion",
+      "textPreview": "GitHub · Slack · Notion · DB | 每接一个，就写一套适配器 | Integration Explosion",
+      "resolvedFontSize": 23,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 23,
+        "typeface": "+mn-lt",
+        "color": "#B8C4D2",
+        "alignment": "left",
+        "verticalAlignment": "middle",
+        "wrap": "square",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 3,
+        "lines": [
+          {
+            "index": 1,
+            "text": "GitHub · Slack · Notion · DB"
+          },
+          {
+            "index": 2,
+            "text": "每接一个，就写一套适配器"
+          },
+          {
+            "index": 3,
+            "text": "Integration Explosion"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "GitHub · Slack · Notion · DB",
+          "lineSpacingPercent": 118000,
+          "resolvedTextStyle": {
+            "fontSize": 23,
+            "color": "#B8C4D2",
+            "alignment": "left",
+            "lineSpacing": 1.18
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "GitHub · Slack · Notion · DB",
+              "fontSize": 23,
+              "color": "#B8C4D2",
+              "alignment": "left",
+              "lineSpacing": 1.18
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "每接一个，就写一套适配器",
+          "lineSpacingPercent": 118000,
+          "resolvedTextStyle": {
+            "fontSize": 23,
+            "color": "#B8C4D2",
+            "alignment": "left",
+            "lineSpacing": 1.18
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "每接一个，就写一套适配器",
+              "fontSize": 23,
+              "color": "#B8C4D2",
+              "alignment": "left",
+              "lineSpacing": 1.18
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 3,
+          "text": "Integration Explosion",
+          "lineSpacingPercent": 118000,
+          "resolvedTextStyle": {
+            "fontSize": 23,
+            "color": "#B8C4D2",
+            "alignment": "left",
+            "lineSpacing": 1.18
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Integration Explosion",
+              "fontSize": 23,
+              "color": "#B8C4D2",
+              "alignment": "left",
+              "lineSpacing": 1.18
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 33,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/pwfuhgri",
+      "id": "33",
+      "bbox": [
+        650,
+        463,
+        120,
+        42
+      ],
+      "geometry": "rect",
+      "text": "→",
+      "textPreview": "→",
+      "resolvedFontSize": 34,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 34,
+        "typeface": "+mn-lt",
+        "color": "#8ED6FF",
+        "bold": true,
+        "alignment": "center",
+        "verticalAlignment": "middle",
+        "wrap": "square",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "→"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "→",
+          "lineSpacingPercent": 112000,
+          "resolvedTextStyle": {
+            "fontSize": 34,
+            "color": "#8ED6FF",
+            "bold": true,
+            "alignment": "center",
+            "lineSpacing": 1.12
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "→",
+              "fontSize": 34,
+              "color": "#8ED6FF",
+              "bold": true,
+              "alignment": "center",
+              "lineSpacing": 1.12
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 34,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ep4bi1sv",
+      "id": "34",
+      "name": "client",
+      "bbox": [
+        790,
+        410,
+        330,
+        205
+      ],
+      "geometry": "roundRect",
+      "fillColor": "#0A2F4E",
+      "lineColor": "#FFD66F",
+      "lineWidth": 2
+    },
+    {
+      "order": 35,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/fqdcb6tg",
+      "id": "35",
+      "name": "client-title",
+      "bbox": [
+        818,
+        432,
+        274,
+        42
+      ],
+      "geometry": "rect",
+      "text": "MCP Client",
+      "textPreview": "MCP Client",
+      "resolvedFontSize": 31,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 31,
+        "typeface": "+mn-lt",
+        "color": "#FFD66F",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "middle",
+        "wrap": "square",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "MCP Client"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "MCP Client",
+          "lineSpacingPercent": 112000,
+          "resolvedTextStyle": {
+            "fontSize": 31,
+            "color": "#FFD66F",
+            "bold": true,
+            "alignment": "left",
+            "lineSpacing": 1.12
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "MCP Client",
+              "fontSize": 31,
+              "color": "#FFD66F",
+              "bold": true,
+              "alignment": "left",
+              "lineSpacing": 1.12
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 36,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/0rmtkbal",
+      "id": "36",
+      "name": "client-copy",
+      "bbox": [
+        818,
+        480,
+        274,
+        117
+      ],
+      "geometry": "rect",
+      "text": "统一发现和调用外部能力",
+      "textPreview": "统一发现和调用外部能力",
+      "resolvedFontSize": 22,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 22,
+        "typeface": "+mn-lt",
+        "color": "#B8C4D2",
+        "alignment": "left",
+        "verticalAlignment": "middle",
+        "wrap": "square",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "统一发现和调用外部能力"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "统一发现和调用外部能力",
+          "lineSpacingPercent": 118000,
+          "resolvedTextStyle": {
+            "fontSize": 22,
+            "color": "#B8C4D2",
+            "alignment": "left",
+            "lineSpacing": 1.18
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "统一发现和调用外部能力",
+              "fontSize": 22,
+              "color": "#B8C4D2",
+              "alignment": "left",
+              "lineSpacing": 1.18
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 37,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/1svudwb6",
+      "id": "37",
+      "bbox": [
+        1140,
+        463,
+        120,
+        42
+      ],
+      "geometry": "rect",
+      "text": "→",
+      "textPreview": "→",
+      "resolvedFontSize": 34,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 34,
+        "typeface": "+mn-lt",
+        "color": "#8ED6FF",
+        "bold": true,
+        "alignment": "center",
+        "verticalAlignment": "middle",
+        "wrap": "square",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "→"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "→",
+          "lineSpacingPercent": 112000,
+          "resolvedTextStyle": {
+            "fontSize": 34,
+            "color": "#8ED6FF",
+            "bold": true,
+            "alignment": "center",
+            "lineSpacing": 1.12
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "→",
+              "fontSize": 34,
+              "color": "#8ED6FF",
+              "bold": true,
+              "alignment": "center",
+              "lineSpacing": 1.12
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 38,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/q1kbehsj",
+      "id": "38",
+      "name": "servers",
+      "bbox": [
+        1280,
+        370,
+        500,
+        285
+      ],
+      "geometry": "roundRect",
+      "fillColor": "#0A2F4E",
+      "lineColor": "#8ED6FF",
+      "lineWidth": 2
+    },
+    {
+      "order": 39,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/rmdc7mt4",
+      "id": "39",
+      "name": "servers-title",
+      "bbox": [
+        1308,
+        392,
+        444,
+        42
+      ],
+      "geometry": "rect",
+      "text": "MCP Servers",
+      "textPreview": "MCP Servers",
+      "resolvedFontSize": 31,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 31,
+        "typeface": "+mn-lt",
+        "color": "#8ED6FF",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "middle",
+        "wrap": "square",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "MCP Servers"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "MCP Servers",
+          "lineSpacingPercent": 112000,
+          "resolvedTextStyle": {
+            "fontSize": 31,
+            "color": "#8ED6FF",
+            "bold": true,
+            "alignment": "left",
+            "lineSpacing": 1.12
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "MCP Servers",
+              "fontSize": 31,
+              "color": "#8ED6FF",
+              "bold": true,
+              "alignment": "left",
+              "lineSpacing": 1.12
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 40,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/jed8j2d0",
+      "id": "40",
+      "name": "servers-copy",
+      "bbox": [
+        1308,
+        440,
+        444,
+        197
+      ],
+      "geometry": "rect",
+      "text": "GitHub · Notion · Database",
+      "textPreview": "GitHub · Notion · Database",
+      "resolvedFontSize": 25,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 25,
+        "typeface": "+mn-lt",
+        "color": "#B8C4D2",
+        "alignment": "left",
+        "verticalAlignment": "middle",
+        "wrap": "square",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "GitHub · Notion · Database"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "GitHub · Notion · Database",
+          "lineSpacingPercent": 118000,
+          "resolvedTextStyle": {
+            "fontSize": 25,
+            "color": "#B8C4D2",
+            "alignment": "left",
+            "lineSpacing": 1.18
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "GitHub · Notion · Database",
+              "fontSize": 25,
+              "color": "#B8C4D2",
+              "alignment": "left",
+              "lineSpacing": 1.18
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 41,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/id47axwf",
+      "id": "41",
+      "name": "mcp-interfaces",
+      "bbox": [
+        760,
+        720,
+        540,
+        90
+      ],
+      "geometry": "roundRect",
+      "fillColor": "#0A2F4E",
+      "lineColor": "#FFD66F",
+      "lineWidth": 2
+    },
+    {
+      "order": 42,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/5gfqlsv6",
+      "id": "42",
+      "name": "mcp-interfaces-title",
+      "bbox": [
+        788,
+        742,
+        484,
+        42
+      ],
+      "geometry": "rect",
+      "text": "Tools · Resources · Prompts",
+      "textPreview": "Tools · Resources · Prompts",
+      "resolvedFontSize": 28,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 28,
+        "typeface": "+mn-lt",
+        "color": "#FFD66F",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "middle",
+        "wrap": "square",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Tools · Resources · Prompts"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Tools · Resources · Prompts",
+          "lineSpacingPercent": 112000,
+          "resolvedTextStyle": {
+            "fontSize": 28,
+            "color": "#FFD66F",
+            "bold": true,
+            "alignment": "left",
+            "lineSpacing": 1.12
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Tools · Resources · Prompts",
+              "fontSize": 28,
+              "color": "#FFD66F",
+              "bold": true,
+              "alignment": "left",
+              "lineSpacing": 1.12
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    }
+  ],
+  "composeRuns": []
+}

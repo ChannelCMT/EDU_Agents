@@ -1,0 +1,147 @@
+version: v03
+chapter: 4
+source_of_truth: audio/word-alignment-raw.json
+rule: every spoken sentence/phrase maps to an explicit visual event or a justified
+  voice_only connective
+beats:
+- id: B01
+  sentence_id: S1
+  source_text: Route+Skill 的关键不是让模型自由发挥。
+  semantic_start: 0.0
+  visual_start: 0.12
+  visual_event: c4-title
+  semantic_role: reframe
+  must_be_visible: true
+  forbid_voice_only: true
+  delta: 0.12
+  status: pass
+- id: B02
+  sentence_id: S2
+  source_text: 而是先让意图路由器选中一个 Skill，再执行这项可复用能力。
+  semantic_start: 4.1
+  visual_start: 4.1
+  visual_event: c4-router
+  semantic_role: show_control_path
+  must_be_visible: true
+  forbid_voice_only: true
+  delta: 0.0
+  status: pass
+- id: B03
+  sentence_id: S3
+  source_text: 这样更稳定、更容易缓存，也能用命中率评估效果。
+  semantic_start: 9.46
+  visual_start: 9.46
+  visual_event: c4-cache
+  semantic_role: show_benefit
+  must_be_visible: true
+  forbid_voice_only: true
+  delta: 0.0
+  status: pass
+- id: B04
+  sentence_id: S4
+  source_text: 代价是 Skill 设计成本高，还要处理路由冲突。
+  semantic_start: 13.8
+  visual_start: 13.8
+  visual_event: c4-cost
+  semantic_role: show_cost
+  must_be_visible: true
+  forbid_voice_only: true
+  delta: 0.0
+  status: pass
+- id: B05
+  sentence_id: S5
+  source_text: Blackboard 则让多个 Agent 共同读写一份共享状态。
+  semantic_start: 18.0
+  visual_start: 18.11
+  visual_event: c4b-board
+  semantic_role: introduce_shared_state
+  must_be_visible: true
+  forbid_voice_only: true
+  delta: 0.11
+  status: pass
+- id: B06
+  sentence_id: S6
+  source_text: 状态变化推动下一步执行。
+  semantic_start: 22.56
+  visual_start: 22.56
+  visual_event: c4b-a1
+  semantic_role: show_state_transition
+  must_be_visible: true
+  forbid_voice_only: true
+  delta: 0.0
+  status: pass
+- id: B07
+  sentence_id: S7
+  source_text: 它适合复杂协作，但状态模型、权限和追踪必须先设计好。
+  semantic_start: 24.98
+  visual_start: 24.98
+  visual_event: c4b-warn
+  semantic_role: state_governance
+  must_be_visible: true
+  forbid_voice_only: true
+  delta: 0.0
+  status: pass
+- id: B08
+  sentence_id: S8
+  source_text: 否则出了问题很难定位。
+  semantic_start: 30.42
+  visual_start: 30.42
+  visual_event: c4b-warn
+  semantic_role: close_risk
+  must_be_visible: true
+  forbid_voice_only: true
+  delta: 0.0
+  status: pass
+first_30_seconds_layer_audit:
+  required: false
+  subtitle_band_y:
+  - 900
+  - 1080
+  key_visual_max_y: 870
+  max_unmapped_gap_seconds: 0.8
+  layer_order:
+  - background
+  - title
+  - axes
+  - axis_labels
+  - evolution_line
+  - selection_chips
+  - closing_note
+  - captions
+  axis_direction:
+    origin_y: 812
+    y_axis_top: 530
+    y_axis_bottom: 812
+    arrow: up
+  evolution_panel_bounds:
+    left: 1460
+    top: 210
+    width: 390
+    height: 410
+    max_width: 420
+    max_height: 450
+  evolution_panel_exit:
+    start: 23.1
+    must_finish_before: 23.58
+    reason: leave_axes_and_closing_note_as_primary_visual
+  theme_bounds:
+    label_top: 240
+    title_top: 282
+    subtitle_top: 382
+    bottom_estimate: 440
+    max_bottom: 500
+  theme_axis_clearance:
+    theme_bottom: 440
+    axis_origin_y: 812
+    min_clearance: 250
+  theme_caption_clearance:
+    theme_bottom: 440
+    caption_band_top: 900
+    min_clearance: 400
+  theme_visual_rule: chapter-one theme must remain above the axis origin, outside
+    the subtitle band, and clear of the vertical axis label
+  auxiliary_visual_timing:
+    c1-q2:
+      target_start: 14.0
+      meaning: 拆分与路由在复杂任务的拆分、路由和状态管理语义中出现
+  status: pass

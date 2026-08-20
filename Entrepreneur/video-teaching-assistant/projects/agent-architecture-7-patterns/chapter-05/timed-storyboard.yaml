@@ -1,0 +1,59 @@
+version: v03
+chapter: 5
+canvas:
+- 1920
+- 1080
+safe_caption_band:
+  y_min: 900
+  y_max: 1080
+shots:
+- id: 1
+  anchor: c5-title
+  start: 0.12
+  meaning: Graph Workflow 用图来编排长流程。
+  motion: reveal-then-connect
+- id: 2
+  anchor: c5-graph
+  start: 3.2
+  meaning: 节点代表步骤，边代表条件。
+  motion: reveal-then-connect
+- id: 3
+  anchor: c5-features
+  start: 6.04
+  meaning: 它可以支持分支、并行、回溯和重试。
+  motion: reveal-then-connect
+- id: 4
+  anchor: c5-features
+  start: 10.1
+  meaning: 所以最适合流程自动化和生产环境。
+  motion: reveal-then-connect
+- id: 5
+  anchor: c5c-line
+  start: 14.12
+  meaning: 你可以把七种架构排成一条演进线。
+  motion: reveal-then-connect
+- id: 6
+  anchor: c5c1
+  start: 17.04
+  meaning: 单 Agent 做最小验证，ReAct 做多步探索。
+  motion: reveal-then-connect
+- id: 7
+  anchor: c5c3
+  start: 21.08
+  meaning: Plan and Execute 做工程化，多 Agent 做角色协作。
+  motion: reveal-then-connect
+- id: 8
+  anchor: c5c5
+  start: 25.98
+  meaning: Route+Skill 做精准技能系统，Blackboard 管共享状态，Graph Workflow 承载长流程。
+  motion: reveal-then-connect
+- id: 9
+  anchor: c5-check
+  start: 34.2
+  meaning: 最后用三问做选择：任务有多复杂？哪里必须可控？失败后能不能重试和回滚？
+  motion: reveal-then-connect
+- id: 10
+  anchor: c5-check
+  start: 40.71
+  meaning: 没有最好的架构，只有最合适的架构。
+  motion: reveal-then-connect

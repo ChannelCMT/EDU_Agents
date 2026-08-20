@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=1920, height=1080" />
+  <title>AI Agent 技术栈｜MCP / API / SDK / CLI</title>
+  <script src="../vendor/gsap.min.js"></script>
+  <style>
+    * { box-sizing: border-box; }
+    html, body { margin: 0; background: #06182A; color: #F7FBFF; font-family: "Microsoft YaHei", "Noto Sans SC", sans-serif; }
+    #root { position: relative; width: 1920px; height: 1080px; overflow: hidden; background: #06182A; }
+    .clip { position: absolute; inset: 0; overflow: hidden; }
+    .bg { position:absolute; inset:0; background: radial-gradient(circle at 18% 8%, rgba(42,113,174,.24), transparent 34%), radial-gradient(circle at 88% 82%, rgba(25,72,121,.20), transparent 38%), #06182A; }
+    /* Harness: grid lines are texture, not content. Keep contrast below text-level visibility. */
+    .grid { position:absolute; inset:0; opacity:.045; background-image: linear-gradient(rgba(142,214,255,.16) 1px, transparent 1px), linear-gradient(90deg, rgba(142,214,255,.16) 1px, transparent 1px); background-size:80px 80px; mask-image:linear-gradient(to bottom, rgba(0,0,0,.76), transparent 92%); }
+    .topbar { position:absolute; left:76px; right:76px; top:44px; display:flex; justify-content:space-between; color:#B8C4D2; font-size:22px; letter-spacing:.13em; text-transform:uppercase; }
+    .eyebrow { color:#8ED6FF; font-weight:700; }
+    .chapter { color:#FFD66F; font-weight:700; }
+    .rule { position:absolute; left:76px; right:76px; top:98px; height:1px; background:rgba(142,214,255,.24); transform-origin:left center; }
+    .safe-band { position:absolute; left:0; right:0; bottom:0; height:180px; background:linear-gradient(to top, rgba(3,14,26,.88), rgba(3,14,26,.38)); border-top:1px solid rgba(142,214,255,.12); }
+    .title { position:absolute; left:96px; top:150px; font-size:78px; line-height:1.1; font-weight:800; letter-spacing:-.03em; }
+    .subtitle { position:absolute; left:100px; top:260px; color:#B8C4D2; font-size:30px; line-height:1.35; }
+    .label { position:absolute; color:#8ED6FF; font-size:24px; font-weight:700; letter-spacing:.10em; }
+    .muted { color:#B8C4D2; }
+    .white { color:#F7FBFF; }
+    .blue { color:#8ED6FF; }
+    .yellow { color:#FFD66F; }
+    .gray { color:#B8C4D2; }
+    .panel { position:absolute; border:2px solid rgba(142,214,255,.55); border-radius:22px; background:rgba(10,47,78,.86); box-shadow:0 18px 44px rgba(0,0,0,.25); }
+    .panel.yellow { border-color:rgba(255,214,111,.72); }
+    .panel.green { border-color:rgba(160,230,191,.68); background:rgba(22,65,70,.78); }
+    .panel.red { border-color:rgba(255,152,152,.72); background:rgba(74,30,47,.78); }
+    .panel h3 { margin:0; font-size:34px; line-height:1.15; }
+    .panel p { margin:18px 0 0; color:#B8C4D2; font-size:25px; line-height:1.4; white-space:pre-line; }
+    .node { position:absolute; display:flex; align-items:center; justify-content:center; border-radius:999px; border:3px solid #8ED6FF; background:#0C2B49; color:#F7FBFF; font-weight:750; font-size:28px; box-shadow:0 10px 24px rgba(0,0,0,.25); }
+    .node.yellow { border-color:#FFD66F; color:#FFD66F; }
+    .line { position:absolute; height:4px; background:#8ED6FF; transform-origin:left center; border-radius:3px; }
+    .line::after { content:""; position:absolute; right:-2px; top:-7px; border-left:15px solid #8ED6FF; border-top:9px solid transparent; border-bottom:9px solid transparent; }
+    .vline { position:absolute; width:4px; background:#8ED6FF; transform-origin:top center; }
+    .vline::after { content:""; position:absolute; bottom:-2px; left:-7px; border-top:15px solid #8ED6FF; border-left:9px solid transparent; border-right:9px solid transparent; }
+    .pill { position:absolute; padding:14px 22px; border:2px solid rgba(142,214,255,.55); border-radius:15px; background:rgba(12,43,73,.88); color:#F7FBFF; font-size:25px; font-weight:700; white-space:nowrap; }
+    .pill.yellow { color:#FFD66F; border-color:rgba(255,214,111,.72); }
+    .pill.gray { color:#B8C4D2; border-color:rgba(184,196,210,.52); }
+    .mono { font-family:"JetBrains Mono", Consolas, monospace; }
+    .big-question { position:absolute; left:110px; top:270px; font-size:74px; line-height:1.24; font-weight:800; max-width:1260px; }
+    .word-cloud { position:absolute; left:1150px; top:260px; width:640px; height:380px; }
+    .word { position:absolute; padding:18px 24px; border-radius:17px; border:2px solid rgba(142,214,255,.5); color:#F7FBFF; background:rgba(12,43,73,.82); font-weight:700; font-size:28px; }
+    .word.hot { border-color:#FFD66F; color:#FFD66F; }
+    .layer { position:absolute; left:260px; width:1380px; height:90px; border:2px solid rgba(142,214,255,.48); border-radius:17px; background:rgba(10,47,78,.80); display:flex; align-items:center; padding:0 30px; font-size:28px; font-weight:700; }
+    .layer span { margin-left:auto; color:#B8C4D2; font-size:22px; font-weight:500; }
+    .small { position:absolute; color:#B8C4D2; font-size:22px; }
+    .definition { position:absolute; left:150px; width:1550px; height:54px; display:flex; align-items:center; border-bottom:1px solid rgba(142,214,255,.18); font-size:28px; }
+    .definition b { display:inline-block; width:360px; color:#8ED6FF; }
+    .definition em { color:#B8C4D2; font-style:normal; }
+  </style>
+</head>
+<body>
+<div id="root" data-composition-id="mcp-api-cli-review" data-start="0" data-width="1920" data-height="1080" data-duration="210" data-fps="30" data-subtitle-safe-band="900-1080">
+  <div class="bg"></div><div class="grid"></div><div class="topbar"><span class="eyebrow">AGENT ARCHITECTURE / COURSE LOOP</span><span class="chapter">MCP · API · SDK · CLI · ADK</span></div><div id="rule" class="rule"></div><div class="safe-band"></div>
+
+  <section id="s01" class="clip" data-start="0" data-duration="16" data-track-index="1">
+    <div class="label" style="left:100px;top:165px;">WHY THIS FEELS CONFUSING</div>
+    <div id="s01-title" class="big-question">这 7 个词，<span class="blue">为什么总被混在一起？</span></div>
+    <div id="s01-copy" class="subtitle" style="top:535px;max-width:920px;">它们看起来都和“调用工具”有关，但其实根本不在同一层。</div>
+    <div class="word-cloud">
+      <div id="w-api" class="word" style="left:0;top:30px;">API</div><div id="w-sdk" class="word" style="left:145px;top:110px;">SDK</div><div id="w-cli" class="word hot" style="left:288px;top:30px;">CLI</div>
+      <div id="w-fn" class="word" style="left:60px;top:230px;font-size:22px;">Function Calling</div><div id="w-tool" class="word hot" style="left:320px;top:200px;font-size:22px;">Tool Calling</div><div id="w-mcp" class="word" style="left:445px;top:100px;">MCP</div><div id="w-adk" class="word hot" style="left:445px;top:300px;">ADK</div>
+    </div>
+    <div id="s01-conclusion" class="panel yellow" style="left:100px;top:710px;width:930px;height:110px;padding:25px 34px;"><h3 style="font-size:30px;color:#FFD66F;">先放回地图，再解释每个词</h3></div>
+  </section>
+
+  <section id="s02" class="clip" data-start="16" data-duration="24" data-track-index="1">
+    <div class="label" style="left:100px;top:150px;">THE WHOLE MAP</div><div id="s02-title" class="title" style="top:196px;font-size:64px;">先看总地图，再解释每个词</div>
+    <div id="l1" class="layer" style="top:330px;border-color:#FFD66F;">用户 / Agent 应用<span>任务从这里进入</span></div>
+    <div id="l2" class="layer" style="top:440px;">ADK<span>状态 · 工作流 · 编排</span></div>
+    <div id="l3" class="layer" style="top:550px;">LLM + Tool Calling<span>模型决定何时使用能力</span></div>
+    <div id="l4" class="layer" style="top:660px;">Function Calling / MCP<span>工具机制与标准化连接</span></div>
+    <div id="l5" class="layer" style="top:770px;border-color:#A0E6BF;">API · SDK · CLI · 外部系统<span>能力真正落地的地方</span></div>
+    <div id="s02-arrow" class="vline" style="left:1640px;top:386px;height:420px;"></div>
+  </section>
+
+  <section id="s03" class="clip" data-start="40" data-duration="23" data-track-index="1">
+    <div class="label" style="left:100px;top:150px;">ACCESS LAYER</div><div id="s03-title" class="title" style="top:196px;font-size:64px;">API、SDK、CLI：软件怎样使用能力</div>
+    <div id="api-box" class="panel" style="left:140px;top:470px;width:390px;height:180px;padding:34px;"><h3 class="blue">API</h3><p>程序之间的能力契约</p></div>
+    <div id="sdk-box" class="panel yellow" style="left:765px;top:470px;width:390px;height:180px;padding:34px;"><h3 class="yellow">SDK</h3><p>把认证、重试、错误处理封装起来</p></div>
+    <div id="cli-box" class="panel green" style="left:1390px;top:470px;width:390px;height:180px;padding:34px;"><h3 style="color:#A0E6BF;">CLI</h3><p>人、脚本或 Agent 的终端入口</p></div>
+    <div id="a31" class="line" style="left:535px;top:558px;width:220px;"></div><div id="a32" class="line" style="left:1160px;top:558px;width:220px;"></div>
+    <div id="s03-bottom" class="panel" style="left:360px;top:750px;width:1200px;height:100px;padding:27px 36px;text-align:center;"><h3 style="font-size:30px;color:#F7FBFF;">不是竞争关系：同一个服务的三种使用方式</h3></div>
+  </section>
+
+  <section id="s04" class="clip" data-start="63" data-duration="25" data-track-index="1">
+    <div class="label" style="left:100px;top:150px;">MODEL TOOL LAYER</div><div id="s04-title" class="title" style="top:196px;font-size:60px;">Function Calling 是具体机制，Tool Calling 是总机制</div>
+    <div id="model" class="node yellow" style="left:150px;top:500px;width:250px;height:120px;">LLM</div><div id="request" class="panel" style="left:575px;top:450px;width:380px;height:210px;padding:30px;"><h3>结构化请求</h3><p class="mono">name: get_weather\ncity: Tokyo</p></div><div id="executor" class="panel green" style="left:1135px;top:450px;width:360px;height:210px;padding:30px;"><h3 style="color:#A0E6BF;">Executor</h3><p>应用程序真正执行函数</p></div>
+    <div id="a41" class="line" style="left:405px;top:560px;width:145px;"></div><div id="a42" class="line" style="left:965px;top:560px;width:150px;"></div>
+    <div id="tool-umbrella" class="panel yellow" style="left:270px;top:745px;width:1370px;height:100px;padding:25px 35px;"><h3 style="font-size:30px;color:#FFD66F;">TOOL = Function · Web Search · File Search · Computer · MCP</h3></div>
+    <div id="fn-subset" class="small yellow" style="left:450px;top:695px;">Function 是 Tool 的一种具体形式</div>
+  </section>
+
+  <section id="s05" class="clip" data-start="88" data-duration="27" data-track-index="1">
+    <div class="label" style="left:100px;top:150px;">STANDARDIZED CONNECTION</div><div id="s05-title" class="title" style="top:196px;font-size:64px;">MCP：把外部能力接得更标准</div>
+    <div id="explosion" class="panel red" style="left:120px;top:445px;width:510px;height:260px;padding:34px;"><h3 style="color:#FFB1B1;">没有 MCP</h3><p>GitHub、Slack、Notion、数据库<br>每接一个，就写一套适配器<br><span style="color:#FFB1B1;">Integration Explosion</span></p></div>
+    <div id="mcp-client" class="node yellow" style="left:805px;top:510px;width:300px;height:120px;">MCP Client</div>
+    <div id="server1" class="panel" style="left:1300px;top:365px;width:420px;height:110px;padding:27px;"><h3 style="font-size:28px;">GitHub MCP Server</h3></div><div id="server2" class="panel" style="left:1300px;top:520px;width:420px;height:110px;padding:27px;"><h3 style="font-size:28px;">Notion MCP Server</h3></div><div id="server3" class="panel green" style="left:1300px;top:675px;width:420px;height:110px;padding:27px;"><h3 style="font-size:28px;color:#A0E6BF;">Database MCP Server</h3></div>
+    <div id="mcp-a1" class="line" style="left:1110px;top:570px;width:170px;"></div><div id="mcp-a2" class="line" style="left:1160px;top:570px;width:170px;transform:rotate(-36deg);"></div><div id="mcp-a3" class="line" style="left:1160px;top:570px;width:170px;transform:rotate(36deg);"></div>
+    <div id="mcp-tools" class="pill yellow" style="left:745px;top:740px;">Tools · Resources · Prompts</div>
+  </section>
+
+  <section id="s06" class="clip" data-start="115" data-duration="25" data-track-index="1">
+    <div class="label" style="left:100px;top:150px;">LAYER RELATIONSHIP</div><div id="s06-title" class="title" style="top:196px;font-size:64px;">MCP 不取代 API，ADK 也不是另一种接口</div>
+    <div id="adk-box" class="panel yellow" style="left:150px;top:390px;width:530px;height:350px;padding:38px;"><h3 class="yellow" style="font-size:44px;">ADK</h3><p>Agent Development Kit\n\n状态 · 工作流 · 回调\n多 Agent · 评测</p></div>
+    <div id="mcp-box" class="panel" style="left:770px;top:390px;width:420px;height:350px;padding:38px;"><h3 class="blue" style="font-size:44px;">MCP</h3><p>统一发现和调用\n\nTools · Resources · Prompts</p></div>
+    <div id="under-box" class="panel green" style="left:1280px;top:390px;width:430px;height:350px;padding:38px;"><h3 style="color:#A0E6BF;font-size:38px;">API / SDK / CLI</h3><p>真正执行能力\n\n数据库 · 文件 · 服务</p></div>
+    <div id="s06-note" class="panel" style="left:420px;top:785px;width:1100px;height:80px;padding:21px;text-align:center;"><h3 style="font-size:28px;">MCP 解决“怎么接工具”，ADK 解决“怎么组织 Agent”</h3></div>
+  </section>
+
+  <section id="s07" class="clip" data-start="140" data-duration="30" data-track-index="1">
+    <div class="label" style="left:100px;top:150px;">ONE REAL TASK</div><div id="s07-title" class="title" style="top:196px;font-size:64px;">一个订单案例串起全部层级</div>
+    <div id="order-user" class="panel yellow" style="left:110px;top:465px;width:320px;height:160px;padding:30px;"><h3 class="yellow">用户</h3><p>查订单 123<br>未发货就退款</p></div>
+    <div id="order-adk" class="panel" style="left:570px;top:465px;width:320px;height:160px;padding:30px;"><h3>ADK</h3><p>组织流程</p></div>
+    <div id="order-llm" class="panel" style="left:1030px;top:465px;width:320px;height:160px;padding:30px;"><h3>LLM</h3><p>选择查询工具</p></div>
+    <div id="order-stack" class="panel green" style="left:1490px;top:400px;width:320px;height:290px;padding:30px;"><h3 style="color:#A0E6BF;">MCP / SDK / API</h3><p>读取订单数据库\n\n返回 pending\n\n执行 refund</p></div>
+    <div id="oa1" class="line" style="left:435px;top:545px;width:120px;"></div><div id="oa2" class="line" style="left:895px;top:545px;width:120px;"></div><div id="oa3" class="line" style="left:1355px;top:545px;width:120px;"></div>
+    <div id="order-result" class="panel" style="left:520px;top:750px;width:880px;height:90px;padding:23px;text-align:center;"><h3 style="font-size:30px;color:#A0E6BF;">退款完成 → 返回用户</h3></div>
+  </section>
+
+  <section id="s08" class="clip" data-start="170" data-duration="24" data-track-index="1">
+    <div class="label" style="left:100px;top:150px;">SEVEN SENTENCES</div><div id="s08-title" class="title" style="top:196px;font-size:64px;">七句话，记住它们的位置</div>
+    <div id="d1" class="definition" style="top:335px;"><b>API</b><em>软件之间的能力契约</em></div><div id="d2" class="definition" style="top:395px;"><b>SDK</b><em>让开发者更方便地使用 API</em></div><div id="d3" class="definition" style="top:455px;"><b>CLI</b><em>让人或脚本通过命令行操作软件</em></div><div id="d4" class="definition" style="top:515px;"><b>Function Calling</b><em>让模型产生结构化函数请求</em></div><div id="d5" class="definition" style="top:575px;"><b>Tool Calling</b><em>模型选择并使用外部能力的总机制</em></div><div id="d6" class="definition" style="top:635px;"><b>MCP</b><em>让 AI 用统一协议连接工具和数据</em></div><div id="d7" class="definition" style="top:695px;"><b>ADK</b><em>把模型、工具、状态和流程组织成完整 Agent</em></div>
+  </section>
+
+  <section id="s09" class="clip" data-start="194" data-duration="16" data-track-index="1">
+    <div class="label" style="left:100px;top:155px;">PUT IT BACK ON THE MAP</div><div id="s09-title" class="title" style="top:205px;font-size:68px;">以后先问：<span class="blue">它属于哪一层？</span></div>
+    <div id="q1" class="panel" style="left:150px;top:440px;width:430px;height:180px;padding:34px;"><h3>01</h3><p>它属于哪一层？</p></div><div id="q2" class="panel yellow" style="left:745px;top:440px;width:430px;height:180px;padding:34px;"><h3 class="yellow">02</h3><p>它连接的是谁？</p></div><div id="q3" class="panel green" style="left:1340px;top:440px;width:430px;height:180px;padding:34px;"><h3 style="color:#A0E6BF;">03</h3><p>解决调用、连接，还是编排？</p></div>
+    <div id="s09-final" class="panel" style="left:330px;top:735px;width:1260px;height:100px;padding:28px;text-align:center;"><h3 style="font-size:32px;">放回这张地图，AI Agent 技术栈就清楚了。</h3></div>
+  </section>
+</div>
+<script>
+window.__timelines = window.__timelines || {};
+const tl = gsap.timeline({ paused: true });
+tl.fromTo('#rule', {scaleX:0}, {scaleX:1, duration:.7, ease:'power3.out'}, 0.1);
+// Scene 01 — hook first, terms second, conclusion last.
+tl.fromTo('#s01-title', {opacity:0, y:32}, {opacity:1, y:0, duration:.65, ease:'expo.out'}, .2);
+tl.fromTo('#s01-copy', {opacity:0, x:-28}, {opacity:1, x:0, duration:.5, ease:'power2.out'}, 4.8);
+tl.fromTo(['#w-api','#w-sdk','#w-cli','#w-fn','#w-tool','#w-mcp','#w-adk'], {opacity:0, scale:.78}, {opacity:1, scale:1, duration:.32, ease:'back.out(1.5)', stagger:.35}, 6.0);
+tl.fromTo('#s01-conclusion', {opacity:0, y:22}, {opacity:1, y:0, duration:.45, ease:'power2.out'}, 11.2);
+// Scene 02 — layered map reveals top to bottom.
+tl.fromTo(['#l1','#l2','#l3','#l4','#l5'], {opacity:0, x:38}, {opacity:1, x:0, duration:.45, ease:'power2.out', stagger:.55}, 16.3);
+tl.fromTo('#s02-title', {opacity:0, y:24}, {opacity:1, y:0, duration:.55, ease:'expo.out'}, 16.15);
+tl.fromTo('#s02-arrow', {scaleY:0}, {scaleY:1, duration:.9, ease:'power3.out'}, 18.1);
+// Scene 03 — three access paths.
+tl.fromTo('#s03-title', {opacity:0, x:-35}, {opacity:1, x:0, duration:.55, ease:'expo.out'}, 40.15);
+tl.fromTo(['#api-box','#sdk-box','#cli-box'], {opacity:0, y:30}, {opacity:1, y:0, duration:.45, ease:'power2.out', stagger:.5}, 42.0);
+tl.fromTo(['#a31','#a32'], {scaleX:0}, {scaleX:1, duration:.48, ease:'power3.out', stagger:.35}, 43.6);
+tl.fromTo('#s03-bottom', {opacity:0, y:20}, {opacity:1, y:0, duration:.45, ease:'power2.out'}, 57.5);
+// Scene 04 — model asks, application executes, tool umbrella expands.
+tl.fromTo('#s04-title', {opacity:0, y:24}, {opacity:1, y:0, duration:.55, ease:'expo.out'}, 63.1);
+tl.fromTo(['#model','#request','#executor'], {opacity:0, y:28}, {opacity:1, y:0, duration:.45, ease:'power2.out', stagger:.45}, 65.0);
+tl.fromTo(['#a41','#a42'], {scaleX:0}, {scaleX:1, duration:.42, ease:'power3.out', stagger:.3}, 66.3);
+tl.fromTo('#tool-umbrella', {opacity:0, y:24}, {opacity:1, y:0, duration:.5, ease:'power2.out'}, 76.7);
+tl.fromTo('#fn-subset', {opacity:0}, {opacity:1, duration:.35}, 83.5);
+// Scene 05 — integration explosion collapses into MCP.
+tl.fromTo('#s05-title', {opacity:0, y:24}, {opacity:1, y:0, duration:.55, ease:'expo.out'}, 88.1);
+tl.fromTo('#explosion', {opacity:0, scale:.88}, {opacity:1, scale:1, duration:.55, ease:'back.out(1.5)'}, 90.0);
+tl.fromTo('#mcp-client', {opacity:0, scale:.78}, {opacity:1, scale:1, duration:.55, ease:'back.out(1.5)'}, 96.0);
+tl.to('#explosion', {opacity:.28, x:-24, duration:.45, ease:'sine.in'}, 97.0);
+tl.fromTo(['#server1','#server2','#server3'], {opacity:0, x:40}, {opacity:1, x:0, duration:.42, ease:'power2.out', stagger:.45}, 101.0);
+tl.fromTo(['#mcp-a1','#mcp-a2','#mcp-a3'], {scaleX:0}, {scaleX:1, duration:.38, ease:'power3.out', stagger:.22}, 103.0);
+tl.fromTo('#mcp-tools', {opacity:0, y:18}, {opacity:1, y:0, duration:.42, ease:'power2.out'}, 109.0);
+// Scene 06 — layer relationship.
+tl.fromTo('#s06-title', {opacity:0, y:24}, {opacity:1, y:0, duration:.55, ease:'expo.out'}, 115.1);
+tl.fromTo(['#adk-box','#mcp-box','#under-box'], {opacity:0, y:28}, {opacity:1, y:0, duration:.48, ease:'power2.out', stagger:.5}, 117.0);
+tl.fromTo('#s06-note', {opacity:0, y:18}, {opacity:1, y:0, duration:.45, ease:'power2.out'}, 133.0);
+// Scene 07 — one order task traverses every layer.
+tl.fromTo('#s07-title', {opacity:0, y:24}, {opacity:1, y:0, duration:.55, ease:'expo.out'}, 140.1);
+tl.fromTo(['#order-user','#order-adk','#order-llm','#order-stack'], {opacity:0, y:28}, {opacity:1, y:0, duration:.44, ease:'power2.out', stagger:.48}, 142.0);
+tl.fromTo(['#oa1','#oa2','#oa3'], {scaleX:0}, {scaleX:1, duration:.4, ease:'power3.out', stagger:.3}, 144.0);
+tl.fromTo('#order-result', {opacity:0, y:18}, {opacity:1, y:0, duration:.45, ease:'power2.out'}, 161.0);
+// Scene 08 — memory cards.
+tl.fromTo('#s08-title', {opacity:0, y:24}, {opacity:1, y:0, duration:.55, ease:'expo.out'}, 170.1);
+tl.fromTo(['#d1','#d2','#d3','#d4','#d5','#d6','#d7'], {opacity:0, x:-20}, {opacity:1, x:0, duration:.3, ease:'power2.out', stagger:.36}, 171.5);
+// Scene 09 — closing questions.
+tl.fromTo('#s09-title', {opacity:0, y:24}, {opacity:1, y:0, duration:.55, ease:'expo.out'}, 194.1);
+tl.fromTo(['#q1','#q2','#q3'], {opacity:0, y:22}, {opacity:1, y:0, duration:.42, ease:'power2.out', stagger:.48}, 196.0);
+tl.fromTo('#s09-final', {opacity:0, y:18}, {opacity:1, y:0, duration:.45, ease:'power2.out'}, 204.0);
+window.__timelines['mcp-api-cli-review'] = tl;
+</script>
+</body>
+</html>

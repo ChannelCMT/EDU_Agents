@@ -1,0 +1,23 @@
+schema_version: "1.0"
+source_video: "publish-package/video/agent-architecture-7-patterns_v15_harness-audit_subtitled.mp4"
+source_alignment: "audio/word-alignment-raw.json"
+style_version: "course-video-caption-v15-word-aligned"
+style:
+  font_size_px: 52
+  minimum_font_size_px: 48
+  one_line: true
+  visible_characters: [5, 14]
+  target_start_offset_ms: -50
+  max_alignment_error_ms: 80
+  background_rgba: [12, 43, 73, 184]
+captions:
+  srt: "publish-package/captions/agent-architecture-7-patterns.srt"
+  vtt: "publish-package/captions/agent-architecture-7-patterns.vtt"
+  cue_count: 110
+  short_exact_terms_allowed: ["容易跑偏"]
+gate:
+  exact_spoken_sequence: true
+  timing_pass: true
+  segmentation_pass: true
+  mobile_preview_pass: true
+  harness_audit_v05_pass: true

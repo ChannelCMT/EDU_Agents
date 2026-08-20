@@ -1,0 +1,110 @@
+version: v05
+chapter: 2
+voice: Channel科技解说员
+delivery_profile: 稳重底色 + 句内对比 + 关键名词重读 + 结论落点
+generic_plan_rejected: true
+sentences:
+- sentence_id: S1
+  source_text: 单 Agent 就是一个大模型包揽输入、思考、调用工具和输出。
+  delivery_intent: define_single_agent
+  energy_1_to_5: 4
+  pace: clear
+  emphasis_terms:
+  - 单 Agent
+  - 输入
+  - 输出
+  pause_after_ms: 120
+  breath_points:
+  - 输入
+  - 思考
+  - 工具
+  - 输出
+  pronunciation: use canonical terminology.yaml spelling; no ASR variant in display
+  visual_sync: c2-input
+  audio_window:
+  - 0.0
+  - 4.94
+- sentence_id: S2
+  source_text: 它简单、便宜、延迟低，适合做概念验证和简单对话。
+  delivery_intent: show_fit
+  energy_1_to_5: 3
+  pace: light
+  emphasis_terms:
+  - 简单
+  - 便宜
+  - 延迟低
+  pause_after_ms: 180
+  breath_points:
+  - 概念验证
+  pronunciation: use canonical terminology.yaml spelling; no ASR variant in display
+  visual_sync: c2-output
+  audio_window:
+  - 4.94
+  - 10.18
+- sentence_id: S3
+  source_text: 一旦任务变复杂，模型容易认知过载，出现上下文污染。
+  delivery_intent: warn
+  energy_1_to_5: 4
+  pace: tighten_then_warn
+  emphasis_terms:
+  - 认知过载
+  - 上下文污染
+  pause_after_ms: 260
+  breath_points:
+  - 一旦任务变复杂
+  pronunciation: use canonical terminology.yaml spelling; no ASR variant in display
+  visual_sync: c2-warn
+  audio_window:
+  - 10.18
+  - 15.26
+- sentence_id: S4
+  source_text: ReAct 把过程变成 Reason 加 Action 的循环：思考、行动、观察，再决定下一步。
+  delivery_intent: introduce_loop
+  energy_1_to_5: 5
+  pace: stepwise
+  emphasis_terms:
+  - ReAct
+  - Reason
+  - Action
+  - 观察
+  pause_after_ms: 180
+  breath_points:
+  - 循环
+  pronunciation: use canonical terminology.yaml spelling; no ASR variant in display
+  visual_sync: c2r-loop
+  audio_window:
+  - 15.26
+  - 18.98
+- sentence_id: S5
+  source_text: 它比单 Agent 更适合多步探索，也更容易解释过程。
+  delivery_intent: compare
+  energy_1_to_5: 4
+  pace: confident
+  emphasis_terms:
+  - 多步探索
+  - 解释过程
+  pause_after_ms: 160
+  breath_points:
+  - 多步探索
+  pronunciation: use canonical terminology.yaml spelling; no ASR variant in display
+  visual_sync: c2r-loop
+  audio_window:
+  - 18.98
+  - 26.82
+- sentence_id: S6
+  source_text: 但 Token 消耗大、容易跑偏，不适合直接承担大规模生产流程。
+  delivery_intent: state_boundary
+  energy_1_to_5: 4
+  pace: slow_warning
+  emphasis_terms:
+  - Token
+  - 跑偏
+  - 生产流程
+  pause_after_ms: 280
+  breath_points:
+  - 大规模生产流程
+  pronunciation: use canonical terminology.yaml spelling; no ASR variant in display
+  visual_sync: c2r-cost
+  audio_window:
+  - 26.82
+  - 32.388

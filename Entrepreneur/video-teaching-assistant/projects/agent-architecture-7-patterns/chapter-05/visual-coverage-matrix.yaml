@@ -1,0 +1,606 @@
+version: v05
+chapter: 5
+source_caption_file: captions/captions.json
+rule: one caption cue -> one explicit visual event; named claims and cost/risk phrases
+  cannot be voice_only
+rows:
+- caption_id: C001
+  text: Graph Workflow
+  word_evidence:
+    source: audio/word-alignment-raw.json
+    word_start: 0.0
+    word_end: 1.0
+    raw_words:
+    - G
+    - raph
+    - ' Work'
+    - flow
+    target_window:
+    - 0.0
+    - 1.0
+  visual_event_ids:
+  - c5-title
+  coverage: visual_event
+  voice_only_reason: null
+  status: pass
+- caption_id: C002
+  text: 用图来编排长流程
+  word_evidence:
+    source: audio/word-alignment-raw.json
+    word_start: 1.5
+    word_end: 3.2
+    raw_words:
+    - ' 用'
+    - 图
+    - 来
+    - 编
+    - 排
+    - 残
+    - 流
+    - 程
+    target_window:
+    - 1.5
+    - 3.2
+  visual_event_ids:
+  - c5-title
+  coverage: visual_event
+  voice_only_reason: null
+  status: pass
+- caption_id: C003
+  text: 节点代表步骤
+  word_evidence:
+    source: audio/word-alignment-raw.json
+    word_start: 3.2
+    word_end: 4.8
+    raw_words:
+    - 节
+    - 点
+    - 代
+    - 表
+    - 步
+    - 骤
+    target_window:
+    - 3.2
+    - 4.8
+  visual_event_ids:
+  - c5-graph
+  coverage: visual_event
+  voice_only_reason: null
+  status: pass
+- caption_id: C004
+  text: 边代表条件
+  word_evidence:
+    source: audio/word-alignment-raw.json
+    word_start: 5.12
+    word_end: 6.04
+    raw_words:
+    - ' 编'
+    - 代
+    - 表
+    - 条
+    - 件
+    target_window:
+    - 5.12
+    - 6.04
+  visual_event_ids:
+  - c5-features
+  coverage: visual_event
+  voice_only_reason: null
+  status: pass
+- caption_id: C005
+  text: 它可以支持分支
+  word_evidence:
+    source: audio/word-alignment-raw.json
+    word_start: 6.04
+    word_end: 7.98
+    raw_words:
+    - 它
+    - 可以
+    - 支持
+    - 分
+    - 支
+    target_window:
+    - 6.04
+    - 7.98
+  visual_event_ids:
+  - c5-features
+  coverage: visual_event
+  voice_only_reason: null
+  status: pass
+- caption_id: C006
+  text: 并行、回溯和重试
+  word_evidence:
+    source: audio/word-alignment-raw.json
+    word_start: 8.26
+    word_end: 10.1
+    raw_words:
+    - ' 并'
+    - 行
+    - ' 回'
+    - 数
+    - ' 和'
+    - 重
+    - 视
+    target_window:
+    - 8.26
+    - 10.1
+  visual_event_ids:
+  - c5-features
+  coverage: visual_event
+  voice_only_reason: null
+  status: pass
+- caption_id: C007
+  text: 所以最适合流程
+  word_evidence:
+    source: audio/word-alignment-raw.json
+    word_start: 10.1
+    word_end: 11.92
+    raw_words:
+    - 所以
+    - 最
+    - 适
+    - 合
+    - 流
+    - 程
+    target_window:
+    - 10.1
+    - 11.92
+  visual_event_ids:
+  - c5-features
+  coverage: visual_event
+  voice_only_reason: null
+  status: pass
+- caption_id: C008
+  text: 自动化和生产环境
+  word_evidence:
+    source: audio/word-alignment-raw.json
+    word_start: 11.92
+    word_end: 13.46
+    raw_words:
+    - 自
+    - 动
+    - 化
+    - 和
+    - 生
+    - 产
+    - 环
+    - 境
+    target_window:
+    - 11.92
+    - 13.46
+  visual_event_ids:
+  - c5-features
+  coverage: visual_event
+  voice_only_reason: null
+  status: pass
+- caption_id: C009
+  text: 你可以把七种架构
+  word_evidence:
+    source: audio/word-alignment-raw.json
+    word_start: 14.0
+    word_end: 15.68
+    raw_words:
+    - 你可以
+    - 把
+    - 七
+    - 种
+    - 架
+    - 构
+    target_window:
+    - 14.0
+    - 15.68
+  visual_event_ids:
+  - c5c-line
+  coverage: visual_event
+  voice_only_reason: null
+  status: pass
+- caption_id: C010
+  text: 排成一条演进线
+  word_evidence:
+    source: audio/word-alignment-raw.json
+    word_start: 15.68
+    word_end: 17.04
+    raw_words:
+    - 排
+    - 成
+    - 一
+    - 条
+    - 演
+    - 进
+    - 线
+    target_window:
+    - 15.68
+    - 17.04
+  visual_event_ids:
+  - c5c1
+  coverage: visual_event
+  voice_only_reason: null
+  status: pass
+- caption_id: C011
+  text: 单 Agent 做最小验证
+  word_evidence:
+    source: audio/word-alignment-raw.json
+    word_start: 17.04
+    word_end: 18.96
+    raw_words:
+    - 单
+    - A
+    - gent
+    - 做
+    - 最
+    - 小
+    - 验
+    - 证
+    target_window:
+    - 17.04
+    - 18.96
+  visual_event_ids:
+  - c5c1
+  coverage: visual_event
+  voice_only_reason: null
+  status: pass
+- caption_id: C012
+  text: ReAct 做多步探索
+  word_evidence:
+    source: audio/word-alignment-raw.json
+    word_start: 18.96
+    word_end: 21.08
+    raw_words:
+    - Re
+    - act
+    - ' 做'
+    - 多
+    - 部
+    - 探
+    - 索
+    target_window:
+    - 18.96
+    - 21.08
+  visual_event_ids:
+  - c5c1
+  coverage: visual_event
+  voice_only_reason: null
+  status: pass
+- caption_id: C013
+  text: Plan and
+  word_evidence:
+    source: audio/word-alignment-raw.json
+    word_start: 21.08
+    word_end: 22.04
+    raw_words:
+    - P
+    - lan
+    - ' and'
+    target_window:
+    - 21.08
+    - 22.04
+  visual_event_ids:
+  - c5c3
+  coverage: visual_event
+  voice_only_reason: null
+  status: pass
+- caption_id: C014
+  text: Execute 做工程化
+  word_evidence:
+    source: audio/word-alignment-raw.json
+    word_start: 22.04
+    word_end: 23.9
+    raw_words:
+    - ' Exec'
+    - ute
+    - ' 做'
+    - 工
+    - 程
+    - 化
+    target_window:
+    - 22.04
+    - 23.9
+  visual_event_ids:
+  - c5c3
+  coverage: visual_event
+  voice_only_reason: null
+  status: pass
+- caption_id: C015
+  text: Multi-Agent
+  word_evidence:
+    source: audio/word-alignment-raw.json
+    word_start: 23.9
+    word_end: 24.76
+    raw_words:
+    - 多
+    - A
+    - gent
+    target_window:
+    - 23.9
+    - 24.76
+  visual_event_ids:
+  - c5c5
+  coverage: visual_event
+  voice_only_reason: null
+  status: pass
+- caption_id: C016
+  text: 做角色协作
+  word_evidence:
+    source: audio/word-alignment-raw.json
+    word_start: 24.96
+    word_end: 25.98
+    raw_words:
+    - ' 做'
+    - 角
+    - 色
+    - 协
+    - 作
+    target_window:
+    - 24.96
+    - 25.98
+  visual_event_ids:
+  - c5c5
+  coverage: visual_event
+  voice_only_reason: null
+  status: pass
+- caption_id: C017
+  text: Route+Skill
+  word_evidence:
+    source: audio/word-alignment-raw.json
+    word_start: 25.98
+    word_end: 27.14
+    raw_words:
+    - R
+    - oute
+    - ' Skill'
+    target_window:
+    - 25.98
+    - 27.14
+  visual_event_ids:
+  - c5c5
+  coverage: visual_event
+  voice_only_reason: null
+  status: pass
+- caption_id: C018
+  text: 做精准技能系统
+  word_evidence:
+    source: audio/word-alignment-raw.json
+    word_start: 27.5
+    word_end: 28.8
+    raw_words:
+    - ' 做'
+    - 精
+    - 准
+    - 技
+    - 能
+    - 系
+    - 统
+    target_window:
+    - 27.5
+    - 28.8
+  visual_event_ids:
+  - c5c5
+  coverage: visual_event
+  voice_only_reason: null
+  status: pass
+- caption_id: C019
+  text: Blackboard
+  word_evidence:
+    source: audio/word-alignment-raw.json
+    word_start: 28.8
+    word_end: 29.7
+    raw_words:
+    - Black
+    - board,
+    target_window:
+    - 28.8
+    - 29.7
+  visual_event_ids:
+  - c5c5
+  coverage: visual_event
+  voice_only_reason: null
+  status: pass
+- caption_id: C020
+  text: 管共享状态
+  word_evidence:
+    source: audio/word-alignment-raw.json
+    word_start: 30.0
+    word_end: 31.06
+    raw_words:
+    - 管
+    - 共
+    - 享
+    - 状
+    - 态,
+    target_window:
+    - 30.0
+    - 31.06
+  visual_event_ids:
+  - c5c5
+  coverage: visual_event
+  voice_only_reason: null
+  status: pass
+- caption_id: C021
+  text: Graph Workflow
+  word_evidence:
+    source: audio/word-alignment-raw.json
+    word_start: 31.34
+    word_end: 32.22
+    raw_words:
+    - G
+    - raph
+    - work
+    - P
+    - o,
+    target_window:
+    - 31.34
+    - 32.22
+  visual_event_ids:
+  - c5-check
+  coverage: visual_event
+  voice_only_reason: null
+  status: pass
+- caption_id: C022
+  text: 承载长流程
+  word_evidence:
+    source: audio/word-alignment-raw.json
+    word_start: 32.54
+    word_end: 33.58
+    raw_words:
+    - 承
+    - 载
+    - 长
+    - 流
+    - 程。
+    target_window:
+    - 32.54
+    - 33.58
+  visual_event_ids:
+  - c5-check
+  coverage: visual_event
+  voice_only_reason: null
+  status: pass
+- caption_id: C023
+  text: 最后用三问做选择
+  word_evidence:
+    source: audio/word-alignment-raw.json
+    word_start: 34.12
+    word_end: 35.74
+    raw_words:
+    - 最
+    - 后
+    - 用
+    - 三
+    - 问
+    - 做
+    - 选
+    target_window:
+    - 34.12
+    - 35.74
+  visual_event_ids:
+  - c5-check
+  coverage: visual_event
+  voice_only_reason: null
+  status: pass
+- caption_id: C024
+  text: 任务有多复杂
+  word_evidence:
+    source: audio/word-alignment-raw.json
+    word_start: 36.24
+    word_end: 37.36
+    raw_words:
+    - 任
+    - 务
+    - 有
+    - 多
+    - 复
+    - 杂,
+    target_window:
+    - 36.24
+    - 37.36
+  visual_event_ids:
+  - c5-check
+  coverage: visual_event
+  voice_only_reason: null
+  status: pass
+- caption_id: C025
+  text: 哪里必须可控
+  word_evidence:
+    source: audio/word-alignment-raw.json
+    word_start: 37.62
+    word_end: 38.64
+    raw_words:
+    - 哪
+    - 里
+    - 必
+    - 须
+    - 可
+    - 控,
+    target_window:
+    - 37.62
+    - 38.64
+  visual_event_ids:
+  - c5-check
+  coverage: visual_event
+  voice_only_reason: null
+  status: pass
+- caption_id: C026
+  text: 失败后能不能
+  word_evidence:
+    source: audio/word-alignment-raw.json
+    word_start: 38.96
+    word_end: 39.92
+    raw_words:
+    - 失
+    - 败
+    - 后
+    - 能
+    - 不能
+    target_window:
+    - 38.96
+    - 39.92
+  visual_event_ids:
+  - c5-check
+  coverage: visual_event
+  voice_only_reason: null
+  status: pass
+- caption_id: C027
+  text: 重试和回滚
+  word_evidence:
+    source: audio/word-alignment-raw.json
+    word_start: 39.92
+    word_end: 41.04
+    raw_words:
+    - 重
+    - 视
+    - 和
+    - 回
+    - 滚,
+    target_window:
+    - 39.92
+    - 41.04
+  visual_event_ids:
+  - c5-check
+  coverage: visual_event
+  voice_only_reason: null
+  status: pass
+- caption_id: C028
+  text: 没有最好的架构
+  word_evidence:
+    source: audio/word-alignment-raw.json
+    word_start: 41.38
+    word_end: 42.28
+    raw_words:
+    - 没有
+    - 最
+    - 好的
+    - 架
+    target_window:
+    - 41.38
+    - 42.28
+  visual_event_ids:
+  - c5-check
+  coverage: visual_event
+  voice_only_reason: null
+  status: pass
+- caption_id: C029
+  text: 只有最合适的架构
+  word_evidence:
+    source: audio/word-alignment-raw.json
+    word_start: 42.74
+    word_end: 44.26
+    raw_words:
+    - 只有
+    - 最
+    - 合
+    - 适
+    - 的
+    - 架
+    - 构。
+    target_window:
+    - 42.74
+    - 44.26
+  visual_event_ids:
+  - c5-check
+  coverage: visual_event
+  voice_only_reason: null
+  status: pass
+gate:
+  cue_count: 29
+  all_cues_covered: true
+  status: pass

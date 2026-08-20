@@ -1,0 +1,78 @@
+version: v03
+chapter: 5
+duration_seconds: 44.5874375
+audio_timing_source: audio/chapter-final.wav
+sentence_level_source: semantic-beat-manifest.yaml
+offset_policy: visual entry may lead by 150ms and lag by 120ms
+static_gap_max_seconds: 1.4
+anchors:
+- id: 1
+  name: c5-title
+  semantic_start: 0.0
+  visual_start: 0.12
+  meaning: Graph Workflow 用图来编排长流程。
+  delta: 0.0
+  status: pass
+- id: 2
+  name: c5-graph
+  semantic_start: 3.2
+  visual_start: 3.2
+  meaning: 节点代表步骤，边代表条件。
+  delta: 0.0
+  status: pass
+- id: 3
+  name: c5-features
+  semantic_start: 6.04
+  visual_start: 6.04
+  meaning: 它可以支持分支、并行、回溯和重试。
+  delta: 0.0
+  status: pass
+- id: 4
+  name: c5-features
+  semantic_start: 10.1
+  visual_start: 10.1
+  meaning: 所以最适合流程自动化和生产环境。
+  delta: 0.0
+  status: pass
+- id: 5
+  name: c5c-line
+  semantic_start: 14.0
+  visual_start: 14.12
+  meaning: 你可以把七种架构排成一条演进线。
+  delta: 0.0
+  status: pass
+- id: 6
+  name: c5c1
+  semantic_start: 17.04
+  visual_start: 17.04
+  meaning: 单 Agent 做最小验证，ReAct 做多步探索。
+  delta: 0.0
+  status: pass
+- id: 7
+  name: c5c3
+  semantic_start: 21.08
+  visual_start: 21.08
+  meaning: Plan and Execute 做工程化，多 Agent 做角色协作。
+  delta: 0.0
+  status: pass
+- id: 8
+  name: c5c5
+  semantic_start: 25.98
+  visual_start: 25.98
+  meaning: Route+Skill 做精准技能系统，Blackboard 管共享状态，Graph Workflow 承载长流程。
+  delta: 0.0
+  status: pass
+- id: 9
+  name: c5-check
+  semantic_start: 34.12
+  visual_start: 34.2
+  meaning: 最后用三问做选择：任务有多复杂？哪里必须可控？失败后能不能重试和回滚？
+  delta: 0.0
+  status: pass
+- id: 10
+  name: c5-check
+  semantic_start: 40.71
+  visual_start: 40.71
+  meaning: 没有最好的架构，只有最合适的架构。
+  delta: 0.0
+  status: pass

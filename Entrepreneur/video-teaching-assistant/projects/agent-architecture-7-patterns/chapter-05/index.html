@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=1920, height=1080" />
+<title>Agent 架构选型｜第 5 章</title>
+<script src="vendor/gsap.min.js"></script>
+<style>@font-face { font-family: "Microsoft YaHei"; src: local("Microsoft YaHei"); } @font-face { font-family: "Noto Sans SC"; src: local("Noto Sans SC"); }
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; background: #06182A; color: #F7FBFF; font-family: "Microsoft YaHei", "Noto Sans SC", sans-serif; }
+#root { position: relative; width: 1920px; height: 1080px; overflow: hidden; background: #06182A; }
+.clip { position: absolute; inset: 0; display: block; overflow: hidden; }
+.fill { position: absolute; inset: 0; background: #06182A; }
+.grid { position: absolute; inset: 0; opacity: .09; background-image: linear-gradient(rgba(142,214,255,.32) 1px, transparent 1px), linear-gradient(90deg, rgba(142,214,255,.32) 1px, transparent 1px); background-size: 80px 80px; mask-image: linear-gradient(to bottom, rgba(0,0,0,.8), transparent 88%); }
+.glow { position: absolute; border-radius: 50%; filter: blur(10px); }
+.glow.a { width: 720px; height: 720px; left: -220px; top: -280px; background: radial-gradient(circle, rgba(45,124,196,.28), transparent 70%); }
+.glow.b { width: 680px; height: 680px; right: -240px; bottom: -260px; background: radial-gradient(circle, rgba(44,101,162,.24), transparent 72%); }
+.topbar { position: absolute; left: 76px; right: 76px; top: 50px; display: flex; justify-content: space-between; align-items: center; color: #B8C4D2; font-size: 22px; letter-spacing: .12em; text-transform: uppercase; }
+.eyebrow { color: #8ED6FF; font-weight: 700; }
+.chapter-no { color: #FFD66F; font-weight: 700; }
+.rule { position: absolute; left: 76px; right: 76px; top: 104px; height: 2px; background: rgba(142,214,255,.35); transform-origin: left center; }
+.title { position: absolute; left: 96px; top: 142px; max-width: 1250px; font-size: 76px; line-height: 1.08; font-weight: 800; letter-spacing: -.025em; }
+.subtitle { position: absolute; left: 100px; top: 240px; color: #B8C4D2; font-size: 30px; line-height: 1.3; }
+.section-label { position: absolute; color: #8ED6FF; font-size: 24px; letter-spacing: .08em; font-weight: 700; }
+.panel { position: absolute; border: 2px solid rgba(142,214,255,.5); border-radius: 24px; background: rgba(10,47,78,.86); box-shadow: 0 20px 50px rgba(0,0,0,.28); }
+.panel.warm { border-color: rgba(255,214,111,.62); }
+.panel.alert { border-color: rgba(255,152,152,.66); background: rgba(74,30,47,.78); }
+.panel.green { border-color: rgba(160,230,191,.65); background: rgba(22,65,70,.78); }
+.panel-title { color: #F7FBFF; font-size: 34px; font-weight: 750; }
+.panel-copy { color: #B8C4D2; font-size: 25px; line-height: 1.38; white-space: pre-line; }
+.node { position: absolute; display: flex; align-items: center; justify-content: center; border-radius: 999px; border: 3px solid #8ED6FF; color: #F7FBFF; background: #0C2B49; font-size: 27px; font-weight: 750; box-shadow: 0 12px 24px rgba(0,0,0,.25); }
+.node.hot { border-color: #FFD66F; color: #FFD66F; }
+.node.done { border-color: #A0E6BF; color: #A0E6BF; }
+.arrow { position: absolute; height: 4px; background: #8ED6FF; transform-origin: left center; border-radius: 2px; }
+.arrow::after { content: ""; position: absolute; right: -2px; top: -7px; border-left: 15px solid #8ED6FF; border-top: 9px solid transparent; border-bottom: 9px solid transparent; }
+.chip { position: absolute; padding: 14px 22px; border-radius: 14px; border: 2px solid rgba(142,214,255,.48); color: #F7FBFF; background: rgba(12,43,73,.88); font-size: 24px; font-weight: 700; }
+.chip.hot { color: #FFD66F; border-color: rgba(255,214,111,.68); }
+.chip.gray { color: #B8C4D2; border-color: rgba(184,196,210,.44); }
+.metric { position: absolute; color: #8ED6FF; font-family: "JetBrains Mono", monospace; font-size: 22px; letter-spacing: .08em; }
+.caption { position: absolute; top: auto; left: 220px; right: 220px; bottom: 46px; height: 76px; display: flex; align-items: center; justify-content: center; padding: 0 28px; border-radius: 16px; border: 2px solid rgba(142,214,255,.48); background: rgba(12,43,73,.72); color: #FFFFFF; font-size: 36px; font-weight: 650; white-space: nowrap; text-align: center; box-shadow: 0 10px 26px rgba(0,0,0,.22); }
+.caption span { display: block; }
+.caption-safe-line { position: absolute; left: 76px; right: 76px; bottom: 150px; height: 2px; background: rgba(184,196,210,.15); }
+.small-note { position: absolute; color: #B8C4D2; font-size: 22px; }
+.axis { position: absolute; background: rgba(142,214,255,.66); transform-origin: left center; }
+.axis.x { height: 3px; }
+.axis.y { width: 3px; transform-origin: center bottom; }
+.axis.x::after { content: ""; position: absolute; right: -2px; top: -7px; border-left: 15px solid rgba(142,214,255,.66); border-top: 9px solid transparent; border-bottom: 9px solid transparent; }
+.axis.y::after { content: ""; position: absolute; left: -7px; top: -15px; border-bottom: 15px solid rgba(142,214,255,.66); border-left: 9px solid transparent; border-right: 9px solid transparent; }
+.axis-label { position: absolute; color: #B8C4D2; font-size: 24px; font-weight: 700; }
+.loop { position: absolute; border: 4px solid #8ED6FF; border-radius: 50%; }
+.loop-arrow { position: absolute; width: 0; height: 0; border-left: 20px solid #FFD66F; border-top: 12px solid transparent; border-bottom: 12px solid transparent; }
+.state-line { position: absolute; height: 2px; background: rgba(142,214,255,.45); }
+.state-dot { position: absolute; width: 18px; height: 18px; border-radius: 50%; background: #8ED6FF; box-shadow: 0 0 24px rgba(142,214,255,.8); }
+</style>
+</head>
+<body>
+<div id="root" data-composition-id="agent-architecture-ch05" data-start="0" data-width="1920" data-height="1080" data-duration="44.587" data-fps="30" data-subtitle-safe-band="900-1080">
+  <div class="fill"></div><div id="grid" class="grid"></div><div id="glow-a" class="glow a"></div><div id="glow-b" class="glow b"></div>
+  <div class="topbar"><span class="eyebrow">AGENT ARCHITECTURE / COURSE LOOP</span><span class="chapter-no">CHAPTER 05 / 05</span></div>
+  <div id="rule" class="rule"></div><div class="caption-safe-line"></div>
+  <audio id="narration" src="audio/chapter-final.wav" data-start="0" data-duration="44.587" data-track-index="10" data-volume="1"></audio>
+
+  <section id="c5-graph" class="clip" data-start="0" data-duration="13.819" data-track-index="1">
+    <div class="section-label" style="left:100px;top:160px;">07 / GRAPH WORKFLOW</div><div id="c5-title" class="title" style="top:210px;">用图，把长流程变成可治理的系统</div>
+    <div id="c5-n1" class="node hot" style="left:260px;top:500px;width:210px;height:110px;">输入</div><div id="c5-n2" class="node" style="left:620px;top:360px;width:210px;height:110px;">计划</div><div id="c5-n3" class="node" style="left:620px;top:640px;width:210px;height:110px;">执行</div><div id="c5-n4" class="node done" style="left:1020px;top:500px;width:210px;height:110px;">验证</div><div id="c5-n5" class="node" style="left:1450px;top:500px;width:210px;height:110px;">交付</div>
+    <div id="c5-a1" class="arrow" style="left:472px;top:540px;width:135px;transform:rotate(-22deg);"></div><div id="c5-a2" class="arrow" style="left:472px;top:575px;width:135px;transform:rotate(22deg);"></div><div id="c5-a3" class="arrow" style="left:835px;top:420px;width:185px;transform:rotate(21deg);"></div><div id="c5-a4" class="arrow" style="left:835px;top:690px;width:185px;transform:rotate(-21deg);"></div><div id="c5-a5" class="arrow" style="left:1232px;top:548px;width:200px;"></div>
+    <div id="c5-features" class="panel green" style="left:1280px;top:760px;width:520px;height:120px;padding:28px;"><div class="panel-title" style="font-size:29px;">分支 · 并行 · 回溯 · 重试</div></div>
+  </section>
+  <section id="c5-choice" class="clip" style="opacity:0" data-start="13.999" data-duration="30.588" data-track-index="1">
+    <div class="section-label" style="left:100px;top:160px;">THE EVOLUTION LINE</div><div id="c5c-title" class="title" style="top:210px;">七种架构，七个控制层级</div>
+    <div id="c5c-line" class="state-line" style="left:180px;right:180px;top:500px;"></div>
+    <div id="c5c1" class="node" style="left:150px;top:445px;width:180px;height:110px;">单 Agent</div><div id="c5c2" class="node" style="left:390px;top:445px;width:180px;height:110px;">ReAct</div><div id="c5c3" class="node" style="left:630px;top:445px;width:180px;height:110px;">Plan</div><div id="c5c4" class="node" style="left:870px;top:445px;width:180px;height:110px;">Multi</div><div id="c5c5" class="node" style="left:1110px;top:445px;width:180px;height:110px;">Skill</div><div id="c5c6" class="node" style="left:1350px;top:445px;width:180px;height:110px;">Blackboard</div><div id="c5c7" class="node hot" style="left:1590px;top:445px;width:180px;height:110px;">Graph</div>
+    <div id="c5-check" class="panel" style="left:250px;top:700px;width:1420px;height:160px;padding:28px 40px;"><div class="panel-title" style="font-size:32px;">三问：任务有多复杂？哪里必须可控？失败后能否重试和回滚？</div></div>
+  </section>
+
+</div>
+<script>
+window.__timelines = window.__timelines || {};
+const tl = gsap.timeline({ paused: true });
+tl.to("#glow-a", {scale: 1.12, opacity: .85, duration: 43.587, ease: "sine.inOut"}, 0);
+tl.to("#glow-b", {scale: 1.08, opacity: .78, duration: 43.087, ease: "sine.inOut"}, 0.4);
+tl.fromTo("#rule", {scaleX: 0}, {scaleX: 1, duration: .65, ease: "power3.out"}, .12);
+
+tl.to("#c5-graph", {opacity:0, duration:.01, ease:"none"}, 13.999);
+tl.fromTo("#c5-choice", {opacity:0}, {opacity:1, duration:.01, ease:"none"}, 13.999);
+tl.fromTo("#c5-title", {opacity:0, y:30}, {opacity:1, y:0, duration:.6, ease:"expo.out"}, .12);
+tl.fromTo(["#c5-n1","#c5-n2","#c5-n3","#c5-n4","#c5-n5"], {opacity:0, scale:.72}, {opacity:1, scale:1, duration:.45, ease:"back.out(1.45)", stagger:.34}, 1.6);
+tl.fromTo(["#c5-a1","#c5-a2","#c5-a3","#c5-a4","#c5-a5"], {scaleX:0}, {scaleX:1, duration:.35, ease:"expo.out", stagger:.22}, 6.04);
+tl.fromTo("#c5-features", {opacity:0, y:24}, {opacity:1, y:0, duration:.5, ease:"power2.out"}, 10.10);
+tl.fromTo("#c5c-title", {opacity:0, x:-40}, {opacity:1, x:0, duration:.58, ease:"power3.out"}, 14.12);
+tl.fromTo("#c5c-line", {scaleX:0}, {scaleX:1, duration:.6, ease:"power2.out"}, 15.2);
+tl.fromTo("#c5c1", {opacity:0, y:28}, {opacity:1, y:0, duration:.38, ease:"power2.out"}, 15.90);
+tl.fromTo("#c5c2", {opacity:0, y:28}, {opacity:1, y:0, duration:.38, ease:"power2.out"}, 19.12);
+tl.fromTo("#c5c3", {opacity:0, y:28}, {opacity:1, y:0, duration:.38, ease:"power2.out"}, 21.18);
+tl.fromTo("#c5c4", {opacity:0, y:28}, {opacity:1, y:0, duration:.38, ease:"power2.out"}, 23.24);
+tl.fromTo("#c5c5", {opacity:0, y:28}, {opacity:1, y:0, duration:.38, ease:"power2.out"}, 26.10);
+tl.fromTo("#c5c6", {opacity:0, y:28}, {opacity:1, y:0, duration:.38, ease:"power2.out"}, 28.40);
+tl.fromTo("#c5c7", {opacity:0, y:28}, {opacity:1, y:0, duration:.38, ease:"power2.out"}, 30.80);
+tl.fromTo("#c5-check", {opacity:0, y:28}, {opacity:1, y:0, duration:.55, ease:"back.out(1.2)"}, 34.20);
+
+window.__timelines["agent-architecture-ch05"] = tl;
+</script>
+</body></html>

@@ -1,0 +1,15 @@
+schema_version: "1.0"
+chapter: {{CHAPTER_NUMBER}}
+scenes:
+  - id: "SCENE-01"
+    start: 0.000
+    end: 0.000
+    spoken_intent: "TODO"
+    primary_visual: "TODO"
+    elements:
+      - id: "TODO"
+        enter: 0.000
+        hold_until: 0.000
+        exit: 0.000
+        motion: "TODO"
+    subtitle_safe: false

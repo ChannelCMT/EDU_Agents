@@ -1,0 +1,27 @@
+flowchart TD
+    A[原始视频/文稿/课件] --> B[素材清单 + 转录 + 术语]
+    B --> C[课程拆章 + SCRIPT]
+    C --> D[语气规划 + 读音]
+    D --> E[Fish Audio 最终配音]
+    E --> F[逐词对齐]
+    F --> G[semantic anchor plan]
+    G --> H[semantic timing manifest]
+    H --> I[15–20秒对齐试片]
+    I --> J{语义/布局通过?}
+    J -->|否| K[修最小 artifact]
+    K --> F
+    J -->|是| L[Terra 实现整章动画]
+    L --> M[逐章 MP4 审核]
+    M --> N[字幕 Harness]
+    N --> O[五章合并 + 媒体检查]
+    O --> P[横竖封面 + 发布文案]
+    P --> Q[发布反馈写回 Harness]
+    Q --> B
+
+    X[Luna Ultra: 内容/语义/审查] -.-> C
+    X -.-> G
+    Y[Terra High: 实现/渲染/修复] -.-> L
+    Z[SOL: 两轮未决冲突裁决] -.-> K
+    T[工具链: ASR/TTS/HyperFrames/FFmpeg] -.-> E
+    T -.-> F
+    T -.-> N

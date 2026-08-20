@@ -1,0 +1,174 @@
+schema_version: "1.0"
+name: "course-video-master-harness"
+scope: "source-to-publish"
+
+content:
+  canonical_script_per_chapter: 1
+  script_version_required: true
+  audience_must_be_locked: true
+  one_primary_teaching_task_per_scene: true
+  claims_must_have_boundary_or_source: true
+  vague_requirements_forbidden:
+    - "做得更好"
+    - "代码规范一点"
+    - "动画高级一点"
+  requirement_schema: ["check_object", "pass_standard", "failure_action", "evidence_or_rollback"]
+
+voice:
+  timing_source_of_truth: "final_approved_voice_track"
+  require_before_animation_seconds: ["voice-manifest.yaml", "audio_meta.json", "word-alignment.yaml"]
+  same_sentence_single_voice: true
+  approve_mandarin_naturalness: true
+  terminology_pronunciation_locked: true
+  regenerate_smallest_failed_segment: true
+  voice_ids_and_training_audio_public: false
+  tone_plan_sentence_level_required: true
+  tone_plan_required_fields: [sentence_id, source_text, delivery_intent, energy_1_to_5, pace, emphasis_terms, pause_after_ms, breath_points, pronunciation, visual_sync]
+  generic_tone_plan_forbidden: true
+  opening_hook:
+    first_window_seconds: 5
+    must_start_with: ["audience_tension_or_question", "plain_language_reframe"]
+    unfamiliar_architecture_terms_forbidden: true
+    script_visual_copy_must_match: true
+    hook_checkpoint_required: true
+
+semantic_animation:
+  one_cue_one_primary_visual: true
+  anchor_kinds: ["segment", "term", "action", "turn"]
+  max_early_seconds: 0.15
+  max_late_seconds: 0.12
+  max_semantically_static_seconds: 1.4
+  turn_requires_state_change: true
+  estimated_seconds_before_final_audio_forbidden: true
+  old_timeline_layers_must_be_removed: true
+  pilot_seconds: [15, 20]
+  sentence_level_beat_manifest_required: true
+  visual_coverage_matrix_required: true
+  every_caption_cue_requires_visual_event_or_voice_only_reason: true
+  voice_only_forbidden_for_claims_and_named_terms: true
+  first_30_seconds_layer_audit_required: true
+  first_30_seconds_max_unmapped_gap_seconds: 0.8
+  animation_claim_requires_explicit_object: true
+  theme_visual_layer_audit_required: true
+  theme_visual_layer_rules:
+    - "chapter_one_theme_group_must_clear_axis_origin_by_at_least_250px"
+    - "chapter_one_theme_group_must_clear_subtitle_band_by_at_least_400px"
+    - "chapter_one_theme_group_must_not_overlap_axis_label_or_graph_panel"
+    - "audit_source_bounds_and_rendered_frame_bounds"
+  rendered_frame_geometry_required: true
+  rendered_frame_checkpoints_seconds: [0, 3, 5, 14, 19, 24, 28]
+  forbidden_intersections: ["title_subtitle", "title_graph", "graph_caption_band", "caption_key_visual"]
+  source_regex_checks_are_insufficient: true
+
+visual_style:
+  canvas: [1920, 1080]
+  background: "#06182A"
+  primary_highlight: "#8ED6FF"
+  primary_text: "#FFFFFF"
+  secondary_text: "#B8C4D2"
+  limited_accent: "#FFD66F"
+  grid: "small_and_subtle"
+  title_min_px: 54
+  body_min_px: 24
+  key_node_min_px: 26
+  max_primary_structures_per_scene: 1
+  max_auxiliary_cards_per_scene: 3
+  forbid: ["content_overlap", "text_overflow", "panel_out_of_canvas", "arrow_through_card"]
+  utf8_only: true
+
+subtitle_safe_zone:
+  band_y: [900, 1080]
+  key_visual_max_y: 870
+  buffer_px: 30
+  check_animation_intermediate_frames: true
+  root_attribute: "data-subtitle-safe-band=900-1080"
+
+subtitles:
+  source: "final_chapter_audio_word_alignment"
+  timing_source_required: "word-alignment-raw.json"
+  proportional_timing_forbidden: true
+  word_evidence_required: true
+  exact_spoken_sequence: true
+  allowed_display_changes: ["punctuation", "approved_english_capitalization"]
+  one_line: true
+  visible_characters: [5, 14]
+  never_split_english_word: true
+  never_leave_incomplete_verb_object_phrase: true
+  target_start_offset_ms: -50
+  max_word_alignment_error_ms: 80
+  segment_local_time_normalization_required: true
+  cue_timebase: "global"
+  cue_start_end_must_track_word_evidence: true
+  cue_overlap_forbidden: true
+  first_cue_start_max_ms: 10
+  single_group_at_a_time: true
+  font_family: "Microsoft YaHei Bold"
+  font_size_px: 52
+  minimum_font_size_px: 48
+  text_color: "#FFFFFF"
+  background:
+    type: "semi_transparent_layer"
+    rgba: [18, 58, 88, 145]
+    preserve_underlying_ppt: true
+    forbid_opaque_fill: true
+  border_rgba: [173, 225, 255, 190]
+  mobile_scale_review: true
+
+digital_human:
+  default_use: "chapter_intro_or_closing_only"
+  intro_seconds: [3, 8]
+  allow_multiple_visible_segments_per_chapter: false
+  lipsync_audio_must_match_final_voice: true
+  external_video_audio_stream_check: true
+  final_mix_voice_stream_count: 1
+  if_external_clip_contains_audio: "strip_or_mute_before_composition"
+
+render:
+  render_chapter_before_full_merge: true
+  machine_checks_required: ["runtime", "layout", "motion", "contrast", "media_streams"]
+  human_checks_required: ["listen_and_watch", "transition_frames", "mobile_scale"]
+  final_video_codec: "h264"
+  final_audio_codec: "aac"
+  final_media_report_required: true
+  overwrite_frozen_output_forbidden: true
+
+parallelization:
+  safe_fan_out_after: "S08_alignment_pilot"
+  unit_of_parallelism: "chapter"
+  max_concurrent_chapters: 3
+  shared_inputs_frozen_before_fan_out: ["SCRIPT.md", "tone-plan.yaml", "final_audio", "word-alignment.yaml", "semantic-timing-manifest.yaml", "visual-style.yaml"]
+  chapter_scoped_stages: ["S05_voice_generation", "S06_word_alignment", "S07_storyboard_mapping", "S09_motion_implementation", "S10_chapter_render", "S11_subtitles"]
+  fan_in_stage: "S12_merge_and_media_qa"
+  immutable_artifact_root: "chapter-XX"
+  forbidden_shared_writes: ["final-course-video.mp4", "publish-package/video", "audio/final-narration.wav"]
+  retry_scope: "failed_chapter_or_failed_sentence_only"
+
+cover:
+  ratios: ["4:3", "3:4"]
+  normalized_landscape_canvas: [1440, 1080]
+  minimum_outer_margin_percent: 4
+  rightmost_graphic_clearance_px: 56
+  use_visual_bounding_box: ["stroke", "shadow", "glow", "arrow_head"]
+  forbidden_intersections: ["text_graphic", "graphic_border", "text_accent_bar", "card_arrow"]
+  exact_copy_no_unexpected_wrap: true
+  previews_required: ["100_percent", "platform_crop"]
+
+publish:
+  required_files: ["final-course-video.mp4", "cover-4x3.png", "cover-3x4.png", "publish-copy.md", "release-manifest.yaml"]
+  copy_fields: ["title", "short_description", "body", "hashtags", "pinned_comment"]
+  public_sanitization_required: true
+
+loop:
+  classify_issue_as: ["content", "voice", "timing", "layout", "subtitle", "media", "cover", "publish"]
+  repair_order: ["smallest_artifact", "scene", "chapter", "full_video"]
+  verify_with: ["machine_gate", "targeted_frame_or_audio_check", "human_review"]
+  archive_failed_versions: true
+  archive_directory: "PastUselessDoc"
+  sol_after_same_conflict_failures: 2
+  no_symptom_only_patch: true
+  failed_gate_must_point_to_source_artifact: true
+
+privacy_and_repository:
+  forbid_commit: ["api_tokens", "private_voice_ids", "training_audio", "avatar_source_video", "unlicensed_media", "large_renders"]
+  use_relative_paths: true
+  env_example_only: true

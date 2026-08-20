@@ -1,0 +1,49 @@
+version: v03
+chapter: 4
+canvas:
+- 1920
+- 1080
+safe_caption_band:
+  y_min: 900
+  y_max: 1080
+shots:
+- id: 1
+  anchor: c4-title
+  start: 0.12
+  meaning: Route+Skill 的关键不是让模型自由发挥。
+  motion: reveal-then-connect
+- id: 2
+  anchor: c4-router
+  start: 4.1
+  meaning: 而是先让意图路由器选中一个 Skill，再执行这项可复用能力。
+  motion: reveal-then-connect
+- id: 3
+  anchor: c4-cache
+  start: 9.46
+  meaning: 这样更稳定、更容易缓存，也能用命中率评估效果。
+  motion: reveal-then-connect
+- id: 4
+  anchor: c4-cost
+  start: 13.8
+  meaning: 代价是 Skill 设计成本高，还要处理路由冲突。
+  motion: reveal-then-connect
+- id: 5
+  anchor: c4b-board
+  start: 18.11
+  meaning: Blackboard 则让多个 Agent 共同读写一份共享状态。
+  motion: reveal-then-connect
+- id: 6
+  anchor: c4b-a1
+  start: 22.56
+  meaning: 状态变化推动下一步执行。
+  motion: reveal-then-connect
+- id: 7
+  anchor: c4b-warn
+  start: 24.98
+  meaning: 它适合复杂协作，但状态模型、权限和追踪必须先设计好。
+  motion: reveal-then-connect
+- id: 8
+  anchor: c4b-warn
+  start: 30.42
+  meaning: 否则出了问题很难定位。
+  motion: reveal-then-connect

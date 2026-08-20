@@ -1,0 +1,35 @@
+version: "v01"
+project: "mcp_api_cli"
+status: "review_ready"
+reference_video: "C:/Users/HI/Documents/ABC_E/Course1/HarnessEngineeringPPT/courseVedio/projects/agent-architecture-7-patterns/chapter-01/renders/chapter-01_v14_harness-audit_subtitled.mp4"
+reference_frames_checked: [5, 15, 25]
+scope:
+  script: "ready_for_owner_review"
+  ppt: "ready_for_owner_review"
+  hyperframes: "draft_ready_for_owner_review"
+  audio: "not_started"
+  subtitles: "not_started"
+  mp4: "not_started_by_request"
+checks:
+  pptx_export: pass
+  pptx_slide_render: pass
+  pptx_overflow_test: pass
+  pptx_min_font_gate: pass
+  subtitle_safe_band_reserved: pass
+  hyperframes_root_contract: pass
+  hyperframes_duration_seconds: 210
+  hyperframes_clip_count: 9
+  hyperframes_timeline_registered: true
+  background_grid_contrast_gate: pass
+  top_divider_contrast_gate: pass
+  video_master_background_match: pass
+  first_five_second_hook: pass
+  unfamiliar_terms_delayed: pass
+  one_scene_one_claim: pass
+review_points:
+  - "开场是否足够抓人，是否保留‘为什么总被混在一起’的问题张力"
+  - "总地图的层级是否一眼可读"
+  - "Function Calling ⊂ Tool Calling 的关系是否清楚"
+  - "MCP 与 API 的关系是否没有被误解成替代关系"
+  - "订单案例是否能把七个概念串在同一条链上"
+next_gate: "owner_approval_before_voice_and_render"

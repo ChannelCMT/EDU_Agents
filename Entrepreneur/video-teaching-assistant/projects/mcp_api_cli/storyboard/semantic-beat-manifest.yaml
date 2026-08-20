@@ -1,0 +1,139 @@
+version: "v01"
+project: "mcp_api_cli"
+duration_seconds: 210
+format: "1920x1080"
+style: "course-video-dark-blue-light-blue-white-gray-yellow"
+subtitle_safe_band: {top: 900, bottom: 1080}
+scenes:
+  - id: "S01_hook"
+    time: [0.0, 16.0]
+    title: "这 7 个词，为什么总被混在一起？"
+    claim: "它们不是并列概念，而是分属不同层级。"
+    spoken_text: "你是不是也遇到过这种情况：刚开始做 Agent，就被 API、SDK、CLI、MCP、Function Calling、Tool Calling、ADK 这几个词绕晕。"
+    visual_sequence:
+      - at: 0.0
+        action: "show question and seven terms as a loose cluster"
+      - at: 5.0
+        action: "separate terms into four horizontal layers"
+      - at: 11.0
+        action: "highlight conclusion: 不在同一层"
+  - id: "S02_map"
+    time: [16.0, 40.0]
+    title: "先看总地图，再解释每个词"
+    claim: "Agent 技术栈是一条分层调用链。"
+    visual_sequence:
+      - at: 16.0
+        action: "show User → Agent Application"
+      - at: 20.0
+        action: "reveal ADK and LLM"
+      - at: 25.0
+        action: "reveal Tool Calling with two branches"
+      - at: 31.0
+        action: "reveal API/SDK/CLI and MCP branch"
+      - at: 37.0
+        action: "merge to external services"
+  - id: "S03_access_layer"
+    time: [40.0, 63.0]
+    title: "API、SDK、CLI：软件怎样使用能力"
+    claim: "三者是同一个服务的不同入口。"
+    visual_sequence:
+      - at: 40.0
+        action: "API: Program → API → Service"
+      - at: 48.0
+        action: "SDK wraps auth/retry/json into one client call"
+      - at: 55.0
+        action: "CLI: Human/Script → command → Service"
+      - at: 60.0
+        action: "three paths converge on same service"
+  - id: "S04_model_layer"
+    time: [63.0, 88.0]
+    title: "Function Calling 是具体机制，Tool Calling 是总机制"
+    claim: "模型先提出调用请求，应用再执行能力。"
+    visual_sequence:
+      - at: 63.0
+        action: "LLM outputs function name + arguments"
+      - at: 71.0
+        action: "Executor runs function and returns result"
+      - at: 78.0
+        action: "expand Tool umbrella: Function / Search / File / MCP"
+      - at: 85.0
+        action: "highlight Function ⊂ Tool"
+  - id: "S05_mcp"
+    time: [88.0, 115.0]
+    title: "MCP：把外部能力接得更标准"
+    claim: "MCP 解决的是连接方式，不是替代 API。"
+    visual_sequence:
+      - at: 88.0
+        action: "show integration explosion: N clients × N services"
+      - at: 96.0
+        action: "collapse adapters into MCP Client"
+      - at: 103.0
+        action: "reveal MCP Servers for GitHub/Notion/Database"
+      - at: 109.0
+        action: "expand Tools / Resources / Prompts"
+  - id: "S06_layers"
+    time: [115.0, 140.0]
+    title: "MCP 不取代 API，ADK 也不是另一种接口"
+    claim: "MCP 在连接层，ADK 在 Agent 编排层。"
+    visual_sequence:
+      - at: 115.0
+        action: "show MCP Server → API/SDK/CLI/DB/Files"
+      - at: 123.0
+        action: "place ADK above LLM and tools"
+      - at: 130.0
+        action: "reveal State / Workflow / Callback / Multi-Agent"
+      - at: 137.0
+        action: "lock two conclusions"
+  - id: "S07_case"
+    time: [140.0, 170.0]
+    title: "一个订单案例串起全部层级"
+    claim: "一个真实任务会穿过多个层级，而不是选择其中一个。"
+    visual_sequence:
+      - at: 140.0
+        action: "user asks check order 123 and refund if pending"
+      - at: 146.0
+        action: "ADK orchestrates; LLM selects tool"
+      - at: 153.0
+        action: "MCP/SDK/API reads order database"
+      - at: 161.0
+        action: "refund tool executes and returns result"
+      - at: 168.0
+        action: "show full chain as one highlighted route"
+  - id: "S08_memory"
+    time: [170.0, 194.0]
+    title: "七句话，记住它们的位置"
+    claim: "每个词只回答一个核心问题。"
+    visual_sequence:
+      - at: 170.0
+        action: "reveal seven concise definitions one by one"
+      - at: 187.0
+        action: "arrange definitions back on the layered map"
+  - id: "S09_close"
+    time: [194.0, 210.0]
+    title: "以后先问：它属于哪一层？"
+    claim: "用层级、连接对象和问题类型判断技术。"
+    visual_sequence:
+      - at: 194.0
+        action: "show three questions: 层级 / 连接谁 / 解决什么"
+      - at: 203.0
+        action: "zoom out to complete architecture map"
+      - at: 208.0
+        action: "hold final title and map"
+
+qa_gates:
+  opening:
+    first_five_seconds_must_include: "你是不是也遇到过"
+    forbidden_in_first_five_seconds: ["ReAct", "Multi-Agent", "架构排行榜"]
+  visual:
+    min_title_px: 50
+    min_body_px: 24
+    subtitle_band: "900-1080"
+    forbidden_intersections: ["title_graph", "graph_caption", "caption_key_visual", "node_node"]
+  semantic:
+    every_scene_has_one_claim: true
+    every_spoken_sentence_has_primary_visual: true
+    first_visual_beat_lead_seconds: 0.05
+  output:
+    review_only: true
+    render_mp4: false
+

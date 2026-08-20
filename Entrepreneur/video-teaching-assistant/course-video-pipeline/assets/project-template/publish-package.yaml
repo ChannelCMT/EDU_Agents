@@ -1,0 +1,17 @@
+schema_version: "1.0"
+title: "TODO"
+short_description: "TODO"
+body: "TODO"
+hashtags: []
+pinned_comment: "TODO"
+files:
+  final_video: "TODO"
+  cover_4x3: "TODO"
+  cover_3x4: "TODO"
+  media_report: "TODO"
+checks:
+  copy_matches_cover: false
+  bounding_boxes_pass: false
+  platform_crop_pass: false
+  public_sanitization_pass: false
+  owner_approved: false

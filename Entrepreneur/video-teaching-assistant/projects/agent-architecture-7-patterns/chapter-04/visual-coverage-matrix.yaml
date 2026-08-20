@@ -1,0 +1,400 @@
+version: v05
+chapter: 4
+source_caption_file: captions/captions.json
+rule: one caption cue -> one explicit visual event; named claims and cost/risk phrases
+  cannot be voice_only
+rows:
+- caption_id: C001
+  text: Route+Skill的关键
+  word_evidence:
+    source: audio/word-alignment-raw.json
+    word_start: 0.0
+    word_end: 1.84
+    raw_words:
+    - R
+    - oot
+    - er
+    - 加
+    - Sc
+    - ale
+    - 的
+    - 关
+    - 键
+    target_window:
+    - 0.0
+    - 1.84
+  visual_event_ids:
+  - c4-title
+  coverage: visual_event
+  voice_only_reason: null
+  status: pass
+- caption_id: C002
+  text: 不是让模型自由发挥
+  word_evidence:
+    source: audio/word-alignment-raw.json
+    word_start: 1.84
+    word_end: 3.48
+    raw_words:
+    - 不是
+    - 让
+    - 模
+    - 型
+    - 自由
+    - 发
+    - 挥,
+    target_window:
+    - 1.84
+    - 3.48
+  visual_event_ids:
+  - c4-title
+  coverage: visual_event
+  voice_only_reason: null
+  status: pass
+- caption_id: C003
+  text: 而是先让意图路由器
+  word_evidence:
+    source: audio/word-alignment-raw.json
+    word_start: 3.78
+    word_end: 5.44
+    raw_words:
+    - 而
+    - 是
+    - 先
+    - 让
+    - 意
+    - 图
+    - 路
+    - 由
+    - 器
+    target_window:
+    - 3.78
+    - 5.44
+  visual_event_ids:
+  - c4-router
+  coverage: visual_event
+  voice_only_reason: null
+  status: pass
+- caption_id: C004
+  text: 选中一个 Skill
+  word_evidence:
+    source: audio/word-alignment-raw.json
+    word_start: 5.44
+    word_end: 6.52
+    raw_words:
+    - 选
+    - 中
+    - 一个
+    - Sc
+    - ale,
+    target_window:
+    - 5.44
+    - 6.52
+  visual_event_ids:
+  - c4-router
+  coverage: visual_event
+  voice_only_reason: null
+  status: pass
+- caption_id: C005
+  text: 再执行这项可复用能力
+  word_evidence:
+    source: audio/word-alignment-raw.json
+    word_start: 6.94
+    word_end: 9.12
+    raw_words:
+    - 再
+    - 执
+    - 行
+    - 这
+    - 项
+    - 可
+    - 附
+    - 用
+    - 能
+    - 力,
+    target_window:
+    - 6.94
+    - 9.12
+  visual_event_ids:
+  - c4-cache
+  coverage: visual_event
+  voice_only_reason: null
+  status: pass
+- caption_id: C006
+  text: 这样更稳定、更容易缓存
+  word_evidence:
+    source: audio/word-alignment-raw.json
+    word_start: 9.46
+    word_end: 11.34
+    raw_words:
+    - 这样
+    - 更
+    - 稳
+    - 定
+    - 更
+    - 容易
+    - 缓
+    - 存,
+    target_window:
+    - 9.46
+    - 11.34
+  visual_event_ids:
+  - c4-cache
+  coverage: visual_event
+  voice_only_reason: null
+  status: pass
+- caption_id: C007
+  text: 也能用命中率评估效果
+  word_evidence:
+    source: audio/word-alignment-raw.json
+    word_start: 11.64
+    word_end: 13.48
+    raw_words:
+    - 也
+    - 能
+    - 用
+    - 命
+    - 中
+    - 率
+    - 评
+    - 估
+    - 效
+    - 果,
+    target_window:
+    - 11.64
+    - 13.48
+  visual_event_ids:
+  - c4-cache
+  coverage: visual_event
+  voice_only_reason: null
+  status: pass
+- caption_id: C008
+  text: 代价是 Skill 设计成本高
+  word_evidence:
+    source: audio/word-alignment-raw.json
+    word_start: 13.8
+    word_end: 15.8
+    raw_words:
+    - 代
+    - 价
+    - 是
+    - Sc
+    - ale
+    - 设
+    - 计
+    - 成
+    - 本
+    - 高,
+    target_window:
+    - 13.8
+    - 15.8
+  visual_event_ids:
+  - c4-cost
+  coverage: visual_event
+  voice_only_reason: null
+  status: pass
+- caption_id: C009
+  text: 还要处理路由冲突
+  word_evidence:
+    source: audio/word-alignment-raw.json
+    word_start: 16.16
+    word_end: 17.56
+    raw_words:
+    - 还
+    - 要
+    - 处
+    - 理
+    - 路
+    - 由
+    - 冲
+    - 突。
+    target_window:
+    - 16.16
+    - 17.56
+  visual_event_ids:
+  - c4b-board
+  coverage: visual_event
+  voice_only_reason: null
+  status: pass
+- caption_id: C010
+  text: Blackboard
+  word_evidence:
+    source: audio/word-alignment-raw.json
+    word_start: 18.0
+    word_end: 18.78
+    raw_words:
+    - Black
+    - board
+    target_window:
+    - 18.0
+    - 18.78
+  visual_event_ids:
+  - c4b-board
+  coverage: visual_event
+  voice_only_reason: null
+  status: pass
+- caption_id: C011
+  text: 则让多个 Agent
+  word_evidence:
+    source: audio/word-alignment-raw.json
+    word_start: 19.18
+    word_end: 20.24
+    raw_words:
+    - ' 則'
+    - 讓
+    - 多
+    - 個
+    - A
+    - gent
+    target_window:
+    - 19.18
+    - 20.24
+  visual_event_ids:
+  - c4b-board
+  coverage: visual_event
+  voice_only_reason: null
+  status: pass
+- caption_id: C012
+  text: 共同读写一份共享状态
+  word_evidence:
+    source: audio/word-alignment-raw.json
+    word_start: 20.24
+    word_end: 22.34
+    raw_words:
+    - 共
+    - 同
+    - 讀
+    - 寫
+    - 一
+    - 份
+    - 共
+    - 享
+    - 狀
+    - 態,
+    target_window:
+    - 20.24
+    - 22.34
+  visual_event_ids:
+  - c4b-a1
+  coverage: visual_event
+  voice_only_reason: null
+  status: pass
+- caption_id: C013
+  text: 状态变化推动下一步
+  word_evidence:
+    source: audio/word-alignment-raw.json
+    word_start: 22.56
+    word_end: 23.96
+    raw_words:
+    - 狀
+    - 態
+    - 變
+    - 化
+    - 推
+    - 動
+    - 下一
+    target_window:
+    - 22.56
+    - 23.96
+  visual_event_ids:
+  - c4b-a1
+  coverage: visual_event
+  voice_only_reason: null
+  status: pass
+- caption_id: C014
+  text: 执行，它适合复杂协作
+  word_evidence:
+    source: audio/word-alignment-raw.json
+    word_start: 24.2
+    word_end: 26.26
+    raw_words:
+    - 執
+    - 行,
+    - 它
+    - 適
+    - 合
+    - 複
+    - 雜
+    - 協
+    - 作,
+    target_window:
+    - 24.2
+    - 26.26
+  visual_event_ids:
+  - c4b-warn
+  coverage: visual_event
+  voice_only_reason: null
+  status: pass
+- caption_id: C015
+  text: 但状态模型、权限和追踪
+  word_evidence:
+    source: audio/word-alignment-raw.json
+    word_start: 26.58
+    word_end: 29.02
+    raw_words:
+    - 但
+    - 狀
+    - 態
+    - 模
+    - 型、
+    - 權
+    - 限
+    - 和
+    - 追
+    - 蹤
+    target_window:
+    - 26.58
+    - 29.02
+  visual_event_ids:
+  - c4b-warn
+  coverage: visual_event
+  voice_only_reason: null
+  status: pass
+- caption_id: C016
+  text: 必须先设计好
+  word_evidence:
+    source: audio/word-alignment-raw.json
+    word_start: 29.02
+    word_end: 30.16
+    raw_words:
+    - 必
+    - 須
+    - 先
+    - 設
+    - 計
+    - 好,
+    target_window:
+    - 29.02
+    - 30.16
+  visual_event_ids:
+  - c4b-warn
+  coverage: visual_event
+  voice_only_reason: null
+  status: pass
+- caption_id: C017
+  text: 否则出了问题很难定位
+  word_evidence:
+    source: audio/word-alignment-raw.json
+    word_start: 30.42
+    word_end: 32.18
+    raw_words:
+    - 否
+    - 則
+    - 出
+    - 了
+    - 問題
+    - 很
+    - 難
+    - 定
+    - 位。
+    target_window:
+    - 30.42
+    - 32.18
+  visual_event_ids:
+  - c4b-warn
+  coverage: visual_event
+  voice_only_reason: null
+  status: pass
+gate:
+  cue_count: 17
+  all_cues_covered: true
+  status: pass

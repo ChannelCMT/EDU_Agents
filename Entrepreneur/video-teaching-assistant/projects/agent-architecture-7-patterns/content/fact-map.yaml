@@ -1,0 +1,35 @@
+schema_version: "1.0"
+facts:
+  - id: F01
+    claim: "架构选择由场景复杂度和控制力需求共同决定"
+    source_ref: "source-transcript.md#事实摘要"
+    chapter: 1
+  - id: F02
+    claim: "单 Agent 适合轻量验证，不适合复杂多任务并发"
+    source_ref: "source-transcript.md#事实摘要"
+    chapter: 2
+  - id: F03
+    claim: "ReAct 用思考—行动—观察循环换取可解释性，但消耗和不稳定性更高"
+    source_ref: "source-transcript.md#事实摘要"
+    chapter: 2
+  - id: F04
+    claim: "Plan and Execute 把规划和执行分开，计划错误会放大为全盘错误"
+    source_ref: "source-transcript.md#事实摘要"
+    chapter: 3
+  - id: F05
+    claim: "多 Agent 通过角色分工提升复杂流程的拆解能力，但成本更高"
+    source_ref: "source-transcript.md#事实摘要"
+    chapter: 3
+  - id: F06
+    claim: "Route+Skill 通过路由选择可复用能力，适合稳定的技能系统"
+    source_ref: "source-transcript.md#事实摘要"
+    chapter: 4
+  - id: F07
+    claim: "Blackboard 通过共享状态驱动协作，状态治理决定可追踪性"
+    source_ref: "source-transcript.md#事实摘要"
+    chapter: 4
+  - id: F08
+    claim: "Graph Workflow 支持分支、并行、回溯和重试，适合长流程生产环境"
+    source_ref: "source-transcript.md#事实摘要"
+    chapter: 5
+

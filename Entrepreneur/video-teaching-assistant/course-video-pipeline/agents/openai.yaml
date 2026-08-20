@@ -1,0 +1,7 @@
+interface:
+  display_name: "Course Video Pipeline"
+  short_description: "把原始视频稳定转成分章PPT动画课程、配音、字幕与发布包"
+  default_prompt: "Use $course-video-pipeline to 把原始视频整理成分章 PPT 动画课程，并完成配音、语义对齐、字幕和发布包。"
+
+policy:
+  allow_implicit_invocation: true

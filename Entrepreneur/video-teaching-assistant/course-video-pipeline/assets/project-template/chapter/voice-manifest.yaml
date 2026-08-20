@@ -1,0 +1,19 @@
+schema_version: "1.0"
+chapter: {{CHAPTER_NUMBER}}
+provider: "Fish Audio"
+voice_public_label: "TODO"
+private_voice_id_env: "FISH_AUDIO_VOICE_ID"
+script_version: "v01"
+tone_plan_version: "v01"
+status: "draft"
+segments:
+  - id: "SEG-01"
+    text_sha256: "TODO"
+    file: "audio/seg-01.mp3"
+    duration_seconds: 0.0
+    approved: false
+combined_audio:
+  file: "audio/chapter-final.wav"
+  duration_seconds: 0.0
+  sha256: "TODO"
+human_approved: false

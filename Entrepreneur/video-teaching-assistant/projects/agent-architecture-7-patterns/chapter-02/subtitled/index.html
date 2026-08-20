@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=1920, height=1080" />
+<title>Agent 架构选型｜第 2 章</title>
+<script src="vendor/gsap.min.js"></script>
+<style>@font-face { font-family: "Microsoft YaHei"; src: local("Microsoft YaHei"); } @font-face { font-family: "Noto Sans SC"; src: local("Noto Sans SC"); }
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; background: #06182A; color: #F7FBFF; font-family: "Microsoft YaHei", "Noto Sans SC", sans-serif; }
+#root { position: relative; width: 1920px; height: 1080px; overflow: hidden; background: #06182A; }
+.clip { position: absolute; inset: 0; display: block; overflow: hidden; }
+.fill { position: absolute; inset: 0; background: #06182A; }
+.grid { position: absolute; inset: 0; opacity: .09; background-image: linear-gradient(rgba(142,214,255,.32) 1px, transparent 1px), linear-gradient(90deg, rgba(142,214,255,.32) 1px, transparent 1px); background-size: 80px 80px; mask-image: linear-gradient(to bottom, rgba(0,0,0,.8), transparent 88%); }
+.glow { position: absolute; border-radius: 50%; filter: blur(10px); }
+.glow.a { width: 720px; height: 720px; left: -220px; top: -280px; background: radial-gradient(circle, rgba(45,124,196,.28), transparent 70%); }
+.glow.b { width: 680px; height: 680px; right: -240px; bottom: -260px; background: radial-gradient(circle, rgba(44,101,162,.24), transparent 72%); }
+.topbar { position: absolute; left: 76px; right: 76px; top: 50px; display: flex; justify-content: space-between; align-items: center; color: #B8C4D2; font-size: 22px; letter-spacing: .12em; text-transform: uppercase; }
+.eyebrow { color: #8ED6FF; font-weight: 700; }
+.chapter-no { color: #FFD66F; font-weight: 700; }
+.rule { position: absolute; left: 76px; right: 76px; top: 104px; height: 2px; background: rgba(142,214,255,.35); transform-origin: left center; }
+.title { position: absolute; left: 96px; top: 142px; max-width: 1250px; font-size: 76px; line-height: 1.08; font-weight: 800; letter-spacing: -.025em; }
+.subtitle { position: absolute; left: 100px; top: 240px; color: #B8C4D2; font-size: 30px; line-height: 1.3; }
+.section-label { position: absolute; color: #8ED6FF; font-size: 24px; letter-spacing: .08em; font-weight: 700; }
+.panel { position: absolute; border: 2px solid rgba(142,214,255,.5); border-radius: 24px; background: rgba(10,47,78,.86); box-shadow: 0 20px 50px rgba(0,0,0,.28); }
+.panel.warm { border-color: rgba(255,214,111,.62); }
+.panel.alert { border-color: rgba(255,152,152,.66); background: rgba(74,30,47,.78); }
+.panel.green { border-color: rgba(160,230,191,.65); background: rgba(22,65,70,.78); }
+.panel-title { color: #F7FBFF; font-size: 34px; font-weight: 750; }
+.panel-copy { color: #B8C4D2; font-size: 25px; line-height: 1.38; white-space: pre-line; }
+.node { position: absolute; display: flex; align-items: center; justify-content: center; border-radius: 999px; border: 3px solid #8ED6FF; color: #F7FBFF; background: #0C2B49; font-size: 27px; font-weight: 750; box-shadow: 0 12px 24px rgba(0,0,0,.25); }
+.node.hot { border-color: #FFD66F; color: #FFD66F; }
+.node.done { border-color: #A0E6BF; color: #A0E6BF; }
+.arrow { position: absolute; height: 4px; background: #8ED6FF; transform-origin: left center; border-radius: 2px; }
+.arrow::after { content: ""; position: absolute; right: -2px; top: -7px; border-left: 15px solid #8ED6FF; border-top: 9px solid transparent; border-bottom: 9px solid transparent; }
+.chip { position: absolute; padding: 14px 22px; border-radius: 14px; border: 2px solid rgba(142,214,255,.48); color: #F7FBFF; background: rgba(12,43,73,.88); font-size: 24px; font-weight: 700; }
+.chip.hot { color: #FFD66F; border-color: rgba(255,214,111,.68); }
+.chip.gray { color: #B8C4D2; border-color: rgba(184,196,210,.44); }
+.metric { position: absolute; color: #8ED6FF; font-family: "JetBrains Mono", monospace; font-size: 22px; letter-spacing: .08em; }
+.caption { position: absolute; top: auto; left: 220px; right: 220px; bottom: 46px; height: 76px; display: flex; align-items: center; justify-content: center; padding: 0 28px; border-radius: 16px; border: 2px solid rgba(142,214,255,.48); background: rgba(12,43,73,.72); color: #FFFFFF; font-size: 36px; font-weight: 650; white-space: nowrap; text-align: center; box-shadow: 0 10px 26px rgba(0,0,0,.22); }
+.caption span { display: block; }
+.caption-safe-line { position: absolute; left: 76px; right: 76px; bottom: 150px; height: 2px; background: rgba(184,196,210,.15); }
+.small-note { position: absolute; color: #B8C4D2; font-size: 22px; }
+.axis { position: absolute; background: rgba(142,214,255,.66); transform-origin: left center; }
+.axis.x { height: 3px; }
+.axis.y { width: 3px; transform-origin: center bottom; }
+.axis.x::after { content: ""; position: absolute; right: -2px; top: -7px; border-left: 15px solid rgba(142,214,255,.66); border-top: 9px solid transparent; border-bottom: 9px solid transparent; }
+.axis.y::after { content: ""; position: absolute; left: -7px; top: -15px; border-bottom: 15px solid rgba(142,214,255,.66); border-left: 9px solid transparent; border-right: 9px solid transparent; }
+.axis-label { position: absolute; color: #B8C4D2; font-size: 24px; font-weight: 700; }
+.loop { position: absolute; border: 4px solid #8ED6FF; border-radius: 50%; }
+.loop-arrow { position: absolute; width: 0; height: 0; border-left: 20px solid #FFD66F; border-top: 12px solid transparent; border-bottom: 12px solid transparent; }
+.state-line { position: absolute; height: 2px; background: rgba(142,214,255,.45); }
+.state-dot { position: absolute; width: 18px; height: 18px; border-radius: 50%; background: #8ED6FF; box-shadow: 0 0 24px rgba(142,214,255,.8); }
+</style>
+</head>
+<body>
+<div id="root" data-composition-id="agent-architecture-ch02" data-start="0" data-width="1920" data-height="1080" data-duration="32.388" data-fps="30" data-subtitle-safe-band="900-1080">
+  <div class="fill"></div><div id="grid" class="grid"></div><div id="glow-a" class="glow a"></div><div id="glow-b" class="glow b"></div>
+  <div class="topbar"><span class="eyebrow">AGENT ARCHITECTURE / COURSE LOOP</span><span class="chapter-no">CHAPTER 02 / 05</span></div>
+  <div id="rule" class="rule"></div><div class="caption-safe-line"></div>
+  <audio id="narration" src="audio/chapter-final.wav" data-start="0" data-duration="32.388" data-track-index="10" data-volume="1"></audio>
+
+  <section id="c2-single" class="clip" data-start="0" data-duration="15.260" data-track-index="1">
+    <div class="section-label" style="left:100px;top:160px;">01 / SINGLE AGENT</div><div id="c2-title" class="title" style="top:210px;">一个模型包揽全部任务</div>
+    <div id="c2-input" class="panel" style="left:120px;top:470px;width:280px;height:160px;padding:34px;"><div class="panel-title">输入</div><div class="panel-copy">用户任务</div></div>
+    <div id="c2-think" class="panel" style="left:580px;top:400px;width:300px;height:230px;padding:34px;"><div class="panel-title">LLM</div><div class="panel-copy">思考&#10;调用工具</div></div>
+    <div id="c2-output" class="panel warm" style="left:1090px;top:470px;width:300px;height:160px;padding:34px;"><div class="panel-title">输出</div><div class="panel-copy">结果交付</div></div>
+    <div id="c2-warn" class="panel alert" style="left:1450px;top:390px;width:340px;height:260px;padding:34px;"><div class="panel-title">复杂后</div><div class="panel-copy">认知过载&#10;上下文污染</div></div>
+    <div id="c2-a1" class="arrow" style="left:402px;top:548px;width:160px;"></div><div id="c2-a2" class="arrow" style="left:884px;top:548px;width:190px;"></div><div id="c2-a3" class="arrow" style="left:1394px;top:548px;width:48px;"></div>
+    <div class="small-note" style="left:120px;top:850px;">适合：概念验证、简单对话</div>
+  </section>
+  <section id="c2-react" class="clip" style="opacity:0" data-start="15.260" data-duration="17.128" data-track-index="1">
+    <div class="section-label" style="left:100px;top:160px;">02 / REACT</div><div id="c2r-title" class="title" style="top:210px;">Reason + Action：让 Agent 会探索</div>
+    <div id="c2r-reason" class="node hot" style="left:460px;top:460px;width:210px;height:110px;">Reason</div><div id="c2r-action" class="node" style="left:850px;top:340px;width:210px;height:110px;">Action</div><div id="c2r-observe" class="node" style="left:1200px;top:460px;width:210px;height:110px;">Observe</div>
+    <div id="c2r-loop" class="loop" style="left:710px;top:430px;width:500px;height:250px;"></div><div id="c2r-arrow" class="loop-arrow" style="left:1180px;top:434px;"></div>
+    <div id="c2r-cost" class="panel alert" style="left:400px;top:760px;width:1080px;height:120px;padding:28px 38px;"><div class="panel-title" style="font-size:30px;">更会探索，但不适合直接承担大规模生产流程</div></div>
+  </section>
+<div id="caption-000" class="clip caption" data-start="0.000" data-duration="0.650" data-track-index="40"><span>单 Agent</span></div>
+<div id="caption-001" class="clip caption" data-start="0.660" data-duration="1.270" data-track-index="41"><span>就是一个大模型</span></div>
+<div id="caption-002" class="clip caption" data-start="1.940" data-duration="1.510" data-track-index="42"><span>包揽输入、思考</span></div>
+<div id="caption-003" class="clip caption" data-start="3.550" data-duration="1.440" data-track-index="43"><span>调用工具和输出</span></div>
+<div id="caption-004" class="clip caption" data-start="5.000" data-duration="1.570" data-track-index="44"><span>它简单、便宜</span></div>
+<div id="caption-005" class="clip caption" data-start="6.730" data-duration="0.660" data-track-index="45"><span>延迟低</span></div>
+<div id="caption-006" class="clip caption" data-start="7.710" data-duration="1.460" data-track-index="46"><span>适合做概念验证</span></div>
+<div id="caption-007" class="clip caption" data-start="9.180" data-duration="1.050" data-track-index="47"><span>和简单对话</span></div>
+<div id="caption-008" class="clip caption" data-start="10.240" data-duration="1.570" data-track-index="48"><span>一旦任务变复杂</span></div>
+<div id="caption-009" class="clip caption" data-start="12.030" data-duration="1.640" data-track-index="49"><span>模型容易认知过载</span></div>
+<div id="caption-010" class="clip caption" data-start="13.890" data-duration="1.420" data-track-index="50"><span>出现上下文污染</span></div>
+<div id="caption-011" class="clip caption" data-start="15.320" data-duration="1.870" data-track-index="51"><span>ReAct 把过程变成</span></div>
+<div id="caption-012" class="clip caption" data-start="17.200" data-duration="1.210" data-track-index="52"><span>Reason 加 Action</span></div>
+<div id="caption-013" class="clip caption" data-start="18.420" data-duration="2.090" data-track-index="53"><span>的循环：思考、行动</span></div>
+<div id="caption-014" class="clip caption" data-start="20.670" data-duration="1.900" data-track-index="54"><span>观察，再决定下一步</span></div>
+<div id="caption-015" class="clip caption" data-start="22.580" data-duration="1.190" data-track-index="55"><span>它比单 Agent 更</span></div>
+<div id="caption-016" class="clip caption" data-start="23.780" data-duration="1.270" data-track-index="56"><span>适合多步探索</span></div>
+<div id="caption-017" class="clip caption" data-start="25.290" data-duration="1.580" data-track-index="57"><span>也更容易解释过程</span></div>
+<div id="caption-018" class="clip caption" data-start="26.880" data-duration="1.450" data-track-index="58"><span>但 Token 消耗大</span></div>
+<div id="caption-019" class="clip caption" data-start="28.340" data-duration="0.890" data-track-index="59"><span>容易跑偏</span></div>
+<div id="caption-020" class="clip caption" data-start="29.410" data-duration="1.380" data-track-index="60"><span>不适合直接承担</span></div>
+<div id="caption-021" class="clip caption" data-start="30.800" data-duration="1.210" data-track-index="61"><span>大规模生产流程</span></div>
+</div>
+<script>
+window.__timelines = window.__timelines || {};
+const tl = gsap.timeline({ paused: true });
+tl.to("#glow-a", {scale: 1.12, opacity: .85, duration: 31.388, ease: "sine.inOut"}, 0);
+tl.to("#glow-b", {scale: 1.08, opacity: .78, duration: 30.888, ease: "sine.inOut"}, 0.4);
+tl.fromTo("#rule", {scaleX: 0}, {scaleX: 1, duration: .65, ease: "power3.out"}, .12);
+
+tl.to("#c2-single", {opacity:0, duration:.01, ease:"none"}, 15.260);
+tl.fromTo("#c2-react", {opacity:0}, {opacity:1, duration:.01, ease:"none"}, 15.260);
+tl.fromTo("#c2-title", {opacity:0, x:-50}, {opacity:1, x:0, duration:.6, ease:"power3.out"}, .12);
+tl.fromTo(["#c2-input","#c2-think","#c2-output"], {opacity:0, y:32}, {opacity:1, y:0, duration:.5, ease:"power2.out", stagger:.16}, 1.8);
+tl.fromTo(["#c2-a1","#c2-a2","#c2-a3"], {scaleX:0}, {scaleX:1, duration:.45, ease:"expo.out", stagger:.18}, 2.55);
+tl.fromTo("#c2-warn", {opacity:0, scale:.86}, {opacity:1, scale:1, duration:.55, ease:"back.out(1.4)"}, 10.20);
+tl.fromTo("#c2r-title", {opacity:0, y:30}, {opacity:1, y:0, duration:.58, ease:"expo.out"}, 15.32);
+tl.fromTo(["#c2r-reason","#c2r-action","#c2r-observe"], {opacity:0, scale:.75}, {opacity:1, scale:1, duration:.52, ease:"back.out(1.5)", stagger:.55}, 15.62);
+tl.fromTo("#c2r-loop", {opacity:0, scale:.88}, {opacity:1, scale:1, duration:.7, ease:"power2.out"}, 17.45);
+tl.fromTo("#c2r-arrow", {opacity:0, x:-18}, {opacity:1, x:0, duration:.35, ease:"power3.out"}, 18.20);
+tl.fromTo("#c2r-cost", {opacity:0, y:28}, {opacity:1, y:0, duration:.5, ease:"power2.out"}, 27.0);
+
+window.__timelines["agent-architecture-ch02"] = tl;
+</script>
+</body></html>

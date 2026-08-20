@@ -1,0 +1,42 @@
+schema_version: '1.0'
+assets:
+- id: source-01
+  type: reference_video
+  path: raw/source-douyin.mp4
+  source_or_owner: user-supplied Douyin reference
+  rights_status: derivative educational adaptation; private raw media
+  public: false
+  purpose: source content
+- id: audio-final
+  type: narration
+  path: audio/final-narration.wav
+  source_or_owner: Fish Audio / Channel科技解说员
+  rights_status: user-controlled voice asset; keep private
+  public: false
+  purpose: timing source of truth
+- id: release-video
+  type: video
+  path: publish-package/video/agent-architecture-7-patterns_v15_harness-audit_subtitled.mp4
+  source_or_owner: project output
+  rights_status: project output
+  public: true
+  purpose: final release
+- id: cover-landscape
+  type: cover
+  path: publish-package/assets/cover_4x3.png
+  source_or_owner: project output
+  rights_status: project output
+  public: true
+  purpose: platform cover
+- id: cover-portrait
+  type: cover
+  path: publish-package/assets/cover_3x4.png
+  source_or_owner: project output
+  rights_status: project output
+  public: true
+  purpose: platform cover
+privacy_checks:
+  contains_personal_voice: true
+  contains_avatar_source: false
+  contains_private_business_data: false
+  public_copy_sanitized: true

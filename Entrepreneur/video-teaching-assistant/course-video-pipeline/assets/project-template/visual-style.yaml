@@ -1,0 +1,19 @@
+schema_version: "1.0"
+canvas: [1920, 1080]
+fps: 30
+palette:
+  background: "#06182A"
+  highlight: "#8ED6FF"
+  text: "#FFFFFF"
+  secondary: "#B8C4D2"
+  accent: "#FFD66F"
+typography:
+  title_min_px: 54
+  body_min_px: 24
+  key_node_min_px: 26
+layout:
+  subtitle_safe_band_y: [900, 1080]
+  key_visual_max_y: 870
+  grid: "small_and_subtle"
+  max_primary_structures: 1
+  max_auxiliary_cards: 3

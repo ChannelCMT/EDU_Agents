@@ -1,0 +1,477 @@
+[
+  {
+    "id": "C001",
+    "text": "Route+Skill的关键",
+    "start": 0.0,
+    "end": 1.89,
+    "timing_method": "word_alignment",
+    "word_evidence": {
+      "source": "audio/word-alignment-raw.json",
+      "timebase": "global",
+      "word_start": 0.0,
+      "word_end": 1.84,
+      "raw_words": [
+        "R",
+        "oot",
+        "er",
+        "加",
+        "Sc",
+        "ale",
+        "的",
+        "关",
+        "键"
+      ],
+      "target_window": [
+        0.0,
+        1.84
+      ]
+    },
+    "alignment_error_ms": 50
+  },
+  {
+    "id": "C002",
+    "text": "不是让模型自由发挥",
+    "start": 1.9,
+    "end": 3.53,
+    "timing_method": "word_alignment",
+    "word_evidence": {
+      "source": "audio/word-alignment-raw.json",
+      "timebase": "global",
+      "word_start": 1.84,
+      "word_end": 3.48,
+      "raw_words": [
+        "不是",
+        "让",
+        "模",
+        "型",
+        "自由",
+        "发",
+        "挥,"
+      ],
+      "target_window": [
+        1.84,
+        3.48
+      ]
+    },
+    "alignment_error_ms": 50
+  },
+  {
+    "id": "C003",
+    "text": "而是先让意图路由器",
+    "start": 3.73,
+    "end": 5.49,
+    "timing_method": "word_alignment",
+    "word_evidence": {
+      "source": "audio/word-alignment-raw.json",
+      "timebase": "global",
+      "word_start": 3.78,
+      "word_end": 5.44,
+      "raw_words": [
+        "而",
+        "是",
+        "先",
+        "让",
+        "意",
+        "图",
+        "路",
+        "由",
+        "器"
+      ],
+      "target_window": [
+        3.78,
+        5.44
+      ]
+    },
+    "alignment_error_ms": 50
+  },
+  {
+    "id": "C004",
+    "text": "选中一个 Skill",
+    "start": 5.5,
+    "end": 6.57,
+    "timing_method": "word_alignment",
+    "word_evidence": {
+      "source": "audio/word-alignment-raw.json",
+      "timebase": "global",
+      "word_start": 5.44,
+      "word_end": 6.52,
+      "raw_words": [
+        "选",
+        "中",
+        "一个",
+        "Sc",
+        "ale,"
+      ],
+      "target_window": [
+        5.44,
+        6.52
+      ]
+    },
+    "alignment_error_ms": 50
+  },
+  {
+    "id": "C005",
+    "text": "再执行这项可复用能力",
+    "start": 6.89,
+    "end": 9.17,
+    "timing_method": "word_alignment",
+    "word_evidence": {
+      "source": "audio/word-alignment-raw.json",
+      "timebase": "global",
+      "word_start": 6.94,
+      "word_end": 9.12,
+      "raw_words": [
+        "再",
+        "执",
+        "行",
+        "这",
+        "项",
+        "可",
+        "附",
+        "用",
+        "能",
+        "力,"
+      ],
+      "target_window": [
+        6.94,
+        9.12
+      ]
+    },
+    "alignment_error_ms": 50
+  },
+  {
+    "id": "C006",
+    "text": "这样更稳定、更容易缓存",
+    "start": 9.41,
+    "end": 11.39,
+    "timing_method": "word_alignment",
+    "word_evidence": {
+      "source": "audio/word-alignment-raw.json",
+      "timebase": "global",
+      "word_start": 9.46,
+      "word_end": 11.34,
+      "raw_words": [
+        "这样",
+        "更",
+        "稳",
+        "定",
+        "更",
+        "容易",
+        "缓",
+        "存,"
+      ],
+      "target_window": [
+        9.46,
+        11.34
+      ]
+    },
+    "alignment_error_ms": 50
+  },
+  {
+    "id": "C007",
+    "text": "也能用命中率评估效果",
+    "start": 11.59,
+    "end": 13.53,
+    "timing_method": "word_alignment",
+    "word_evidence": {
+      "source": "audio/word-alignment-raw.json",
+      "timebase": "global",
+      "word_start": 11.64,
+      "word_end": 13.48,
+      "raw_words": [
+        "也",
+        "能",
+        "用",
+        "命",
+        "中",
+        "率",
+        "评",
+        "估",
+        "效",
+        "果,"
+      ],
+      "target_window": [
+        11.64,
+        13.48
+      ]
+    },
+    "alignment_error_ms": 50
+  },
+  {
+    "id": "C008",
+    "text": "代价是 Skill 设计成本高",
+    "start": 13.75,
+    "end": 15.85,
+    "timing_method": "word_alignment",
+    "word_evidence": {
+      "source": "audio/word-alignment-raw.json",
+      "timebase": "global",
+      "word_start": 13.8,
+      "word_end": 15.8,
+      "raw_words": [
+        "代",
+        "价",
+        "是",
+        "Sc",
+        "ale",
+        "设",
+        "计",
+        "成",
+        "本",
+        "高,"
+      ],
+      "target_window": [
+        13.8,
+        15.8
+      ]
+    },
+    "alignment_error_ms": 50
+  },
+  {
+    "id": "C009",
+    "text": "还要处理路由冲突",
+    "start": 16.11,
+    "end": 17.61,
+    "timing_method": "word_alignment",
+    "word_evidence": {
+      "source": "audio/word-alignment-raw.json",
+      "timebase": "global",
+      "word_start": 16.16,
+      "word_end": 17.56,
+      "raw_words": [
+        "还",
+        "要",
+        "处",
+        "理",
+        "路",
+        "由",
+        "冲",
+        "突。"
+      ],
+      "target_window": [
+        16.16,
+        17.56
+      ]
+    },
+    "alignment_error_ms": 50
+  },
+  {
+    "id": "C010",
+    "text": "Blackboard",
+    "start": 17.95,
+    "end": 18.83,
+    "timing_method": "word_alignment",
+    "word_evidence": {
+      "source": "audio/word-alignment-raw.json",
+      "timebase": "global",
+      "word_start": 18.0,
+      "word_end": 18.78,
+      "raw_words": [
+        "Black",
+        "board"
+      ],
+      "target_window": [
+        18.0,
+        18.78
+      ]
+    },
+    "alignment_error_ms": 50
+  },
+  {
+    "id": "C011",
+    "text": "则让多个 Agent",
+    "start": 19.13,
+    "end": 20.29,
+    "timing_method": "word_alignment",
+    "word_evidence": {
+      "source": "audio/word-alignment-raw.json",
+      "timebase": "global",
+      "word_start": 19.18,
+      "word_end": 20.24,
+      "raw_words": [
+        " 則",
+        "讓",
+        "多",
+        "個",
+        "A",
+        "gent"
+      ],
+      "target_window": [
+        19.18,
+        20.24
+      ]
+    },
+    "alignment_error_ms": 50
+  },
+  {
+    "id": "C012",
+    "text": "共同读写一份共享状态",
+    "start": 20.3,
+    "end": 22.39,
+    "timing_method": "word_alignment",
+    "word_evidence": {
+      "source": "audio/word-alignment-raw.json",
+      "timebase": "global",
+      "word_start": 20.24,
+      "word_end": 22.34,
+      "raw_words": [
+        "共",
+        "同",
+        "讀",
+        "寫",
+        "一",
+        "份",
+        "共",
+        "享",
+        "狀",
+        "態,"
+      ],
+      "target_window": [
+        20.24,
+        22.34
+      ]
+    },
+    "alignment_error_ms": 50
+  },
+  {
+    "id": "C013",
+    "text": "状态变化推动下一步",
+    "start": 22.51,
+    "end": 24.01,
+    "timing_method": "word_alignment",
+    "word_evidence": {
+      "source": "audio/word-alignment-raw.json",
+      "timebase": "global",
+      "word_start": 22.56,
+      "word_end": 23.96,
+      "raw_words": [
+        "狀",
+        "態",
+        "變",
+        "化",
+        "推",
+        "動",
+        "下一"
+      ],
+      "target_window": [
+        22.56,
+        23.96
+      ]
+    },
+    "alignment_error_ms": 50
+  },
+  {
+    "id": "C014",
+    "text": "执行，它适合复杂协作",
+    "start": 24.15,
+    "end": 26.31,
+    "timing_method": "word_alignment",
+    "word_evidence": {
+      "source": "audio/word-alignment-raw.json",
+      "timebase": "global",
+      "word_start": 24.2,
+      "word_end": 26.26,
+      "raw_words": [
+        "執",
+        "行,",
+        "它",
+        "適",
+        "合",
+        "複",
+        "雜",
+        "協",
+        "作,"
+      ],
+      "target_window": [
+        24.2,
+        26.26
+      ]
+    },
+    "alignment_error_ms": 50
+  },
+  {
+    "id": "C015",
+    "text": "但状态模型、权限和追踪",
+    "start": 26.53,
+    "end": 29.07,
+    "timing_method": "word_alignment",
+    "word_evidence": {
+      "source": "audio/word-alignment-raw.json",
+      "timebase": "global",
+      "word_start": 26.58,
+      "word_end": 29.02,
+      "raw_words": [
+        "但",
+        "狀",
+        "態",
+        "模",
+        "型、",
+        "權",
+        "限",
+        "和",
+        "追",
+        "蹤"
+      ],
+      "target_window": [
+        26.58,
+        29.02
+      ]
+    },
+    "alignment_error_ms": 50
+  },
+  {
+    "id": "C016",
+    "text": "必须先设计好",
+    "start": 29.08,
+    "end": 30.21,
+    "timing_method": "word_alignment",
+    "word_evidence": {
+      "source": "audio/word-alignment-raw.json",
+      "timebase": "global",
+      "word_start": 29.02,
+      "word_end": 30.16,
+      "raw_words": [
+        "必",
+        "須",
+        "先",
+        "設",
+        "計",
+        "好,"
+      ],
+      "target_window": [
+        29.02,
+        30.16
+      ]
+    },
+    "alignment_error_ms": 50
+  },
+  {
+    "id": "C017",
+    "text": "否则出了问题很难定位",
+    "start": 30.37,
+    "end": 32.23,
+    "timing_method": "word_alignment",
+    "word_evidence": {
+      "source": "audio/word-alignment-raw.json",
+      "timebase": "global",
+      "word_start": 30.42,
+      "word_end": 32.18,
+      "raw_words": [
+        "否",
+        "則",
+        "出",
+        "了",
+        "問題",
+        "很",
+        "難",
+        "定",
+        "位。"
+      ],
+      "target_window": [
+        30.42,
+        32.18
+      ]
+    },
+    "alignment_error_ms": 50
+  }
+]

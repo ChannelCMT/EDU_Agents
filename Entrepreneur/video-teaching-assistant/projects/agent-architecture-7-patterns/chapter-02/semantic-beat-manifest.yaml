@@ -1,0 +1,125 @@
+version: v03
+chapter: 2
+source_of_truth: audio/word-alignment-raw.json
+rule: every spoken sentence/phrase maps to an explicit visual event or a justified
+  voice_only connective
+beats:
+- id: B01
+  sentence_id: S1
+  source_text: 单 Agent 就是一个大模型包揽输入、思考、调用工具和输出。
+  semantic_start: 0.0
+  visual_start: 0.12
+  visual_event: c2-input
+  semantic_role: define_single_agent
+  must_be_visible: true
+  forbid_voice_only: true
+  delta: 0.12
+  status: pass
+- id: B02
+  sentence_id: S2
+  source_text: 它简单、便宜、延迟低，适合做概念验证和简单对话。
+  semantic_start: 4.94
+  visual_start: 4.94
+  visual_event: c2-output
+  semantic_role: show_fit
+  must_be_visible: true
+  forbid_voice_only: true
+  delta: 0.0
+  status: pass
+- id: B03
+  sentence_id: S3
+  source_text: 一旦任务变复杂，模型容易认知过载，出现上下文污染。
+  semantic_start: 10.18
+  visual_start: 10.2
+  visual_event: c2-warn
+  semantic_role: warn
+  must_be_visible: true
+  forbid_voice_only: true
+  delta: 0.02
+  status: pass
+- id: B04
+  sentence_id: S4
+  source_text: ReAct 把过程变成 Reason 加 Action 的循环：思考、行动、观察，再决定下一步。
+  semantic_start: 15.26
+  visual_start: 15.32
+  visual_event: c2r-loop
+  semantic_role: introduce_loop
+  must_be_visible: true
+  forbid_voice_only: true
+  delta: 0.06
+  status: pass
+- id: B05
+  sentence_id: S5
+  source_text: 它比单 Agent 更适合多步探索，也更容易解释过程。
+  semantic_start: 18.98
+  visual_start: 18.98
+  visual_event: c2r-loop
+  semantic_role: compare
+  must_be_visible: true
+  forbid_voice_only: true
+  delta: 0.0
+  status: pass
+- id: B06
+  sentence_id: S6
+  source_text: 但 Token 消耗大、容易跑偏，不适合直接承担大规模生产流程。
+  semantic_start: 26.82
+  visual_start: 26.82
+  visual_event: c2r-cost
+  semantic_role: state_boundary
+  must_be_visible: true
+  forbid_voice_only: true
+  delta: 0.0
+  status: pass
+first_30_seconds_layer_audit:
+  required: false
+  subtitle_band_y:
+  - 900
+  - 1080
+  key_visual_max_y: 870
+  max_unmapped_gap_seconds: 0.8
+  layer_order:
+  - background
+  - title
+  - axes
+  - axis_labels
+  - evolution_line
+  - selection_chips
+  - closing_note
+  - captions
+  axis_direction:
+    origin_y: 812
+    y_axis_top: 530
+    y_axis_bottom: 812
+    arrow: up
+  evolution_panel_bounds:
+    left: 1460
+    top: 210
+    width: 390
+    height: 410
+    max_width: 420
+    max_height: 450
+  evolution_panel_exit:
+    start: 23.1
+    must_finish_before: 23.58
+    reason: leave_axes_and_closing_note_as_primary_visual
+  theme_bounds:
+    label_top: 240
+    title_top: 282
+    subtitle_top: 382
+    bottom_estimate: 440
+    max_bottom: 500
+  theme_axis_clearance:
+    theme_bottom: 440
+    axis_origin_y: 812
+    min_clearance: 250
+  theme_caption_clearance:
+    theme_bottom: 440
+    caption_band_top: 900
+    min_clearance: 400
+  theme_visual_rule: chapter-one theme must remain above the axis origin, outside
+    the subtitle band, and clear of the vertical axis label
+  auxiliary_visual_timing:
+    c1-q2:
+      target_start: 14.0
+      meaning: 拆分与路由在复杂任务的拆分、路由和状态管理语义中出现
+  status: pass

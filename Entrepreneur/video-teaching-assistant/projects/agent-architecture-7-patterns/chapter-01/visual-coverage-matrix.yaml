@@ -1,0 +1,402 @@
+version: v05
+chapter: 1
+source_caption_file: captions/captions.json
+rule: one caption cue -> one explicit visual event; named claims and cost/risk phrases
+  cannot be voice_only
+rows:
+- caption_id: C001
+  text: 你是不是想到什么，就让AI做什么？
+  word_evidence:
+    source: audio/word-alignment-raw.json
+    word_start: 0.0
+    word_end: 1.72
+    raw_words:
+    - '?'
+    - ???
+    - '?'
+    - '?'
+    - ??
+    - '?'
+    - '?'
+    - AI
+    - '?'
+    - ??
+    - '?'
+    - ??
+    - '?'
+    - '?'
+    - '?'
+    - AI
+    - '?'
+    - '?'
+    target_window:
+    - 0.0
+    - 2.951
+  visual_event_ids:
+  - c1-title
+  coverage: visual_event
+  voice_only_reason: null
+  status: pass
+- caption_id: C002
+  text: 先不要急着让AI干活
+  word_evidence:
+    source: audio/word-alignment-raw.json
+    word_start: 2.34
+    word_end: 2.62
+    raw_words:
+    - ??
+    target_window:
+    - 2.951
+    - 5.067
+  visual_event_ids:
+  - c1-title
+  coverage: visual_event
+  voice_only_reason: null
+  status: pass
+- caption_id: C003
+  text: 真正要回答的是
+  word_evidence:
+    source: audio/word-alignment-raw.json
+    word_start: 5.067
+    word_end: 6.807
+    raw_words:
+    - 真
+    - 正
+    - 要
+    - 回
+    - 答
+    - 的是
+    target_window:
+    - 5.067
+    - 6.807
+  visual_event_ids:
+  - c1-axis-x
+  coverage: visual_event
+  voice_only_reason: null
+  status: pass
+- caption_id: C004
+  text: 任务有多复杂
+  word_evidence:
+    source: audio/word-alignment-raw.json
+    word_start: 7.227
+    word_end: 8.307
+    raw_words:
+    - ' 任'
+    - 務
+    - 有
+    - 多
+    - 複
+    - 雜
+    target_window:
+    - 7.227
+    - 8.307
+  visual_event_ids:
+  - c1-axis-x
+  coverage: visual_event
+  voice_only_reason: null
+  status: pass
+- caption_id: C005
+  text: 以及你需要多强的控制力
+  word_evidence:
+    source: audio/word-alignment-raw.json
+    word_start: 8.567
+    word_end: 10.407
+    raw_words:
+    - ' 以及'
+    - 你
+    - 需要
+    - 多
+    - 強
+    - 的
+    - 控
+    - 制
+    - 力
+    target_window:
+    - 8.567
+    - 10.407
+  visual_event_ids:
+  - c1-q1
+  coverage: visual_event
+  voice_only_reason: null
+  status: pass
+- caption_id: C006
+  text: 轻任务只要快速验证
+  word_evidence:
+    source: audio/word-alignment-raw.json
+    word_start: 10.207
+    word_end: 12.507
+    raw_words:
+    - 力
+    - 請
+    - 任
+    - 務
+    - 只
+    - 要
+    - 快
+    - 速
+    - 驗
+    - 證
+    target_window:
+    - 10.407
+    - 12.507
+  visual_event_ids:
+  - c1-q1
+  coverage: visual_event
+  voice_only_reason: null
+  status: pass
+- caption_id: C007
+  text: 复杂任务才需要拆分
+  word_evidence:
+    source: audio/word-alignment-raw.json
+    word_start: 12.807
+    word_end: 14.407
+    raw_words:
+    - ' 複'
+    - 雜
+    - 任
+    - 務
+    - 才
+    - 需要
+    - 拆
+    - 分
+    target_window:
+    - 12.807
+    - 14.407
+  visual_event_ids:
+  - c1-q1
+  coverage: visual_event
+  voice_only_reason: null
+  status: pass
+- caption_id: C008
+  text: 路由和状态管理
+  word_evidence:
+    source: audio/word-alignment-raw.json
+    word_start: 14.647
+    word_end: 16.427
+    raw_words:
+    - ' 路'
+    - 由
+    - 和
+    - 狀
+    - 態
+    - 管
+    - 理
+    target_window:
+    - 14.647
+    - 16.427
+  visual_event_ids:
+  - c1-evo
+  coverage: visual_event
+  voice_only_reason: null
+  status: pass
+- caption_id: C009
+  text: 七种架构不是排行榜
+  word_evidence:
+    source: audio/word-alignment-raw.json
+    word_start: 16.047
+    word_end: 18.447
+    raw_words:
+    - 理
+    - 七
+    - 種
+    - 架
+    - 構
+    - 不是
+    - 排
+    - 行
+    - 榜
+    target_window:
+    - 16.427
+    - 18.447
+  visual_event_ids:
+  - c1-evo
+  coverage: visual_event
+  voice_only_reason: null
+  status: pass
+- caption_id: C010
+  text: 而是一条从单 Agent
+  word_evidence:
+    source: audio/word-alignment-raw.json
+    word_start: 18.727
+    word_end: 20.227
+    raw_words:
+    - ' 而'
+    - 是
+    - 一
+    - 條
+    - 從
+    - D
+    - one
+    - A
+    - gent
+    target_window:
+    - 18.727
+    - 20.227
+  visual_event_ids:
+  - c1-evo
+  coverage: visual_event
+  voice_only_reason: null
+  status: pass
+- caption_id: C011
+  text: 到协作系统
+  word_evidence:
+    source: audio/word-alignment-raw.json
+    word_start: 20.007
+    word_end: 21.647
+    raw_words:
+    - gent
+    - 到
+    - 協
+    - 作
+    - 系
+    - 統
+    target_window:
+    - 20.227
+    - 21.647
+  visual_event_ids:
+  - c1-evo
+  coverage: visual_event
+  voice_only_reason: null
+  status: pass
+- caption_id: C012
+  text: 再到 Graph Workflow
+  word_evidence:
+    source: audio/word-alignment-raw.json
+    word_start: 21.387
+    word_end: 23.287
+    raw_words:
+    - 統
+    - 再
+    - 到
+    - G
+    - raph
+    - Work
+    - flow
+    target_window:
+    - 21.647
+    - 23.287
+  visual_event_ids:
+  - c1-note
+  coverage: visual_event
+  voice_only_reason: null
+  status: pass
+- caption_id: C013
+  text: 的演进线
+  word_evidence:
+    source: audio/word-alignment-raw.json
+    word_start: 22.967
+    word_end: 24.147
+    raw_words:
+    - flow
+    - 的
+    - 眼
+    - 鏡
+    - 線
+    target_window:
+    - 23.287
+    - 24.147
+  visual_event_ids:
+  - c1-note
+  coverage: visual_event
+  voice_only_reason: null
+  status: pass
+- caption_id: C014
+  text: 本章先记住两个判断轴
+  word_evidence:
+    source: audio/word-alignment-raw.json
+    word_start: 24.467
+    word_end: 26.247
+    raw_words:
+    - ' 本'
+    - 章
+    - 先
+    - 記
+    - 住
+    - 兩個
+    - 判
+    - 斷
+    - 軸
+    target_window:
+    - 24.467
+    - 26.247
+  visual_event_ids:
+  - c1-note
+  coverage: visual_event
+  voice_only_reason: null
+  status: pass
+- caption_id: C015
+  text: 复杂度和控制力
+  word_evidence:
+    source: audio/word-alignment-raw.json
+    word_start: 26.627
+    word_end: 27.987
+    raw_words:
+    - ' 複'
+    - 雜
+    - 度
+    - 和
+    - 控
+    - 制
+    - 力
+    target_window:
+    - 26.627
+    - 27.987
+  visual_event_ids:
+  - c1-note
+  coverage: visual_event
+  voice_only_reason: null
+  status: pass
+- caption_id: C016
+  text: 后面每一种架构都放回
+  word_evidence:
+    source: audio/word-alignment-raw.json
+    word_start: 27.787
+    word_end: 30.047
+    raw_words:
+    - 力
+    - 后
+    - 面
+    - 每
+    - 一
+    - 种
+    - 架
+    - 构
+    - 都
+    - 放
+    target_window:
+    - 27.987
+    - 30.047
+  visual_event_ids:
+  - c1-note
+  coverage: visual_event
+  voice_only_reason: null
+  status: pass
+- caption_id: C017
+  text: 这张坐标系里选择
+  word_evidence:
+    source: audio/word-alignment-raw.json
+    word_start: 29.867
+    word_end: 31.527
+    raw_words:
+    - 放
+    - 回
+    - 这
+    - 张
+    - 坐
+    - 标
+    - 系
+    - 列
+    - 选
+    - 择
+    target_window:
+    - 30.047
+    - 31.527
+  visual_event_ids:
+  - c1-note
+  coverage: visual_event
+  voice_only_reason: null
+  status: pass
+gate:
+  cue_count: 17
+  all_cues_covered: true
+  status: pass

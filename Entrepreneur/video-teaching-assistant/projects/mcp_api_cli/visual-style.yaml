@@ -1,0 +1,40 @@
+version: "v01"
+canvas: "1920x1080"
+palette:
+  background: "#06182A"
+  panel: "#0A2F4E"
+  highlight_blue: "#8ED6FF"
+  highlight_yellow: "#FFD66F"
+  text_white: "#F7FBFF"
+  text_gray: "#B8C4D2"
+  success_green: "#A0E6BF"
+  warning_red: "#FFB1B1"
+typography:
+  title_min_px: 50
+  slide_title_px: 46
+  body_min_px: 24
+  label_px: 18
+layout:
+  safe_band: {top: 900, bottom: 1080}
+  content_left: 76
+  content_right: 1844
+  max_title_lines: 1
+  max_primary_claims_per_scene: 1
+  background_grid:
+    purpose: "environmental texture only"
+    line_color: "#0B2236"
+    line_opacity: 0.32
+    contrast_to_background_max: 0.12
+    must_not_compete_with_text: true
+  top_divider:
+    color: "#1B4058"
+    width_px: 1
+    contrast_to_background_max: 0.24
+  background_glow:
+    top_left: "radial(#2D7CC4/30 0%, #2D7CC4/0 72%)"
+    bottom_right: "radial(#2C65A2/24 0%, #2C65A2/0 74%)"
+    purpose: "match the chapter video master, never behind foreground text"
+motion:
+  pattern: "zoom-in → explain → zoom-out"
+  entrances: ["fade-up", "slide-in", "scale-pop"]
+  forbidden: ["random motion", "simultaneous unreadable reveals", "graph under subtitle band"]

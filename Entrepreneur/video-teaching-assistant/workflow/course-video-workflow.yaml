@@ -1,0 +1,195 @@
+schema_version: "1.0"
+name: "course-video-pipeline"
+description: "从原始素材到分章 PPT 动画课程、字幕、封面和发布包的端到端流程"
+
+defaults:
+  chapter_count: 5
+  canvas: "1920x1080"
+  fps: 30
+  visual_style: "深蓝底、浅蓝高亮、白字、浅灰辅助、少量黄色重点"
+  source_of_timing_truth: "final_approved_voice_track"
+  archive_directory: "PastUselessDoc"
+
+stages:
+  - id: "S00_intake"
+    name: "素材接收与目标锁定"
+    owner: "luna_ultra"
+    approver: "human_owner"
+    depends_on: []
+    inputs: ["source_video_or_text", "reference_style", "target_platform"]
+    outputs: ["project.yaml", "asset-inventory.yaml", "audience_and_learning_goal"]
+    exit_gate: ["audience_locked", "platform_locked", "copyright_and_privacy_checked"]
+    on_failure: "request_missing_source_or_decision"
+
+  - id: "S01_transcript"
+    name: "转录与事实清理"
+    owner: "toolchain"
+    reviewer: "luna_ultra"
+    depends_on: ["S00_intake"]
+    inputs: ["source_video_or_audio"]
+    outputs: ["canonical-transcript.md", "source-timecodes.yaml", "terminology.yaml"]
+    exit_gate: ["transcript_complete", "speaker_or_section_boundaries_checked", "terms_spelled_consistently"]
+    on_failure: "retranscribe_only_failed_ranges"
+
+  - id: "S02_course_structure"
+    name: "课程拆章与教学目标"
+    owner: "luna_ultra"
+    approver: "human_owner"
+    depends_on: ["S01_transcript"]
+    inputs: ["canonical-transcript.md", "audience_and_learning_goal"]
+    outputs: ["chapter-plan.yaml", "learning-outcomes.md"]
+    exit_gate: ["one_core_task_per_chapter", "chapter_arc_complete", "audience_examples_fit"]
+    on_failure: "revise_chapter_boundaries_before_script"
+
+  - id: "S03_script_rewrite"
+    name: "课程讲稿改写"
+    owner: "luna_ultra"
+    approver: "human_owner"
+    depends_on: ["S02_course_structure"]
+    inputs: ["chapter-plan.yaml", "canonical-transcript.md", "terminology.yaml"]
+    outputs: ["chapter-XX/SCRIPT.md", "chapter-XX/script-review.md"]
+    exit_gate: ["one_canonical_script_per_chapter", "spoken_language_natural", "claims_and_examples_checkable"]
+    on_failure: "return_to_script_only"
+
+  - id: "S04_tone_and_pronunciation"
+    name: "语气规划与术语读音"
+    owner: "luna_ultra"
+    approver: "human_owner"
+    depends_on: ["S03_script_rewrite"]
+    inputs: ["chapter-XX/SCRIPT.md", "terminology.yaml"]
+    outputs: ["chapter-XX/tone-plan.yaml", "chapter-XX/terminology.yaml"]
+    exit_gate: ["sentence_level_intent_present", "breath_and_pause_marks_present", "emphasis_words_present", "english_terms_pronunciation_locked", "visual_sync_targets_present"]
+    on_failure: "revise_tone_plan_without_changing_meaning"
+
+  - id: "S05_voice_generation"
+    name: "配音生成与人工确认"
+    owner: "toolchain"
+    reviewer: "luna_ultra"
+    approver: "human_owner"
+    depends_on: ["S04_tone_and_pronunciation"]
+    inputs: ["SCRIPT.md", "tone-plan.yaml", "approved_voice_profile"]
+    outputs: ["chapter-XX/audio/", "chapter-XX/voice-manifest.yaml", "chapter-XX/audio_meta.json"]
+    exit_gate: ["mandarin_natural", "terms_pronounced_correctly", "single_voice_per_sentence", "final_audio_frozen"]
+    on_failure: "regenerate_only_failed_sentence_or_segment"
+    parallelizable_by: "chapter"
+
+  - id: "S06_word_alignment"
+    name: "最终音频逐词对齐"
+    owner: "toolchain"
+    reviewer: "luna_ultra"
+    depends_on: ["S05_voice_generation"]
+    inputs: ["final_approved_voice_track", "SCRIPT.md", "terminology.yaml"]
+    outputs: ["chapter-XX/word-alignment.yaml", "chapter-XX/alignment-audit.md"]
+    exit_gate: ["all_spoken_tokens_covered_once", "critical_terms_manually_checked", "audio_duration_matches_manifest"]
+    on_failure: "realign_failed_ranges_do_not_guess"
+    parallelizable_by: "chapter"
+
+  - id: "S07_storyboard_mapping"
+    name: "语义锚点、布局与定时分镜"
+    owner: "luna_ultra"
+    reviewer: "terra_high"
+    depends_on: ["S06_word_alignment"]
+    inputs: ["SCRIPT.md", "word-alignment.yaml", "visual-style.yaml"]
+    outputs: ["semantic-anchor-plan.yaml", "semantic-beat-manifest.yaml", "visual-coverage-matrix.yaml", "semantic-timing-manifest.yaml", "timed-storyboard.yaml", "layout-audit.md"]
+    exit_gate: ["one_cue_one_primary_visual", "sentence_level_coverage_pass", "all_turns_have_state_change", "subtitle_safe_band_reserved", "first_30_seconds_layer_audit_pass", "timing_windows_pass"]
+    on_failure: "fix_manifest_before_animation_code"
+    parallelizable_by: "chapter"
+
+  - id: "S08_alignment_pilot"
+    name: "15–20 秒高风险对齐试片"
+    owner: "terra_high"
+    reviewer: "luna_ultra"
+    approver: "human_owner"
+    depends_on: ["S07_storyboard_mapping"]
+    inputs: ["approved_manifests", "final_audio"]
+    outputs: ["pilot.mp4", "pilot-qa.md"]
+    exit_gate: ["terms_visible_when_spoken", "actions_visible_when_spoken", "no_old_layer_competition", "layout_pass"]
+    on_failure: "minimal_fix_then_repeat_same_pilot"
+
+  - id: "S09_motion_implementation"
+    name: "PPT 风格动画实现"
+    owner: "terra_high"
+    reviewer: "luna_ultra"
+    depends_on: ["S08_alignment_pilot"]
+    inputs: ["approved_manifests", "pilot_motion_pattern", "visual-style.yaml"]
+    outputs: ["index.html", "index.motion.json", "media-ledger.json"]
+    exit_gate: ["utf8_source", "runtime_pass", "layout_pass", "motion_is_seek_safe"]
+    on_failure: "fix_smallest_scene_or_object"
+    parallelizable_by: "chapter"
+
+  - id: "S10_chapter_render"
+    name: "逐章审查与渲染"
+    owner: "toolchain"
+    reviewer: "luna_ultra"
+    approver: "human_owner"
+    depends_on: ["S09_motion_implementation"]
+    inputs: ["renderable_chapter", "final_audio"]
+    outputs: ["chapter-XX/renders/chapter-vNN-no-captions.mp4", "chapter-XX/qa-report.md"]
+    exit_gate: ["semantic_gate_pass", "layout_gate_pass", "audio_gate_pass", "human_review_pass"]
+    on_failure: "return_to_exact_failed_stage"
+    parallelizable_by: "chapter"
+
+  - id: "S11_subtitles"
+    name: "逐章字幕生成与烧录"
+    owner: "toolchain"
+    reviewer: "luna_ultra"
+    depends_on: ["S10_chapter_render"]
+    inputs: ["final_chapter_mp4_audio", "word-alignment.yaml", "subtitle-style"]
+    outputs: ["subtitle-manifest.yaml", "captioned-chapter.mp4", "subtitle-gate-report.json"]
+    exit_gate: ["exact_spoken_sequence", "one_line", "five_to_fourteen_visible_characters", "word_alignment_evidence_present", "proportional_timing_absent", "timing_error_within_80ms"]
+    on_failure: "fix_alignment_or_segmentation_only"
+    parallelizable_by: "chapter"
+
+  - id: "S12_merge_and_media_qa"
+    name: "章节合并与媒体检查"
+    owner: "toolchain"
+    reviewer: "terra_high"
+    depends_on: ["S11_subtitles"]
+    inputs: ["approved_captioned_chapters"]
+    outputs: ["final-course-video.mp4", "final-media-report.json"]
+    exit_gate: ["chapter_order_correct", "single_audio_stream", "h264_aac", "duration_and_streams_verified"]
+    on_failure: "repair_concat_or_stream_mapping_without_rerendering_animation"
+
+  - id: "S13_cover_and_publish"
+    name: "封面、发布文案与发布包"
+    owner: "luna_ultra"
+    renderer: "toolchain"
+    approver: "human_owner"
+    depends_on: ["S12_merge_and_media_qa"]
+    inputs: ["final-course-video.mp4", "course-summary", "brand-style"]
+    outputs: ["cover-4x3.png", "cover-3x4.png", "publish-package.yaml", "publish-copy.md"]
+    exit_gate: ["bbox_overlap_zero", "safe_margins_pass", "copy_matches_cover", "platform_crop_preview_pass"]
+    on_failure: "repair_cover_layout_or_copy_only"
+
+  - id: "S14_release_and_learning_loop"
+    name: "发布冻结与经验回写"
+    owner: "human_owner"
+    recorder: "luna_ultra"
+    depends_on: ["S13_cover_and_publish"]
+    inputs: ["approved_publish_package", "platform_feedback"]
+    outputs: ["release-manifest.yaml", "lessons-learned.md", "harness-revision-proposal.yaml"]
+    exit_gate: ["version_frozen", "public_files_sanitized", "new_rules_are_checkable"]
+    on_failure: "do_not_publish_or_reopen_exact_failed_gate"
+
+parallel_execution:
+  - id: "P1_audio_alignment"
+    fan_out_after: "S04_tone_and_pronunciation"
+    work_units: ["chapter-01", "chapter-02", "chapter-03", "chapter-04", "chapter-05"]
+    stages: ["S05_voice_generation", "S06_word_alignment"]
+    join_gate: "all_chapters_audio_and_alignment_pass"
+  - id: "P2_storyboards"
+    fan_out_after: "P1_audio_alignment"
+    stages: ["S07_storyboard_mapping"]
+    join_gate: "all_chapter_manifests_pass"
+  - id: "P3_motion_render_caption"
+    fan_out_after: "S08_alignment_pilot"
+    stages: ["S09_motion_implementation", "S10_chapter_render", "S11_subtitles"]
+    join_gate: "all_captioned_chapters_pass"
+  - id: "P4_cover_copy_draft"
+    fan_out_after: "S03_script_rewrite"
+    stages: ["S13_cover_and_publish.copy_draft"]
+    join_gate: "final_video_available_before_release"
+  - id: "P5_merge"
+    fan_out_after: "P3_motion_render_caption"
+    stages: ["S12_merge_and_media_qa"]
+    parallel: false

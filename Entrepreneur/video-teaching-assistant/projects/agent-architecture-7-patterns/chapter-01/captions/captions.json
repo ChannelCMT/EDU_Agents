@@ -1,0 +1,471 @@
+[
+  {
+    "id": "C001",
+    "text": "你是不是想到什么，就让AI做什么？",
+    "start": 0.0,
+    "end": 2.67,
+    "timing_method": "word_alignment",
+    "word_evidence": {
+      "source": "audio/word-alignment-raw.json",
+      "timebase": "global",
+      "word_start": 0.0,
+      "word_end": 2.62,
+      "raw_words": [
+        "?",
+        "???",
+        "?",
+        "?",
+        "??",
+        "?",
+        "?",
+        "AI",
+        "?",
+        "??"
+      ],
+      "target_window": [
+        0.0,
+        2.951
+      ]
+    },
+    "alignment_error_ms": 50
+  },
+  {
+    "id": "C002",
+    "text": "先不要急着让AI干活",
+    "start": 2.901,
+    "end": 4.721,
+    "timing_method": "word_alignment",
+    "word_evidence": {
+      "source": "audio/word-alignment-raw.json",
+      "timebase": "global",
+      "word_start": 2.951,
+      "word_end": 4.671,
+      "raw_words": [
+        "?",
+        "??",
+        "?",
+        "?",
+        "?",
+        "AI",
+        "?",
+        "?"
+      ],
+      "target_window": [
+        2.951,
+        5.067
+      ]
+    },
+    "alignment_error_ms": 50
+  },
+  {
+    "id": "C003",
+    "text": "真正要回答的是",
+    "start": 5.017,
+    "end": 6.857,
+    "timing_method": "word_alignment",
+    "word_evidence": {
+      "source": "audio/word-alignment-raw.json",
+      "timebase": "global",
+      "word_start": 5.067,
+      "word_end": 6.807,
+      "raw_words": [
+        "真",
+        "正",
+        "要",
+        "回",
+        "答",
+        "的是"
+      ],
+      "target_window": [
+        5.067,
+        6.807
+      ]
+    },
+    "alignment_error_ms": 50
+  },
+  {
+    "id": "C004",
+    "text": "任务有多复杂",
+    "start": 7.177,
+    "end": 8.357,
+    "timing_method": "word_alignment",
+    "word_evidence": {
+      "source": "audio/word-alignment-raw.json",
+      "timebase": "global",
+      "word_start": 7.227,
+      "word_end": 8.307,
+      "raw_words": [
+        " 任",
+        "務",
+        "有",
+        "多",
+        "複",
+        "雜"
+      ],
+      "target_window": [
+        7.227,
+        8.307
+      ]
+    },
+    "alignment_error_ms": 50
+  },
+  {
+    "id": "C005",
+    "text": "以及你需要多强的控制力",
+    "start": 8.517,
+    "end": 10.457,
+    "timing_method": "word_alignment",
+    "word_evidence": {
+      "source": "audio/word-alignment-raw.json",
+      "timebase": "global",
+      "word_start": 8.567,
+      "word_end": 10.407,
+      "raw_words": [
+        " 以及",
+        "你",
+        "需要",
+        "多",
+        "強",
+        "的",
+        "控",
+        "制",
+        "力"
+      ],
+      "target_window": [
+        8.567,
+        10.407
+      ]
+    },
+    "alignment_error_ms": 50
+  },
+  {
+    "id": "C006",
+    "text": "轻任务只要快速验证",
+    "start": 10.467,
+    "end": 12.557,
+    "timing_method": "word_alignment",
+    "word_evidence": {
+      "source": "audio/word-alignment-raw.json",
+      "timebase": "global",
+      "word_start": 10.407,
+      "word_end": 12.507,
+      "raw_words": [
+        "請",
+        "任",
+        "務",
+        "只",
+        "要",
+        "快",
+        "速",
+        "驗",
+        "證"
+      ],
+      "target_window": [
+        10.407,
+        12.507
+      ]
+    },
+    "alignment_error_ms": 50
+  },
+  {
+    "id": "C007",
+    "text": "复杂任务才需要拆分",
+    "start": 12.757,
+    "end": 14.457,
+    "timing_method": "word_alignment",
+    "word_evidence": {
+      "source": "audio/word-alignment-raw.json",
+      "timebase": "global",
+      "word_start": 12.807,
+      "word_end": 14.407,
+      "raw_words": [
+        " 複",
+        "雜",
+        "任",
+        "務",
+        "才",
+        "需要",
+        "拆",
+        "分"
+      ],
+      "target_window": [
+        12.807,
+        14.407
+      ]
+    },
+    "alignment_error_ms": 50
+  },
+  {
+    "id": "C008",
+    "text": "路由和状态管理",
+    "start": 14.597,
+    "end": 16.477,
+    "timing_method": "word_alignment",
+    "word_evidence": {
+      "source": "audio/word-alignment-raw.json",
+      "timebase": "global",
+      "word_start": 14.647,
+      "word_end": 16.427,
+      "raw_words": [
+        " 路",
+        "由",
+        "和",
+        "狀",
+        "態",
+        "管",
+        "理"
+      ],
+      "target_window": [
+        14.647,
+        16.427
+      ]
+    },
+    "alignment_error_ms": 50
+  },
+  {
+    "id": "C009",
+    "text": "七种架构不是排行榜",
+    "start": 16.487,
+    "end": 18.497,
+    "timing_method": "word_alignment",
+    "word_evidence": {
+      "source": "audio/word-alignment-raw.json",
+      "timebase": "global",
+      "word_start": 16.427,
+      "word_end": 18.447,
+      "raw_words": [
+        "七",
+        "種",
+        "架",
+        "構",
+        "不是",
+        "排",
+        "行",
+        "榜"
+      ],
+      "target_window": [
+        16.427,
+        18.447
+      ]
+    },
+    "alignment_error_ms": 50
+  },
+  {
+    "id": "C010",
+    "text": "而是一条从单 Agent",
+    "start": 18.677,
+    "end": 20.277,
+    "timing_method": "word_alignment",
+    "word_evidence": {
+      "source": "audio/word-alignment-raw.json",
+      "timebase": "global",
+      "word_start": 18.727,
+      "word_end": 20.227,
+      "raw_words": [
+        " 而",
+        "是",
+        "一",
+        "條",
+        "從",
+        "D",
+        "one",
+        "A",
+        "gent"
+      ],
+      "target_window": [
+        18.727,
+        20.227
+      ]
+    },
+    "alignment_error_ms": 50
+  },
+  {
+    "id": "C011",
+    "text": "到协作系统",
+    "start": 20.287,
+    "end": 21.697,
+    "timing_method": "word_alignment",
+    "word_evidence": {
+      "source": "audio/word-alignment-raw.json",
+      "timebase": "global",
+      "word_start": 20.227,
+      "word_end": 21.647,
+      "raw_words": [
+        "到",
+        "協",
+        "作",
+        "系",
+        "統"
+      ],
+      "target_window": [
+        20.227,
+        21.647
+      ]
+    },
+    "alignment_error_ms": 50
+  },
+  {
+    "id": "C012",
+    "text": "再到 Graph Workflow",
+    "start": 21.707,
+    "end": 23.337,
+    "timing_method": "word_alignment",
+    "word_evidence": {
+      "source": "audio/word-alignment-raw.json",
+      "timebase": "global",
+      "word_start": 21.647,
+      "word_end": 23.287,
+      "raw_words": [
+        "再",
+        "到",
+        "G",
+        "raph",
+        "Work",
+        "flow"
+      ],
+      "target_window": [
+        21.647,
+        23.287
+      ]
+    },
+    "alignment_error_ms": 50
+  },
+  {
+    "id": "C013",
+    "text": "的演进线",
+    "start": 23.347,
+    "end": 24.197,
+    "timing_method": "word_alignment",
+    "word_evidence": {
+      "source": "audio/word-alignment-raw.json",
+      "timebase": "global",
+      "word_start": 23.287,
+      "word_end": 24.147,
+      "raw_words": [
+        "的",
+        "眼",
+        "鏡",
+        "線"
+      ],
+      "target_window": [
+        23.287,
+        24.147
+      ]
+    },
+    "alignment_error_ms": 50
+  },
+  {
+    "id": "C014",
+    "text": "本章先记住两个判断轴",
+    "start": 24.417,
+    "end": 26.297,
+    "timing_method": "word_alignment",
+    "word_evidence": {
+      "source": "audio/word-alignment-raw.json",
+      "timebase": "global",
+      "word_start": 24.467,
+      "word_end": 26.247,
+      "raw_words": [
+        " 本",
+        "章",
+        "先",
+        "記",
+        "住",
+        "兩個",
+        "判",
+        "斷",
+        "軸"
+      ],
+      "target_window": [
+        24.467,
+        26.247
+      ]
+    },
+    "alignment_error_ms": 50
+  },
+  {
+    "id": "C015",
+    "text": "复杂度和控制力",
+    "start": 26.577,
+    "end": 28.037,
+    "timing_method": "word_alignment",
+    "word_evidence": {
+      "source": "audio/word-alignment-raw.json",
+      "timebase": "global",
+      "word_start": 26.627,
+      "word_end": 27.987,
+      "raw_words": [
+        " 複",
+        "雜",
+        "度",
+        "和",
+        "控",
+        "制",
+        "力"
+      ],
+      "target_window": [
+        26.627,
+        27.987
+      ]
+    },
+    "alignment_error_ms": 50
+  },
+  {
+    "id": "C016",
+    "text": "后面每一种架构都放回",
+    "start": 28.047,
+    "end": 30.097,
+    "timing_method": "word_alignment",
+    "word_evidence": {
+      "source": "audio/word-alignment-raw.json",
+      "timebase": "global",
+      "word_start": 27.987,
+      "word_end": 30.047,
+      "raw_words": [
+        "后",
+        "面",
+        "每",
+        "一",
+        "种",
+        "架",
+        "构",
+        "都",
+        "放"
+      ],
+      "target_window": [
+        27.987,
+        30.047
+      ]
+    },
+    "alignment_error_ms": 50
+  },
+  {
+    "id": "C017",
+    "text": "这张坐标系里选择",
+    "start": 30.107,
+    "end": 31.577,
+    "timing_method": "word_alignment",
+    "word_evidence": {
+      "source": "audio/word-alignment-raw.json",
+      "timebase": "global",
+      "word_start": 30.047,
+      "word_end": 31.527,
+      "raw_words": [
+        "回",
+        "这",
+        "张",
+        "坐",
+        "标",
+        "系",
+        "列",
+        "选",
+        "择"
+      ],
+      "target_window": [
+        30.047,
+        31.527
+      ]
+    },
+    "alignment_error_ms": 50
+  }
+]

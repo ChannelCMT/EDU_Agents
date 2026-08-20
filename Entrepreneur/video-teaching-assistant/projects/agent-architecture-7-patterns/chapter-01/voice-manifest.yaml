@@ -1,0 +1,19 @@
+schema_version: "1.0"
+chapter: 1
+provider: "Fish Audio"
+voice_public_label: "Channel科技解说员"
+private_voice_id_env: "FISH_AUDIO_VOICE_ID"
+script_version: "v03"
+tone_plan_version: "v03"
+status: "approved"
+segments:
+  - id: "SEG-01"
+    text_sha256: "pending-local-hash"
+    file: "audio/seg-01.mp3"
+    duration_seconds: 31.894
+    approved: true
+combined_audio:
+  file: "audio/chapter-final.wav"
+  duration_seconds: 31.894
+  sha256: "pending-local-hash"
+human_approved: true

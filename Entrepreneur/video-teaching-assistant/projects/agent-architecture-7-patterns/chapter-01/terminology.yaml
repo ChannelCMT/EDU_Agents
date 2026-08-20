@@ -1,0 +1,16 @@
+version: '1.0'
+chapter: 1
+display_terms:
+- Agent
+- ReAct
+- Plan and Execute
+- Multi-Agent
+- Route+Skill
+- Blackboard
+- Graph Workflow
+- Coordinator
+- Planner
+- Executor
+- Reviewer
+pronunciation_policy: English terms are written canonically in captions and visuals;
+  ASR variants are never copied to display text.

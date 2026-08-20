@@ -1,0 +1,39 @@
+version: v03
+chapter: 2
+canvas:
+- 1920
+- 1080
+safe_caption_band:
+  y_min: 900
+  y_max: 1080
+shots:
+- id: 1
+  anchor: c2-input
+  start: 0.12
+  meaning: 单 Agent 就是一个大模型包揽输入、思考、调用工具和输出。
+  motion: reveal-then-connect
+- id: 2
+  anchor: c2-output
+  start: 4.94
+  meaning: 它简单、便宜、延迟低，适合做概念验证和简单对话。
+  motion: reveal-then-connect
+- id: 3
+  anchor: c2-warn
+  start: 10.2
+  meaning: 一旦任务变复杂，模型容易认知过载，出现上下文污染。
+  motion: reveal-then-connect
+- id: 4
+  anchor: c2r-loop
+  start: 15.32
+  meaning: ReAct 把过程变成 Reason 加 Action 的循环：思考、行动、观察，再决定下一步。
+  motion: reveal-then-connect
+- id: 5
+  anchor: c2r-loop
+  start: 18.98
+  meaning: 它比单 Agent 更适合多步探索，也更容易解释过程。
+  motion: reveal-then-connect
+- id: 6
+  anchor: c2r-cost
+  start: 26.82
+  meaning: 但 Token 消耗大、容易跑偏，不适合直接承担大规模生产流程。
+  motion: reveal-then-connect

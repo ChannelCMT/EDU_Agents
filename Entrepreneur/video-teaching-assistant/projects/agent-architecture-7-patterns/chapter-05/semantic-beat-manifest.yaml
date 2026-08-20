@@ -1,0 +1,169 @@
+version: v03
+chapter: 5
+source_of_truth: audio/word-alignment-raw.json
+rule: every spoken sentence/phrase maps to an explicit visual event or a justified
+  voice_only connective
+beats:
+- id: B01
+  sentence_id: S1
+  source_text: Graph Workflow 用图来编排长流程。
+  semantic_start: 0.0
+  visual_start: 0.12
+  visual_event: c5-title
+  semantic_role: define_graph
+  must_be_visible: true
+  forbid_voice_only: true
+  delta: 0.12
+  status: pass
+- id: B02
+  sentence_id: S2
+  source_text: 节点代表步骤，边代表条件。
+  semantic_start: 3.2
+  visual_start: 3.2
+  visual_event: c5-graph
+  semantic_role: define_nodes_edges
+  must_be_visible: true
+  forbid_voice_only: true
+  delta: 0.0
+  status: pass
+- id: B03
+  sentence_id: S3
+  source_text: 它可以支持分支、并行、回溯和重试。
+  semantic_start: 6.04
+  visual_start: 6.04
+  visual_event: c5-features
+  semantic_role: show_capabilities
+  must_be_visible: true
+  forbid_voice_only: true
+  delta: 0.0
+  status: pass
+- id: B04
+  sentence_id: S4
+  source_text: 所以最适合流程自动化和生产环境。
+  semantic_start: 10.1
+  visual_start: 10.1
+  visual_event: c5-features
+  semantic_role: land_fit
+  must_be_visible: true
+  forbid_voice_only: true
+  delta: 0.0
+  status: pass
+- id: B05
+  sentence_id: S5
+  source_text: 你可以把七种架构排成一条演进线。
+  semantic_start: 14.0
+  visual_start: 14.12
+  visual_event: c5c-line
+  semantic_role: set_evolution_line
+  must_be_visible: true
+  forbid_voice_only: true
+  delta: 0.12
+  status: pass
+- id: B06
+  sentence_id: S6
+  source_text: 单 Agent 做最小验证，ReAct 做多步探索。
+  semantic_start: 17.04
+  visual_start: 17.04
+  visual_event: c5c1
+  semantic_role: compare_first_two
+  must_be_visible: true
+  forbid_voice_only: true
+  delta: 0.0
+  status: pass
+- id: B07
+  sentence_id: S7
+  source_text: Plan and Execute 做工程化，多 Agent 做角色协作。
+  semantic_start: 21.08
+  visual_start: 21.08
+  visual_event: c5c3
+  semantic_role: compare_middle
+  must_be_visible: true
+  forbid_voice_only: true
+  delta: 0.0
+  status: pass
+- id: B08
+  sentence_id: S8
+  source_text: Route+Skill 做精准技能系统，Blackboard 管共享状态，Graph Workflow 承载长流程。
+  semantic_start: 25.98
+  visual_start: 25.98
+  visual_event: c5c5
+  semantic_role: compare_last_three
+  must_be_visible: true
+  forbid_voice_only: true
+  delta: 0.0
+  status: pass
+- id: B09
+  sentence_id: S9
+  source_text: 最后用三问做选择：任务有多复杂？哪里必须可控？失败后能不能重试和回滚？
+  semantic_start: 34.12
+  visual_start: 34.2
+  visual_event: c5-check
+  semantic_role: three_questions
+  must_be_visible: true
+  forbid_voice_only: true
+  delta: 0.08
+  status: pass
+- id: B10
+  sentence_id: S10
+  source_text: 没有最好的架构，只有最合适的架构。
+  semantic_start: 40.71
+  visual_start: 40.71
+  visual_event: c5-check
+  semantic_role: final_land
+  must_be_visible: true
+  forbid_voice_only: true
+  delta: 0.0
+  status: pass
+first_30_seconds_layer_audit:
+  required: false
+  subtitle_band_y:
+  - 900
+  - 1080
+  key_visual_max_y: 870
+  max_unmapped_gap_seconds: 0.8
+  layer_order:
+  - background
+  - title
+  - axes
+  - axis_labels
+  - evolution_line
+  - selection_chips
+  - closing_note
+  - captions
+  axis_direction:
+    origin_y: 812
+    y_axis_top: 530
+    y_axis_bottom: 812
+    arrow: up
+  evolution_panel_bounds:
+    left: 1460
+    top: 210
+    width: 390
+    height: 410
+    max_width: 420
+    max_height: 450
+  evolution_panel_exit:
+    start: 23.1
+    must_finish_before: 23.58
+    reason: leave_axes_and_closing_note_as_primary_visual
+  theme_bounds:
+    label_top: 240
+    title_top: 282
+    subtitle_top: 382
+    bottom_estimate: 440
+    max_bottom: 500
+  theme_axis_clearance:
+    theme_bottom: 440
+    axis_origin_y: 812
+    min_clearance: 250
+  theme_caption_clearance:
+    theme_bottom: 440
+    caption_band_top: 900
+    min_clearance: 400
+  theme_visual_rule: chapter-one theme must remain above the axis origin, outside
+    the subtitle band, and clear of the vertical axis label
+  auxiliary_visual_timing:
+    c1-q2:
+      target_start: 14.0
+      meaning: 拆分与路由在复杂任务的拆分、路由和状态管理语义中出现
+  status: pass

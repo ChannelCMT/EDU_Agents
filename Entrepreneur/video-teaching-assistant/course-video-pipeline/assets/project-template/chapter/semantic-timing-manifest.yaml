@@ -1,0 +1,24 @@
+schema_version: "1.0"
+chapter: {{CHAPTER_NUMBER}}
+audio_version: "v01"
+alignment_version: "v01"
+tolerance:
+  max_early_seconds: 0.15
+  max_late_seconds: 0.12
+  max_semantically_static_seconds: 1.4
+anchors:
+  - id: "A01"
+    cue: "TODO"
+    kind: "segment"
+    semantic_start: 0.000
+    visual_start: 0.000
+    object: "TODO"
+    action: "TODO"
+    hold_until: 0.000
+    exit: "TODO"
+    inherit_state: []
+    forbid_early: []
+gate:
+  all_windows_pass: false
+  turns_have_state_change: false
+  no_unmapped_visuals: false

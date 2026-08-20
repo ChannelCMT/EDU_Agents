@@ -1,0 +1,1412 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/94ztmn",
+    "id": "94ztmn",
+    "slide": 6,
+    "layoutId": "78f3f17c-effe-426a-843e-b847b5f23867",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "3cd712da-81cc-4e88-934a-01e1c28d60fa",
+    "masterLayoutName": "Master",
+    "backgroundColor": "#06182A",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1920,
+      "height": 1080
+    }
+  },
+  "theme": {
+    "colorSchemeName": "ChatGPT",
+    "colors": {
+      "accent1": "#156082",
+      "accent2": "#E97132",
+      "accent3": "#196B24",
+      "accent4": "#0F9ED5",
+      "accent5": "#A02B93",
+      "accent6": "#4EA72E",
+      "bg1": "#FFFFFF",
+      "bg2": "#000000",
+      "tx1": "#1F1F1F",
+      "tx2": "#FFFFFF",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#0E2841",
+      "lt2": "#E8E8E8",
+      "hlink": "#467886",
+      "folHlink": "#96607D"
+    },
+    "typefaces": [
+      "+mn-lt"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "78f3f17c-effe-426a-843e-b847b5f23867",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "3cd712da-81cc-4e88-934a-01e1c28d60fa",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "3cd712da-81cc-4e88-934a-01e1c28d60fa",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/u5obe5w7",
+      "id": "1",
+      "name": "glow-top-left-6",
+      "bbox": [
+        -220,
+        -280,
+        720,
+        720
+      ],
+      "geometry": "ellipse",
+      "lineWidth": 0
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/hsza90vi",
+      "id": "2",
+      "name": "glow-bottom-right-6",
+      "bbox": [
+        1460,
+        760,
+        680,
+        680
+      ],
+      "geometry": "ellipse",
+      "lineWidth": 0
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/g76tgfed",
+      "id": "3",
+      "bbox": [
+        0,
+        0,
+        0,
+        1080
+      ],
+      "geometry": "line",
+      "lineColor": "#0B2236",
+      "lineWidth": 1
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/72xs3qxg",
+      "id": "4",
+      "bbox": [
+        160,
+        0,
+        0,
+        1080
+      ],
+      "geometry": "line",
+      "lineColor": "#0B2236",
+      "lineWidth": 1
+    },
+    {
+      "order": 5,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/61obalwv",
+      "id": "5",
+      "bbox": [
+        320,
+        0,
+        0,
+        1080
+      ],
+      "geometry": "line",
+      "lineColor": "#0B2236",
+      "lineWidth": 1
+    },
+    {
+      "order": 6,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/t4fa50vm",
+      "id": "6",
+      "bbox": [
+        480,
+        0,
+        0,
+        1080
+      ],
+      "geometry": "line",
+      "lineColor": "#0B2236",
+      "lineWidth": 1
+    },
+    {
+      "order": 7,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/836tcve1",
+      "id": "7",
+      "bbox": [
+        640,
+        0,
+        0,
+        1080
+      ],
+      "geometry": "line",
+      "lineColor": "#0B2236",
+      "lineWidth": 1
+    },
+    {
+      "order": 8,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/jydszqxk",
+      "id": "8",
+      "bbox": [
+        800,
+        0,
+        0,
+        1080
+      ],
+      "geometry": "line",
+      "lineColor": "#0B2236",
+      "lineWidth": 1
+    },
+    {
+      "order": 9,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/yx4r6lwz",
+      "id": "9",
+      "bbox": [
+        960,
+        0,
+        0,
+        1080
+      ],
+      "geometry": "line",
+      "lineColor": "#0B2236",
+      "lineWidth": 1
+    },
+    {
+      "order": 10,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/8z698fmp",
+      "id": "10",
+      "bbox": [
+        1120,
+        0,
+        0,
+        1080
+      ],
+      "geometry": "line",
+      "lineColor": "#0B2236",
+      "lineWidth": 1
+    },
+    {
+      "order": 11,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/90fahk3a",
+      "id": "11",
+      "bbox": [
+        1280,
+        0,
+        0,
+        1080
+      ],
+      "geometry": "line",
+      "lineColor": "#0B2236",
+      "lineWidth": 1
+    },
+    {
+      "order": 12,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/mx4r654z",
+      "id": "12",
+      "bbox": [
+        1440,
+        0,
+        0,
+        1080
+      ],
+      "geometry": "line",
+      "lineColor": "#0B2236",
+      "lineWidth": 1
+    },
+    {
+      "order": 13,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/nydsfal4",
+      "id": "13",
+      "bbox": [
+        1600,
+        0,
+        0,
+        1080
+      ],
+      "geometry": "line",
+      "lineColor": "#0B2236",
+      "lineWidth": 1
+    },
+    {
+      "order": 14,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/0vm94fmt",
+      "id": "14",
+      "bbox": [
+        1760,
+        0,
+        0,
+        1080
+      ],
+      "geometry": "line",
+      "lineColor": "#0B2236",
+      "lineWidth": 1
+    },
+    {
+      "order": 15,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/lwvadk3e",
+      "id": "15",
+      "bbox": [
+        1920,
+        0,
+        0,
+        1080
+      ],
+      "geometry": "line",
+      "lineColor": "#0B2236",
+      "lineWidth": 1
+    },
+    {
+      "order": 16,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/y94r254n",
+      "id": "16",
+      "bbox": [
+        0,
+        0,
+        1920,
+        0
+      ],
+      "geometry": "line",
+      "lineColor": "#0B2236",
+      "lineWidth": 1
+    },
+    {
+      "order": 17,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/zadsbal8",
+      "id": "17",
+      "bbox": [
+        0,
+        160,
+        1920,
+        0
+      ],
+      "geometry": "line",
+      "lineColor": "#0B2236",
+      "lineWidth": 1
+    },
+    {
+      "order": 18,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/krqtgz2x",
+      "id": "18",
+      "bbox": [
+        0,
+        320,
+        1920,
+        0
+      ],
+      "geometry": "line",
+      "lineColor": "#0B2236",
+      "lineWidth": 1
+    },
+    {
+      "order": 19,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/5szap43i",
+      "id": "19",
+      "bbox": [
+        0,
+        480,
+        1920,
+        0
+      ],
+      "geometry": "line",
+      "lineColor": "#0B2236",
+      "lineWidth": 1
+    },
+    {
+      "order": 20,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/tcbid0ra",
+      "id": "20",
+      "bbox": [
+        0,
+        640,
+        1920,
+        0
+      ],
+      "geometry": "line",
+      "lineColor": "#0B2236",
+      "lineWidth": 1
+    },
+    {
+      "order": 21,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/sb21kvqp",
+      "id": "21",
+      "bbox": [
+        0,
+        800,
+        1920,
+        0
+      ],
+      "geometry": "line",
+      "lineColor": "#0B2236",
+      "lineWidth": 1
+    },
+    {
+      "order": 22,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/7at0ba9k",
+      "id": "22",
+      "bbox": [
+        0,
+        960,
+        1920,
+        0
+      ],
+      "geometry": "line",
+      "lineColor": "#0B2236",
+      "lineWidth": 1
+    },
+    {
+      "order": 23,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/69kji58z",
+      "id": "23",
+      "name": "eyebrow-6",
+      "bbox": [
+        76,
+        34,
+        700,
+        34
+      ],
+      "geometry": "rect",
+      "text": "AGENT ARCHITECTURE / COURSE LOOP",
+      "textPreview": "AGENT ARCHITECTURE / COURSE LOOP",
+      "resolvedFontSize": 18,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 18,
+        "typeface": "+mn-lt",
+        "color": "#8ED6FF",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "middle",
+        "wrap": "square",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "AGENT ARCHITECTURE / COURSE LOOP"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "AGENT ARCHITECTURE / COURSE LOOP",
+          "lineSpacingPercent": 112000,
+          "resolvedTextStyle": {
+            "fontSize": 18,
+            "color": "#8ED6FF",
+            "bold": true,
+            "alignment": "left",
+            "lineSpacing": 1.12
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "AGENT ARCHITECTURE / COURSE LOOP",
+              "fontSize": 18,
+              "color": "#8ED6FF",
+              "bold": true,
+              "alignment": "left",
+              "lineSpacing": 1.12
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 24,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/58bi90re",
+      "id": "24",
+      "name": "label-6",
+      "bbox": [
+        1340,
+        34,
+        500,
+        34
+      ],
+      "geometry": "rect",
+      "text": "LAYER RELATIONSHIP / 01:55",
+      "textPreview": "LAYER RELATIONSHIP / 01:55",
+      "resolvedFontSize": 18,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 18,
+        "typeface": "+mn-lt",
+        "color": "#FFD66F",
+        "bold": true,
+        "alignment": "right",
+        "verticalAlignment": "middle",
+        "wrap": "square",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "LAYER RELATIONSHIP / 01:55"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "LAYER RELATIONSHIP / 01:55",
+          "lineSpacingPercent": 112000,
+          "resolvedTextStyle": {
+            "fontSize": 18,
+            "color": "#FFD66F",
+            "bold": true,
+            "alignment": "right",
+            "lineSpacing": 1.12
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "LAYER RELATIONSHIP / 01:55",
+              "fontSize": 18,
+              "color": "#FFD66F",
+              "bold": true,
+              "alignment": "right",
+              "lineSpacing": 1.12
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 25,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/k7i1gvqt",
+      "id": "25",
+      "bbox": [
+        76,
+        92,
+        1768,
+        0
+      ],
+      "geometry": "line",
+      "lineColor": "#1B4058",
+      "lineWidth": 1
+    },
+    {
+      "order": 26,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/j6907q98",
+      "id": "26",
+      "name": "title-6",
+      "bbox": [
+        92,
+        124,
+        1600,
+        86
+      ],
+      "geometry": "rect",
+      "text": "MCP 不取代 API，ADK 也不是另一种接口",
+      "textPreview": "MCP 不取代 API，ADK 也不是另一种接口",
+      "resolvedFontSize": 46,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 46,
+        "typeface": "+mn-lt",
+        "color": "#F7FBFF",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "middle",
+        "wrap": "square",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "MCP 不取代 API，ADK 也不是另一种接口"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "MCP 不取代 API，ADK 也不是另一种接口",
+          "lineSpacingPercent": 112000,
+          "resolvedTextStyle": {
+            "fontSize": 46,
+            "color": "#F7FBFF",
+            "bold": true,
+            "alignment": "left",
+            "lineSpacing": 1.12
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "MCP 不取代 API，ADK 也不是另一种接口",
+              "fontSize": 46,
+              "color": "#F7FBFF",
+              "bold": true,
+              "alignment": "left",
+              "lineSpacing": 1.12
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 27,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/i50jel8n",
+      "id": "27",
+      "name": "subtitle-safe-band-6",
+      "bbox": [
+        0,
+        900,
+        1920,
+        180
+      ],
+      "geometry": "rect",
+      "fillColor": "#03101D",
+      "lineWidth": 0
+    },
+    {
+      "order": 28,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/x4ri5gr2",
+      "id": "28",
+      "bbox": [
+        76,
+        900,
+        1768,
+        0
+      ],
+      "geometry": "line",
+      "lineColor": "#204B6A",
+      "lineWidth": 1
+    },
+    {
+      "order": 29,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/wji1cbqx",
+      "id": "29",
+      "name": "safe-note-6",
+      "bbox": [
+        1500,
+        930,
+        310,
+        26
+      ],
+      "geometry": "rect",
+      "text": "字幕安全区（暂不显示）",
+      "textPreview": "字幕安全区（暂不显示）",
+      "resolvedFontSize": 14,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 14,
+        "typeface": "+mn-lt",
+        "color": "#52718A",
+        "alignment": "right",
+        "verticalAlignment": "middle",
+        "wrap": "square",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "字幕安全区（暂不显示）"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "字幕安全区（暂不显示）",
+          "lineSpacingPercent": 112000,
+          "resolvedTextStyle": {
+            "fontSize": 14,
+            "color": "#52718A",
+            "alignment": "right",
+            "lineSpacing": 1.12
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "字幕安全区（暂不显示）",
+              "fontSize": 14,
+              "color": "#52718A",
+              "alignment": "right",
+              "lineSpacing": 1.12
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 30,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/mpgf6hof",
+      "id": "30",
+      "name": "adk",
+      "bbox": [
+        130,
+        350,
+        500,
+        340
+      ],
+      "geometry": "roundRect",
+      "fillColor": "#0A2F4E",
+      "lineColor": "#FFD66F",
+      "lineWidth": 2
+    },
+    {
+      "order": 31,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/napgfmp0",
+      "id": "31",
+      "name": "adk-title",
+      "bbox": [
+        158,
+        372,
+        444,
+        42
+      ],
+      "geometry": "rect",
+      "text": "ADK",
+      "textPreview": "ADK",
+      "resolvedFontSize": 43,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 43,
+        "typeface": "+mn-lt",
+        "color": "#FFD66F",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "middle",
+        "wrap": "square",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "ADK"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "ADK",
+          "lineSpacingPercent": 112000,
+          "resolvedTextStyle": {
+            "fontSize": 43,
+            "color": "#FFD66F",
+            "bold": true,
+            "alignment": "left",
+            "lineSpacing": 1.12
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "ADK",
+              "fontSize": 43,
+              "color": "#FFD66F",
+              "bold": true,
+              "alignment": "left",
+              "lineSpacing": 1.12
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 32,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/8byx8r6l",
+      "id": "32",
+      "name": "adk-copy",
+      "bbox": [
+        158,
+        420,
+        444,
+        252
+      ],
+      "geometry": "rect",
+      "text": "Agent Development Kit\n\n状态 · 工作流 · 回调\n多 Agent · 评测",
+      "textPreview": "Agent Development Kit |  | 状态 · 工作流 · 回调 | 多 Agent · 评测",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "color": "#B8C4D2",
+        "alignment": "left",
+        "verticalAlignment": "middle",
+        "wrap": "square",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 4,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Agent Development Kit"
+          },
+          {
+            "index": 2,
+            "text": ""
+          },
+          {
+            "index": 3,
+            "text": "状态 · 工作流 · 回调"
+          },
+          {
+            "index": 4,
+            "text": "多 Agent · 评测"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Agent Development Kit",
+          "lineSpacingPercent": 118000,
+          "resolvedTextStyle": {
+            "fontSize": 24,
+            "color": "#B8C4D2",
+            "alignment": "left",
+            "lineSpacing": 1.18
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Agent Development Kit",
+              "fontSize": 24,
+              "color": "#B8C4D2",
+              "alignment": "left",
+              "lineSpacing": 1.18
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 3,
+          "text": "状态 · 工作流 · 回调",
+          "lineSpacingPercent": 118000,
+          "resolvedTextStyle": {
+            "fontSize": 24,
+            "color": "#B8C4D2",
+            "alignment": "left",
+            "lineSpacing": 1.18
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "状态 · 工作流 · 回调",
+              "fontSize": 24,
+              "color": "#B8C4D2",
+              "alignment": "left",
+              "lineSpacing": 1.18
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 4,
+          "text": "多 Agent · 评测",
+          "lineSpacingPercent": 118000,
+          "resolvedTextStyle": {
+            "fontSize": 24,
+            "color": "#B8C4D2",
+            "alignment": "left",
+            "lineSpacing": 1.18
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "多 Agent · 评测",
+              "fontSize": 24,
+              "color": "#B8C4D2",
+              "alignment": "left",
+              "lineSpacing": 1.18
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 33,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/9c7yhw76",
+      "id": "33",
+      "name": "mcp",
+      "bbox": [
+        710,
+        350,
+        470,
+        340
+      ],
+      "geometry": "roundRect",
+      "fillColor": "#0A2F4E",
+      "lineColor": "#8ED6FF",
+      "lineWidth": 2
+    },
+    {
+      "order": 34,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/elwf2hoj",
+      "id": "34",
+      "name": "mcp-title",
+      "bbox": [
+        738,
+        372,
+        414,
+        42
+      ],
+      "geometry": "rect",
+      "text": "MCP",
+      "textPreview": "MCP",
+      "resolvedFontSize": 43,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 43,
+        "typeface": "+mn-lt",
+        "color": "#8ED6FF",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "middle",
+        "wrap": "square",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "MCP"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "MCP",
+          "lineSpacingPercent": 112000,
+          "resolvedTextStyle": {
+            "fontSize": 43,
+            "color": "#8ED6FF",
+            "bold": true,
+            "alignment": "left",
+            "lineSpacing": 1.12
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "MCP",
+              "fontSize": 43,
+              "color": "#8ED6FF",
+              "bold": true,
+              "alignment": "left",
+              "lineSpacing": 1.12
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 35,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/zm5gbmp4",
+      "id": "35",
+      "name": "mcp-copy",
+      "bbox": [
+        738,
+        420,
+        414,
+        252
+      ],
+      "geometry": "rect",
+      "text": "统一发现和调用\n\nTools · Resources · Prompts",
+      "textPreview": "统一发现和调用 |  | Tools · Resources · Prompts",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "color": "#B8C4D2",
+        "alignment": "left",
+        "verticalAlignment": "middle",
+        "wrap": "square",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 3,
+        "lines": [
+          {
+            "index": 1,
+            "text": "统一发现和调用"
+          },
+          {
+            "index": 2,
+            "text": ""
+          },
+          {
+            "index": 3,
+            "text": "Tools · Resources · Prompts"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "统一发现和调用",
+          "lineSpacingPercent": 118000,
+          "resolvedTextStyle": {
+            "fontSize": 24,
+            "color": "#B8C4D2",
+            "alignment": "left",
+            "lineSpacing": 1.18
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "统一发现和调用",
+              "fontSize": 24,
+              "color": "#B8C4D2",
+              "alignment": "left",
+              "lineSpacing": 1.18
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 3,
+          "text": "Tools · Resources · Prompts",
+          "lineSpacingPercent": 118000,
+          "resolvedTextStyle": {
+            "fontSize": 24,
+            "color": "#B8C4D2",
+            "alignment": "left",
+            "lineSpacing": 1.18
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Tools · Resources · Prompts",
+              "fontSize": 24,
+              "color": "#B8C4D2",
+              "alignment": "left",
+              "lineSpacing": 1.18
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 36,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/0nex4r6p",
+      "id": "36",
+      "name": "access",
+      "bbox": [
+        1260,
+        350,
+        500,
+        340
+      ],
+      "geometry": "roundRect",
+      "fillColor": "#0A2F4E",
+      "lineColor": "#A0E6BF",
+      "lineWidth": 2
+    },
+    {
+      "order": 37,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/1onydc7u",
+      "id": "37",
+      "name": "access-title",
+      "bbox": [
+        1288,
+        372,
+        444,
+        42
+      ],
+      "geometry": "rect",
+      "text": "API / SDK / CLI",
+      "textPreview": "API / SDK / CLI",
+      "resolvedFontSize": 36,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 36,
+        "typeface": "+mn-lt",
+        "color": "#A0E6BF",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "middle",
+        "wrap": "square",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "API / SDK / CLI"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "API / SDK / CLI",
+          "lineSpacingPercent": 112000,
+          "resolvedTextStyle": {
+            "fontSize": 36,
+            "color": "#A0E6BF",
+            "bold": true,
+            "alignment": "left",
+            "lineSpacing": 1.12
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "API / SDK / CLI",
+              "fontSize": 36,
+              "color": "#A0E6BF",
+              "bold": true,
+              "alignment": "left",
+              "lineSpacing": 1.12
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 38,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/qhcfyx87",
+      "id": "38",
+      "name": "access-copy",
+      "bbox": [
+        1288,
+        420,
+        444,
+        252
+      ],
+      "geometry": "rect",
+      "text": "真正执行能力\n\n数据库 · 文件 · 服务",
+      "textPreview": "真正执行能力 |  | 数据库 · 文件 · 服务",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "color": "#B8C4D2",
+        "alignment": "left",
+        "verticalAlignment": "middle",
+        "wrap": "square",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 3,
+        "lines": [
+          {
+            "index": 1,
+            "text": "真正执行能力"
+          },
+          {
+            "index": 2,
+            "text": ""
+          },
+          {
+            "index": 3,
+            "text": "数据库 · 文件 · 服务"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "真正执行能力",
+          "lineSpacingPercent": 118000,
+          "resolvedTextStyle": {
+            "fontSize": 24,
+            "color": "#B8C4D2",
+            "alignment": "left",
+            "lineSpacing": 1.18
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "真正执行能力",
+              "fontSize": 24,
+              "color": "#B8C4D2",
+              "alignment": "left",
+              "lineSpacing": 1.18
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 3,
+          "text": "数据库 · 文件 · 服务",
+          "lineSpacingPercent": 118000,
+          "resolvedTextStyle": {
+            "fontSize": 24,
+            "color": "#B8C4D2",
+            "alignment": "left",
+            "lineSpacing": 1.18
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "数据库 · 文件 · 服务",
+              "fontSize": 24,
+              "color": "#B8C4D2",
+              "alignment": "left",
+              "lineSpacing": 1.18
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 39,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ri5g72ps",
+      "id": "39",
+      "name": "layer-summary",
+      "bbox": [
+        320,
+        755,
+        1280,
+        100
+      ],
+      "geometry": "roundRect",
+      "fillColor": "#0A2F4E",
+      "lineColor": "#8ED6FF",
+      "lineWidth": 2
+    },
+    {
+      "order": 40,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/3a5cjito",
+      "id": "40",
+      "name": "layer-summary-title",
+      "bbox": [
+        348,
+        777,
+        1224,
+        42
+      ],
+      "geometry": "rect",
+      "text": "MCP 解决“怎么接工具” · ADK 解决“怎么组织 Agent”",
+      "textPreview": "MCP 解决“怎么接工具” · ADK 解决“怎么组织 Agent”",
+      "resolvedFontSize": 29,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 29,
+        "typeface": "+mn-lt",
+        "color": "#F7FBFF",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "middle",
+        "wrap": "square",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "MCP 解决“怎么接工具” · ADK 解决“怎么组织 Agent”"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "MCP 解决“怎么接工具” · ADK 解决“怎么组织 Agent”",
+          "lineSpacingPercent": 112000,
+          "resolvedTextStyle": {
+            "fontSize": 29,
+            "color": "#F7FBFF",
+            "bold": true,
+            "alignment": "left",
+            "lineSpacing": 1.12
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "MCP 解决“怎么接工具” · ADK 解决“怎么组织 Agent”",
+              "fontSize": 29,
+              "color": "#F7FBFF",
+              "bold": true,
+              "alignment": "left",
+              "lineSpacing": 1.12
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    }
+  ],
+  "composeRuns": []
+}

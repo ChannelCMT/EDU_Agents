@@ -1,0 +1,64 @@
+version: v03
+chapter: 3
+duration_seconds: 34.6086875
+audio_timing_source: audio/chapter-final.wav
+sentence_level_source: semantic-beat-manifest.yaml
+offset_policy: visual entry may lead by 150ms and lag by 120ms
+static_gap_max_seconds: 1.4
+anchors:
+- id: 1
+  name: c3-plan-card
+  semantic_start: 0.0
+  visual_start: 0.12
+  meaning: Plan and Execute 先生成完整计划，再按步骤执行。
+  delta: 0.0
+  status: pass
+- id: 2
+  name: c3-exec-card
+  semantic_start: 4.42
+  visual_start: 4.42
+  meaning: 它让流程更稳定，适合代码生成和长流程自动化。
+  delta: 0.0
+  status: pass
+- id: 3
+  name: c3-fail
+  semantic_start: 8.64
+  visual_start: 8.7
+  meaning: 但计划如果一开始就错，后面的执行会把错误放大，灵活性也不如 ReAct。
+  delta: 0.0
+  status: pass
+- id: 4
+  name: c3m-router
+  semantic_start: 15.28
+  visual_start: 15.35
+  meaning: Multi-Agent 再进一步，把任务分给不同角色。
+  delta: 0.0
+  status: pass
+- id: 5
+  name: c3m-planner
+  semantic_start: 19.3
+  visual_start: 19.3
+  meaning: 例如 Planner、Executor 和 Reviewer。
+  delta: 0.0
+  status: pass
+- id: 6
+  name: c3m-reviewer
+  semantic_start: 21.72
+  visual_start: 21.72
+  meaning: 这样上下文边界更清楚，复杂流程更容易扩展。
+  delta: 0.0
+  status: pass
+- id: 7
+  name: c3m-cost
+  semantic_start: 26.0
+  visual_start: 26.0
+  meaning: 代价是调用成本、协作协议和失败处理都会增加。
+  delta: 0.0
+  status: pass
+- id: 8
+  name: c3m-cost
+  semantic_start: 30.54
+  visual_start: 30.54
+  meaning: 它适合对流程一致性要求高的行业任务。
+  delta: 0.0
+  status: pass

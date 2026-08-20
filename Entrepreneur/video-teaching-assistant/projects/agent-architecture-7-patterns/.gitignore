@@ -1,0 +1,9 @@
+.npm-cache/
+node_modules/
+raw/*.mp4
+raw/*.wav
+chapter-*/audio/*.mp3
+chapter-*/audio/*.wav
+chapter-*/audio/*.json
+chapter-*/renders/frames_subtitled/
+publish-package/qa/frame_*.jpg

@@ -1,0 +1,12 @@
+schema_version: "1.0"
+chapter: {{CHAPTER_NUMBER}}
+script_version: "v01"
+anchors:
+  - id: "A01"
+    cue: "TODO"
+    kind: "segment"
+    primary_visual: "TODO"
+    action: "TODO"
+    inherit_state: []
+    forbid_early: []
+    voice_only: false

@@ -1,0 +1,39 @@
+version: v03
+chapter: 1
+canvas:
+- 1920
+- 1080
+safe_caption_band:
+  y_min: 900
+  y_max: 1080
+shots:
+- id: 1
+  anchor: c1-title
+  start: 0.12
+  meaning: 你是不是想到什么，就让AI做什么？先不要急着让AI干活。
+  motion: reveal-then-connect
+- id: 2
+  anchor: c1-axis-x
+  start: 5.14
+  meaning: 真正要回答的是：任务有多复杂，以及你需要多强的控制力。
+  motion: reveal-then-connect
+- id: 3
+  anchor: c1-q1
+  start: 10.51
+  meaning: 轻任务只要快速验证，复杂任务才需要拆分、路由和状态管理。
+  motion: reveal-then-connect
+- id: 4
+  anchor: c1-evo
+  start: 16.54
+  meaning: 七种架构不是排行榜，而是一条从单 Agent，到协作系统，再到 Graph Workflow 的演进线。
+  motion: reveal-then-connect
+- id: 5
+  anchor: c1-note
+  start: 24.47
+  meaning: 本章先记住两个判断轴：复杂度和控制力。
+  motion: reveal-then-connect
+- id: 6
+  anchor: c1-note
+  start: 27.99
+  meaning: 后面每一种架构，都放回这张坐标系里选择。
+  motion: reveal-then-connect

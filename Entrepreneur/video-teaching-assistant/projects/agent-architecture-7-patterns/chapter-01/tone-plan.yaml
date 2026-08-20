@@ -1,0 +1,111 @@
+version: v05
+chapter: 1
+voice: Channel科技解说员
+delivery_profile: 稳重底色 + 句内对比 + 关键名词重读 + 结论落点
+generic_plan_rejected: true
+sentences:
+- sentence_id: S1
+  source_text: 你是不是想到什么，就让AI做什么？先不要急着让AI干活。
+  delivery_intent: hook_and_reframe
+  energy_1_to_5: 5
+  pace: brisk
+  emphasis_terms:
+  - 想到什么
+  - AI
+  - 干活
+  pause_after_ms: 120
+  breath_points:
+  - 你是不是想到什么
+  - 让AI做什么
+  - 不要急着干活
+  pronunciation: use canonical terminology.yaml spelling; no ASR variant in display
+  visual_sync: c1-title
+  audio_window:
+  - 0.0
+  - 5.067
+- sentence_id: S2
+  source_text: 真正要回答的是：任务有多复杂，以及你需要多强的控制力。
+  delivery_intent: define_decision_axes
+  energy_1_to_5: 4
+  pace: measured
+  emphasis_terms:
+  - 任务有多复杂
+  - 控制力
+  pause_after_ms: 180
+  breath_points:
+  - 复杂度
+  - 控制力
+  pronunciation: use canonical terminology.yaml spelling; no ASR variant in display
+  visual_sync: c1-axis-x
+  audio_window:
+  - 5.067
+  - 10.407
+- sentence_id: S3
+  source_text: 轻任务只要快速验证，复杂任务才需要拆分、路由和状态管理。
+  delivery_intent: contrast_light_and_complex
+  energy_1_to_5: 4
+  pace: accelerate_then_land
+  emphasis_terms:
+  - 快速验证
+  - 拆分
+  - 路由
+  - 状态管理
+  pause_after_ms: 160
+  breath_points:
+  - 轻任务
+  - 复杂任务
+  pronunciation: use canonical terminology.yaml spelling; no ASR variant in display
+  visual_sync: c1-q1
+  audio_window:
+  - 10.407
+  - 16.427
+- sentence_id: S4
+  source_text: 七种架构不是排行榜，而是一条从单 Agent，到协作系统，再到 Graph Workflow 的演进线。
+  delivery_intent: build_evolution_line
+  energy_1_to_5: 5
+  pace: rising
+  emphasis_terms:
+  - 七种架构
+  - 协作系统
+  - Graph Workflow
+  pause_after_ms: 220
+  breath_points:
+  - 不是排行榜
+  - 演进线
+  pronunciation: use canonical terminology.yaml spelling; no ASR variant in display
+  visual_sync: c1-evo
+  audio_window:
+  - 16.427
+  - 24.147
+- sentence_id: S5
+  source_text: 本章先记住两个判断轴：复杂度和控制力。
+  delivery_intent: land_the_rule
+  energy_1_to_5: 3
+  pace: slow_land
+  emphasis_terms:
+  - 复杂度
+  - 控制力
+  pause_after_ms: 260
+  breath_points:
+  - 两个判断轴
+  pronunciation: use canonical terminology.yaml spelling; no ASR variant in display
+  visual_sync: c1-note
+  audio_window:
+  - 24.467
+  - 27.987
+- sentence_id: S6
+  source_text: 后面每一种架构，都放回这张坐标系里选择。
+  delivery_intent: handoff
+  energy_1_to_5: 3
+  pace: steady
+  emphasis_terms:
+  - 坐标系
+  - 选择
+  pause_after_ms: 180
+  breath_points:
+  - 放回坐标系
+  pronunciation: use canonical terminology.yaml spelling; no ASR variant in display
+  visual_sync: c1-note
+  audio_window:
+  - 27.987
+  - 31.894

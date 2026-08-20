@@ -1,0 +1,106 @@
+schema_version: "1.0"
+name: "course-video-role-routing"
+
+roles:
+  human_owner:
+    purpose: "做不可逆或主观性较高的最终决定"
+    owns:
+      - "目标受众与平台"
+      - "讲稿定稿"
+      - "声音/口型批准"
+      - "15–20 秒试片批准"
+      - "逐章成片与发布批准"
+    must_not_delegate:
+      - "公开发布"
+      - "授权素材与隐私判断"
+
+  luna_ultra:
+    purpose: "内容理解、推理规划和质量审查"
+    best_for:
+      - "原始视频/文稿拆解"
+      - "课程结构与讲稿改写"
+      - "语气语义规划"
+      - "语义锚点和定时分镜"
+      - "布局与语义双门禁"
+      - "字幕语义断句"
+      - "封面文案和发布文案"
+    not_primary_for:
+      - "长时间等待外部生成任务"
+      - "逐帧编码和大文件渲染"
+      - "没有真实音频时猜词级时间"
+    long_running_policy: "把长运行任务交给工具链，自己负责启动、检查状态、验证产物和继续下一步"
+
+  terra_high:
+    purpose: "按已批准清单实现并进行工程修复"
+    best_for:
+      - "HTML/GSAP/HyperFrames 实现"
+      - "复杂流程图、箭头和图层关系"
+      - "音频与动画工程接入"
+      - "布局、编码、渲染和最小修复"
+      - "媒体流与合并问题诊断"
+    entry_condition: "semantic-timing-manifest 与 layout-audit 已通过"
+    forbidden:
+      - "自行改变讲稿含义"
+      - "用随机秒数代替逐词时间"
+
+  sol:
+    purpose: "疑难语义冲突的裁判，不是默认制作器"
+    use_only_when:
+      - "同一语义段按证据修改两轮仍未通过"
+      - "存在两种合理画面顺序且影响教学结论"
+      - "多层因果/循环关系无法由 Luna 与 Terra 裁决"
+    output_only:
+      - "冲突点"
+      - "正确顺序"
+      - "证据词"
+      - "建议时间窗口"
+    forbidden:
+      - "直接重写整章"
+      - "代替真实音频时间戳"
+
+  toolchain:
+    purpose: "执行确定性、长运行或媒体密集型任务"
+    capabilities:
+      transcription: ["ASR", "faster-whisper"]
+      voice: ["Fish Audio"]
+      avatar_lipsync: ["Replicate LatentSync"]
+      animation: ["HyperFrames", "GSAP"]
+      media: ["FFmpeg", "ffprobe", "PyAV"]
+      image: ["ImageGen or approved design tool"]
+    required_behavior:
+      - "保存请求参数、版本、输出和错误日志"
+      - "外部生成视频接入前检查是否自带音频"
+      - "长任务完成后验证文件存在、时长和媒体流"
+
+handoffs:
+  - from: "luna_ultra"
+    to: "terra_high"
+    requires: ["SCRIPT approved", "word alignment ready", "semantic timing ready", "layout audit ready"]
+  - from: "terra_high"
+    to: "luna_ultra"
+    requires: ["pilot or chapter render", "machine check report", "contact sheet"]
+  - from: "luna_ultra"
+    to: "sol"
+    requires: ["same conflict failed twice", "evidence screenshots", "audio phrase and timestamps"]
+  - from: "toolchain"
+    to: "human_owner"
+    requires: ["playable media", "duration report", "known limitations"]
+
+parallel_orchestration:
+  fan_out_owner: "toolchain"
+  quality_owner: "luna_ultra"
+  chapter_worker: "terra_high"
+  max_concurrent_chapters: 3
+  artifact_lock_pattern: "chapter-XX/**"
+  shared_artifact_lock: ["script/script-approved.md", "audio/final-narration.wav", "visual-style.yaml"]
+  fan_in_owner: "toolchain"
+  fan_in_reviewer: "terra_high"
+  fan_in_requirements: ["all chapter subtitle gates pass", "single audio stream", "chapter order manifest matches"]
+  retry_policy: "retry only the failed chapter or sentence; never overwrite a passed chapter"
+
+escalation_order:
+  content_conflict: ["luna_ultra", "human_owner", "sol"]
+  implementation_bug: ["terra_high", "toolchain"]
+  timing_mismatch: ["word_alignment", "luna_ultra", "terra_high", "sol_if_twice_failed"]
+  external_api_wait: ["toolchain_monitor", "human_owner_if_authorization_needed"]
+  publish_decision: ["human_owner"]

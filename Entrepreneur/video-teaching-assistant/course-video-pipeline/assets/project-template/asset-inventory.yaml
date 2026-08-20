@@ -1,0 +1,15 @@
+schema_version: "1.0"
+assets:
+  - id: "source-01"
+    type: "video_or_text"
+    path: "TODO"
+    source_or_owner: "TODO"
+    rights_status: "TODO"
+    public: false
+    purpose: "source content"
+
+privacy_checks:
+  contains_personal_voice: false
+  contains_avatar_source: false
+  contains_private_business_data: false
+  public_copy_sanitized: false

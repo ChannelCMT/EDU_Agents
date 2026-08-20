@@ -1,0 +1,568 @@
+[
+  {
+    "id": "C001",
+    "text": "单 Agent",
+    "start": 0.0,
+    "end": 0.65,
+    "timing_method": "word_alignment",
+    "word_evidence": {
+      "source": "audio/word-alignment-raw.json",
+      "timebase": "global",
+      "word_start": 0.0,
+      "word_end": 0.6,
+      "raw_words": [
+        "單",
+        "A",
+        "gent"
+      ],
+      "target_window": [
+        0.0,
+        0.6
+      ]
+    },
+    "alignment_error_ms": 50
+  },
+  {
+    "id": "C002",
+    "text": "就是一个大模型",
+    "start": 0.66,
+    "end": 1.93,
+    "timing_method": "word_alignment",
+    "word_evidence": {
+      "source": "audio/word-alignment-raw.json",
+      "timebase": "global",
+      "word_start": 0.6,
+      "word_end": 1.88,
+      "raw_words": [
+        " 就是",
+        "一個",
+        "大",
+        "模",
+        "型"
+      ],
+      "target_window": [
+        0.6,
+        1.88
+      ]
+    },
+    "alignment_error_ms": 50
+  },
+  {
+    "id": "C003",
+    "text": "包揽输入、思考",
+    "start": 1.94,
+    "end": 3.45,
+    "timing_method": "word_alignment",
+    "word_evidence": {
+      "source": "audio/word-alignment-raw.json",
+      "timebase": "global",
+      "word_start": 1.88,
+      "word_end": 3.4,
+      "raw_words": [
+        "包",
+        "攬",
+        "輸",
+        "入、",
+        "思",
+        "考、"
+      ],
+      "target_window": [
+        1.88,
+        3.4
+      ]
+    },
+    "alignment_error_ms": 50
+  },
+  {
+    "id": "C004",
+    "text": "调用工具和输出",
+    "start": 3.55,
+    "end": 4.99,
+    "timing_method": "word_alignment",
+    "word_evidence": {
+      "source": "audio/word-alignment-raw.json",
+      "timebase": "global",
+      "word_start": 3.6,
+      "word_end": 4.94,
+      "raw_words": [
+        "調",
+        "用",
+        "工",
+        "具",
+        "和",
+        "輸",
+        "出"
+      ],
+      "target_window": [
+        3.6,
+        4.94
+      ]
+    },
+    "alignment_error_ms": 50
+  },
+  {
+    "id": "C005",
+    "text": "它简单、便宜",
+    "start": 5.0,
+    "end": 6.57,
+    "timing_method": "word_alignment",
+    "word_evidence": {
+      "source": "audio/word-alignment-raw.json",
+      "timebase": "global",
+      "word_start": 4.94,
+      "word_end": 6.52,
+      "raw_words": [
+        "它",
+        "簡單、",
+        "便",
+        "宜、"
+      ],
+      "target_window": [
+        4.94,
+        6.52
+      ]
+    },
+    "alignment_error_ms": 50
+  },
+  {
+    "id": "C006",
+    "text": "延迟低",
+    "start": 6.73,
+    "end": 7.39,
+    "timing_method": "word_alignment",
+    "word_evidence": {
+      "source": "audio/word-alignment-raw.json",
+      "timebase": "global",
+      "word_start": 6.78,
+      "word_end": 7.34,
+      "raw_words": [
+        "延",
+        "遲",
+        "低、"
+      ],
+      "target_window": [
+        6.78,
+        7.34
+      ]
+    },
+    "alignment_error_ms": 50
+  },
+  {
+    "id": "C007",
+    "text": "适合做概念验证",
+    "start": 7.71,
+    "end": 9.17,
+    "timing_method": "word_alignment",
+    "word_evidence": {
+      "source": "audio/word-alignment-raw.json",
+      "timebase": "global",
+      "word_start": 7.76,
+      "word_end": 9.12,
+      "raw_words": [
+        "適",
+        "合",
+        "做",
+        "概",
+        "念",
+        "驗",
+        "證"
+      ],
+      "target_window": [
+        7.76,
+        9.12
+      ]
+    },
+    "alignment_error_ms": 50
+  },
+  {
+    "id": "C008",
+    "text": "和简单对话",
+    "start": 9.18,
+    "end": 10.23,
+    "timing_method": "word_alignment",
+    "word_evidence": {
+      "source": "audio/word-alignment-raw.json",
+      "timebase": "global",
+      "word_start": 9.12,
+      "word_end": 10.18,
+      "raw_words": [
+        "和",
+        "簡單",
+        "對",
+        "話"
+      ],
+      "target_window": [
+        9.12,
+        10.18
+      ]
+    },
+    "alignment_error_ms": 50
+  },
+  {
+    "id": "C009",
+    "text": "一旦任务变复杂",
+    "start": 10.24,
+    "end": 11.81,
+    "timing_method": "word_alignment",
+    "word_evidence": {
+      "source": "audio/word-alignment-raw.json",
+      "timebase": "global",
+      "word_start": 10.18,
+      "word_end": 11.76,
+      "raw_words": [
+        "一",
+        "旦",
+        "任",
+        "務",
+        "變",
+        "複",
+        "雜,"
+      ],
+      "target_window": [
+        10.18,
+        11.76
+      ]
+    },
+    "alignment_error_ms": 50
+  },
+  {
+    "id": "C010",
+    "text": "模型容易认知过载",
+    "start": 12.03,
+    "end": 13.67,
+    "timing_method": "word_alignment",
+    "word_evidence": {
+      "source": "audio/word-alignment-raw.json",
+      "timebase": "global",
+      "word_start": 12.08,
+      "word_end": 13.62,
+      "raw_words": [
+        "模",
+        "型",
+        "容易",
+        "認",
+        "知",
+        "過",
+        "宅,"
+      ],
+      "target_window": [
+        12.08,
+        13.62
+      ]
+    },
+    "alignment_error_ms": 50
+  },
+  {
+    "id": "C011",
+    "text": "出现上下文污染",
+    "start": 13.89,
+    "end": 15.31,
+    "timing_method": "word_alignment",
+    "word_evidence": {
+      "source": "audio/word-alignment-raw.json",
+      "timebase": "global",
+      "word_start": 13.94,
+      "word_end": 15.26,
+      "raw_words": [
+        "出",
+        "現",
+        "上",
+        "下",
+        "文",
+        "物",
+        "欄"
+      ],
+      "target_window": [
+        13.94,
+        15.26
+      ]
+    },
+    "alignment_error_ms": 50
+  },
+  {
+    "id": "C012",
+    "text": "ReAct 把过程变成",
+    "start": 15.32,
+    "end": 17.19,
+    "timing_method": "word_alignment",
+    "word_evidence": {
+      "source": "audio/word-alignment-raw.json",
+      "timebase": "global",
+      "word_start": 15.26,
+      "word_end": 17.14,
+      "raw_words": [
+        "Re",
+        "actor",
+        " 把",
+        "過",
+        "程",
+        "變"
+      ],
+      "target_window": [
+        15.26,
+        17.14
+      ]
+    },
+    "alignment_error_ms": 50
+  },
+  {
+    "id": "C013",
+    "text": "Reason 加 Action",
+    "start": 17.2,
+    "end": 18.41,
+    "timing_method": "word_alignment",
+    "word_evidence": {
+      "source": "audio/word-alignment-raw.json",
+      "timebase": "global",
+      "word_start": 17.14,
+      "word_end": 18.36,
+      "raw_words": [
+        "成",
+        "V",
+        "ision",
+        " 加",
+        " Action"
+      ],
+      "target_window": [
+        17.14,
+        18.36
+      ]
+    },
+    "alignment_error_ms": 50
+  },
+  {
+    "id": "C014",
+    "text": "的循环：思考、行动",
+    "start": 18.42,
+    "end": 20.51,
+    "timing_method": "word_alignment",
+    "word_evidence": {
+      "source": "audio/word-alignment-raw.json",
+      "timebase": "global",
+      "word_start": 18.36,
+      "word_end": 20.46,
+      "raw_words": [
+        " 的",
+        "循",
+        "環",
+        "思",
+        "考、",
+        "行",
+        "動、"
+      ],
+      "target_window": [
+        18.36,
+        20.46
+      ]
+    },
+    "alignment_error_ms": 50
+  },
+  {
+    "id": "C015",
+    "text": "观察，再决定下一步",
+    "start": 20.67,
+    "end": 22.57,
+    "timing_method": "word_alignment",
+    "word_evidence": {
+      "source": "audio/word-alignment-raw.json",
+      "timebase": "global",
+      "word_start": 20.72,
+      "word_end": 22.52,
+      "raw_words": [
+        "觀",
+        "察",
+        "再",
+        "決",
+        "定",
+        "下一",
+        "步"
+      ],
+      "target_window": [
+        20.72,
+        22.52
+      ]
+    },
+    "alignment_error_ms": 50
+  },
+  {
+    "id": "C016",
+    "text": "它比单 Agent 更",
+    "start": 22.58,
+    "end": 23.77,
+    "timing_method": "word_alignment",
+    "word_evidence": {
+      "source": "audio/word-alignment-raw.json",
+      "timebase": "global",
+      "word_start": 22.52,
+      "word_end": 23.72,
+      "raw_words": [
+        "它",
+        "比",
+        "單",
+        "A",
+        "gent",
+        "更"
+      ],
+      "target_window": [
+        22.52,
+        23.72
+      ]
+    },
+    "alignment_error_ms": 50
+  },
+  {
+    "id": "C017",
+    "text": "适合多步探索",
+    "start": 23.78,
+    "end": 25.05,
+    "timing_method": "word_alignment",
+    "word_evidence": {
+      "source": "audio/word-alignment-raw.json",
+      "timebase": "global",
+      "word_start": 23.72,
+      "word_end": 25.0,
+      "raw_words": [
+        "適",
+        "合",
+        "多",
+        "部",
+        "探",
+        "索,"
+      ],
+      "target_window": [
+        23.72,
+        25.0
+      ]
+    },
+    "alignment_error_ms": 50
+  },
+  {
+    "id": "C018",
+    "text": "也更容易解释过程",
+    "start": 25.29,
+    "end": 26.87,
+    "timing_method": "word_alignment",
+    "word_evidence": {
+      "source": "audio/word-alignment-raw.json",
+      "timebase": "global",
+      "word_start": 25.34,
+      "word_end": 26.82,
+      "raw_words": [
+        "也",
+        "更",
+        "容易",
+        "解",
+        "釋",
+        "過",
+        "程"
+      ],
+      "target_window": [
+        25.34,
+        26.82
+      ]
+    },
+    "alignment_error_ms": 50
+  },
+  {
+    "id": "C019",
+    "text": "但 Token 消耗大",
+    "start": 26.88,
+    "end": 28.33,
+    "timing_method": "word_alignment",
+    "word_evidence": {
+      "source": "audio/word-alignment-raw.json",
+      "timebase": "global",
+      "word_start": 26.82,
+      "word_end": 28.28,
+      "raw_words": [
+        "但",
+        "T",
+        "oken",
+        "消",
+        "耗",
+        "大"
+      ],
+      "target_window": [
+        26.82,
+        28.28
+      ]
+    },
+    "alignment_error_ms": 50
+  },
+  {
+    "id": "C020",
+    "text": "容易跑偏",
+    "start": 28.34,
+    "end": 29.23,
+    "timing_method": "word_alignment",
+    "word_evidence": {
+      "source": "audio/word-alignment-raw.json",
+      "timebase": "global",
+      "word_start": 28.28,
+      "word_end": 29.18,
+      "raw_words": [
+        "容易",
+        "跑",
+        "偏,"
+      ],
+      "target_window": [
+        28.28,
+        29.18
+      ]
+    },
+    "alignment_error_ms": 50
+  },
+  {
+    "id": "C021",
+    "text": "不适合直接承担",
+    "start": 29.41,
+    "end": 30.79,
+    "timing_method": "word_alignment",
+    "word_evidence": {
+      "source": "audio/word-alignment-raw.json",
+      "timebase": "global",
+      "word_start": 29.46,
+      "word_end": 30.74,
+      "raw_words": [
+        "不",
+        "適",
+        "合",
+        "直接",
+        "承",
+        "擔"
+      ],
+      "target_window": [
+        29.46,
+        30.74
+      ]
+    },
+    "alignment_error_ms": 50
+  },
+  {
+    "id": "C022",
+    "text": "大规模生产流程",
+    "start": 30.8,
+    "end": 32.01,
+    "timing_method": "word_alignment",
+    "word_evidence": {
+      "source": "audio/word-alignment-raw.json",
+      "timebase": "global",
+      "word_start": 30.74,
+      "word_end": 31.96,
+      "raw_words": [
+        "大",
+        "規",
+        "模",
+        "生",
+        "產",
+        "流",
+        "程"
+      ],
+      "target_window": [
+        30.74,
+        31.96
+      ]
+    },
+    "alignment_error_ms": 50
+  }
+]

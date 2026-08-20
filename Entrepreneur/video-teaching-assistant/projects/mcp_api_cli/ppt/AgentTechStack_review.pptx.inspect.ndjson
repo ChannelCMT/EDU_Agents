@@ -1,0 +1,417 @@
+{"kind":"deck","id":"pr/jgzebi","name":"Deck"}
+{"kind":"layout","layoutId":"3cd712da-81cc-4e88-934a-01e1c28d60fa","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"78f3f17c-effe-426a-843e-b847b5f23867","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/xq1smr","slide":1,"title":"AGENT ARCHITECTURE / COURSE LOOP","textShapes":13}
+{"kind":"shape","id":"sh/q54nu1g7","slide":1,"name":"glow-top-left-1","bbox":[-220,-280,720,720]}
+{"kind":"shape","id":"sh/d8v6pwfy","slide":1,"name":"glow-bottom-right-1","bbox":[1460,760,680,680]}
+{"kind":"shape","id":"sh/c7mpwryd","slide":1,"bbox":[0,0,0,1080]}
+{"kind":"shape","id":"sh/3itojmxg","slide":1,"bbox":[160,0,0,1080]}
+{"kind":"shape","id":"sh/2hknqhgb","slide":1,"bbox":[320,0,0,1080]}
+{"kind":"shape","id":"sh/p4v6lwfm","slide":1,"bbox":[480,0,0,1080]}
+{"kind":"shape","id":"sh/4325sry1","slide":1,"bbox":[640,0,0,1080]}
+{"kind":"shape","id":"sh/fetof2xk","slide":1,"bbox":[800,0,0,1080]}
+{"kind":"shape","id":"sh/udknmhgz","slide":1,"bbox":[960,0,0,1080]}
+{"kind":"shape","id":"sh/o72t0jyh","slide":1,"bbox":[1120,0,0,1080]}
+{"kind":"shape","id":"sh/p8ba9oz2","slide":1,"bbox":[1280,0,0,1080]}
+{"kind":"shape","id":"sh/25kby9gb","slide":1,"bbox":[1440,0,0,1080]}
+{"kind":"shape","id":"sh/n6ts7ehw","slide":1,"bbox":[1600,0,0,1080]}
+{"kind":"shape","id":"sh/03itwzyl","slide":1,"bbox":[1760,0,0,1080]}
+{"kind":"shape","id":"sh/14ba54zq","slide":1,"bbox":[1920,0,0,1080]}
+{"kind":"shape","id":"sh/e10bu9gf","slide":1,"bbox":[0,0,1920,0]}
+{"kind":"shape","id":"sh/f29s3eh0","slide":1,"bbox":[0,160,1920,0]}
+{"kind":"shape","id":"sh/kzmt83yp","slide":1,"bbox":[0,320,1920,0]}
+{"kind":"shape","id":"sh/l0vuh8fa","slide":1,"bbox":[0,480,1920,0]}
+{"kind":"shape","id":"sh/tgral87e","slide":1,"bbox":[0,640,1920,0]}
+{"kind":"shape","id":"sh/svits3qt","slide":1,"bbox":[0,800,1920,0]}
+{"kind":"shape","id":"sh/7u9sjyp8","slide":1,"bbox":[0,960,1920,0]}
+{"kind":"textbox","id":"sh/6t0bqt8n","slide":1,"name":"eyebrow-1","text":"AGENT ARCHITECTURE / COURSE LOOP","textPreview":"AGENT ARCHITECTURE / COURSE LOOP","textChars":32,"textLines":1,"bbox":[76,34,700,34]}
+{"kind":"textbox","id":"sh/5sraho72","slide":1,"name":"label-1","text":"OPENING / 00:00","textPreview":"OPENING / 00:00","textChars":15,"textLines":1,"bbox":[1340,34,500,34]}
+{"kind":"shape","id":"sh/kritojqx","slide":1,"bbox":[76,92,1768,0]}
+{"kind":"textbox","id":"sh/jqpsfepc","slide":1,"name":"title-1","text":"这 7 个词，为什么总被混在一起？","textPreview":"这 7 个词，为什么总被混在一起？","textChars":17,"textLines":1,"bbox":[92,124,1600,86]}
+{"kind":"shape","id":"sh/ipgbm98r","slide":1,"name":"subtitle-safe-band-1","bbox":[0,900,1920,180]}
+{"kind":"shape","id":"sh/xo7ador6","slide":1,"bbox":[76,900,1768,0]}
+{"kind":"textbox","id":"sh/wnytkjql","slide":1,"name":"safe-note-1","text":"字幕安全区（暂不显示）","textPreview":"字幕安全区（暂不显示）","textChars":11,"textLines":1,"bbox":[1500,930,310,26]}
+{"kind":"textbox","id":"sh/mtw7upoj","slide":1,"text":"它们看起来都和“调用工具”有关，\n但其实根本不在同一层。","textPreview":"它们看起来都和“调用工具”有关， | 但其实根本不在同一层。","textChars":28,"textLines":2,"bbox":[112,300,900,180]}
+{"kind":"shape","id":"sh/nu58na54","slide":1,"bbox":[1180,300,180,68]}
+{"kind":"textbox","id":"sh/ovepwf6p","slide":1,"text":"API","textPreview":"API","textChars":3,"textLines":1,"bbox":[1192,306,156,54]}
+{"kind":"shape","id":"sh/9wnqpknu","slide":1,"bbox":[1380,420,180,68]}
+{"kind":"textbox","id":"sh/e5c7q5o7","slide":1,"text":"SDK","textPreview":"SDK","textChars":3,"textLines":1,"bbox":[1392,426,156,54]}
+{"kind":"shape","id":"sh/zql8japs","slide":1,"bbox":[1600,300,180,68]}
+{"kind":"textbox","id":"sh/0repsf6d","slide":1,"text":"CLI","textPreview":"CLI","textChars":3,"textLines":1,"bbox":[1612,306,156,54]}
+{"kind":"shape","id":"sh/1snqlkny","slide":1,"bbox":[1120,560,300,68]}
+{"kind":"textbox","id":"sh/q1c7m5ob","slide":1,"text":"Function Calling","textPreview":"Function Calling","textChars":16,"textLines":1,"bbox":[1132,566,276,54]}
+{"kind":"shape","id":"sh/r2l8fqpw","slide":1,"bbox":[1430,560,300,68]}
+{"kind":"textbox","id":"sh/3e54r69c","slide":1,"text":"Tool Calling","textPreview":"Tool Calling","textChars":12,"textLines":1,"bbox":[1442,566,276,54]}
+{"kind":"shape","id":"sh/idw3y1s7","slide":1,"bbox":[1600,680,180,68]}
+{"kind":"textbox","id":"sh/5gnmtgri","slide":1,"text":"MCP","textPreview":"MCP","textChars":3,"textLines":1,"bbox":[1612,686,156,54]}
+{"kind":"shape","id":"sh/4fe50bax","slide":1,"bbox":[1260,720,180,68]}
+{"kind":"textbox","id":"sh/vql4nm9g","slide":1,"text":"ADK","textPreview":"ADK","textChars":3,"textLines":1,"bbox":[1272,726,156,54]}
+{"kind":"shape","id":"sh/upc3uhsv","slide":1,"name":"hook-conclusion","bbox":[112,650,870,110]}
+{"kind":"textbox","id":"sh/hs3mpwrm","slide":1,"name":"hook-conclusion-title","text":"先放回地图，再解释每个词","textPreview":"先放回地图，再解释每个词","textChars":12,"textLines":1,"bbox":[140,672,814,42]}
+{"kind":"notes","id":"nt/xq1smr","slide":1,"text":"开场先承接受众困惑，不在前 5 秒讲 ReAct 或 Multi-Agent。\n\n[Sources]\n- 用户提供的 pasted-text.txt（概念定义、示例与技术关系）\n- 本页为审核稿：时间点与动画顺序写在 storyboard/semantic-beat-manifest.yaml。"}
+{"kind":"slide","id":"sl/m772be","slide":2,"title":"AGENT ARCHITECTURE / COURSE LOOP","textShapes":15}
+{"kind":"shape","id":"sh/y5o3i543","slide":2,"name":"glow-top-left-2","bbox":[-220,-280,720,720]}
+{"kind":"shape","id":"sh/lsfmt03e","slide":2,"name":"glow-bottom-right-2","bbox":[1460,760,680,680]}
+{"kind":"shape","id":"sh/k76lkvmt","slide":2,"bbox":[0,0,0,1080]}
+{"kind":"shape","id":"sh/7uh4valk","slide":2,"bbox":[160,0,0,1080]}
+{"kind":"shape","id":"sh/6to3m54z","slide":2,"bbox":[320,0,0,1080]}
+{"kind":"shape","id":"sh/twzmxk3q","slide":2,"bbox":[480,0,0,1080]}
+{"kind":"shape","id":"sh/8vqlofm5","slide":2,"bbox":[640,0,0,1080]}
+{"kind":"shape","id":"sh/nydkj65g","slide":2,"bbox":[800,0,0,1080]}
+{"kind":"shape","id":"sh/2x43a14v","slide":2,"bbox":[960,0,0,1080]}
+{"kind":"shape","id":"sh/ofe1kfy1","slide":2,"bbox":[1120,0,0,1080]}
+{"kind":"shape","id":"sh/pgn2dkfm","slide":2,"bbox":[1280,0,0,1080]}
+{"kind":"shape","id":"sh/2dwji5gb","slide":2,"bbox":[1440,0,0,1080]}
+{"kind":"shape","id":"sh/3e50baxw","slide":2,"bbox":[1600,0,0,1080]}
+{"kind":"shape","id":"sh/cje1ofyd","slide":2,"bbox":[1760,0,0,1080]}
+{"kind":"shape","id":"sh/dkn2hkfy","slide":2,"bbox":[1920,0,0,1080]}
+{"kind":"shape","id":"sh/qhwjmpg7","slide":2,"bbox":[0,0,1920,0]}
+{"kind":"shape","id":"sh/bi5kfuxs","slide":2,"bbox":[0,160,1920,0]}
+{"kind":"shape","id":"sh/snu1cvyt","slide":2,"bbox":[0,320,1920,0]}
+{"kind":"shape","id":"sh/to3i50fe","slide":2,"bbox":[0,480,1920,0]}
+{"kind":"shape","id":"sh/94vy9w7i","slide":2,"bbox":[0,640,1920,0]}
+{"kind":"shape","id":"sh/83mh0rqx","slide":2,"bbox":[0,800,1920,0]}
+{"kind":"shape","id":"sh/7idg7m9c","slide":2,"bbox":[0,960,1920,0]}
+{"kind":"textbox","id":"sh/mhkzyh8r","slide":2,"name":"eyebrow-2","text":"AGENT ARCHITECTURE / COURSE LOOP","textPreview":"AGENT ARCHITECTURE / COURSE LOOP","textChars":32,"textLines":1,"bbox":[76,34,700,34]}
+{"kind":"textbox","id":"sh/h8vydw7e","slide":2,"name":"label-2","text":"MAP / 00:16","textPreview":"MAP / 00:16","textChars":11,"textLines":1,"bbox":[1340,34,500,34]}
+{"kind":"shape","id":"sh/w7mh4rqt","slide":2,"bbox":[76,92,1768,0]}
+{"kind":"textbox","id":"sh/v6dgbmp8","slide":2,"name":"title-2","text":"先看总地图，再解释每个词","textPreview":"先看总地图，再解释每个词","textChars":12,"textLines":1,"bbox":[92,124,1600,86]}
+{"kind":"shape","id":"sh/u54z2h83","slide":2,"name":"subtitle-safe-band-2","bbox":[0,900,1920,180]}
+{"kind":"shape","id":"sh/5cfihg7q","slide":2,"bbox":[76,900,1768,0]}
+{"kind":"textbox","id":"sh/4b6h8bq5","slide":2,"name":"safe-note-2","text":"字幕安全区（暂不显示）","textPreview":"字幕安全区（暂不显示）","textChars":11,"textLines":1,"bbox":[1500,930,310,26]}
+{"kind":"shape","id":"sh/25gnm9kb","slide":2,"bbox":[250,280,1420,78]}
+{"kind":"textbox","id":"sh/36p4felw","slide":2,"text":"用户 / Agent 应用","textPreview":"用户 / Agent 应用","textChars":13,"textLines":1,"bbox":[285,290,640,56]}
+{"kind":"textbox","id":"sh/o7y5oj2h","slide":2,"text":"任务从这里进入","textPreview":"任务从这里进入","textChars":7,"textLines":1,"bbox":[1070,290,540,56]}
+{"kind":"shape","id":"sh/p87mhojm","slide":2,"bbox":[250,392,1420,78]}
+{"kind":"textbox","id":"sh/q9gnq9k7","slide":2,"text":"ADK","textPreview":"ADK","textChars":3,"textLines":1,"bbox":[285,402,640,56]}
+{"kind":"textbox","id":"sh/bapoje1s","slide":2,"text":"状态 · 工作流 · 编排","textPreview":"状态 · 工作流 · 编排","textChars":13,"textLines":1,"bbox":[1070,402,540,56]}
+{"kind":"shape","id":"sh/cby5sj2d","slide":2,"bbox":[250,504,1420,78]}
+{"kind":"textbox","id":"sh/dc76lojy","slide":2,"text":"LLM + Tool Calling","textPreview":"LLM + Tool Calling","textChars":18,"textLines":1,"bbox":[285,514,640,56]}
+{"kind":"textbox","id":"sh/yd0nutkj","slide":2,"text":"模型决定何时使用能力","textPreview":"模型决定何时使用能力","textChars":10,"textLines":1,"bbox":[1070,514,540,56]}
+{"kind":"shape","id":"sh/zy9ony14","slide":2,"bbox":[250,616,1420,78]}
+{"kind":"textbox","id":"sh/7u547yt8","slide":2,"text":"Function Calling / MCP","textPreview":"Function Calling / MCP","textChars":22,"textLines":1,"bbox":[285,626,640,56]}
+{"kind":"textbox","id":"sh/mtwnetcn","slide":2,"text":"工具机制与标准化连接","textPreview":"工具机制与标准化连接","textChars":10,"textLines":1,"bbox":[1070,626,540,56]}
+{"kind":"shape","id":"sh/9wnm9oby","slide":2,"bbox":[250,728,1420,78]}
+{"kind":"textbox","id":"sh/8ve5g3ut","slide":2,"text":"API · SDK · CLI · 外部系统","textPreview":"API · SDK · CLI · 外部系统","textChars":22,"textLines":1,"bbox":[285,738,640,56]}
+{"kind":"textbox","id":"sh/vi54byt4","slide":2,"text":"能力真正落地的地方","textPreview":"能力真正落地的地方","textChars":9,"textLines":1,"bbox":[1070,738,540,56]}
+{"kind":"textbox","id":"sh/uxwnitcj","slide":2,"text":"从上到下：组织 → 决策 → 连接 → 执行","textPreview":"从上到下：组织 → 决策 → 连接 → 执行","textChars":22,"textLines":1,"bbox":[480,850,960,42]}
+{"kind":"notes","id":"nt/m772be","slide":2,"text":"总图是全片主视觉，后续每页都从这里局部放大，再回到总图。\n\n[Sources]\n- 用户提供的 pasted-text.txt（概念定义、示例与技术关系）\n- 本页为审核稿：时间点与动画顺序写在 storyboard/semantic-beat-manifest.yaml。"}
+{"kind":"slide","id":"sl/i6iw9w","slide":3,"title":"AGENT ARCHITECTURE / COURSE LOOP","textShapes":14}
+{"kind":"shape","id":"sh/7md0b6ho","slide":3,"name":"glow-top-left-3","bbox":[-220,-280,720,720]}
+{"kind":"shape","id":"sh/8nmh4by9","slide":3,"name":"glow-bottom-right-3","bbox":[1460,760,680,680]}
+{"kind":"shape","id":"sh/tovidgze","slide":3,"bbox":[0,0,0,1080]}
+{"kind":"shape","id":"sh/up4z6lgz","slide":3,"bbox":[160,0,0,1080]}
+{"kind":"shape","id":"sh/vqx0fqhk","slide":3,"bbox":[320,0,0,1080]}
+{"kind":"shape","id":"sh/gr6h8by5","slide":3,"bbox":[480,0,0,1080]}
+{"kind":"shape","id":"sh/hsfihgzq","slide":3,"bbox":[640,0,0,1080]}
+{"kind":"shape","id":"sh/itozalgb","slide":3,"bbox":[800,0,0,1080]}
+{"kind":"shape","id":"sh/3ux0jqhw","slide":3,"bbox":[960,0,0,1080]}
+{"kind":"shape","id":"sh/z2t0vet8","slide":3,"bbox":[1120,0,0,1080]}
+{"kind":"shape","id":"sh/e1kz2tc3","slide":3,"bbox":[1280,0,0,1080]}
+{"kind":"shape","id":"sh/14bixobe","slide":3,"bbox":[1440,0,0,1080]}
+{"kind":"shape","id":"sh/032h4jut","slide":3,"bbox":[1600,0,0,1080]}
+{"kind":"shape","id":"sh/rytgredc","slide":3,"bbox":[1760,0,0,1080]}
+{"kind":"shape","id":"sh/qx0zy9cr","slide":3,"bbox":[1920,0,0,1080]}
+{"kind":"shape","id":"sh/d0bitobi","slide":3,"bbox":[0,0,1920,0]}
+{"kind":"shape","id":"sh/cz2h0jux","slide":3,"bbox":[0,160,1920,0]}
+{"kind":"shape","id":"sh/bud03ytg","slide":3,"bbox":[0,320,1920,0]}
+{"kind":"shape","id":"sh/at4zadcv","slide":3,"bbox":[0,480,1920,0]}
+{"kind":"shape","id":"sh/618bi10f","slide":3,"bbox":[0,640,1920,0]}
+{"kind":"shape","id":"sh/721cr6h0","slide":3,"bbox":[0,800,1920,0]}
+{"kind":"shape","id":"sh/s3atkbil","slide":3,"bbox":[0,960,1920,0]}
+{"kind":"textbox","id":"sh/t4jutgz6","slide":3,"name":"eyebrow-3","text":"AGENT ARCHITECTURE / COURSE LOOP","textPreview":"AGENT ARCHITECTURE / COURSE LOOP","textChars":32,"textLines":1,"bbox":[76,34,700,34]}
+{"kind":"textbox","id":"sh/u5sbml0r","slide":3,"name":"label-3","text":"ACCESS LAYER / 00:40","textPreview":"ACCESS LAYER / 00:40","textChars":20,"textLines":1,"bbox":[1340,34,500,34]}
+{"kind":"shape","id":"sh/f61cv6hc","slide":3,"bbox":[76,92,1768,0]}
+{"kind":"textbox","id":"sh/g7atobih","slide":3,"name":"title-3","text":"API、SDK、CLI：软件怎样使用能力","textPreview":"API、SDK、CLI：软件怎样使用能力","textChars":20,"textLines":1,"bbox":[92,124,1600,86]}
+{"kind":"shape","id":"sh/h8juxgz2","slide":3,"name":"subtitle-safe-band-3","bbox":[0,900,1920,180]}
+{"kind":"shape","id":"sh/a9obah07","slide":3,"bbox":[76,900,1768,0]}
+{"kind":"textbox","id":"sh/vaxsjm1s","slide":3,"name":"safe-note-3","text":"字幕安全区（暂不显示）","textPreview":"字幕安全区（暂不显示）","textChars":11,"textLines":1,"bbox":[1500,930,310,26]}
+{"kind":"shape","id":"sh/donepkja","slide":3,"name":"api","bbox":[140,385,430,220]}
+{"kind":"textbox","id":"sh/cnexwf2p","slide":3,"name":"api-title","text":"API","textPreview":"API","textChars":3,"textLines":1,"bbox":[168,407,374,42]}
+{"kind":"textbox","id":"sh/b25wna1k","slide":3,"name":"api-copy","text":"软件之间的\n能力契约","textPreview":"软件之间的 | 能力契约","textChars":10,"textLines":2,"bbox":[168,455,374,132]}
+{"kind":"textbox","id":"sh/q1cvu5kz","slide":3,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[585,474,170,42]}
+{"kind":"shape","id":"sh/lsnet4jm","slide":3,"name":"sdk","bbox":[745,385,430,220]}
+{"kind":"textbox","id":"sh/0rex0z21","slide":3,"name":"sdk-title","text":"SDK","textPreview":"SDK","textChars":3,"textLines":1,"bbox":[773,407,374,42]}
+{"kind":"textbox","id":"sh/zq5wru1g","slide":3,"name":"sdk-copy","text":"把认证、重试和\n错误处理封装起来","textPreview":"把认证、重试和 | 错误处理封装起来","textChars":16,"textLines":2,"bbox":[773,455,374,132]}
+{"kind":"textbox","id":"sh/ypwfypkv","slide":3,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[1190,474,170,42]}
+{"kind":"shape","id":"sh/hw3eh0j2","slide":3,"name":"cli","bbox":[1350,385,430,220]}
+{"kind":"textbox","id":"sh/gvudov2x","slide":3,"name":"cli-title","text":"CLI","textPreview":"CLI","textChars":3,"textLines":1,"bbox":[1378,407,374,42]}
+{"kind":"textbox","id":"sh/krihw3m5","slide":3,"name":"cli-copy","text":"人、脚本或 Agent\n的终端入口","textPreview":"人、脚本或 Agent | 的终端入口","textChars":17,"textLines":2,"bbox":[1378,455,374,132]}
+{"kind":"shape","id":"sh/5sbip83q","slide":3,"name":"access-summary","bbox":[380,690,1160,115]}
+{"kind":"textbox","id":"sh/ip0zut4f","slide":3,"name":"access-summary-title","text":"同一个服务的三种入口","textPreview":"同一个服务的三种入口","textChars":10,"textLines":1,"bbox":[408,712,1104,42]}
+{"kind":"textbox","id":"sh/jq90nylk","slide":3,"name":"access-summary-copy","text":"API 面向程序，SDK 面向开发者，CLI 面向终端操作。","textPreview":"API 面向程序，SDK 面向开发者，CLI 面向终端操作。","textChars":30,"textLines":1,"bbox":[408,760,1104,27]}
+{"kind":"notes","id":"nt/i6iw9w","slide":3,"text":"用一个订单接口例子解释 API，再展示 SDK 封装和 CLI 入口。\n\n[Sources]\n- 用户提供的 pasted-text.txt（概念定义、示例与技术关系）\n- 本页为审核稿：时间点与动画顺序写在 storyboard/semantic-beat-manifest.yaml。"}
+{"kind":"slide","id":"sl/1djqng","slide":4,"title":"AGENT ARCHITECTURE / COURSE LOOP","textShapes":15}
+{"kind":"shape","id":"sh/ril8n69g","slide":4,"name":"glow-top-left-4","bbox":[-220,-280,720,720]}
+{"kind":"shape","id":"sh/cjupgba1","slide":4,"name":"glow-bottom-right-4","bbox":[1460,760,680,680]}
+{"kind":"shape","id":"sh/dk3qpwrm","slide":4,"bbox":[0,0,0,1080]}
+{"kind":"shape","id":"sh/2ds7ahsz","slide":4,"bbox":[160,0,0,1080]}
+{"kind":"shape","id":"sh/3e18jm94","slide":4,"bbox":[320,0,0,1080]}
+{"kind":"shape","id":"sh/4fapcrap","slide":4,"bbox":[480,0,0,1080]}
+{"kind":"shape","id":"sh/pg3qlwra","slide":4,"bbox":[640,0,0,1080]}
+{"kind":"shape","id":"sh/ups76hsn","slide":4,"bbox":[800,0,0,1080]}
+{"kind":"shape","id":"sh/fq1ofm98","slide":4,"bbox":[960,0,0,1080]}
+{"kind":"shape","id":"sh/nm1gr61c","slide":4,"bbox":[1120,0,0,1080]}
+{"kind":"shape","id":"sh/mlszi10r","slide":4,"bbox":[1280,0,0,1080]}
+{"kind":"shape","id":"sh/98jytgji","slide":4,"bbox":[1440,0,0,1080]}
+{"kind":"shape","id":"sh/87ahkbix","slide":4,"bbox":[1600,0,0,1080]}
+{"kind":"shape","id":"sh/va1gv618","slide":4,"bbox":[1760,0,0,1080]}
+{"kind":"shape","id":"sh/a9szm10n","slide":4,"bbox":[1920,0,0,1080]}
+{"kind":"shape","id":"sh/xc3yxgje","slide":4,"bbox":[0,0,1920,0]}
+{"kind":"shape","id":"sh/wbahobit","slide":4,"bbox":[0,160,1920,0]}
+{"kind":"shape","id":"sh/behgjm14","slide":4,"bbox":[0,320,1920,0]}
+{"kind":"shape","id":"sh/qdofah0j","slide":4,"bbox":[0,480,1920,0]}
+{"kind":"shape","id":"sh/u9wjipk7","slide":4,"bbox":[0,640,1920,0]}
+{"kind":"shape","id":"sh/fa5kruls","slide":4,"bbox":[0,800,1920,0]}
+{"kind":"shape","id":"sh/gbe1kz2d","slide":4,"bbox":[0,960,1920,0]}
+{"kind":"textbox","id":"sh/hc72tk3i","slide":4,"name":"eyebrow-4","text":"AGENT ARCHITECTURE / COURSE LOOP","textPreview":"AGENT ARCHITECTURE / COURSE LOOP","textChars":32,"textLines":1,"bbox":[76,34,700,34]}
+{"kind":"textbox","id":"sh/65wje5kv","slide":4,"name":"label-4","text":"MODEL TOOL LAYER / 01:03","textPreview":"MODEL TOOL LAYER / 01:03","textChars":24,"textLines":1,"bbox":[1340,34,500,34]}
+{"kind":"shape","id":"sh/765knalg","slide":4,"bbox":[76,92,1768,0]}
+{"kind":"textbox","id":"sh/s7e1gf21","slide":4,"name":"title-4","text":"Function Calling 是具体机制，Tool Calling 是总机制","textPreview":"Function Calling 是具体机制，Tool Calling 是总机制","textChars":40,"textLines":1,"bbox":[92,124,1600,86]}
+{"kind":"shape","id":"sh/t8n2pk3m","slide":4,"name":"subtitle-safe-band-4","bbox":[0,900,1920,180]}
+{"kind":"shape","id":"sh/i1cja5kz","slide":4,"bbox":[76,900,1768,0]}
+{"kind":"textbox","id":"sh/j2l0jalk","slide":4,"name":"safe-note-4","text":"字幕安全区（暂不显示）","textPreview":"字幕安全区（暂不显示）","textChars":11,"textLines":1,"bbox":[1500,930,310,26]}
+{"kind":"shape","id":"sh/lwbmp8n2","slide":4,"name":"llm","bbox":[140,380,310,180]}
+{"kind":"textbox","id":"sh/0v25w3mh","slide":4,"name":"llm-title","text":"LLM","textPreview":"LLM","textChars":3,"textLines":1,"bbox":[168,402,254,42]}
+{"kind":"textbox","id":"sh/zu94ny5w","slide":4,"name":"llm-copy","text":"提出调用请求","textPreview":"提出调用请求","textChars":6,"textLines":1,"bbox":[168,450,254,92]}
+{"kind":"textbox","id":"sh/et0nut4b","slide":4,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[470,429,130,42]}
+{"kind":"shape","id":"sh/dsrmlonq","slide":4,"name":"request","bbox":[620,360,430,220]}
+{"kind":"textbox","id":"sh/cri5sjml","slide":4,"name":"request-title","text":"结构化请求","textPreview":"结构化请求","textChars":5,"textLines":1,"bbox":[648,382,374,42]}
+{"kind":"textbox","id":"sh/r694jy50","slide":4,"name":"request-copy","text":"name: get_weather\ncity: Tokyo","textPreview":"name: get_weather | city: Tokyo","textChars":29,"textLines":2,"bbox":[648,430,374,132]}
+{"kind":"textbox","id":"sh/q503qt4f","slide":4,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[1080,429,130,42]}
+{"kind":"shape","id":"sh/p4rmhonu","slide":4,"name":"executor","bbox":[1230,380,360,180]}
+{"kind":"textbox","id":"sh/43ilojm9","slide":4,"name":"executor-title","text":"Executor","textPreview":"Executor","textChars":8,"textLines":1,"bbox":[1258,402,304,42]}
+{"kind":"textbox","id":"sh/47adonm5","slide":4,"name":"executor-copy","text":"应用程序真正\n执行函数","textPreview":"应用程序真正 | 执行函数","textChars":11,"textLines":2,"bbox":[1258,450,304,92]}
+{"kind":"shape","id":"sh/58juxsnq","slide":4,"name":"tool-umbrella","bbox":[300,700,1320,115]}
+{"kind":"textbox","id":"sh/i58vmd4f","slide":4,"name":"tool-umbrella-title","text":"TOOL","textPreview":"TOOL","textChars":4,"textLines":1,"bbox":[328,722,1264,42]}
+{"kind":"textbox","id":"sh/36hcvi50","slide":4,"name":"tool-umbrella-copy","text":"Function · Web Search · File Search · Computer · MCP","textPreview":"Function · Web Search · File Search · Computer · MCP","textChars":52,"textLines":1,"bbox":[328,770,1264,27]}
+{"kind":"textbox","id":"sh/cvads7mh","slide":4,"text":"Function ⊂ Tool","textPreview":"Function ⊂ Tool","textChars":15,"textLines":1,"bbox":[740,620,420,50]}
+{"kind":"notes","id":"nt/1djqng","slide":4,"text":"关键不是“模型自己执行代码”，而是模型输出结构化请求，应用程序负责执行。\n\n[Sources]\n- 用户提供的 pasted-text.txt（概念定义、示例与技术关系）\n- 本页为审核稿：时间点与动画顺序写在 storyboard/semantic-beat-manifest.yaml。"}
+{"kind":"slide","id":"sl/pllve9","slide":5,"title":"AGENT ARCHITECTURE / COURSE LOOP","textShapes":13}
+{"kind":"shape","id":"sh/a54nmd4z","slide":5,"name":"glow-top-left-5","bbox":[-220,-280,720,720]}
+{"kind":"shape","id":"sh/xsfmxs3q","slide":5,"name":"glow-bottom-right-5","bbox":[1460,760,680,680]}
+{"kind":"shape","id":"sh/c7m5onm5","slide":5,"bbox":[0,0,0,1080]}
+{"kind":"shape","id":"sh/n2d4ril8","slide":5,"bbox":[160,0,0,1080]}
+{"kind":"shape","id":"sh/2143id43","slide":5,"bbox":[320,0,0,1080]}
+{"kind":"shape","id":"sh/p4vmt83e","slide":5,"bbox":[480,0,0,1080]}
+{"kind":"shape","id":"sh/o3m5k3mt","slide":5,"bbox":[640,0,0,1080]}
+{"kind":"shape","id":"sh/fyt4nylc","slide":5,"bbox":[800,0,0,1080]}
+{"kind":"shape","id":"sh/exk3et4r","slide":5,"bbox":[960,0,0,1080]}
+{"kind":"shape","id":"sh/o7uxsf2p","slide":5,"bbox":[1120,0,0,1080]}
+{"kind":"shape","id":"sh/ps3elk3a","slide":5,"bbox":[1280,0,0,1080]}
+{"kind":"shape","id":"sh/25sfq5kz","slide":5,"bbox":[1440,0,0,1080]}
+{"kind":"shape","id":"sh/361wjal4","slide":5,"bbox":[1600,0,0,1080]}
+{"kind":"shape","id":"sh/g3axov2t","slide":5,"bbox":[1760,0,0,1080]}
+{"kind":"shape","id":"sh/14jeh03e","slide":5,"bbox":[1920,0,0,1080]}
+{"kind":"shape","id":"sh/e1sfmlkn","slide":5,"bbox":[0,0,1920,0]}
+{"kind":"shape","id":"sh/f21wfql8","slide":5,"bbox":[0,160,1920,0]}
+{"kind":"shape","id":"sh/0zex0z2x","slide":5,"bbox":[0,320,1920,0]}
+{"kind":"shape","id":"sh/l0nyt4ji","slide":5,"bbox":[0,480,1920,0]}
+{"kind":"shape","id":"sh/9gjedkbm","slide":5,"bbox":[0,640,1920,0]}
+{"kind":"shape","id":"sh/8faxkzu1","slide":5,"bbox":[0,800,1920,0]}
+{"kind":"shape","id":"sh/7e1wbutg","slide":5,"bbox":[0,960,1920,0]}
+{"kind":"textbox","id":"sh/mdsfipcb","slide":5,"name":"eyebrow-5","text":"AGENT ARCHITECTURE / COURSE LOOP","textPreview":"AGENT ARCHITECTURE / COURSE LOOP","textChars":32,"textLines":1,"bbox":[76,34,700,34]}
+{"kind":"textbox","id":"sh/lcze9kvq","slide":5,"name":"label-5","text":"CONNECTION LAYER / 01:28","textPreview":"CONNECTION LAYER / 01:28","textChars":24,"textLines":1,"bbox":[1340,34,500,34]}
+{"kind":"shape","id":"sh/krqxgfu5","slide":5,"bbox":[76,92,1768,0]}
+{"kind":"textbox","id":"sh/zqhw7adk","slide":5,"name":"title-5","text":"MCP：把外部能力接得更标准","textPreview":"MCP：把外部能力接得更标准","textChars":14,"textLines":1,"bbox":[92,124,1600,86]}
+{"kind":"shape","id":"sh/yp8fe5cz","slide":5,"name":"subtitle-safe-band-5","bbox":[0,900,1920,180]}
+{"kind":"shape","id":"sh/xoze50ve","slide":5,"bbox":[76,900,1768,0]}
+{"kind":"textbox","id":"sh/cnqxcvut","slide":5,"name":"safe-note-5","text":"字幕安全区（暂不显示）","textPreview":"字幕安全区（暂不显示）","textChars":11,"textLines":1,"bbox":[1500,930,310,26]}
+{"kind":"shape","id":"sh/2t4bm1sr","slide":5,"name":"explosion","bbox":[110,380,520,265]}
+{"kind":"textbox","id":"sh/nuxcf69c","slide":5,"name":"explosion-title","text":"没有 MCP","textPreview":"没有 MCP","textChars":6,"textLines":1,"bbox":[138,402,464,42]}
+{"kind":"textbox","id":"sh/ov6tobax","slide":5,"name":"explosion-copy","text":"GitHub · Slack · Notion · DB\n每接一个，就写一套适配器\nIntegration Explosion","textPreview":"GitHub · Slack · Notion · DB | 每接一个，就写一套适配器 | Integration Explosion","textChars":63,"textLines":3,"bbox":[138,450,464,177]}
+{"kind":"textbox","id":"sh/pwfuhgri","slide":5,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[650,463,120,42]}
+{"kind":"shape","id":"sh/ep4bi1sv","slide":5,"name":"client","bbox":[790,410,330,205]}
+{"kind":"textbox","id":"sh/fqdcb6tg","slide":5,"name":"client-title","text":"MCP Client","textPreview":"MCP Client","textChars":10,"textLines":1,"bbox":[818,432,274,42]}
+{"kind":"textbox","id":"sh/0rmtkbal","slide":5,"name":"client-copy","text":"统一发现和调用外部能力","textPreview":"统一发现和调用外部能力","textChars":11,"textLines":1,"bbox":[818,480,274,117]}
+{"kind":"textbox","id":"sh/1svudwb6","slide":5,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[1140,463,120,42]}
+{"kind":"shape","id":"sh/q1kbehsj","slide":5,"name":"servers","bbox":[1280,370,500,285]}
+{"kind":"textbox","id":"sh/rmdc7mt4","slide":5,"name":"servers-title","text":"MCP Servers","textPreview":"MCP Servers","textChars":11,"textLines":1,"bbox":[1308,392,444,42]}
+{"kind":"textbox","id":"sh/jed8j2d0","slide":5,"name":"servers-copy","text":"GitHub · Notion · Database","textPreview":"GitHub · Notion · Database","textChars":26,"textLines":1,"bbox":[1308,440,444,197]}
+{"kind":"shape","id":"sh/id47axwf","slide":5,"name":"mcp-interfaces","bbox":[760,720,540,90]}
+{"kind":"textbox","id":"sh/5gfqlsv6","slide":5,"name":"mcp-interfaces-title","text":"Tools · Resources · Prompts","textPreview":"Tools · Resources · Prompts","textChars":27,"textLines":1,"bbox":[788,742,484,42]}
+{"kind":"notes","id":"nt/pllve9","slide":5,"text":"MCP 是连接协议，不是 API 的替代品；它让 AI 应用以统一方式发现和调用工具。\n\n[Sources]\n- 用户提供的 pasted-text.txt（概念定义、示例与技术关系）\n- 本页为审核稿：时间点与动画顺序写在 storyboard/semantic-beat-manifest.yaml。"}
+{"kind":"slide","id":"sl/94ztmn","slide":6,"title":"AGENT ARCHITECTURE / COURSE LOOP","textShapes":11}
+{"kind":"shape","id":"sh/u5obe5w7","slide":6,"name":"glow-top-left-6","bbox":[-220,-280,720,720]}
+{"kind":"shape","id":"sh/hsza90vi","slide":6,"name":"glow-bottom-right-6","bbox":[1460,760,680,680]}
+{"kind":"shape","id":"sh/g76tgfed","slide":6,"bbox":[0,0,0,1080]}
+{"kind":"shape","id":"sh/72xs3qxg","slide":6,"bbox":[160,0,0,1080]}
+{"kind":"shape","id":"sh/61obalwv","slide":6,"bbox":[320,0,0,1080]}
+{"kind":"shape","id":"sh/t4fa50vm","slide":6,"bbox":[480,0,0,1080]}
+{"kind":"shape","id":"sh/836tcve1","slide":6,"bbox":[640,0,0,1080]}
+{"kind":"shape","id":"sh/jydszqxk","slide":6,"bbox":[800,0,0,1080]}
+{"kind":"shape","id":"sh/yx4r6lwz","slide":6,"bbox":[960,0,0,1080]}
+{"kind":"shape","id":"sh/8z698fmp","slide":6,"bbox":[1120,0,0,1080]}
+{"kind":"shape","id":"sh/90fahk3a","slide":6,"bbox":[1280,0,0,1080]}
+{"kind":"shape","id":"sh/mx4r654z","slide":6,"bbox":[1440,0,0,1080]}
+{"kind":"shape","id":"sh/nydsfal4","slide":6,"bbox":[1600,0,0,1080]}
+{"kind":"shape","id":"sh/0vm94fmt","slide":6,"bbox":[1760,0,0,1080]}
+{"kind":"shape","id":"sh/lwvadk3e","slide":6,"bbox":[1920,0,0,1080]}
+{"kind":"shape","id":"sh/y94r254n","slide":6,"bbox":[0,0,1920,0]}
+{"kind":"shape","id":"sh/zadsbal8","slide":6,"bbox":[0,160,1920,0]}
+{"kind":"shape","id":"sh/krqtgz2x","slide":6,"bbox":[0,320,1920,0]}
+{"kind":"shape","id":"sh/5szap43i","slide":6,"bbox":[0,480,1920,0]}
+{"kind":"shape","id":"sh/tcbid0ra","slide":6,"bbox":[0,640,1920,0]}
+{"kind":"shape","id":"sh/sb21kvqp","slide":6,"bbox":[0,800,1920,0]}
+{"kind":"shape","id":"sh/7at0ba9k","slide":6,"bbox":[0,960,1920,0]}
+{"kind":"textbox","id":"sh/69kji58z","slide":6,"name":"eyebrow-6","text":"AGENT ARCHITECTURE / COURSE LOOP","textPreview":"AGENT ARCHITECTURE / COURSE LOOP","textChars":32,"textLines":1,"bbox":[76,34,700,34]}
+{"kind":"textbox","id":"sh/58bi90re","slide":6,"name":"label-6","text":"LAYER RELATIONSHIP / 01:55","textPreview":"LAYER RELATIONSHIP / 01:55","textChars":26,"textLines":1,"bbox":[1340,34,500,34]}
+{"kind":"shape","id":"sh/k7i1gvqt","slide":6,"bbox":[76,92,1768,0]}
+{"kind":"textbox","id":"sh/j6907q98","slide":6,"name":"title-6","text":"MCP 不取代 API，ADK 也不是另一种接口","textPreview":"MCP 不取代 API，ADK 也不是另一种接口","textChars":24,"textLines":1,"bbox":[92,124,1600,86]}
+{"kind":"shape","id":"sh/i50jel8n","slide":6,"name":"subtitle-safe-band-6","bbox":[0,900,1920,180]}
+{"kind":"shape","id":"sh/x4ri5gr2","slide":6,"bbox":[76,900,1768,0]}
+{"kind":"textbox","id":"sh/wji1cbqx","slide":6,"name":"safe-note-6","text":"字幕安全区（暂不显示）","textPreview":"字幕安全区（暂不显示）","textChars":11,"textLines":1,"bbox":[1500,930,310,26]}
+{"kind":"shape","id":"sh/mpgf6hof","slide":6,"name":"adk","bbox":[130,350,500,340]}
+{"kind":"textbox","id":"sh/napgfmp0","slide":6,"name":"adk-title","text":"ADK","textPreview":"ADK","textChars":3,"textLines":1,"bbox":[158,372,444,42]}
+{"kind":"textbox","id":"sh/8byx8r6l","slide":6,"name":"adk-copy","text":"Agent Development Kit\n\n状态 · 工作流 · 回调\n多 Agent · 评测","textPreview":"Agent Development Kit |  | 状态 · 工作流 · 回调 | 多 Agent · 评测","textChars":49,"textLines":4,"bbox":[158,420,444,252]}
+{"kind":"shape","id":"sh/9c7yhw76","slide":6,"name":"mcp","bbox":[710,350,470,340]}
+{"kind":"textbox","id":"sh/elwf2hoj","slide":6,"name":"mcp-title","text":"MCP","textPreview":"MCP","textChars":3,"textLines":1,"bbox":[738,372,414,42]}
+{"kind":"textbox","id":"sh/zm5gbmp4","slide":6,"name":"mcp-copy","text":"统一发现和调用\n\nTools · Resources · Prompts","textPreview":"统一发现和调用 |  | Tools · Resources · Prompts","textChars":36,"textLines":3,"bbox":[738,420,414,252]}
+{"kind":"shape","id":"sh/0nex4r6p","slide":6,"name":"access","bbox":[1260,350,500,340]}
+{"kind":"textbox","id":"sh/1onydc7u","slide":6,"name":"access-title","text":"API / SDK / CLI","textPreview":"API / SDK / CLI","textChars":15,"textLines":1,"bbox":[1288,372,444,42]}
+{"kind":"textbox","id":"sh/qhcfyx87","slide":6,"name":"access-copy","text":"真正执行能力\n\n数据库 · 文件 · 服务","textPreview":"真正执行能力 |  | 数据库 · 文件 · 服务","textChars":21,"textLines":3,"bbox":[1288,420,444,252]}
+{"kind":"shape","id":"sh/ri5g72ps","slide":6,"name":"layer-summary","bbox":[320,755,1280,100]}
+{"kind":"textbox","id":"sh/3a5cjito","slide":6,"name":"layer-summary-title","text":"MCP 解决“怎么接工具” · ADK 解决“怎么组织 Agent”","textPreview":"MCP 解决“怎么接工具” · ADK 解决“怎么组织 Agent”","textChars":34,"textLines":1,"bbox":[348,777,1224,42]}
+{"kind":"notes","id":"nt/94ztmn","slide":6,"text":"这一页解决最容易混淆的层级关系：MCP 在连接层，ADK 在 Agent 编排层。\n\n[Sources]\n- 用户提供的 pasted-text.txt（概念定义、示例与技术关系）\n- 本页为审核稿：时间点与动画顺序写在 storyboard/semantic-beat-manifest.yaml。"}
+{"kind":"slide","id":"sl/z2bmyn","slide":7,"title":"AGENT ARCHITECTURE / COURSE LOOP","textShapes":16}
+{"kind":"shape","id":"sh/g7ylwf69","slide":7,"name":"glow-top-left-7","bbox":[-220,-280,720,720]}
+{"kind":"shape","id":"sh/v6pkna5o","slide":7,"name":"glow-bottom-right-7","bbox":[1460,760,680,680]}
+{"kind":"shape","id":"sh/u5w3u5o3","slide":7,"bbox":[0,0,0,1080]}
+{"kind":"shape","id":"sh/pw72tknq","slide":7,"bbox":[160,0,0,1080]}
+{"kind":"shape","id":"sh/4vyl0z65","slide":7,"bbox":[320,0,0,1080]}
+{"kind":"shape","id":"sh/3apkru5k","slide":7,"bbox":[480,0,0,1080]}
+{"kind":"shape","id":"sh/i9g3ypoz","slide":7,"bbox":[640,0,0,1080]}
+{"kind":"shape","id":"sh/l0n2h0nm","slide":7,"bbox":[800,0,0,1080]}
+{"kind":"shape","id":"sh/kfe1ov61","slide":7,"bbox":[960,0,0,1080]}
+{"kind":"shape","id":"sh/elov218f","slide":7,"bbox":[1120,0,0,1080]}
+{"kind":"shape","id":"sh/fmxwv690","slide":7,"bbox":[1280,0,0,1080]}
+{"kind":"shape","id":"sh/gn6d4bql","slide":7,"bbox":[1440,0,0,1080]}
+{"kind":"shape","id":"sh/1ozexgr6","slide":7,"bbox":[1600,0,0,1080]}
+{"kind":"shape","id":"sh/2p8v618r","slide":7,"bbox":[1760,0,0,1080]}
+{"kind":"shape","id":"sh/3ahwz69c","slide":7,"bbox":[1920,0,0,1080]}
+{"kind":"shape","id":"sh/obqd8bqx","slide":7,"bbox":[0,0,1920,0]}
+{"kind":"shape","id":"sh/pcze1gr2","slide":7,"bbox":[0,160,1920,0]}
+{"kind":"shape","id":"sh/qd8val8n","slide":7,"bbox":[0,320,1920,0]}
+{"kind":"shape","id":"sh/behw3q98","slide":7,"bbox":[0,480,1920,0]}
+{"kind":"shape","id":"sh/ni1crq5g","slide":7,"bbox":[0,640,1920,0]}
+{"kind":"shape","id":"sh/mhsvilov","slide":7,"bbox":[0,800,1920,0]}
+{"kind":"shape","id":"sh/9kjut0nm","slide":7,"bbox":[0,960,1920,0]}
+{"kind":"textbox","id":"sh/8jadkv61","slide":7,"name":"eyebrow-7","text":"AGENT ARCHITECTURE / COURSE LOOP","textPreview":"AGENT ARCHITECTURE / COURSE LOOP","textChars":32,"textLines":1,"bbox":[76,34,700,34]}
+{"kind":"textbox","id":"sh/zehcn65k","slide":7,"name":"label-7","text":"CASE / 02:20","textPreview":"CASE / 02:20","textChars":12,"textLines":1,"bbox":[1340,34,500,34]}
+{"kind":"shape","id":"sh/yd8beloz","slide":7,"bbox":[76,92,1768,0]}
+{"kind":"textbox","id":"sh/lgjupgna","slide":7,"name":"title-7","text":"一个订单案例串起全部层级","textPreview":"一个订单案例串起全部层级","textChars":12,"textLines":1,"bbox":[92,124,1600,86]}
+{"kind":"shape","id":"sh/0fadgb6p","slide":7,"name":"subtitle-safe-band-7","bbox":[0,900,1920,180]}
+{"kind":"shape","id":"sh/bqhcj6p8","slide":7,"bbox":[76,900,1768,0]}
+{"kind":"textbox","id":"sh/qp8ba1on","slide":7,"name":"safe-note-7","text":"字幕安全区（暂不显示）","textPreview":"字幕安全区（暂不显示）","textChars":11,"textLines":1,"bbox":[1500,930,310,26]}
+{"kind":"shape","id":"sh/gvm9k7ml","slide":7,"name":"user","bbox":[100,390,310,190]}
+{"kind":"textbox","id":"sh/1wfatc36","slide":7,"name":"user-title","text":"用户","textPreview":"用户","textChars":2,"textLines":1,"bbox":[128,412,254,42]}
+{"kind":"textbox","id":"sh/et4rix4f","slide":7,"name":"user-copy","text":"查订单 123\n未发货就退款","textPreview":"查订单 123 | 未发货就退款","textChars":14,"textLines":2,"bbox":[128,460,254,102]}
+{"kind":"textbox","id":"sh/fudsr2l0","slide":7,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[425,446,120,42]}
+{"kind":"shape","id":"sh/oj69o7mh","slide":7,"name":"adk-case","bbox":[560,390,300,190]}
+{"kind":"textbox","id":"sh/pkfaxc32","slide":7,"name":"adk-case-title","text":"ADK","textPreview":"ADK","textChars":3,"textLines":1,"bbox":[588,412,244,42]}
+{"kind":"textbox","id":"sh/2xormh4r","slide":7,"name":"adk-case-copy","text":"组织流程","textPreview":"组织流程","textChars":4,"textLines":1,"bbox":[588,460,244,102]}
+{"kind":"textbox","id":"sh/3ixsvmlc","slide":7,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[875,446,120,42]}
+{"kind":"shape","id":"sh/4n29cnmd","slide":7,"name":"llm-case","bbox":[1010,390,340,190]}
+{"kind":"textbox","id":"sh/5ovqlsny","slide":7,"name":"llm-case-title","text":"LLM","textPreview":"LLM","textChars":3,"textLines":1,"bbox":[1038,412,284,42]}
+{"kind":"textbox","id":"sh/xw7ahcre","slide":7,"name":"llm-case-copy","text":"通过 Tool Calling\n选择查询工具","textPreview":"通过 Tool Calling | 选择查询工具","textChars":22,"textLines":2,"bbox":[1038,460,284,102]}
+{"kind":"textbox","id":"sh/wvy987qt","slide":7,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[1365,446,120,42]}
+{"kind":"shape","id":"sh/bupsfm98","slide":7,"name":"stack-case","bbox":[1490,340,300,310]}
+{"kind":"textbox","id":"sh/atgr6h83","slide":7,"name":"stack-case-title","text":"MCP / SDK / API","textPreview":"MCP / SDK / API","textChars":15,"textLines":1,"bbox":[1518,362,244,42]}
+{"kind":"textbox","id":"sh/9s7adcri","slide":7,"name":"stack-case-copy","text":"读取订单数据库\n返回 pending\n执行 refund","textPreview":"读取订单数据库 | 返回 pending | 执行 refund","textChars":28,"textLines":3,"bbox":[1518,410,244,222]}
+{"kind":"shape","id":"sh/ory947qx","slide":7,"name":"result-case","bbox":[520,735,880,95]}
+{"kind":"textbox","id":"sh/nqpsb29c","slide":7,"name":"result-case-title","text":"退款完成 → 返回用户","textPreview":"退款完成 → 返回用户","textChars":11,"textLines":1,"bbox":[548,757,824,42]}
+{"kind":"notes","id":"nt/z2bmyn","slide":7,"text":"订单案例把七个概念放到一条真实调用链中，强调它们不是互相替代。\n\n[Sources]\n- 用户提供的 pasted-text.txt（概念定义、示例与技术关系）\n- 本页为审核稿：时间点与动画顺序写在 storyboard/semantic-beat-manifest.yaml。"}
+{"kind":"slide","id":"sl/zi8zn0","slide":8,"title":"AGENT ARCHITECTURE / COURSE LOOP","textShapes":18}
+{"kind":"shape","id":"sh/lkrux8fi","slide":8,"name":"glow-top-left-8","bbox":[-220,-280,720,720]}
+{"kind":"shape","id":"sh/yx0vmtgr","slide":8,"name":"glow-bottom-right-8","bbox":[1460,760,680,680]}
+{"kind":"shape","id":"sh/ji9cvyxc","slide":8,"bbox":[0,0,0,1080]}
+{"kind":"shape","id":"sh/wvitkjy1","slide":8,"bbox":[160,0,0,1080]}
+{"kind":"shape","id":"sh/xwrutof6","slide":8,"bbox":[320,0,0,1080]}
+{"kind":"shape","id":"sh/at0bitgv","slide":8,"bbox":[480,0,0,1080]}
+{"kind":"shape","id":"sh/bu9cryxg","slide":8,"bbox":[640,0,0,1080]}
+{"kind":"shape","id":"sh/orytgjyp","slide":8,"bbox":[800,0,0,1080]}
+{"kind":"shape","id":"sh/9s7upoza","slide":8,"bbox":[960,0,0,1080]}
+{"kind":"shape","id":"sh/t8behs7u","slide":8,"bbox":[1120,0,0,1080]}
+{"kind":"shape","id":"sh/s72d8nq9","slide":8,"bbox":[1280,0,0,1080]}
+{"kind":"shape","id":"sh/r6twfipo","slide":8,"bbox":[1440,0,0,1080]}
+{"kind":"shape","id":"sh/65kv6d83","slide":8,"bbox":[1600,0,0,1080]}
+{"kind":"shape","id":"sh/54bed87i","slide":8,"bbox":[1760,0,0,1080]}
+{"kind":"shape","id":"sh/432d43qd","slide":8,"bbox":[1920,0,0,1080]}
+{"kind":"shape","id":"sh/j2twbips","slide":8,"bbox":[0,0,1920,0]}
+{"kind":"shape","id":"sh/i10v2d87","slide":8,"bbox":[0,160,1920,0]}
+{"kind":"shape","id":"sh/h0re987m","slide":8,"bbox":[0,320,1920,0]}
+{"kind":"shape","id":"sh/wzid03q1","slide":8,"bbox":[0,480,1920,0]}
+{"kind":"shape","id":"sh/ojmdg3yx","slide":8,"bbox":[0,640,1920,0]}
+{"kind":"shape","id":"sh/9kvep8fi","slide":8,"bbox":[0,800,1920,0]}
+{"kind":"shape","id":"sh/mh4vetgr","slide":8,"bbox":[0,960,1920,0]}
+{"kind":"textbox","id":"sh/nidwnyxc","slide":8,"name":"eyebrow-8","text":"AGENT ARCHITECTURE / COURSE LOOP","textPreview":"AGENT ARCHITECTURE / COURSE LOOP","textChars":32,"textLines":1,"bbox":[76,34,700,34]}
+{"kind":"textbox","id":"sh/0f2dc3y1","slide":8,"name":"label-8","text":"MEMORY / 02:50","textPreview":"MEMORY / 02:50","textChars":14,"textLines":1,"bbox":[1340,34,500,34]}
+{"kind":"shape","id":"sh/1gvel8f6","slide":8,"bbox":[76,92,1768,0]}
+{"kind":"textbox","id":"sh/edkvatgv","slide":8,"name":"title-8","text":"七句话，记住它们的位置","textPreview":"七句话，记住它们的位置","textChars":11,"textLines":1,"bbox":[92,124,1600,86]}
+{"kind":"shape","id":"sh/zetwjyxg","slide":8,"name":"subtitle-safe-band-8","bbox":[0,900,1920,180]}
+{"kind":"shape","id":"sh/kb6xony5","slide":8,"bbox":[76,900,1768,0]}
+{"kind":"textbox","id":"sh/5cfexsfq","slide":8,"name":"safe-note-8","text":"字幕安全区（暂不显示）","textPreview":"字幕安全区（暂不显示）","textChars":11,"textLines":1,"bbox":[1500,930,310,26]}
+{"kind":"shape","id":"sh/fi183ql4","slide":8,"bbox":[150,337,1620,0]}
+{"kind":"textbox","id":"sh/ehs7al4j","slide":8,"text":"API","textPreview":"API","textChars":3,"textLines":1,"bbox":[160,275,400,54]}
+{"kind":"textbox","id":"sh/1k3q5g3a","slide":8,"text":"软件之间的能力契约","textPreview":"软件之间的能力契约","textChars":9,"textLines":1,"bbox":[590,275,1120,54]}
+{"kind":"shape","id":"sh/gjapcvmp","slide":8,"bbox":[150,412,1620,0]}
+{"kind":"textbox","id":"sh/3ml87ql0","slide":8,"text":"SDK","textPreview":"SDK","textChars":3,"textLines":1,"bbox":[160,350,400,54]}
+{"kind":"textbox","id":"sh/2lc7el4f","slide":8,"text":"让开发者更方便地使用 API","textPreview":"让开发者更方便地使用 API","textChars":14,"textLines":1,"bbox":[590,350,1120,54]}
+{"kind":"shape","id":"sh/po3q9036","slide":8,"bbox":[150,487,1620,0]}
+{"kind":"textbox","id":"sh/onupgvml","slide":8,"text":"CLI","textPreview":"CLI","textChars":3,"textLines":1,"bbox":[160,425,400,54]}
+{"kind":"textbox","id":"sh/jqh8v6lw","slide":8,"text":"让人或脚本通过命令行操作软件","textPreview":"让人或脚本通过命令行操作软件","textChars":14,"textLines":1,"bbox":[590,425,1120,54]}
+{"kind":"shape","id":"sh/ip87214b","slide":8,"bbox":[150,562,1620,0]}
+{"kind":"textbox","id":"sh/atc7i1c7","slide":8,"text":"Function Calling","textPreview":"Function Calling","textChars":16,"textLines":1,"bbox":[160,500,400,54]}
+{"kind":"textbox","id":"sh/vul8r6ds","slide":8,"text":"让模型产生结构化函数请求","textPreview":"让模型产生结构化函数请求","textChars":12,"textLines":1,"bbox":[590,500,1120,54]}
+{"kind":"shape","id":"sh/wvupkbud","slide":8,"bbox":[150,637,1620,0]}
+{"kind":"textbox","id":"sh/xw3qtgvy","slide":8,"text":"Tool Calling","textPreview":"Tool Calling","textChars":12,"textLines":1,"bbox":[160,575,400,54]}
+{"kind":"textbox","id":"sh/ixw7mlc3","slide":8,"text":"模型选择并使用外部能力的总机制","textPreview":"模型选择并使用外部能力的总机制","textChars":15,"textLines":1,"bbox":[590,575,1120,54]}
+{"kind":"shape","id":"sh/jy58v6to","slide":8,"bbox":[150,712,1620,0]}
+{"kind":"textbox","id":"sh/kze9obu9","slide":8,"text":"MCP","textPreview":"MCP","textChars":3,"textLines":1,"bbox":[160,650,400,54]}
+{"kind":"textbox","id":"sh/50nqxgbu","slide":8,"text":"让 AI 用统一协议连接工具和数据","textPreview":"让 AI 用统一协议连接工具和数据","textChars":17,"textLines":1,"bbox":[590,650,1120,54]}
+{"kind":"shape","id":"sh/61wrqlcf","slide":8,"bbox":[150,787,1620,0]}
+{"kind":"textbox","id":"sh/7258zqt0","slide":8,"text":"ADK","textPreview":"ADK","textChars":3,"textLines":1,"bbox":[160,725,400,54]}
+{"kind":"textbox","id":"sh/hw7apkv2","slide":8,"text":"把模型、工具、状态和流程组织成完整 Agent","textPreview":"把模型、工具、状态和流程组织成完整 Agent","textChars":23,"textLines":1,"bbox":[590,725,1120,54]}
+{"kind":"notes","id":"nt/zi8zn0","slide":8,"text":"每个词只保留一句核心定义，作为后续课程的记忆卡。\n\n[Sources]\n- 用户提供的 pasted-text.txt（概念定义、示例与技术关系）\n- 本页为审核稿：时间点与动画顺序写在 storyboard/semantic-beat-manifest.yaml。"}
+{"kind":"slide","id":"sl/fa1o2a","slide":9,"title":"AGENT ARCHITECTURE / COURSE LOOP","textShapes":11}
+{"kind":"shape","id":"sh/ihkva5oj","slide":9,"name":"glow-top-left-9","bbox":[-220,-280,720,720]}
+{"kind":"shape","id":"sh/5kbe5k7u","slide":9,"name":"glow-bottom-right-9","bbox":[1460,760,680,680]}
+{"kind":"shape","id":"sh/4j2xcf6p","slide":9,"bbox":[0,0,0,1080]}
+{"kind":"shape","id":"sh/ve9wzqps","slide":9,"bbox":[160,0,0,1080]}
+{"kind":"shape","id":"sh/ud0v65o7","slide":9,"bbox":[320,0,0,1080]}
+{"kind":"shape","id":"sh/hgbe107y","slide":9,"bbox":[480,0,0,1080]}
+{"kind":"shape","id":"sh/wfid8v6d","slide":9,"bbox":[640,0,0,1080]}
+{"kind":"shape","id":"sh/7q9wvqpw","slide":9,"bbox":[800,0,0,1080]}
+{"kind":"shape","id":"sh/mp0v2lob","slide":9,"bbox":[960,0,0,1080]}
+{"kind":"shape","id":"sh/0z6l4jyp","slide":9,"bbox":[1120,0,0,1080]}
+{"kind":"shape","id":"sh/10fmdoza","slide":9,"bbox":[1280,0,0,1080]}
+{"kind":"shape","id":"sh/ex432tgj","slide":9,"bbox":[1440,0,0,1080]}
+{"kind":"shape","id":"sh/zyx4byh4","slide":9,"bbox":[1600,0,0,1080]}
+{"kind":"shape","id":"sh/cvml0jyd","slide":9,"bbox":[1760,0,0,1080]}
+{"kind":"shape","id":"sh/dwvm9ozy","slide":9,"bbox":[1920,0,0,1080]}
+{"kind":"shape","id":"sh/qt43y9gn","slide":9,"bbox":[0,0,1920,0]}
+{"kind":"shape","id":"sh/rud47eh8","slide":9,"bbox":[0,160,1920,0]}
+{"kind":"shape","id":"sh/wrq5c3yx","slide":9,"bbox":[0,320,1920,0]}
+{"kind":"shape","id":"sh/xszml8zi","slide":9,"bbox":[0,480,1920,0]}
+{"kind":"shape","id":"sh/lwbu9o3a","slide":9,"bbox":[0,640,1920,0]}
+{"kind":"shape","id":"sh/kb2dgjmp","slide":9,"bbox":[0,800,1920,0]}
+{"kind":"shape","id":"sh/jatc7e54","slide":9,"bbox":[0,960,1920,0]}
+{"kind":"textbox","id":"sh/y9kve94j","slide":9,"name":"eyebrow-9","text":"AGENT ARCHITECTURE / COURSE LOOP","textPreview":"AGENT ARCHITECTURE / COURSE LOOP","textChars":32,"textLines":1,"bbox":[76,34,700,34]}
+{"kind":"textbox","id":"sh/x8bu54ne","slide":9,"name":"label-9","text":"CLOSE / 03:14","textPreview":"CLOSE / 03:14","textChars":13,"textLines":1,"bbox":[1340,34,500,34]}
+{"kind":"shape","id":"sh/w72dczmt","slide":9,"bbox":[76,92,1768,0]}
+{"kind":"textbox","id":"sh/b69c3u58","slide":9,"name":"title-9","text":"以后先问：它属于哪一层？","textPreview":"以后先问：它属于哪一层？","textChars":12,"textLines":1,"bbox":[92,124,1600,86]}
+{"kind":"shape","id":"sh/a50vap4n","slide":9,"name":"subtitle-safe-band-9","bbox":[0,900,1920,180]}
+{"kind":"shape","id":"sh/94ru14n2","slide":9,"bbox":[76,900,1768,0]}
+{"kind":"textbox","id":"sh/o3id8zmh","slide":9,"name":"safe-note-9","text":"字幕安全区（暂不显示）","textPreview":"字幕安全区（暂不显示）","textChars":11,"textLines":1,"bbox":[1500,930,310,26]}
+{"kind":"shape","id":"sh/e9gr25kf","slide":9,"name":"q1","bbox":[135,380,430,180]}
+{"kind":"textbox","id":"sh/zapsbql0","slide":9,"name":"q1-title","text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[163,402,374,42]}
+{"kind":"textbox","id":"sh/0by94v2l","slide":9,"name":"q1-copy","text":"它属于哪一层？","textPreview":"它属于哪一层？","textChars":7,"textLines":1,"bbox":[163,450,374,92]}
+{"kind":"shape","id":"sh/1c7ad036","slide":9,"name":"q2","bbox":[745,380,430,180]}
+{"kind":"textbox","id":"sh/qlwrylkj","slide":9,"name":"q2-title","text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[773,402,374,42]}
+{"kind":"textbox","id":"sh/r65s7qlo","slide":9,"name":"q2-copy","text":"它连接的是谁？","textPreview":"它连接的是谁？","textChars":7,"textLines":1,"bbox":[773,450,374,92]}
+{"kind":"shape","id":"sh/c7e90v29","slide":9,"name":"q3","bbox":[1355,380,430,180]}
+{"kind":"textbox","id":"sh/d87a903u","slide":9,"name":"q3-title","text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[1383,402,374,42]}
+{"kind":"textbox","id":"sh/2hwrulk7","slide":9,"name":"q3-copy","text":"解决调用、连接，还是编排？","textPreview":"解决调用、连接，还是编排？","textChars":13,"textLines":1,"bbox":[1383,450,374,92]}
+{"kind":"shape","id":"sh/3i5s36ls","slide":9,"name":"final","bbox":[330,720,1260,110]}
+{"kind":"textbox","id":"sh/vupofm5o","slide":9,"name":"final-title","text":"放回这张地图，AI Agent 技术栈就清楚了。","textPreview":"放回这张地图，AI Agent 技术栈就清楚了。","textChars":24,"textLines":1,"bbox":[358,742,1204,42]}
+{"kind":"notes","id":"nt/fa1o2a","slide":9,"text":"回到开场问题，用三个判断问题收束。审核通过后再进入配音和词级对齐。\n\n[Sources]\n- 用户提供的 pasted-text.txt（概念定义、示例与技术关系）\n- 本页为审核稿：时间点与动画顺序写在 storyboard/semantic-beat-manifest.yaml。"}

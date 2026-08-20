@@ -1,0 +1,137 @@
+version: v05
+chapter: 3
+voice: Channel科技解说员
+delivery_profile: 稳重底色 + 句内对比 + 关键名词重读 + 结论落点
+generic_plan_rejected: true
+sentences:
+- sentence_id: S1
+  source_text: Plan and Execute 先生成完整计划，再按步骤执行。
+  delivery_intent: define_plan_execute
+  energy_1_to_5: 4
+  pace: stepwise
+  emphasis_terms:
+  - Plan and Execute
+  - 完整计划
+  pause_after_ms: 120
+  breath_points:
+  - Plan
+  - Execute
+  pronunciation: use canonical terminology.yaml spelling; no ASR variant in display
+  visual_sync: c3-plan-card
+  audio_window:
+  - 0.0
+  - 4.42
+- sentence_id: S2
+  source_text: 它让流程更稳定，适合代码生成和长流程自动化。
+  delivery_intent: show_fit
+  energy_1_to_5: 3
+  pace: steady
+  emphasis_terms:
+  - 稳定
+  - 长流程自动化
+  pause_after_ms: 180
+  breath_points:
+  - 流程更稳定
+  pronunciation: use canonical terminology.yaml spelling; no ASR variant in display
+  visual_sync: c3-exec-card
+  audio_window:
+  - 4.42
+  - 8.64
+- sentence_id: S3
+  source_text: 但计划如果一开始就错，后面的执行会把错误放大，灵活性也不如 ReAct。
+  delivery_intent: warn_failure_amplification
+  energy_1_to_5: 5
+  pace: tighten_then_land
+  emphasis_terms:
+  - 一开始就错
+  - 错误放大
+  - ReAct
+  pause_after_ms: 240
+  breath_points:
+  - 错误传播
+  pronunciation: use canonical terminology.yaml spelling; no ASR variant in display
+  visual_sync: c3-fail
+  audio_window:
+  - 8.64
+  - 15.28
+- sentence_id: S4
+  source_text: Multi-Agent 再进一步，把任务分给不同角色。
+  delivery_intent: introduce_roles
+  energy_1_to_5: 4
+  pace: rising
+  emphasis_terms:
+  - Multi-Agent
+  - 不同角色
+  pause_after_ms: 160
+  breath_points:
+  - 角色拆分
+  pronunciation: use canonical terminology.yaml spelling; no ASR variant in display
+  visual_sync: c3m-router
+  audio_window:
+  - 15.28
+  - 19.3
+- sentence_id: S5
+  source_text: 例如 Planner、Executor 和 Reviewer。
+  delivery_intent: name_roles
+  energy_1_to_5: 4
+  pace: punctuated
+  emphasis_terms:
+  - Planner
+  - Executor
+  - Reviewer
+  pause_after_ms: 140
+  breath_points:
+  - 三个角色
+  pronunciation: use canonical terminology.yaml spelling; no ASR variant in display
+  visual_sync: c3m-planner
+  audio_window:
+  - 19.3
+  - 21.72
+- sentence_id: S6
+  source_text: 这样上下文边界更清楚，复杂流程更容易扩展。
+  delivery_intent: show_benefit
+  energy_1_to_5: 3
+  pace: confident
+  emphasis_terms:
+  - 上下文边界
+  - 扩展
+  pause_after_ms: 180
+  breath_points:
+  - 边界更清楚
+  pronunciation: use canonical terminology.yaml spelling; no ASR variant in display
+  visual_sync: c3m-reviewer
+  audio_window:
+  - 21.72
+  - 26.0
+- sentence_id: S7
+  source_text: 代价是调用成本、协作协议和失败处理都会增加。
+  delivery_intent: show_cost
+  energy_1_to_5: 4
+  pace: deliberate
+  emphasis_terms:
+  - 调用成本
+  - 协作协议
+  - 失败处理
+  pause_after_ms: 220
+  breath_points:
+  - 代价
+  pronunciation: use canonical terminology.yaml spelling; no ASR variant in display
+  visual_sync: c3m-cost
+  audio_window:
+  - 26.0
+  - 30.54
+- sentence_id: S8
+  source_text: 它适合对流程一致性要求高的行业任务。
+  delivery_intent: land_boundary
+  energy_1_to_5: 3
+  pace: slow_land
+  emphasis_terms:
+  - 流程一致性
+  pause_after_ms: 220
+  breath_points:
+  - 行业任务
+  pronunciation: use canonical terminology.yaml spelling; no ASR variant in display
+  visual_sync: c3m-cost
+  audio_window:
+  - 30.54
+  - 34.609

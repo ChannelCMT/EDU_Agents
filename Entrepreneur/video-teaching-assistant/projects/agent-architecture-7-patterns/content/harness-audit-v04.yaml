@@ -1,0 +1,47 @@
+version: v04
+source_of_truth:
+- audio/word-alignment-raw.json
+- semantic-beat-manifest.yaml
+- visual-coverage-matrix.yaml
+root_causes_addressed:
+- proportional_caption_timing_replaced_by_word_evidence
+- sentence_level_visual_coverage_added
+- first_30_second_layer_audit_added
+- route_skill_design_cost_has_explicit_c4_cost_animation
+- tone_plan_is_sentence_level_and_non_generic
+- multi_scene_previous_exit_and_next_entry_are_explicit
+- caption_panel_uses_single_line_translucent_safe_band
+- chapter_one_y_axis_points_up_and_stays_inside_canvas
+- chapter_one_evolution_panel_is_compact_and_exits_before_closing_note
+chapters:
+- chapter: 1
+  caption_count: 18
+  beat_count: 6
+  coverage_count: 18
+  failures: []
+  status: pass
+- chapter: 2
+  caption_count: 22
+  beat_count: 6
+  coverage_count: 22
+  failures: []
+  status: pass
+- chapter: 3
+  caption_count: 24
+  beat_count: 8
+  coverage_count: 24
+  failures: []
+  status: pass
+- chapter: 4
+  caption_count: 17
+  beat_count: 8
+  coverage_count: 17
+  failures: []
+  status: pass
+- chapter: 5
+  caption_count: 29
+  beat_count: 10
+  coverage_count: 29
+  failures: []
+  status: pass
+status: pass

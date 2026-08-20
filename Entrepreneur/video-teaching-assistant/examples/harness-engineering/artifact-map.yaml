@@ -1,0 +1,54 @@
+schema_version: "1.0"
+example: "Harness Engineering 五章课程视频"
+privacy: "公开示例不包含私人 Voice ID、训练音频、数字人源素材和大型视频"
+
+source_snapshot:
+  source_types: ["reference video", "15-page PPT", "director narration draft"]
+  audience: "entrepreneurs"
+  style: "deep navy, light blue highlight, white text, light gray secondary, limited yellow accent"
+
+chapters:
+  - number: 1
+    title: "为什么需要 Harness"
+    duration_seconds: 62.0
+    key_lesson: "voice approval before animation timing"
+  - number: 2
+    title: "Prompt、Context、Harness 的边界"
+    duration_seconds: 83.5
+    key_lesson: "semantic order is not page order"
+  - number: 3
+    title: "Harness 的闭环与六个部件"
+    duration_seconds: 90.4
+    key_lesson: "separate layout and semantic gates"
+  - number: 4
+    title: "把经验变成可执行系统"
+    duration_seconds: 87.6
+    key_lesson: "English terms require measured word times"
+  - number: 5
+    title: "从最小目录到真实任务"
+    duration_seconds: 118.0
+    key_lesson: "audience consistency and single narration stream"
+
+final:
+  duration_seconds: 441.587
+  video_codec: "h264"
+  audio_codec: "aac"
+  caption_style: "one line, 5-14 visible characters, 52px, translucent navy layer"
+
+reusable_artifacts:
+  - "SCRIPT.md"
+  - "tone-plan.yaml"
+  - "word-alignment.yaml"
+  - "semantic-anchor-plan.yaml"
+  - "semantic-timing-manifest.yaml"
+  - "timed-storyboard.yaml"
+  - "layout-audit.md"
+  - "subtitle-manifest.yaml"
+  - "final-media-report.json"
+  - "publish-package.yaml"
+
+source_project_artifacts_not_committed:
+  - "chapter render MP4 files"
+  - "Fish Audio outputs"
+  - "avatar/lipsync videos"
+  - "private voice identifiers"

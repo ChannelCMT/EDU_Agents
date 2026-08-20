@@ -1,0 +1,13 @@
+{
+  "chapter": "2",
+  "source": "final_approved_voice_track",
+  "duration_seconds": 32.388,
+  "sample_rate_hz": 48000,
+  "channels": 1,
+  "stream_count": 1,
+  "approved": true,
+  "segments": [
+    {"file":"audio/seg-01.mp3","start_seconds":0.0,"duration_seconds":15.517},
+    {"file":"audio/seg-02.mp3","start_seconds":15.697,"duration_seconds":16.692}
+  ]
+}

@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=1920, height=1080" />
+<title>Agent 架构选型｜第 4 章</title>
+<script src="vendor/gsap.min.js"></script>
+<style>@font-face { font-family: "Microsoft YaHei"; src: local("Microsoft YaHei"); } @font-face { font-family: "Noto Sans SC"; src: local("Noto Sans SC"); }
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; background: #06182A; color: #F7FBFF; font-family: "Microsoft YaHei", "Noto Sans SC", sans-serif; }
+#root { position: relative; width: 1920px; height: 1080px; overflow: hidden; background: #06182A; }
+.clip { position: absolute; inset: 0; display: block; overflow: hidden; }
+.fill { position: absolute; inset: 0; background: #06182A; }
+.grid { position: absolute; inset: 0; opacity: .09; background-image: linear-gradient(rgba(142,214,255,.32) 1px, transparent 1px), linear-gradient(90deg, rgba(142,214,255,.32) 1px, transparent 1px); background-size: 80px 80px; mask-image: linear-gradient(to bottom, rgba(0,0,0,.8), transparent 88%); }
+.glow { position: absolute; border-radius: 50%; filter: blur(10px); }
+.glow.a { width: 720px; height: 720px; left: -220px; top: -280px; background: radial-gradient(circle, rgba(45,124,196,.28), transparent 70%); }
+.glow.b { width: 680px; height: 680px; right: -240px; bottom: -260px; background: radial-gradient(circle, rgba(44,101,162,.24), transparent 72%); }
+.topbar { position: absolute; left: 76px; right: 76px; top: 50px; display: flex; justify-content: space-between; align-items: center; color: #B8C4D2; font-size: 22px; letter-spacing: .12em; text-transform: uppercase; }
+.eyebrow { color: #8ED6FF; font-weight: 700; }
+.chapter-no { color: #FFD66F; font-weight: 700; }
+.rule { position: absolute; left: 76px; right: 76px; top: 104px; height: 2px; background: rgba(142,214,255,.35); transform-origin: left center; }
+.title { position: absolute; left: 96px; top: 142px; max-width: 1250px; font-size: 76px; line-height: 1.08; font-weight: 800; letter-spacing: -.025em; }
+.subtitle { position: absolute; left: 100px; top: 240px; color: #B8C4D2; font-size: 30px; line-height: 1.3; }
+.section-label { position: absolute; color: #8ED6FF; font-size: 24px; letter-spacing: .08em; font-weight: 700; }
+.panel { position: absolute; border: 2px solid rgba(142,214,255,.5); border-radius: 24px; background: rgba(10,47,78,.86); box-shadow: 0 20px 50px rgba(0,0,0,.28); }
+.panel.warm { border-color: rgba(255,214,111,.62); }
+.panel.alert { border-color: rgba(255,152,152,.66); background: rgba(74,30,47,.78); }
+.panel.green { border-color: rgba(160,230,191,.65); background: rgba(22,65,70,.78); }
+.panel-title { color: #F7FBFF; font-size: 34px; font-weight: 750; }
+.panel-copy { color: #B8C4D2; font-size: 25px; line-height: 1.38; white-space: pre-line; }
+.node { position: absolute; display: flex; align-items: center; justify-content: center; border-radius: 999px; border: 3px solid #8ED6FF; color: #F7FBFF; background: #0C2B49; font-size: 27px; font-weight: 750; box-shadow: 0 12px 24px rgba(0,0,0,.25); }
+.node.hot { border-color: #FFD66F; color: #FFD66F; }
+.node.done { border-color: #A0E6BF; color: #A0E6BF; }
+.arrow { position: absolute; height: 4px; background: #8ED6FF; transform-origin: left center; border-radius: 2px; }
+.arrow::after { content: ""; position: absolute; right: -2px; top: -7px; border-left: 15px solid #8ED6FF; border-top: 9px solid transparent; border-bottom: 9px solid transparent; }
+.chip { position: absolute; padding: 14px 22px; border-radius: 14px; border: 2px solid rgba(142,214,255,.48); color: #F7FBFF; background: rgba(12,43,73,.88); font-size: 24px; font-weight: 700; }
+.chip.hot { color: #FFD66F; border-color: rgba(255,214,111,.68); }
+.chip.gray { color: #B8C4D2; border-color: rgba(184,196,210,.44); }
+.metric { position: absolute; color: #8ED6FF; font-family: "JetBrains Mono", monospace; font-size: 22px; letter-spacing: .08em; }
+.caption { position: absolute; top: auto; left: 220px; right: 220px; bottom: 46px; height: 76px; display: flex; align-items: center; justify-content: center; padding: 0 28px; border-radius: 16px; border: 2px solid rgba(142,214,255,.48); background: rgba(12,43,73,.72); color: #FFFFFF; font-size: 36px; font-weight: 650; white-space: nowrap; text-align: center; box-shadow: 0 10px 26px rgba(0,0,0,.22); }
+.caption span { display: block; }
+.caption-safe-line { position: absolute; left: 76px; right: 76px; bottom: 150px; height: 2px; background: rgba(184,196,210,.15); }
+.small-note { position: absolute; color: #B8C4D2; font-size: 22px; }
+.axis { position: absolute; background: rgba(142,214,255,.66); transform-origin: left center; }
+.axis.x { height: 3px; }
+.axis.y { width: 3px; transform-origin: center bottom; }
+.axis.x::after { content: ""; position: absolute; right: -2px; top: -7px; border-left: 15px solid rgba(142,214,255,.66); border-top: 9px solid transparent; border-bottom: 9px solid transparent; }
+.axis.y::after { content: ""; position: absolute; left: -7px; top: -15px; border-bottom: 15px solid rgba(142,214,255,.66); border-left: 9px solid transparent; border-right: 9px solid transparent; }
+.axis-label { position: absolute; color: #B8C4D2; font-size: 24px; font-weight: 700; }
+.loop { position: absolute; border: 4px solid #8ED6FF; border-radius: 50%; }
+.loop-arrow { position: absolute; width: 0; height: 0; border-left: 20px solid #FFD66F; border-top: 12px solid transparent; border-bottom: 12px solid transparent; }
+.state-line { position: absolute; height: 2px; background: rgba(142,214,255,.45); }
+.state-dot { position: absolute; width: 18px; height: 18px; border-radius: 50%; background: #8ED6FF; box-shadow: 0 0 24px rgba(142,214,255,.8); }
+</style>
+</head>
+<body>
+<div id="root" data-composition-id="agent-architecture-ch04" data-start="0" data-width="1920" data-height="1080" data-duration="32.728" data-fps="30" data-subtitle-safe-band="900-1080">
+  <div class="fill"></div><div id="grid" class="grid"></div><div id="glow-a" class="glow a"></div><div id="glow-b" class="glow b"></div>
+  <div class="topbar"><span class="eyebrow">AGENT ARCHITECTURE / COURSE LOOP</span><span class="chapter-no">CHAPTER 04 / 05</span></div>
+  <div id="rule" class="rule"></div><div class="caption-safe-line"></div>
+  <audio id="narration" src="audio/chapter-final.wav" data-start="0" data-duration="32.728" data-track-index="10" data-volume="1"></audio>
+
+  <section id="c4-route" class="clip" data-start="0" data-duration="17.946" data-track-index="1">
+    <div class="section-label" style="left:100px;top:160px;">05 / ROUTE + SKILL</div><div id="c4-title" class="title" style="top:210px;">不让模型想，让模型选</div>
+    <div id="c4-input" class="panel" style="left:120px;top:470px;width:300px;height:170px;padding:34px;"><div class="panel-title">Intent</div><div class="panel-copy">用户输入</div></div>
+    <div id="c4-router" class="node hot" style="left:640px;top:480px;width:280px;height:130px;">Router</div>
+    <div id="c4-skill1" class="chip" style="left:1130px;top:410px;">Skill A · 查询</div><div id="c4-skill2" class="chip hot" style="left:1130px;top:520px;">Skill B · 执行</div><div id="c4-skill3" class="chip gray" style="left:1130px;top:630px;">Skill C · 复核</div>
+    <div id="c4-ra1" class="arrow" style="left:425px;top:550px;width:190px;"></div><div id="c4-ra2" class="arrow" style="left:928px;top:550px;width:170px;"></div>
+    <div id="c4-cache" class="panel green" style="left:1350px;top:760px;width:400px;height:110px;padding:26px;"><div class="panel-title" style="font-size:28px;">可缓存 · 可评估</div></div>
+    <div id="c4-cost" class="panel alert" style="left:760px;top:750px;width:520px;height:120px;padding:24px;"><div class="panel-title" style="font-size:28px;">设计成本 ↑ · 路由冲突 ↑</div><div class="panel-copy" style="font-size:22px;">规则需要维护、评估和追踪</div></div>
+  </section>
+  <section id="c4-board" class="clip" style="opacity:0" data-start="18.126" data-duration="14.602" data-track-index="1">
+    <div class="section-label" style="left:100px;top:160px;">06 / BLACKBOARD</div><div id="c4b-title" class="title" style="top:210px;">多个 Agent，共享一份状态</div>
+    <div id="c4b-board" class="panel" style="left:560px;top:390px;width:800px;height:340px;padding:34px;"><div class="panel-title">SHARED STATE</div><div class="state-line" style="left:40px;right:40px;top:120px;"></div><div class="state-dot" style="left:120px;top:112px;"></div><div class="state-dot" style="left:380px;top:112px;"></div><div class="state-dot" style="left:640px;top:112px;"></div><div class="small-note" style="left:40px;top:170px;">任务状态</div><div class="small-note" style="left:300px;top:170px;">中间证据</div><div class="small-note" style="left:560px;top:170px;">下一步动作</div></div>
+    <div id="c4b-a1" class="arrow" style="left:300px;top:420px;width:180px;transform:rotate(22deg);"></div><div id="c4b-a2" class="arrow" style="left:1510px;top:420px;width:180px;transform:rotate(158deg);"></div>
+    <div id="c4b-warn" class="panel alert" style="left:540px;top:800px;width:840px;height:100px;padding:24px 34px;"><div class="panel-title" style="font-size:28px;">状态模型、权限和追踪要先设计好</div></div>
+  </section>
+<div id="caption-000" class="clip caption" data-start="0.000" data-duration="1.890" data-track-index="40"><span>Route+Skill的关键</span></div>
+<div id="caption-001" class="clip caption" data-start="1.900" data-duration="1.630" data-track-index="41"><span>不是让模型自由发挥</span></div>
+<div id="caption-002" class="clip caption" data-start="3.730" data-duration="1.760" data-track-index="42"><span>而是先让意图路由器</span></div>
+<div id="caption-003" class="clip caption" data-start="5.500" data-duration="1.070" data-track-index="43"><span>选中一个 Skill</span></div>
+<div id="caption-004" class="clip caption" data-start="6.890" data-duration="2.280" data-track-index="44"><span>再执行这项可复用能力</span></div>
+<div id="caption-005" class="clip caption" data-start="9.410" data-duration="1.980" data-track-index="45"><span>这样更稳定、更容易缓存</span></div>
+<div id="caption-006" class="clip caption" data-start="11.590" data-duration="1.940" data-track-index="46"><span>也能用命中率评估效果</span></div>
+<div id="caption-007" class="clip caption" data-start="13.750" data-duration="2.100" data-track-index="47"><span>代价是 Skill 设计成本高</span></div>
+<div id="caption-008" class="clip caption" data-start="16.110" data-duration="1.500" data-track-index="48"><span>还要处理路由冲突</span></div>
+<div id="caption-009" class="clip caption" data-start="17.950" data-duration="0.880" data-track-index="49"><span>Blackboard</span></div>
+<div id="caption-010" class="clip caption" data-start="19.130" data-duration="1.160" data-track-index="50"><span>则让多个 Agent</span></div>
+<div id="caption-011" class="clip caption" data-start="20.300" data-duration="2.090" data-track-index="51"><span>共同读写一份共享状态</span></div>
+<div id="caption-012" class="clip caption" data-start="22.510" data-duration="1.500" data-track-index="52"><span>状态变化推动下一步</span></div>
+<div id="caption-013" class="clip caption" data-start="24.150" data-duration="2.160" data-track-index="53"><span>执行，它适合复杂协作</span></div>
+<div id="caption-014" class="clip caption" data-start="26.530" data-duration="2.540" data-track-index="54"><span>但状态模型、权限和追踪</span></div>
+<div id="caption-015" class="clip caption" data-start="29.080" data-duration="1.130" data-track-index="55"><span>必须先设计好</span></div>
+<div id="caption-016" class="clip caption" data-start="30.370" data-duration="1.860" data-track-index="56"><span>否则出了问题很难定位</span></div>
+</div>
+<script>
+window.__timelines = window.__timelines || {};
+const tl = gsap.timeline({ paused: true });
+tl.to("#glow-a", {scale: 1.12, opacity: .85, duration: 31.728, ease: "sine.inOut"}, 0);
+tl.to("#glow-b", {scale: 1.08, opacity: .78, duration: 31.228, ease: "sine.inOut"}, 0.4);
+tl.fromTo("#rule", {scaleX: 0}, {scaleX: 1, duration: .65, ease: "power3.out"}, .12);
+
+tl.to("#c4-route", {opacity:0, duration:.01, ease:"none"}, 18.126);
+tl.fromTo("#c4-board", {opacity:0}, {opacity:1, duration:.01, ease:"none"}, 18.126);
+tl.fromTo("#c4-title", {opacity:0, y:30}, {opacity:1, y:0, duration:.6, ease:"expo.out"}, .12);
+tl.fromTo(["#c4-input","#c4-router"], {opacity:0, x:-34}, {opacity:1, x:0, duration:.5, ease:"power3.out", stagger:.22}, 4.10);
+tl.fromTo(["#c4-skill1","#c4-skill2","#c4-skill3"], {opacity:0, x:38}, {opacity:1, x:0, duration:.4, ease:"power2.out", stagger:.28}, 5.44);
+tl.fromTo(["#c4-ra1","#c4-ra2"], {scaleX:0}, {scaleX:1, duration:.42, ease:"expo.out", stagger:.2}, 4.76);
+tl.fromTo("#c4-cache", {opacity:0, y:22}, {opacity:1, y:0, duration:.45, ease:"power2.out"}, 9.46);
+tl.fromTo("#c4-cost", {opacity:0, y:28, scale:.96}, {opacity:1, y:0, scale:1, duration:.5, ease:"back.out(1.2)"}, 13.80);
+tl.fromTo("#c4b-title", {opacity:0, x:-44}, {opacity:1, x:0, duration:.55, ease:"power3.out"}, 18.11);
+tl.fromTo("#c4b-board", {opacity:0, scale:.88}, {opacity:1, scale:1, duration:.65, ease:"back.out(1.3)"}, 19.6);
+tl.fromTo(["#c4b-a1","#c4b-a2"], {scaleX:0}, {scaleX:1, duration:.45, ease:"power3.out", stagger:.2}, 22.56);
+tl.fromTo("#c4b-warn", {opacity:0, y:28}, {opacity:1, y:0, duration:.5, ease:"power2.out"}, 24.98);
+
+window.__timelines["agent-architecture-ch04"] = tl;
+</script>
+</body></html>

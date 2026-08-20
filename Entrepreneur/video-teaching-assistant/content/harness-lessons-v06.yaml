@@ -1,0 +1,33 @@
+version: "v06"
+project: "agent-architecture-7-patterns"
+lessons:
+  - id: "L01"
+    issue: "开场白弱"
+    observed: "开头先讲 ReAct/Multi-Agent，观众尚未建立问题意识；后续才改成‘你是不是想到什么就让AI做什么’。"
+    root_cause: "内容 Harness 只有 spoken_language_natural 布尔项，没有首五秒受众钩子、陌生术语禁入和画面文案一致性门禁。"
+    failed_gate: "S03_script_rewrite"
+    new_rule: "前5秒必须先给受众问题或张力，再给白话重构；未解释的架构名词不得进入开场。"
+    evidence: ["chapter-01/SCRIPT.md", "chapter-01/captions/captions.json"]
+    repair_target: "SCRIPT.md + tone-plan.yaml"
+  - id: "L02"
+    issue: "第一章封面/动画重叠"
+    observed: "主题、坐标轴、演进面板和字幕安全区曾出现视觉争抢；源代码规则通过但渲染画面仍需多轮上移/缩小。"
+    root_cause: "布局门禁主要读取 HTML 数值和少量 regex，没有在关键时间点读取真实 DOM 包围盒，也没有把字体、阴影、动画中间状态纳入硬门禁。"
+    failed_gate: "S07_storyboard_mapping + S08_alignment_pilot"
+    new_rule: "关键帧必须检查实际渲染包围盒、层间 forbidden intersections、最小字号和字幕带遮挡；source-only check 不得单独放行。"
+    evidence: ["chapter-01/qa-report.md", "chapter-01/layout-audit.md", "PastUselessDoc/qa-v10-frame-19s.png"]
+    repair_target: "layout-audit + rendered frame checkpoints"
+  - id: "L03"
+    issue: "字幕与声音字词不对齐却通过"
+    observed: "第一句被截短，第二句只出现约0.38秒；后续发现替换音频段的词时间是段内坐标，生成器却按全局坐标选择。"
+    root_cause: "字幕门禁只验证 timing_method/word_evidence 字段存在和数量一致，alignment_error_ms 还是固定写入50ms，没有验证 timebase、单调性和 cue 与 evidence 的实际差值。"
+    failed_gate: "S06_word_alignment + S11_subtitles"
+    new_rule: "所有词时间先归一化为 global；cue 与 word_start/word_end 的差值≤80ms；禁止 cue 重叠、时间回退和首条晚于10ms。"
+    evidence: ["tools/build_word_aligned_captions.py", "tools/audit_caption_alignment.py", "content/caption-alignment-audit-v01.yaml"]
+    repair_target: "word-alignment normalization + caption audit"
+parallelization:
+  safe_boundary: "S08_alignment_pilot 通过后"
+  fan_out: ["S09_motion_implementation", "S10_chapter_render", "S11_subtitles"]
+  optional_earlier_fan_out: ["S05_voice_generation", "S06_word_alignment", "S07_storyboard_mapping"]
+  fan_in: "S12_merge_and_media_qa"
+  do_not_parallelize: ["script approval", "shared final narration freeze", "pilot approval", "merge", "release approval"]

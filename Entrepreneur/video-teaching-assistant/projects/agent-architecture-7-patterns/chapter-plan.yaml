@@ -1,0 +1,49 @@
+schema_version: '1.0'
+course_title: Agent系统主流7种架构选型指南
+chapters:
+- number: 1
+  title: 先建立选型坐标系
+  learner_problem: 不知道该从哪一种 Agent 架构开始
+  learning_result: 能用复杂度和控制力建立初步选型坐标
+  visual_arc:
+  - 复杂度轴
+  - 控制力轴
+  - 七种架构演进线
+  status: approved
+- number: 2
+  title: 单 Agent 与 ReAct
+  learner_problem: 把轻量验证误当成生产架构
+  learning_result: 能区分单 Agent 与 ReAct 的边界和代价
+  visual_arc:
+  - 输入到输出
+  - Reason-Action-Observe循环
+  - 适用边界
+  status: approved
+- number: 3
+  title: Plan and Execute 与 Multi-Agent
+  learner_problem: 复杂任务变长后难以拆解和复核
+  learning_result: 能判断何时需要计划或角色协作
+  visual_arc:
+  - 计划树
+  - Planner-Executor-Reviewer
+  - 协作成本
+  status: approved
+- number: 4
+  title: Route+Skill 与 Blackboard
+  learner_problem: 希望系统稳定，但不知道路由和共享状态如何设计
+  learning_result: 能理解技能路由与共享状态的控制点
+  visual_arc:
+  - 意图路由
+  - Skill卡片
+  - 共享黑板状态
+  status: approved
+- number: 5
+  title: Graph Workflow 与最终选型
+  learner_problem: 长流程上线后无法重试、回溯和治理
+  learning_result: 能用三问完成一次架构选型记录
+  visual_arc:
+  - 图节点
+  - 分支并行回溯
+  - 七种架构演进线
+  - 三问清单
+  status: approved

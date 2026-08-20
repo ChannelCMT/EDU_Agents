@@ -1,0 +1,27 @@
+schema_version: "1.0"
+project: "{{PROJECT_SLUG}}"
+current_stage: "S00_intake"
+current_versions:
+  script: "v00"
+  voice: "v00"
+  timing: "v00"
+  animation: "v00"
+  subtitles: "v00"
+  release: "v00"
+gates:
+  audience: false
+  script: false
+  voice: false
+  alignment: false
+  pilot: false
+  layout: false
+  semantic: false
+  captions: false
+  media: false
+  cover: false
+  publish: false
+last_failure:
+  category: null
+  timestamp_seconds: null
+  evidence: null
+  return_to_artifact: null

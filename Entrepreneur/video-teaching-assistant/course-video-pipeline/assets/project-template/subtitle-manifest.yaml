@@ -1,0 +1,18 @@
+schema_version: "1.0"
+source_video: "TODO"
+source_alignment: "TODO"
+style_version: "course-video-caption-v1"
+style:
+  font_size_px: 52
+  minimum_font_size_px: 48
+  one_line: true
+  visible_characters: [5, 14]
+  target_start_offset_ms: -50
+  max_alignment_error_ms: 80
+  background_rgba: [18, 58, 88, 145]
+captions: []
+gate:
+  exact_spoken_sequence: false
+  timing_pass: false
+  segmentation_pass: false
+  mobile_preview_pass: false

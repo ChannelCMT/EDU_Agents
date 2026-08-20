@@ -1,0 +1,20 @@
+schema_version: "1.0"
+project_id: "agent-architecture-7-patterns"
+source:
+  platform: "Douyin"
+  url: "https://v.douyin.com/_OlflTEBJuQ/"
+  video_id: "7670501017032707362"
+  title: "手把手带你解析从零搭建Agent系统主流7种架构选型指南"
+  author: "张宇技术栈"
+  captured_at: "2026-08-07"
+  duration_seconds: 176.82
+  media_path: "raw/source-douyin.mp4"
+  audio_reference: "raw/source-audio-16k.wav"
+  rights_status: "user-supplied-reference; derivative educational adaptation"
+  public_repository_policy: "keep raw media private; publish only manifests and generated educational assets"
+privacy_checks:
+  contains_personal_voice: true
+  contains_avatar_source: false
+  contains_private_business_data: false
+  public_copy_sanitized: true
+

@@ -1,0 +1,16 @@
+schema_version: "1.0"
+chapter: {{CHAPTER_NUMBER}}
+audio_version: "v01"
+audio_duration_seconds: 0.0
+provenance: "ASR plus manual terminology correction"
+tokens:
+  - id: "W0001"
+    text: "TODO"
+    start: 0.000
+    end: 0.000
+    confidence: 0.0
+    manually_checked: false
+gate:
+  exact_script_coverage: false
+  critical_terms_checked: false
+  duration_matches: false

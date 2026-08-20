@@ -1,0 +1,64 @@
+version: v03
+chapter: 4
+duration_seconds: 32.727875
+audio_timing_source: audio/chapter-final.wav
+sentence_level_source: semantic-beat-manifest.yaml
+offset_policy: visual entry may lead by 150ms and lag by 120ms
+static_gap_max_seconds: 1.4
+anchors:
+- id: 1
+  name: c4-title
+  semantic_start: 0.0
+  visual_start: 0.12
+  meaning: Route+Skill 的关键不是让模型自由发挥。
+  delta: 0.0
+  status: pass
+- id: 2
+  name: c4-router
+  semantic_start: 4.1
+  visual_start: 4.1
+  meaning: 而是先让意图路由器选中一个 Skill，再执行这项可复用能力。
+  delta: 0.0
+  status: pass
+- id: 3
+  name: c4-cache
+  semantic_start: 9.46
+  visual_start: 9.46
+  meaning: 这样更稳定、更容易缓存，也能用命中率评估效果。
+  delta: 0.0
+  status: pass
+- id: 4
+  name: c4-cost
+  semantic_start: 13.8
+  visual_start: 13.8
+  meaning: 代价是 Skill 设计成本高，还要处理路由冲突。
+  delta: 0.0
+  status: pass
+- id: 5
+  name: c4b-board
+  semantic_start: 18.0
+  visual_start: 18.11
+  meaning: Blackboard 则让多个 Agent 共同读写一份共享状态。
+  delta: 0.0
+  status: pass
+- id: 6
+  name: c4b-a1
+  semantic_start: 22.56
+  visual_start: 22.56
+  meaning: 状态变化推动下一步执行。
+  delta: 0.0
+  status: pass
+- id: 7
+  name: c4b-warn
+  semantic_start: 24.98
+  visual_start: 24.98
+  meaning: 它适合复杂协作，但状态模型、权限和追踪必须先设计好。
+  delta: 0.0
+  status: pass
+- id: 8
+  name: c4b-warn
+  semantic_start: 30.42
+  visual_start: 30.42
+  meaning: 否则出了问题很难定位。
+  delta: 0.0
+  status: pass

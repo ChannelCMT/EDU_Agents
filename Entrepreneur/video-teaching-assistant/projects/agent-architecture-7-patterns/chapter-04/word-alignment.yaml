@@ -1,0 +1,11 @@
+schema_version: '1.0'
+chapter: 4
+audio_version: v02
+audio_duration_seconds: 32.727875
+provenance: local faster-whisper timing plus canonical term glossary
+raw_alignment: audio/word-alignment-raw.json
+token_count: 136
+gate:
+  exact_script_coverage: true
+  critical_terms_checked: true
+  duration_matches: true

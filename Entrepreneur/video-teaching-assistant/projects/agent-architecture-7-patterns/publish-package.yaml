@@ -1,0 +1,19 @@
+schema_version: "1.0"
+title: "Agent系统主流7种架构选型指南"
+short_description: "从单 Agent、ReAct 到 Graph Workflow，用五章建立架构选型坐标系。"
+body: "Agent系统不是先堆复杂度，而是先看任务复杂度与控制力需求。本系列拆解单 Agent、ReAct、Plan and Execute、Multi-Agent、Route+Skill、Blackboard、Graph Workflow 七种架构，给出企业家可以复用的选型判断。"
+hashtags: ["#Agent", "#AIAgent", "#大模型", "#工作流", "#企业家AI"]
+pinned_comment: "你现在的 Agent 处于哪一档？先回答：任务有多复杂、哪里必须可控、失败后能不能重试和回滚。"
+files:
+  final_video: "publish-package/video/agent-architecture-7-patterns_v15_harness-audit_subtitled.mp4"
+  cover_4x3: "publish-package/assets/cover_4x3.png"
+  cover_3x4: "publish-package/assets/cover_3x4.png"
+  captions_srt: "publish-package/captions/agent-architecture-7-patterns.srt"
+  captions_vtt: "publish-package/captions/agent-architecture-7-patterns.vtt"
+  media_report: "publish-package/qa/media-report-v15.yaml"
+checks:
+  copy_matches_cover: true
+  bounding_boxes_pass: true
+  platform_crop_pass: true
+  public_sanitization_pass: true
+  owner_approved: false

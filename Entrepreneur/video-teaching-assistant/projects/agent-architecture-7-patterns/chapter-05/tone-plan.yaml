@@ -1,0 +1,178 @@
+version: v05
+chapter: 5
+voice: Channel科技解说员
+delivery_profile: 稳重底色 + 句内对比 + 关键名词重读 + 结论落点
+generic_plan_rejected: true
+sentences:
+- sentence_id: S1
+  source_text: Graph Workflow 用图来编排长流程。
+  delivery_intent: define_graph
+  energy_1_to_5: 4
+  pace: clear
+  emphasis_terms:
+  - Graph Workflow
+  - 长流程
+  pause_after_ms: 140
+  breath_points:
+  - Graph
+  - Workflow
+  pronunciation: use canonical terminology.yaml spelling; no ASR variant in display
+  visual_sync: c5-title
+  audio_window:
+  - 0.0
+  - 3.2
+- sentence_id: S2
+  source_text: 节点代表步骤，边代表条件。
+  delivery_intent: define_nodes_edges
+  energy_1_to_5: 3
+  pace: punctuated
+  emphasis_terms:
+  - 节点
+  - 边
+  - 条件
+  pause_after_ms: 160
+  breath_points:
+  - 节点
+  - 边
+  pronunciation: use canonical terminology.yaml spelling; no ASR variant in display
+  visual_sync: c5-graph
+  audio_window:
+  - 3.2
+  - 6.04
+- sentence_id: S3
+  source_text: 它可以支持分支、并行、回溯和重试。
+  delivery_intent: show_capabilities
+  energy_1_to_5: 4
+  pace: rising
+  emphasis_terms:
+  - 分支
+  - 并行
+  - 回溯
+  - 重试
+  pause_after_ms: 180
+  breath_points:
+  - 四种能力
+  pronunciation: use canonical terminology.yaml spelling; no ASR variant in display
+  visual_sync: c5-features
+  audio_window:
+  - 6.04
+  - 10.1
+- sentence_id: S4
+  source_text: 所以最适合流程自动化和生产环境。
+  delivery_intent: land_fit
+  energy_1_to_5: 3
+  pace: slow_land
+  emphasis_terms:
+  - 流程自动化
+  - 生产环境
+  pause_after_ms: 180
+  breath_points:
+  - 生产环境
+  pronunciation: use canonical terminology.yaml spelling; no ASR variant in display
+  visual_sync: c5-features
+  audio_window:
+  - 10.1
+  - 13.46
+- sentence_id: S5
+  source_text: 你可以把七种架构排成一条演进线。
+  delivery_intent: set_evolution_line
+  energy_1_to_5: 4
+  pace: rising
+  emphasis_terms:
+  - 七种架构
+  - 演进线
+  pause_after_ms: 160
+  breath_points:
+  - 演进线
+  pronunciation: use canonical terminology.yaml spelling; no ASR variant in display
+  visual_sync: c5c-line
+  audio_window:
+  - 14.0
+  - 17.04
+- sentence_id: S6
+  source_text: 单 Agent 做最小验证，ReAct 做多步探索。
+  delivery_intent: compare_first_two
+  energy_1_to_5: 4
+  pace: stepwise
+  emphasis_terms:
+  - 单 Agent
+  - ReAct
+  pause_after_ms: 120
+  breath_points:
+  - 最小验证
+  - 多步探索
+  pronunciation: use canonical terminology.yaml spelling; no ASR variant in display
+  visual_sync: c5c1
+  audio_window:
+  - 17.04
+  - 21.08
+- sentence_id: S7
+  source_text: Plan and Execute 做工程化，多 Agent 做角色协作。
+  delivery_intent: compare_middle
+  energy_1_to_5: 4
+  pace: stepwise
+  emphasis_terms:
+  - Plan and Execute
+  - 角色协作
+  pause_after_ms: 120
+  breath_points:
+  - 工程化
+  - 角色协作
+  pronunciation: use canonical terminology.yaml spelling; no ASR variant in display
+  visual_sync: c5c3
+  audio_window:
+  - 21.08
+  - 25.98
+- sentence_id: S8
+  source_text: Route+Skill 做精准技能系统，Blackboard 管共享状态，Graph Workflow 承载长流程。
+  delivery_intent: compare_last_three
+  energy_1_to_5: 5
+  pace: accelerate_then_land
+  emphasis_terms:
+  - Route+Skill
+  - Blackboard
+  - Graph Workflow
+  pause_after_ms: 200
+  breath_points:
+  - 精准技能系统
+  - 共享状态
+  - 长流程
+  pronunciation: use canonical terminology.yaml spelling; no ASR variant in display
+  visual_sync: c5c5
+  audio_window:
+  - 25.98
+  - 33.58
+- sentence_id: S9
+  source_text: 最后用三问做选择：任务有多复杂？哪里必须可控？失败后能不能重试和回滚？
+  delivery_intent: three_questions
+  energy_1_to_5: 5
+  pace: question_and_pause
+  emphasis_terms:
+  - 三问
+  - 可控
+  - 重试
+  - 回滚
+  pause_after_ms: 320
+  breath_points:
+  - 三问
+  pronunciation: use canonical terminology.yaml spelling; no ASR variant in display
+  visual_sync: c5-check
+  audio_window:
+  - 34.12
+  - 40.68
+- sentence_id: S10
+  source_text: 没有最好的架构，只有最合适的架构。
+  delivery_intent: final_land
+  energy_1_to_5: 4
+  pace: slow_land
+  emphasis_terms:
+  - 没有最好的
+  - 最合适
+  pause_after_ms: 300
+  breath_points:
+  - 最合适
+  pronunciation: use canonical terminology.yaml spelling; no ASR variant in display
+  visual_sync: c5-check
+  audio_window:
+  - 40.71
+  - 44.587

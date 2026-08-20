@@ -1,0 +1,21 @@
+version: v01
+rule: source boxes stay on canvas, clear subtitle band, and preserve required chapter-one
+  layers
+rendered_frame_evidence_required: true
+chapters:
+- chapter: 1
+  failures: []
+  status: pass
+- chapter: 2
+  failures: []
+  status: pass
+- chapter: 3
+  failures: []
+  status: pass
+- chapter: 4
+  failures: []
+  status: pass
+- chapter: 5
+  failures: []
+  status: pass
+status: pass

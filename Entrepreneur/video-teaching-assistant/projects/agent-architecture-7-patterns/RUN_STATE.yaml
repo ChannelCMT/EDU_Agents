@@ -1,0 +1,27 @@
+schema_version: "1.0"
+project: "agent系统主流7种架构选型指南"
+current_stage: "S10_ready_for_owner_review"
+current_versions:
+  script: "v02"
+  voice: "v04-second-line"
+  timing: "v06-word-normalized"
+  animation: "v14-harness-audit"
+  subtitles: "v09-word-aligned"
+  release: "v15"
+gates:
+  audience: true
+  script: true
+  voice: true
+  alignment: true
+  pilot: true
+  layout: true
+  semantic: true
+  captions: true
+  media: true
+  cover: true
+  publish: false
+last_failure:
+  category: null
+  timestamp_seconds: null
+  evidence: null
+  return_to_artifact: null
