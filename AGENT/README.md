@@ -19,7 +19,7 @@
 - 监督复制迁移、隐私和验证边界；
 - 让新贡献者可以从项目层逐层找到具体工作流。
 
-Vibestar Agent 的页面导航和外部课件入口等具体维护边界，以其 `AGENT/manifest.yaml` 为准。
+Vibestar Agent 的页面导航等具体维护边界，以其 `AGENT/manifest.yaml` 为准。
 
 ## 现有路由
 

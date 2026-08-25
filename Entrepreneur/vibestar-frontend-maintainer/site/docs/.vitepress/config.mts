@@ -14,7 +14,6 @@ export default defineConfig({
     nav: [
       { text: '首页', link: '/' },
       { text: '课前准备', link: '/preflight/' },
-      { text: '老洪课件', link: 'https://76e61e71098843878d2b1060f29590ff.app.workbuddy.link/' },
       { text: 'Channel课程', link: '/course/' },
       { text: '课堂演示', link: '/demos/' },
       { text: '90天路径', link: '/roadmap-90-days/' }

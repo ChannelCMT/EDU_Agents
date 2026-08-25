@@ -13,6 +13,9 @@
 - 公开页面不写入活动联系人个人电话、邮箱、实时票价或酒店价格，也不发布第三方票务和酒店平台截图。
 - 课前准备侧栏入口同步改为“出行与课前准备”；手机端四列课表改为内部横向滑动并增加查看提示，避免中文逐字换行；已执行 `npm run build`，VitePress 1.6.4 构建通过，并完成桌面端与390px手机宽度页面检查。
 - 已通过 GitHub MCP 更新 `ChannelCMT/vibestar` 的 `main` 分支，最新提交为 `3c8b0a8`；GitHub Pages 线上页面已确认出现新标题、完整课表及侧栏入口。
+- 按最新需求删除课前准备首页、Windows 和 macOS 页面中的 VPN、v2rayN 及网络连接专属内容，同时保留 Codex、WorkBuddy 和双文件验收流程。
+- 删除页首“老洪课件”导航入口，并移除 manifest 中对应的外部入口注册信息。
+- 本地执行 `npm run build`，VitePress 1.6.4 构建通过；已通过 GitHub MCP 将精确段落删除同步到 `ChannelCMT/vibestar` 的 `main` 分支，远端生成 4 个连续维护提交，GitHub Pages workflow run `32801916696` 已成功。
 
 ## 2026-08-20
 

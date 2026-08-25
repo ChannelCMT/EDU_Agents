@@ -11,7 +11,6 @@ capabilities:
   - "学习地图、章节和行业场景组织"
   - "工具安装与 Windows/Mac 差异说明"
   - "VitePress 导航、主题和页面结构维护"
-  - "页首外部课件入口维护"
   - "GitHub Pages 构建与发布检查"
 
 inputs:
@@ -22,7 +21,6 @@ inputs:
 outputs:
   - "site/docs/ 下的学习资料页面"
   - "VitePress 配置和导航更新"
-  - "页首课件外部入口"
   - "GitHub Pages workflow 和构建交付记录"
 
 workflow:
@@ -31,11 +29,6 @@ workflow:
   config: "site/docs/.vitepress/config.mts"
   deployment: "site/.github/workflows/deploy.yml"
   sequence: "确认页面归属 → 修改内容 → 更新导航 → 本地构建 → 记录交付 → 检查部署"
-
-external_nav_links:
-  - label: "老洪课件"
-    url: "https://76e61e71098843878d2b1060f29590ff.app.workbuddy.link/"
-    placement: "before:Channel课程"
 
 validation_commands:
   - "npm install"

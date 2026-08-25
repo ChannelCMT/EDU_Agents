@@ -58,7 +58,7 @@
     <tr><td>10:15—10:30</td><td>集合签到与行李存放</td><td>穗港科技和产业融合创新中心（广州）</td><td>完成签到、存放行李、分组，并说明参访纪律及两天行程</td></tr>
     <tr><td>10:30—11:30</td><td>科技实验室参访</td><td>香港科技大学（广州）</td><td>从活动中心统一出发，参访科技实验室，了解AI前沿科研及应用场景；11:30开始返回</td></tr>
     <tr><td>11:30—13:30</td><td>返回中心及午餐</td><td>活动中心周边</td><td>学员自行解决午餐，13:30前回到课程场地</td></tr>
-    <tr><td>13:30—14:00</td><td>课程导入与环境检查</td><td>活动中心</td><td>明确学习任务，检查电脑、账号、网络及工具环境</td></tr>
+    <tr><td>13:30—14:00</td><td>课程导入与环境检查</td><td>活动中心</td><td>明确学习任务，检查电脑、账号及工具环境</td></tr>
     <tr><td>14:00—14:45</td><td>AI发展趋势、行业变化与关键认知</td><td>活动中心</td><td>生成式AI、多模态、任务执行；模型、Context、Agent、Workflow、Skill等关键概念</td></tr>
     <tr><td>14:45—15:20</td><td>AI Agent产品与人机协作</td><td>活动中心</td><td>认识Codex、WorkBuddy等产品，练习背景、目标、材料、限制与任务拆解</td></tr>
     <tr><td>15:20—16:00</td><td>深度调研与轻量调研Skill</td><td>活动中心</td><td>完成研究目标、搜索整合、溯源验证及轻量调研Skill初版</td></tr>
@@ -125,18 +125,6 @@ D2下午以“FROM AI USER TO AGENT BOSS”为主线，用同一项任务的逐�
 - 广州8月底炎热且可能有阵雨，建议携带雨具、防晒用品和常用药；
 - 贵重物品、手机和证件请随身保管；
 - 出发前完成本页下方的Codex、WorkBuddy登录及两份测试文件验收。
-
-## 电脑与工具准备：先检查网络连接
-
-<div class="risk-card">
-  <strong>先判断：</strong>如果你的电脑已经有稳定可用的 VPN，并能打开 Codex 官方页面，就保留原来的连接方式，<strong>无需安装 v2rayN</strong>。<br>
-  如果暂时没有可用 VPN，请先按你的系统安装 v2rayN，再安装 Codex。v2rayN 只是网络连接客户端；订阅或配置信息请使用你所在组织或你本人已合法取得的服务，不在课程群或页面中分享账号、订阅链接和节点信息。
-</div>
-
-<div class="ops-grid two">
-  <article class="ops-card"><span class="ops-label">WINDOWS</span><h3>Windows 下载与连接</h3><p>从官方 Release 下载 Windows 的完整包，解压后打开 v2rayN；导入你已有的配置，开启系统代理，然后验证能打开 Codex 官方页面。</p><p><a href="/preflight/windows">查看 Windows 具体步骤 →</a></p></article>
-  <article class="ops-card"><span class="ops-label">MACOS</span><h3>macOS 下载与连接</h3><p>Apple 芯片与 Intel Mac 需要选择不同的 dmg 安装包。安装、导入你已有的配置并连通后，再继续安装 Codex。</p><p><a href="/preflight/macos">查看 macOS 具体步骤 →</a></p></article>
-</div>
 
 ## 你需要准备什么
 
@@ -209,7 +197,6 @@ AI-3H-课程资料
   <tbody>
     <tr><td>Codex</td><td>已登录；能创建并打开 <code>codex-连通测试.md</code></td><td>带着电脑参加；课堂实操时与已连通的同桌共用一台电脑。</td></tr>
     <tr><td>WorkBuddy</td><td>已登录；能创建并打开 <code>workbuddy-连通测试.md</code></td><td>不现场配置模型或权限，先观看讲师演示并记录你的任务想法。</td></tr>
-    <tr><td>网络</td><td>两个工具都能完成一次正常对话或任务</td><td>提前联系助教；课堂当天不要把排错留给讲师。</td></tr>
   </tbody>
 </table>
 
