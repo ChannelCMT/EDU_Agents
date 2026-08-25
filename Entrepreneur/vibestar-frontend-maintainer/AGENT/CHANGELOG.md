@@ -27,6 +27,8 @@
 - 已执行 `git diff --check` 和 `npm run build`，生成 CSS 已包含桌面端与移动端表格规则；已通过 GitHub MCP 更新 `ChannelCMT/vibestar` 的 `main` 分支，提交为 `a8e0375`，等待 GitHub Pages workflow 发布。
 - 在课前准备页“活动基本信息”之后新增简短讲师介绍：高宇博，香港科技大学（广州）博士，主要研究 Hermes Agent、LLM Efficient 和 Multimodal LLM。
 - 已执行 `git diff --check` 和 `npm run build`，VitePress 1.6.4 构建通过；已通过 GitHub MCP 更新 `ChannelCMT/vibestar` 的 `main` 分支，提交为 `eaa42d9`，等待 GitHub Pages workflow 发布。
+- 按反馈移除独立的讲师介绍段落，将同一简短介绍移动到 D1 10:30—11:30 课表行的“主要安排”中。
+- 已执行课表定位检查、`git diff --check` 和 `npm run build`，VitePress 1.6.4 构建通过；已通过 GitHub MCP 更新 `ChannelCMT/vibestar` 的 `main` 分支，提交为 `e5c6934`，等待 GitHub Pages workflow 发布。
 
 ## 2026-08-20
 

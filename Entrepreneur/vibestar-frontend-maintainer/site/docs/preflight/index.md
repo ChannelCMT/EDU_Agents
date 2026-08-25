@@ -25,10 +25,6 @@
   </tbody>
 </table>
 
-## 讲师介绍
-
-高宇博，香港科技大学（广州）博士，主要研究 Hermes Agent、LLM Efficient 和 Multimodal LLM。
-
 ## 去程与返程
 
 <div class="ops-grid two">
@@ -60,7 +56,7 @@
   <thead><tr><th>时间</th><th>环节</th><th>地点</th><th>主要安排</th></tr></thead>
   <tbody>
     <tr><td>10:15—10:30</td><td>集合签到与行李存放</td><td>穗港科技和产业融合创新中心（广州）</td><td>完成签到、存放行李、分组，并说明参访纪律及两天行程</td></tr>
-    <tr><td>10:30—11:30</td><td>人工智能未来应用趋势及案例</td><td>香港科技大学（广州）</td><td>在港科广上课</td></tr>
+    <tr><td>10:30—11:30</td><td>人工智能未来应用趋势及案例</td><td>香港科技大学（广州）</td><td>在港科广上课。讲师：高宇博，香港科技大学（广州）博士，主要研究 Hermes Agent、LLM Efficient 和 Multimodal LLM。</td></tr>
     <tr><td>11:30—12:15</td><td>校园参观</td><td>香港科技大学（广州）</td><td>1. 嗨贝天地<br>2. 校园大脑</td></tr>
     <tr><td>12:15—13:30</td><td>返回中心及午餐</td><td>活动中心周边</td><td>学员自行解决午餐，13:30前回到课程场地</td></tr>
     <tr><td>13:30—14:00</td><td>课程导入与环境检查</td><td>活动中心</td><td>明确学习任务，检查电脑、账号及工具环境</td></tr>
