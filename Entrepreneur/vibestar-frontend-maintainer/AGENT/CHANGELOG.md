@@ -21,6 +21,8 @@
 - 修复移动端暗色模式下自定义课程组件文字对比度不足：为 `--ink`、`--ink-2`、`--muted`、`--line` 和 `--paper` 增加 VitePress 暗色变量映射，并覆盖首页标题、提示卡、指标表、路线卡片及学习地图标签的暗色背景/文字。
 - 已执行 `git diff --check` 和 `npm run build`，VitePress 1.6.4 构建通过；已通过 GitHub MCP 更新 `ChannelCMT/vibestar` 的 `main` 分支，提交为 `4858f7b`，等待现有 GitHub Pages workflow 发布。
 - 在 Agent 使用说明补充主题修改的验收流程：检查 `html.dark` 自定义变量，并在约 390px 移动端确认标题、正文、表格和卡片文字可读。
+- 更新 D1 课表：10:30—11:30 改为“人工智能未来应用趋势及案例”，在香港科技大学（广州）上课；11:30—12:15 改为校园参观，包含“嗨贝天地”和“校园大脑”；午餐段顺延为 12:15—13:30。
+- 已执行课表内容检索、`git diff --check` 和 `npm run build`，VitePress 1.6.4 构建通过；已通过 GitHub MCP 更新 `ChannelCMT/vibestar` 的 `main` 分支，提交为 `5a4dcef`，等待 GitHub Pages workflow 发布。
 
 ## 2026-08-20
 
