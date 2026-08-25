@@ -20,6 +20,7 @@
 - 本地 `npm run build` 通过；已通过 GitHub MCP 更新 `ChannelCMT/vibestar` 的 `main` 分支，提交为 `e1bfe98`。
 - 修复移动端暗色模式下自定义课程组件文字对比度不足：为 `--ink`、`--ink-2`、`--muted`、`--line` 和 `--paper` 增加 VitePress 暗色变量映射，并覆盖首页标题、提示卡、指标表、路线卡片及学习地图标签的暗色背景/文字。
 - 已执行 `git diff --check` 和 `npm run build`，VitePress 1.6.4 构建通过；已通过 GitHub MCP 更新 `ChannelCMT/vibestar` 的 `main` 分支，提交为 `4858f7b`，等待现有 GitHub Pages workflow 发布。
+- 在 Agent 使用说明补充主题修改的验收流程：检查 `html.dark` 自定义变量，并在约 390px 移动端确认标题、正文、表格和卡片文字可读。
 
 ## 2026-08-20
 

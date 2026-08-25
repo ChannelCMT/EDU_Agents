@@ -28,6 +28,8 @@ npm run preview
 
 提交前至少运行 `npm run build`。`node_modules`、`.vitepress/cache` 和 `.vitepress/dist` 是可重建产物，不提交到 Git。
 
+涉及主题样式时，还要检查 `html.dark` 下的自定义颜色变量和固定背景，并在约 390px 的移动端宽度确认标题、正文、表格和卡片文字保持可读。
+
 ## 4. 交付记录
 
 每次更新在本目录 `CHANGELOG.md` 写清：修改了哪些页面或配置、导航是否变化、运行了什么验证命令、是否存在未完成的外部发布动作。内容、导航或部署边界变化时，同步更新 `manifest.yaml` 和上层分类说明。
