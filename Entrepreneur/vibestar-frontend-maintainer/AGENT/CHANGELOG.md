@@ -16,6 +16,8 @@
 - 按最新需求删除课前准备首页、Windows 和 macOS 页面中的 VPN、v2rayN 及网络连接专属内容，同时保留 Codex、WorkBuddy 和双文件验收流程。
 - 删除页首“老洪课件”导航入口，并移除 manifest 中对应的外部入口注册信息。
 - 本地执行 `npm run build`，VitePress 1.6.4 构建通过；已通过 GitHub MCP 将精确段落删除同步到 `ChannelCMT/vibestar` 的 `main` 分支，远端生成 4 个连续维护提交，GitHub Pages workflow run `32801916696` 已成功。
+- D1 课表将 16:00—18:00 的文字、图片、视频三行合并为“多模态控制与内容整合”，并将 19:00—21:00 更新为“AI使用场景交流与助教协助安装所需工具”。
+- 本地 `npm run build` 通过；已通过 GitHub MCP 更新 `ChannelCMT/vibestar` 的 `main` 分支，提交为 `e1bfe98`。
 
 ## 2026-08-20
 
