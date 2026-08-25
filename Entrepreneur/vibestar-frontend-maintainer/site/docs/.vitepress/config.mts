@@ -24,7 +24,7 @@ export default defineConfig({
         {
           text: '课前准备',
           items: [
-            { text: '开始前：只装两项', link: '/preflight/' },
+            { text: '出行与课前准备', link: '/preflight/' },
             { text: 'Windows', link: '/preflight/windows' },
             { text: 'macOS', link: '/preflight/macos' }
           ]

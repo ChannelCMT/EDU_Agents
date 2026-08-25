@@ -1,13 +1,132 @@
-# 课前准备｜只装两项
+# AI Builder Camp｜出行与课前准备
 
 <div class="doc-hero dark">
-  <p class="section-kicker">10 MINUTES / READY TO LEARN</p>
-  <h1>不要把上课时间花在安装环境上。</h1>
-  <p>这门 3 小时课程里，学员只需准备 <strong>Codex</strong> 与 <strong>WorkBuddy</strong>。如果你的电脑还没有可用 VPN，先完成网络连接；当两者都能在课程文件夹里完成一次真实任务，你就可以进入课堂。</p>
-  <div class="chapter-kpis"><span>主工具仅 2 项</span><span>验证 2 个文件</span><span>不在现场排错</span></div>
+  <p class="section-kicker">29–30 AUGUST / NANSHA</p>
+  <h1>先把行程和电脑准备好，到场直接开始。</h1>
+  <p>AI创造者实训营将于2026年8月29日至30日在广州南沙举行。请先确认车票、证件和住宿，并在出发前完成 <strong>Codex</strong> 与 <strong>WorkBuddy</strong> 的连通测试。</p>
+  <div class="chapter-kpis"><span>两天活动</span><span>推荐往返车次</span><span>课前工具 2 项</span></div>
 </div>
 
-## 0. 先检查网络连接（已有 VPN 请跳过）
+<div class="risk-card">
+  <strong>以活动群为准：</strong>集合点、接驳车辆、具体会场和临时调整，以活动群当天通知为准。公开页面不展示个人电话或邮箱。
+</div>
+
+## 活动基本信息
+
+<table class="metric-table">
+  <thead><tr><th>项目</th><th>安排</th></tr></thead>
+  <tbody>
+    <tr><td>活动时间</td><td>2026年8月29日（星期六）至8月30日（星期日）</td></tr>
+    <tr><td>集合及上课地点</td><td>穗港科技和产业融合创新中心（广州）</td></tr>
+    <tr><td>中心地址</td><td>广州市南沙区笃学路2号越秀 iPARK 粤港云谷 T1 栋12层</td></tr>
+    <tr><td>参访地点</td><td>香港科技大学（广州）科技实验室</td></tr>
+    <tr><td>行李安排</td><td>D1先在活动中心签到并存放行李，晚间课程结束后再前往酒店</td></tr>
+    <tr><td>用餐安排</td><td>D1午餐、晚餐及D2午餐均由学员自行安排</td></tr>
+  </tbody>
+</table>
+
+## 去程与返程
+
+<div class="ops-grid two">
+  <article class="ops-card emphasis">
+    <span class="ops-label">D1 / 去程</span>
+    <h3>建议乘坐 G6582</h3>
+    <p>8月29日08:22从香港西九龙站出发，09:04到达南沙北站，全程约42分钟。</p>
+    <p>抵达后按活动群通知乘车或导航前往活动中心，建议09:30前到达，10:15正式签到。</p>
+    <p><a href="https://www.highspeed.mtr.com.hk/tc/trip-planner.html?id=WEK2QIS&amp;sortBy=SJT" target="_blank" rel="noreferrer">查看港铁高铁时间表 →</a></p>
+  </article>
+  <article class="ops-card emphasis">
+    <span class="ops-label">D2 / 返程</span>
+    <h3>建议乘坐 G6585</h3>
+    <p>8月30日17:20课程结束后前往南沙北站。建议乘坐18:04发车、18:53抵达香港西九龙站的G6585。</p>
+    <p>请预留充足的接驳、安检和进站时间，最终以实际购票结果为准。</p>
+    <p><a href="https://www.highspeed.mtr.com.hk/tc/trip-planner.html?id=GZN2WEK&amp;sortBy=EAT" target="_blank" rel="noreferrer">查看港铁高铁时间表 →</a></p>
+  </article>
+</div>
+
+<div class="risk-card">
+  <strong>跨境乘车提醒：</strong>请携带购票时使用的有效证件原件，确认证件姓名与车票一致。香港西九龙站需要办理实名验证、安检和通关，建议至少提前45至60分钟到站。车次、余票和票价可能调整，出发前请再次核对。
+</div>
+
+## D1｜8月29日（星期六）
+
+<p class="table-scroll-hint" aria-hidden="true">← 左右滑动查看完整课表 →</p>
+
+<table class="metric-table schedule-table">
+  <thead><tr><th>时间</th><th>环节</th><th>地点</th><th>主要安排</th></tr></thead>
+  <tbody>
+    <tr><td>10:15—10:30</td><td>集合签到与行李存放</td><td>穗港科技和产业融合创新中心（广州）</td><td>完成签到、存放行李、分组，并说明参访纪律及两天行程</td></tr>
+    <tr><td>10:30—11:30</td><td>科技实验室参访</td><td>香港科技大学（广州）</td><td>从活动中心统一出发，参访科技实验室，了解AI前沿科研及应用场景；11:30开始返回</td></tr>
+    <tr><td>11:30—13:30</td><td>返回中心及午餐</td><td>活动中心周边</td><td>学员自行解决午餐，13:30前回到课程场地</td></tr>
+    <tr><td>13:30—14:00</td><td>课程导入与环境检查</td><td>活动中心</td><td>明确学习任务，检查电脑、账号、网络及工具环境</td></tr>
+    <tr><td>14:00—14:45</td><td>AI发展趋势、行业变化与关键认知</td><td>活动中心</td><td>生成式AI、多模态、任务执行；模型、Context、Agent、Workflow、Skill等关键概念</td></tr>
+    <tr><td>14:45—15:20</td><td>AI Agent产品与人机协作</td><td>活动中心</td><td>认识Codex、WorkBuddy等产品，练习背景、目标、材料、限制与任务拆解</td></tr>
+    <tr><td>15:20—16:00</td><td>深度调研与轻量调研Skill</td><td>活动中心</td><td>完成研究目标、搜索整合、溯源验证及轻量调研Skill初版</td></tr>
+    <tr><td>16:00—16:40</td><td>文字模态：可控生成</td><td>活动中心</td><td>以受众、目的、语气、结构和示例控制文字输出</td></tr>
+    <tr><td>16:40—17:20</td><td>图片模态：可控生成</td><td>活动中心</td><td>控制主体、场景、构图、材质、光影、风格与局部修改</td></tr>
+    <tr><td>17:20—18:00</td><td>视频模态与多模态内容整合</td><td>活动中心</td><td>从主题到脚本、分镜、动态表达及多模态生产链</td></tr>
+    <tr><td>18:00—19:00</td><td>晚餐及休整</td><td>活动中心周边</td><td>学员自行解决晚餐，19:00前返回课程场地</td></tr>
+    <tr><td>19:00—21:00</td><td>AI实战工作坊</td><td>活动中心</td><td>围绕现场命题开展问题定义、Agent协作、多模态生产、成果检查与展示</td></tr>
+    <tr><td>21:00后</td><td>返回酒店及办理入住</td><td>建议住宿酒店</td><td>自行前往酒店；以活动群最终交通安排为准</td></tr>
+  </tbody>
+</table>
+
+## D2｜8月30日（星期日）
+
+D2下午以“FROM AI USER TO AGENT BOSS”为主线，用同一项任务的逐层升级串联模型、任务架构、工具、Harness与Agent Team，重点回答“哪些任务可以交给AI、如何检查结果、何时必须由人承担责任”。
+
+<p class="table-scroll-hint" aria-hidden="true">← 左右滑动查看完整课表 →</p>
+
+<table class="metric-table schedule-table">
+  <thead><tr><th>时间</th><th>环节</th><th>地点</th><th>主要安排</th></tr></thead>
+  <tbody>
+    <tr><td>09:15—09:30</td><td>酒店出发</td><td>酒店至活动中心</td><td>完成退房及行李整理，前往活动中心</td></tr>
+    <tr><td>09:30—10:00</td><td>到场准备</td><td>活动中心</td><td>存放行李、检查设备，完成上午课程准备</td></tr>
+    <tr><td>10:00—11:00</td><td>把专业经验蒸馏成Skill</td><td>活动中心</td><td>将高频任务、业务经验、内容规则及审核标准沉淀为个人或团队Skill初版</td></tr>
+    <tr><td>11:00—12:00</td><td>多模态内容生产Skill包</td><td>活动中心</td><td>整合调研、文字、图片和视频能力，完成Skill包V0.1</td></tr>
+    <tr><td>12:00—14:00</td><td>午餐及休整</td><td>活动中心周边</td><td>学员自行解决午餐，14:00前返回</td></tr>
+    <tr><td>14:00—14:18</td><td>AI Age：重新校准AI生产力坐标</td><td>活动中心</td><td>明确课程终点与自身任务，理解AI正在成为新的生产力坐标</td></tr>
+    <tr><td>14:18—14:48</td><td>最强模型：推理能力、Token与云端服务</td><td>活动中心</td><td>理解先接入强推理能力，再讨论复杂自动化与业务应用</td></tr>
+    <tr><td>14:48—15:20</td><td>任务架构：先评分，再选择自动化方式</td><td>活动中心</td><td>按目标、风险、频率和可验证性选择人工、辅助或自动化架构，并形成任务合同</td></tr>
+    <tr><td>15:20—15:48</td><td>工具：接口、执行主体、复用能力与成本</td><td>活动中心</td><td>通过同一任务的不同实现方式，理解工具选择对执行、复用和成本的影响</td></tr>
+    <tr><td>15:48—16:42</td><td>Harness：边界、证据与批准闸门</td><td>活动中心</td><td>结合实操调整边界、证据、评价与批准闸门，使AI在可控条件下稳定产出</td></tr>
+    <tr><td>16:42—17:00</td><td>Agent Team：受控角色、Graph与项目管理</td><td>活动中心</td><td>区分多个聊天窗口与受控Agent团队，理解角色分工、任务图和项目管理</td></tr>
+    <tr><td>17:00—17:20</td><td>活动收束及前往车站</td><td>活动中心至南沙北站</td><td>带齐个人物品和行李，统一接驳前往南沙北站</td></tr>
+    <tr><td>18:04—18:53</td><td>建议返港车次G6585</td><td>南沙北站至香港西九龙站</td><td>建议预留充足进站时间；最终以实际购票结果为准</td></tr>
+  </tbody>
+</table>
+
+## 住宿建议
+
+<div class="ops-grid two">
+  <article class="ops-card">
+    <span class="ops-label">主手册建议 / 01</span>
+    <h3>全季广州南沙凤凰大道环宇城酒店</h3>
+    <p>地址：广州市南沙区黄阁镇凤凰大道89号环宇城D栋。</p>
+    <p>主手册估计距活动中心车程约25分钟，实际时间受当天交通影响。</p>
+  </article>
+  <article class="ops-card">
+    <span class="ops-label">主手册建议 / 02</span>
+    <h3>广州星河吉酒店</h3>
+    <p>地址：广州市南沙区蕉西路129号。</p>
+    <p>主手册估计距活动中心车程约25分钟，实际时间受当天交通影响。</p>
+  </article>
+</div>
+
+<div class="risk-card">
+  <strong>附近备选：</strong>如果上述酒店满房，可再搜索雅朵Max·城际美宿（东涌南沙北站店）或GEE INN格曼城舍（南沙东涌地铁站店）。酒店名称、距离、房价、房型及取消政策可能变化，请在预订页面重新确认。
+</div>
+
+## 行前检查
+
+- 携带有效证件原件和已确认的往返车票；
+- 带齐笔记本电脑、鼠标、充电器、移动电源及转换插头；
+- 提前加入活动微信群，留意接驳车辆、会场和临时调整；
+- 广州8月底炎热且可能有阵雨，建议携带雨具、防晒用品和常用药；
+- 贵重物品、手机和证件请随身保管；
+- 出发前完成本页下方的Codex、WorkBuddy登录及两份测试文件验收。
+
+## 电脑与工具准备：先检查网络连接
 
 <div class="risk-card">
   <strong>先判断：</strong>如果你的电脑已经有稳定可用的 VPN，并能打开 Codex 官方页面，就保留原来的连接方式，<strong>无需安装 v2rayN</strong>。<br>
