@@ -25,6 +25,8 @@
 - 已执行课表内容检索、`git diff --check` 和 `npm run build`，VitePress 1.6.4 构建通过；已通过 GitHub MCP 更新 `ChannelCMT/vibestar` 的 `main` 分支，提交为 `5a4dcef`，等待 GitHub Pages workflow 发布。
 - 修复课前准备页活动基本信息表右侧空白：VitePress 默认 `.vp-doc table { display: block }` 的选择器优先级覆盖了自定义表格布局；提升 `metric-table`、`tool-table` 和 `lm-audience` 的表格选择器优先级，并保留手机端 `metric-table` 横向滚动。
 - 已执行 `git diff --check` 和 `npm run build`，生成 CSS 已包含桌面端与移动端表格规则；已通过 GitHub MCP 更新 `ChannelCMT/vibestar` 的 `main` 分支，提交为 `a8e0375`，等待 GitHub Pages workflow 发布。
+- 在课前准备页“活动基本信息”之后新增简短讲师介绍：高宇博，香港科技大学（广州）博士，主要研究 Hermes Agent、LLM Efficient 和 Multimodal LLM。
+- 已执行 `git diff --check` 和 `npm run build`，VitePress 1.6.4 构建通过；已通过 GitHub MCP 更新 `ChannelCMT/vibestar` 的 `main` 分支，提交为 `eaa42d9`，等待 GitHub Pages workflow 发布。
 
 ## 2026-08-20
 

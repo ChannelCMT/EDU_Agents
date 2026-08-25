@@ -25,6 +25,10 @@
   </tbody>
 </table>
 
+## 讲师介绍
+
+高宇博，香港科技大学（广州）博士，主要研究 Hermes Agent、LLM Efficient 和 Multimodal LLM。
+
 ## 去程与返程
 
 <div class="ops-grid two">
