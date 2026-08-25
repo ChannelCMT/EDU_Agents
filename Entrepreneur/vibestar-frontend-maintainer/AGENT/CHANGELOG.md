@@ -1,5 +1,13 @@
 # Vibestar 教学前端维护 Agent Changelog
 
+## 2026-08-25
+
+- 页首导航新增“老洪课件”，点击直接跳转到 WorkBuddy 课件地址，并放在“Channel课程”左侧。
+- 将页首导航显示名从“3小时课程”调整为“Channel课程”，课程路径和页面内容保持不变。
+- 同步更新项目层、Entrepreneur 分类层和 Agent manifest 的导航维护边界。
+- 已执行 `npm run build`，VitePress 1.6.4 构建通过。
+- 已通过 GitHub MCP 更新 `ChannelCMT/vibestar` 的 `main` 分支，提交为 `90a2bef`；GitHub Pages 发布由现有 workflow 继续处理。
+
 ## 2026-08-20
 
 - 从来源标识 `knowledge-base-builder` 复制 VitePress 学习资料站源码、锁文件和 GitHub Pages workflow。
