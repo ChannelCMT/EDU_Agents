@@ -1021,3 +1021,49 @@
   .VPHome .VPHero .text,
   .VPHome .VPHero .tagline { text-align: left; }
 }
+
+/* Dark-mode compatibility for custom course components. */
+html.dark {
+  --ink: var(--vp-c-text-1);
+  --ink-2: var(--vp-c-text-2);
+  --muted: var(--vp-c-text-2);
+  --line: var(--vp-c-divider);
+  --paper: var(--vp-c-bg);
+}
+
+html.dark .VPHome .VPHero h1,
+html.dark .VPHome .VPHero .text { color: #f8fbff; }
+html.dark .VPHome .VPHero .tagline { color: #d3e5f6; }
+html.dark .action-button { background: var(--vp-c-brand-2); color: #fff; }
+html.dark .section-kicker,
+html.dark .text-link,
+html.dark .course-path span,
+html.dark .demo-grid span,
+html.dark .chapter-card .chapter-no,
+html.dark .ops-label,
+html.dark .route-timeline strong { color: var(--vp-c-brand-1); }
+html.dark .text-link:hover { color: var(--vp-c-brand-3); }
+html.dark .course-intro-copy strong { color: var(--vp-c-brand-1); }
+html.dark .chapter-kpis span {
+  border-color: rgba(115,199,255,.28);
+  background: rgba(47,155,255,.12);
+  color: var(--vp-c-brand-1);
+}
+html.dark .chapter-card .chapter-no {
+  background: rgba(47,155,255,.18);
+  color: var(--vp-c-brand-1);
+}
+html.dark .fallback-card { background: rgba(255,139,95,.1); }
+html.dark .risk-card {
+  background: rgba(246,195,67,.12);
+  color: #f8e4a8;
+}
+html.dark .risk-card strong { color: #ffe59b; }
+html.dark .metric-table tr:nth-child(even) td { background: var(--vp-c-bg-soft); }
+html.dark .roadmap-row { background: var(--vp-c-bg); }
+html.dark .roadmap-phase,
+html.dark .roadmap-governance { background: var(--vp-c-bg-soft); }
+html.dark .roadmap-focus { background: var(--vp-c-bg); }
+html.dark .roadmap-phase .ops-label { color: var(--yellow); }
+html.dark .roadmap-governance code { color: #ffd98a; }
+html.dark .lm-hero span { color: var(--vp-c-brand-1); }

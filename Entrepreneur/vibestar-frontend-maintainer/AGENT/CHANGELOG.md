@@ -18,6 +18,8 @@
 - 本地执行 `npm run build`，VitePress 1.6.4 构建通过；已通过 GitHub MCP 将精确段落删除同步到 `ChannelCMT/vibestar` 的 `main` 分支，远端生成 4 个连续维护提交，GitHub Pages workflow run `32801916696` 已成功。
 - D1 课表将 16:00—18:00 的文字、图片、视频三行合并为“多模态控制与内容整合”，并将 19:00—21:00 更新为“AI使用场景交流与助教协助安装所需工具”。
 - 本地 `npm run build` 通过；已通过 GitHub MCP 更新 `ChannelCMT/vibestar` 的 `main` 分支，提交为 `e1bfe98`。
+- 修复移动端暗色模式下自定义课程组件文字对比度不足：为 `--ink`、`--ink-2`、`--muted`、`--line` 和 `--paper` 增加 VitePress 暗色变量映射，并覆盖首页标题、提示卡、指标表、路线卡片及学习地图标签的暗色背景/文字。
+- 已执行 `git diff --check` 和 `npm run build`，VitePress 1.6.4 构建通过；已通过 GitHub MCP 更新 `ChannelCMT/vibestar` 的 `main` 分支，提交为 `4858f7b`，等待现有 GitHub Pages workflow 发布。
 
 ## 2026-08-20
 
