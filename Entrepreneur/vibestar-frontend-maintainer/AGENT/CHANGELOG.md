@@ -2,6 +2,9 @@
 
 ## 2026-08-28
 
+- 在“出行与课前准备”页面标题之后、深蓝主视觉之前增加《3小时 AI 数字员工课程 V2》PDF 下载入口；卡片显示139页、约5.56 MB，并以新标签页打开公开课件地址。
+- 新增构建产物回归测试 `site/tests/preflight-course-download.test.mjs`，锁定入口位置、精确地址、下载文案、`target="_blank"` 与安全 `rel` 属性；已完成红灯/绿灯、VitePress 1.6.4 构建、桌面端及390px手机端检查，`npm test` 两项测试全部通过且手机端无整页横向溢出。
+- 已推送 `ChannelCMT/vibestar` 主分支，远端提交为 `0cfb3e7`，GitHub Pages workflow `33178506457` 已成功；线上 HTML 已确认下载入口位于主视觉之前。
 - 将课堂演示总览中 Notion、跃点互动 Harness、TradingAgents 三张卡片的标题改为纯文本，取消标题超链接、蓝色下划线和点击行为；侧栏中的三个详情页入口继续保留。
 - 新增构建产物回归测试 `site/tests/demos-overview-links.test.mjs`，并把 `npm test` 纳入 Agent 使用说明和机器可读验收命令；发布时保留线上仓库原有的 Harness 校验链。
 - 已完成红灯/绿灯测试、VitePress 1.6.4 构建和桌面端视觉检查；线上 HTML 验收结果为 3 个卡片标题、0 个标题链接。隔离发布副本中的既有 Harness 响应式检查通过；另一项既有 Harness 校验因依赖仓库外的 `week1.csv`、`week2.csv` 基准文件而无法在临时副本完成。

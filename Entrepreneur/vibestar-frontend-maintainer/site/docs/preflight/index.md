@@ -1,5 +1,14 @@
 # AI Builder Camp｜出行与课前准备
 
+<a class="resource-callout" href="https://empowerwithai.camp/abce/downloads/3hour-ai-digital-employee-course-v2.pdf" target="_blank" rel="noopener noreferrer">
+  <span class="resource-callout-copy">
+    <small>COURSE MATERIAL / PDF</small>
+    <strong>下载《3小时 AI 数字员工课程 V2》课件</strong>
+    <em>PDF · 139页 · 约5.56 MB</em>
+  </span>
+  <span class="resource-callout-arrow" aria-hidden="true">↓</span>
+</a>
+
 <div class="doc-hero dark">
   <p class="section-kicker">29–30 AUGUST / NANSHA</p>
   <h1>先把行程和电脑准备好，到场直接开始。</h1>
