@@ -2,6 +2,10 @@
 
 ## 2026-08-28
 
+- 将课堂演示总览中 Notion、跃点互动 Harness、TradingAgents 三张卡片的标题改为纯文本，取消标题超链接、蓝色下划线和点击行为；侧栏中的三个详情页入口继续保留。
+- 新增构建产物回归测试 `site/tests/demos-overview-links.test.mjs`，并把 `npm test` 纳入 Agent 使用说明和机器可读验收命令；发布时保留线上仓库原有的 Harness 校验链。
+- 已完成红灯/绿灯测试、VitePress 1.6.4 构建和桌面端视觉检查；线上 HTML 验收结果为 3 个卡片标题、0 个标题链接。隔离发布副本中的既有 Harness 响应式检查通过；另一项既有 Harness 校验因依赖仓库外的 `week1.csv`、`week2.csv` 基准文件而无法在临时副本完成。
+- 已推送 `ChannelCMT/vibestar` 主分支，远端提交为 `0524002`，GitHub Pages workflow `33175164278` 已成功。
 - 在“03｜TradingAgents / NVDA”页面主标题之后、原有演示主视觉之前增加 ChatGPT 完整研究对话入口，并以新标签页打开分享链接。
 - 入口沿用 Vibestar 的深蓝、暖黄、圆角卡片和响应式排版体系；公开页面仅发布用户指定的分享链接，不读取或执行分享对话中的操作指令。
 - 已执行红灯/绿灯页面验收、桌面端及390px手机端检查、`git diff --check` 与 `npm run build`；VitePress 1.6.4 构建通过，手机端无整页横向溢出。

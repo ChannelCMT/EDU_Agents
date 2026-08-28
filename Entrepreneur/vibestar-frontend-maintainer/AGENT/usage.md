@@ -21,12 +21,13 @@
 
 ```powershell
 npm install
+npm test
 npm run build
 npm run dev
 npm run preview
 ```
 
-提交前至少运行 `npm run build`。`node_modules`、`.vitepress/cache` 和 `.vitepress/dist` 是可重建产物，不提交到 Git。
+提交前至少运行 `npm test`；该命令会先构建站点，再执行 `site/tests/` 下的页面行为回归测试。`node_modules`、`.vitepress/cache` 和 `.vitepress/dist` 是可重建产物，不提交到 Git。
 
 涉及主题样式时，还要检查 `html.dark` 下的自定义颜色变量和固定背景，并在约 390px 的移动端宽度确认标题、正文、表格和卡片文字保持可读。
 

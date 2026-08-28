@@ -12,9 +12,9 @@
 <div class="five-loop doc-loop"><span><b>01</b>痛点</span><span><b>02</b>演示</span><span><b>03</b>拆解</span><span><b>04</b>实操</span><span><b>05</b>复盘</span></div>
 
 <div class="demo-grid">
-  <article><span>DEMO 01 / 章节 3</span><h3><a href="/demos/notion">Notion：同一篇文章的四种保存方式</a></h3><p>用同一输出合同，区分 GUI、CLI、API、MCP 的执行主体、复用方式与 Token 成本。</p></article>
-  <article><span>DEMO 02 / 章节 4</span><h3><a href="/demos/harness">跃点互动：经营数字员工的 Harness</a></h3><p>用虚构小游戏公司的数据，对比没有 Harness、有 Harness、遇到新数据后的 Loop。</p></article>
-  <article><span>DEMO 03 / 章节 5</span><h3><a href="/demos/tradingagents">TradingAgents：从 GitHub 到 NVDA</a></h3><p>先让 Codex 理解已有 Graph，再完整展示一只股票的多 Agent 研究；20 股只作扩展展示。</p></article>
+  <article><span>DEMO 01 / 章节 3</span><h3>Notion：同一篇文章的四种保存方式</h3><p>用同一输出合同，区分 GUI、CLI、API、MCP 的执行主体、复用方式与 Token 成本。</p></article>
+  <article><span>DEMO 02 / 章节 4</span><h3>跃点互动：经营数字员工的 Harness</h3><p>用虚构小游戏公司的数据，对比没有 Harness、有 Harness、遇到新数据后的 Loop。</p></article>
+  <article><span>DEMO 03 / 章节 5</span><h3>TradingAgents：从 GitHub 到 NVDA</h3><p>先让 Codex 理解已有 Graph，再完整展示一只股票的多 Agent 研究；20 股只作扩展展示。</p></article>
 </div>
 
 ## 共同录制规则
