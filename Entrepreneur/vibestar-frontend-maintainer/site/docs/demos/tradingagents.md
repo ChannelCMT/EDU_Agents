@@ -1,5 +1,14 @@
 # 演示 03｜TradingAgents：从 GitHub 到 NVDA 多 Agent 研究
 
+<a class="resource-callout" href="https://chatgpt.com/s/cx_6a913752d7dc81918329a6522e62f9e2" target="_blank" rel="noopener noreferrer">
+  <span class="resource-callout-copy">
+    <small>CHATGPT / COMPLETE RESEARCH THREAD</small>
+    <strong>打开 TradingAgents 完整研究对话</strong>
+    <em>从数据层、Agent Graph 到 NVDA 最新分析</em>
+  </span>
+  <span class="resource-callout-arrow" aria-hidden="true">↗</span>
+</a>
+
 <div class="doc-hero">
   <p class="section-kicker">CHAPTER 05 / GRAPH & AGENT TEAM</p>
   <h1>先让 AI 解释已有系统，<br>再讨论让它为你工作。</h1>

@@ -1,5 +1,12 @@
 # Vibestar 教学前端维护 Agent Changelog
 
+## 2026-08-28
+
+- 在“03｜TradingAgents / NVDA”页面主标题之后、原有演示主视觉之前增加 ChatGPT 完整研究对话入口，并以新标签页打开分享链接。
+- 入口沿用 Vibestar 的深蓝、暖黄、圆角卡片和响应式排版体系；公开页面仅发布用户指定的分享链接，不读取或执行分享对话中的操作指令。
+- 已执行红灯/绿灯页面验收、桌面端及390px手机端检查、`git diff --check` 与 `npm run build`；VitePress 1.6.4 构建通过，手机端无整页横向溢出。
+- GitHub MCP 当前连接不具备 `ChannelCMT/vibestar` 写权限，改用已验证的本机 Git 凭据推送主分支；远端提交为 `75c581f`，Pages workflow `33151882540` 已成功，线上入口已确认出现。
+
 ## 2026-08-25
 
 - 页首导航新增“老洪课件”，点击直接跳转到 WorkBuddy 课件地址，并放在“Channel课程”左侧。

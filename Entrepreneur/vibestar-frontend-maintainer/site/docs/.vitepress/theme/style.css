@@ -104,6 +104,14 @@
 .chapter-kpis { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 12px; margin-top: 26px; }
 .chapter-kpis span { padding: 12px 14px; border: 1px solid rgba(47,155,255,.22); border-radius: 8px; background: rgba(255,255,255,.64); color: #11598d; font-size: 14px; font-weight: 800; }
 .doc-hero.dark .chapter-kpis span { border-color: rgba(133,211,255,.2); background: rgba(255,255,255,.08); color: #d2edff; }
+.resource-callout { display: flex; align-items: center; justify-content: space-between; gap: 24px; margin: 18px 0 24px; padding: 20px 22px; border: 1px solid rgba(47,155,255,.42); border-radius: 12px; background: linear-gradient(135deg,rgba(47,155,255,.13),rgba(255,211,61,.12)),var(--vp-c-bg-soft); box-shadow: 0 10px 28px rgba(13,49,93,.08); text-decoration: none !important; transition: border-color .2s ease,box-shadow .2s ease,transform .2s ease; }
+.resource-callout:hover { border-color: var(--vp-c-brand-1); box-shadow: 0 14px 34px rgba(13,49,93,.14); transform: translateY(-2px); }
+.resource-callout:focus-visible { outline: 3px solid rgba(47,155,255,.38); outline-offset: 3px; }
+.resource-callout-copy { display: grid; min-width: 0; gap: 5px; }
+.resource-callout-copy small { color: var(--vp-c-brand-2); font-size: 11px; font-weight: 900; letter-spacing: .11em; }
+.resource-callout-copy strong { color: var(--ink); font-size: 20px; line-height: 1.35; }
+.resource-callout-copy em { color: var(--muted); font-size: 14px; font-style: normal; line-height: 1.55; }
+.resource-callout-arrow { display: grid; flex: 0 0 auto; width: 42px; height: 42px; place-items: center; border-radius: 50%; background: var(--yellow); color: #173150; font-size: 22px; font-weight: 900; }
 
 .chapter-grid { margin: 24px 0 42px; }
 .chapter-card { padding: 24px; }
